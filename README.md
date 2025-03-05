@@ -5,6 +5,7 @@ This repository is dedicated to my progress and projects from the **Complete Web
 ---
 
 ## 🌐 Course Overview
+
 The Complete Web Development Bootcamp is a comprehensive 62+ hour course that takes students from beginner to proficient web developers. By working on real-world projects, I’m learning both front-end and back-end development, as well as Web3 concepts. Topics include:
 
 - **Front-End Development**: HTML5, CSS3, Flexbox, Grid, Bootstrap 5, JavaScript ES6, DOM Manipulation, jQuery
@@ -18,6 +19,7 @@ The Complete Web Development Bootcamp is a comprehensive 62+ hour course that ta
 ---
 
 ## 🚀 Projects & Highlights
+
 Throughout the course, I’m building over 32+ projects to showcase my skills, including:
 
 - **Portfolio Website**: A professional site to highlight projects and skills.
@@ -25,10 +27,11 @@ Throughout the course, I’m building over 32+ projects to showcase my skills, i
 - **RESTful API**: Developing RESTful APIs with Node.js and Express.
 - **React.js App**: Building fully functional front-end applications.
 - **Blockchain Project**: Exploring Web3 development and blockchain integration with NFT minting logic.
-  
+
 These projects and more will be added to this repository as I complete them, providing a portfolio that demonstrates my abilities in both front-end and back-end web development.
 
 ## 🛠 Tools & Technologies
+
 Key tools and frameworks used throughout the course:
 
 - **Front-End**: HTML5, CSS3, Bootstrap 5, JavaScript ES6, jQuery, React.js
@@ -41,6 +44,7 @@ Key tools and frameworks used throughout the course:
 ---
 
 ## 🎯 Goals
+
 - Build a strong foundation in web development, from HTML and CSS to advanced JavaScript and React.
 - Develop a portfolio of real-world projects to showcase my skills to potential employers.
 - Gain hands-on experience with blockchain and Web3 development.
@@ -49,14 +53,17 @@ Key tools and frameworks used throughout the course:
 ---
 
 ## 📈 Course Information
+
 - **Instructor**: Dr. Angela Yu, Lead Instructor at the London App Brewery
 - **Platform**: [Udemy](https://www.udemy.com/)
-- **Prerequisites**: No programming experience needed; internet access.
+- **Prerequisites**: No programming experience needed; just internet access.
 
 ---
 
 ## 🔗 Connect
+
 Feel free to reach out or follow my progress:
+
 - [GitHub](https://github.com/Harshit-Soni78)
 - [LinkedIn](https://www.linkedin.com/in/harshit-soni78/)
 

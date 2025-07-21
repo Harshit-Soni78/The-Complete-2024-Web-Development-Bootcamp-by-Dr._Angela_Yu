@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "The Rise of AI",
+    "content": "Artificial Intelligence is rapidly changing our world. From machine learning to natural language processing, AI is at the forefront of technological innovation. This post explores the history, current state, and future potential of AI."
+  },
+  {
+    "id": 2,
+    "title": "A Guide to Healthy Eating",
+    "content": "Eating healthy is not about strict dietary limitations, staying unrealistically thin, or depriving yourself of the foods you love. Rather, it’s about feeling great, having more energy, improving your health, and boosting your mood. This guide provides simple tips to get started."
+  },
+  {
+    "id": 3,
+    "title": "New Post",
+    "content": "This is New pot for testing"
+  }
+]

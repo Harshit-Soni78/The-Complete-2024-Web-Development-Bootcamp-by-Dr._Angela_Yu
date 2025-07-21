@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<h1>This is Index</h1>
+
+    <form action="/submit" method="POST">
+        <input type="text" name="fullName" placeholder="Enter Your Name">
+        <input type="text" name="blogTitle" placeholder="Enter Blog Title">
+        <input type="text" name="blogHeading" placeholder="Enter Blog Heading">
+        <input type="text" name="blogBody" placeholder="Enter Blog Body">
+        <input type="submit" value="OK">
+    </form>
+
+    <br>
+    <br>
+    
+<h2> fullName : <%= locals.fullName %> </h2>
+<h2> blogTitle : <%= locals.blogTitle %> </h2>
+<h2> blogHeading : <%= locals.blogHeading %> </h2>
+<h2> blogBody : <%= locals.blogBody %> </h2>
+
+<%- include("partials/footer.ejs") %>

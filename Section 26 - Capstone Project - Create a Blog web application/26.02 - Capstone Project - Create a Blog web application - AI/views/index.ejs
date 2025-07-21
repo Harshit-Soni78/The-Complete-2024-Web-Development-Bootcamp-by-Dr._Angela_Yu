@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Blog Posts</h1>
+
+<% if (posts.length === 0) { %>
+    <p>No posts yet. <a href="/compose">Create one!</a></p>
+<% } else { %>
+    <div class="posts-list">
+        <% posts.forEach(post => { %>
+            <div class="post-summary">
+                <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+                <p><%= post.content.substring(0, 150) %>...</p>
+            </div>
+        <% }) %>
+    </div>
+<% } %>
+
+<%- include('partials/footer.ejs') %>

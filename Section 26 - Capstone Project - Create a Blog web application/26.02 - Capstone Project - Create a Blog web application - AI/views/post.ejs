@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+
+<div class="post-full">
+    <h1><%= post.title %></h1>
+    <p class="post-content"><%= post.content %></p>
+    <div class="post-actions">
+        <a href="/edit/<%= post.id %>" class="btn">Edit</a>
+        <form action="/delete/<%= post.id %>" method="POST" style="display: inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

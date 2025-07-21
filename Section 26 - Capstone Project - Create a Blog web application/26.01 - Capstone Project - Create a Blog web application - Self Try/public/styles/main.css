@@ -1,0 +1,8 @@
+body {
+  background: black;
+  color: antiquewhite;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+}

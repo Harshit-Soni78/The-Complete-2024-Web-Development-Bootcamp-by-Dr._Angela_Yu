@@ -1,0 +1,27 @@
+Git Commands
+    1. Initial Configuration:
+        .git config --global user.name "Your Name": Sets the user name.
+        .git config --global user.email "your.email@example.com": Sets the user email.
+    2. Creating and Initializing a Repository:
+        .git init: Initializes a new Git repository.
+        .git clone <URL>: Clones an existing repository.
+    3. Status and Log:
+        .git status: Checks the status of files in the repository.
+        .git log: Displays the commit history.
+    4. Working with Files:
+        .git add <file>: Adds a specific file to the staging area.
+        .git add .: Adds all modified files to the staging area.
+        .git commit -m "commit message": Commits the changes in the staging area with a descriptive message.
+        .git rm <file>: Removes a file from the repository and the staging area.
+    5. Branches:
+        .git branch: Lists branches in the repository.
+        .git branch <branch-name>: Creates a new branch.
+        .git checkout <branch-name>: Switches to the specified branch.
+        .git merge <branch-name>: Merges the specified branch into the current branch.
+    6. Updating and Synchronizing:
+        .git fetch: Downloads changes from a remote repository without merging.
+        .git pull: Downloads and merges changes from a remote repository.
+        .git push: Sends commits to a remote repository.
+    7. Undoing Changes:
+        .git reset <file>: Removes the file from the staging area.
+        .git reset --hard <commit>: Resets the history and changes in the working directory to a specific commit.

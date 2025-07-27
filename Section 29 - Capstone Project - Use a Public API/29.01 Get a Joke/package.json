@@ -1,5 +1,5 @@
 {
-  "name": "29.01-name-a-joke",
+  "name": "29.01-get-a-joke",
   "version": "1.0.0",
   "description": "Use the [JokeAPI](https://sv443.net/jokeapi/v2/) to Create a website that gives the user a joke based on their name.",
   "main": "index.js",

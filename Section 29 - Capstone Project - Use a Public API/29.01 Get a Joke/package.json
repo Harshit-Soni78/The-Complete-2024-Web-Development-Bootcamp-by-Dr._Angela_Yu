@@ -1,0 +1,17 @@
+{
+  "name": "29.01-name-a-joke",
+  "version": "1.0.0",
+  "description": "Use the [JokeAPI](https://sv443.net/jokeapi/v2/) to Create a website that gives the user a joke based on their name.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Harshit Soni",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

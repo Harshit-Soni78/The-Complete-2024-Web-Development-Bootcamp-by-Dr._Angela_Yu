@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name a Joke</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="jokeForm">
+            <button type="submit" formaction="/joke">
+                <h1>Get a Joke</h1>
+            </button>
+        </form>
+        <% if (locals.data.joke) { %>
+            <div id="jokeDisplay">
+                <p id="joke"> <strong>Joke : </strong>
+                    <%= locals.data.joke %>
+                </p>
+            </div>
+            <% } else if (locals.data.setup && locals.data.delivery) { %>
+                <div id="setupDeliveryDisplay">
+                    <p id="setupDisplay"> <strong>Setup : </strong>
+                        <%= locals.data.setup %>
+                    </p>
+                    <p id="deliveryDisplay"> <strong>Delivery : </strong>
+                        <%= locals.data.delivery %>
+                    </p>
+                </div>
+                <% } %>
+    </div>
+</body>
+
+</html>

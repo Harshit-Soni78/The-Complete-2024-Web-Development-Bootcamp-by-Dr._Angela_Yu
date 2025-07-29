@@ -79,8 +79,7 @@ app.patch("/posts/:id", (req, res) => {
     if (req.body.title) specificPost.title = req.body.title;
     if (req.body.content) specificPost.content = req.body.content;
     if (req.body.author) specificPost.author = req.body.author;
-    posts[id + 1] = specificPost;
-    res.json(posts[id + 1]);
+    res.json(specificPost);
   }
 });
 

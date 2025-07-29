@@ -41,11 +41,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Write your code here//
 
 //CHALLENGE 1: GET All posts
-app.get("/posts", (req, res)=>{
-  res.json(posts)
-})
+app.get("/posts", (req, res) => {
+  res.json(posts);
+});
 
 //CHALLENGE 2: GET a specific post by id
+app.get("/posts/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const specificPost = posts.find((post) => post.id === id);
+  if (!specificPost) {
+    res.status(404).json({ message: "Post not found" });
+  } else {
+    res.json(specificPost);
+  }
+});
 
 //CHALLENGE 3: POST a new post
 

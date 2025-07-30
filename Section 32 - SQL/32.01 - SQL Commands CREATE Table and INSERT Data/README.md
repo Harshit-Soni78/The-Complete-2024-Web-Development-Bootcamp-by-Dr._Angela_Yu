@@ -24,3 +24,19 @@ CREATE TABLE table_name ( column1 datatype, column2 datatype, ... );
 
 Here, `CREATE TABLE` are keywords written in uppercase, followed by the table name and a list of columns with their data types enclosed in parentheses and separated by commas.
 
+Let's write the SQL code to create the `products` table. We start with the keywords `CREATE TABLE`, followed by the table name `products`, and then define the columns inside parentheses.
+
+The first column is `id`, which will be of type `INT` (integer). This column will serve as the unique identifier or primary key for the products table, allowing each row to be uniquely identified.
+
+Next, we define the `name` column, which will store the product name as a string. In SQL, we specify the column name followed by its data type separated by a space, without colons.
+
+The third column is `price`, which will store the monetary value of the product. For this, we use the `MONEY` data type, which formats values with commas and decimal places appropriate for currency.
+
+Finally, we need to designate the primary key for the table. The primary key uniquely identifies each record. We specify this by adding `PRIMARY KEY (id)` after the column definitions.
+
+Additionally, we add the `NOT NULL` constraint to the `id` column to ensure that every record must have a value for `id`. This prevents records from being created without an identifier.
+
+After writing the SQL code for the `products` table, verify that commas separate each column definition and that there are no colons. Then, execute the code to create the table.
+
+Once the table is created, you can view it by right-clicking on `products` and selecting "Show table." Initially, the table will be empty.
+

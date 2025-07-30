@@ -21,3 +21,25 @@ SELECT name, price FROM products
 ```
 
 Running this query will return only the `name` and `price` columns from the `products` table, excluding other columns such as `id`.
+
+### Filtering Rows with WHERE Clause
+
+To retrieve particular rows from your database, you use the `WHERE` keyword to specify search conditions. For example, to select the row where the `id` is 1, you would write:
+
+```sql
+SELECT \* FROM products WHERE id = 1
+```
+
+This query returns the single record where the `id` equals 1.
+
+The `WHERE` clause can include various conditions such as equality, greater than, less than, between, and pattern matching with `LIKE`. For example:
+
+```sql
+WHERE Country = 'Mexico'
+WHERE customerID = 1
+```
+
+These conditions help you filter and select the specific data you need from your tables.
+
+In summary, the `SELECT` statement combined with optional column selection and the `WHERE` clause allows you to read and filter data from your SQL database effectively. You will frequently use these statements when working with SQL databases.
+

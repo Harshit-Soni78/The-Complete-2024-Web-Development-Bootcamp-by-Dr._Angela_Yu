@@ -40,3 +40,48 @@ After writing the SQL code for the `products` table, verify that commas separate
 
 Once the table is created, you can view it by right-clicking on `products` and selecting "Show table." Initially, the table will be empty.
 
+To add data to the table, we use the `INSERT INTO` statement. For example, to add a product with `id` 1, `name` "Pen", and `price` 1.20, we write an SQL insert statement.
+
+The syntax for inserting data is:
+
+```sql
+INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
+```
+
+Alternatively, if you provide values for all columns in order, you can omit the column list.
+
+Let's insert the product data into the `products` table by specifying the values directly.
+
+The SQL command is:
+
+```sql
+INSERT INTO products VALUES (1, 'Pen', 1.20);
+```
+
+Note that string values must be enclosed in single quotes.
+
+After running this command, the product record will be added to the table. You can verify this by viewing the `products` table again.
+
+If you want to add a product but do not have all the values, such as the price, you can specify only the columns for which you have data. For example, to add a product with `id` 2 and `name` "Pencil" but no price, you write:
+
+```sql
+INSERT INTO products (id, name) VALUES (2, 'Pencil');
+```
+
+This will insert a record with a NULL value for the price column.
+
+Viewing the table after this insertion will show the second record with an `id` and `name`, but the `price` will be NULL.
+
+Note that the `id` column cannot be NULL due to the `NOT NULL` constraint. Attempting to insert a record without an `id` will result in an error.
+
+For example, the following command will fail:
+
+```sql
+INSERT INTO products (name, price) VALUES ('Rubber', 1.30);
+```
+
+Because the `id` is not provided and cannot be NULL.
+
+This validation ensures that the database remains well-structured and consistent with the defined schema.
+
+In summary, this lesson demonstrated how to create a new table using SQL and how to insert data into it. The next lesson will cover how to read and search data within the table.

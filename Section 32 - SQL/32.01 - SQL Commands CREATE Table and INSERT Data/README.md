@@ -85,3 +85,10 @@ Because the `id` is not provided and cannot be NULL.
 This validation ensures that the database remains well-structured and consistent with the defined schema.
 
 In summary, this lesson demonstrated how to create a new table using SQL and how to insert data into it. The next lesson will cover how to read and search data within the table.
+
+## Key Takeaways
+
+- SQL uses keywords like CREATE, TABLE, INSERT INTO, and PRIMARY KEY to manage databases.
+- The CREATE TABLE statement defines the structure of a table including column names and data types.
+- The PRIMARY KEY constraint uniquely identifies each record and cannot be NULL.
+- Data can be inserted into tables using the INSERT INTO statement, specifying columns and values as needed.

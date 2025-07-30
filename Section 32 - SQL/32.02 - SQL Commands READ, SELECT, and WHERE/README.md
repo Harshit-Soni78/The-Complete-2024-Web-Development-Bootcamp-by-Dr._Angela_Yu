@@ -43,3 +43,9 @@ These conditions help you filter and select the specific data you need from your
 
 In summary, the `SELECT` statement combined with optional column selection and the `WHERE` clause allows you to read and filter data from your SQL database effectively. You will frequently use these statements when working with SQL databases.
 
+## Key Takeaways
+
+- The SQL `SELECT` keyword is used to read data from a database table.
+- Using `SELECT *` retrieves all columns from the specified table.
+- You can specify particular columns by listing them after `SELECT`.
+- The `WHERE` clause filters rows based on specified conditions, such as `id = 1`.

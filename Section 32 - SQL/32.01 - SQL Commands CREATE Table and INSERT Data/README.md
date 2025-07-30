@@ -1,0 +1,2 @@
+# SQL Commands: CREATE Table and INSERT Data
+

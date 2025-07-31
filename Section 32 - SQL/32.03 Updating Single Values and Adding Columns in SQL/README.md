@@ -31,3 +31,17 @@ ALTER TABLE products ADD stock INTEGER
 ```
 
 After executing this command and viewing the products table, we now have an extra column at the end, but both records have Null values for stock.
+
+## Challenge: Updating Stock Values
+
+As a challenge, update both records so that they have appropriate stock values. According to the table, there are 32 pens and 12 pencils to sell.
+
+```sql
+UPDATE products SET stock = 32 WHERE id = 1
+```
+
+```sql
+UPDATE products SET stock = 12 WHERE id = 2
+```
+
+After running these statements, the Pen now has a stock value of 32, and the Pencil has a stock value of 12. Our table is now complete without any null values.

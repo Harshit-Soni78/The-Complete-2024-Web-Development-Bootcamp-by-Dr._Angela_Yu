@@ -45,3 +45,7 @@ UPDATE products SET stock = 12 WHERE id = 2
 ```
 
 After running these statements, the Pen now has a stock value of 32, and the Pencil has a stock value of 12. Our table is now complete without any null values.
+
+## Reflections on Updating Values
+
+It can be tedious to update values, especially if you did not account for certain columns when creating the schema.

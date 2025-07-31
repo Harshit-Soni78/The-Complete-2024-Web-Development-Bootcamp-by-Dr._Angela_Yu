@@ -49,3 +49,10 @@ After running these statements, the Pen now has a stock value of 32, and the Pen
 ## Reflections on Updating Values
 
 It can be tedious to update values, especially if you did not account for certain columns when creating the schema.
+
+## Key Takeaways
+
+- The UPDATE statement in SQL is used to modify existing records in a table, and it is crucial to use the WHERE clause to avoid updating all records unintentionally.
+- The ALTER TABLE statement allows you to add, delete, or modify columns in an existing table.
+- After adding a new column, you may need to update existing records to provide values for that column.
+- Updating records individually can be tedious if not planned for during the initial schema design.

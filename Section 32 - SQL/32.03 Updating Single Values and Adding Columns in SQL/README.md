@@ -21,3 +21,13 @@ UPDATE products SET price = 0.8 WHERE id = 2
 ```
 
 Now, this statement will find the specific record with id equal to 2 and set its price to 0.8. After running this, if we view our products table again, we can see that the pencil now has a price, and there are no more null values.
+
+## Adding a New Column to a Table
+
+Suppose we want to change the table instead of a particular record. For example, in our products table, if we want to keep track of the stock of each product, we need to add a new column. In SQL, this requires altering the table.
+
+```sql
+ALTER TABLE products ADD stock INTEGER
+```
+
+After executing this command and viewing the products table, we now have an extra column at the end, but both records have Null values for stock.

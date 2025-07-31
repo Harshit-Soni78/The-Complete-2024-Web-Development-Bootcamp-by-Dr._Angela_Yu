@@ -38,3 +38,9 @@ After executing the DELETE statement with the appropriate WHERE clause, our prod
 
 Through this process, you have seen how Structured Query Language (SQL) allows us to Create, Read, Update, and Delete data from our tables.
 
+## Key Takeaways
+
+- The DELETE statement in SQL is used to remove records from a table based on specified conditions.
+- Always include a WHERE clause in DELETE statements to avoid deleting all records unintentionally.
+- Using unique identifiers such as an id in the WHERE clause is a safer practice when deleting specific records.
+- DELETE completes the CRUD operations by allowing data removal alongside Create, Read, and Update.

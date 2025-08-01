@@ -18,3 +18,11 @@ Next, create a new table called `orders`. This table will have several fields:
 The `customer_id` field will store the customer who made the order and will act as a foreign key referencing the `customers` table. Similarly, the `product_id` field will form a relationship with the `products` table.
 
 Set the `id` field as the primary key for the `orders` table. You can also specify foreign keys. The foreign key links tables together and establishes the relationship. For example, in the `orders` table, if there is a person with id 3, the foreign key field indicates that this order was made by someone in the `customers` table with id 3. This allows retrieval of all data associated with that order.
+
+## Defining Foreign Keys in SQL
+
+Set the `customer_id` field as a foreign key referencing the `customers` table and its primary key field, `id`. Do the same for the `product_id` field, referencing the `products` table and its `id` field.
+
+If the concept of primary key and foreign key is unfamiliar, refer to documentation on W3Schools to understand how relationships are established in SQL using these keys.
+
+After correcting any syntax errors, such as using the correct brackets, running the command will create the `orders` table. The table will have four fields: `id` (primary key), `order_number`, `customer_id` (foreign key), and `product_id` (foreign key). These foreign keys link the `orders` table with the `customers` and `products` tables.

@@ -57,3 +57,15 @@ INNER JOIN customers ON orders.customer_id = customers.id;
 ```
 
 Running this query produces a joined table with fields from both tables. This allows searching through all tables and records, matching up orders, and joining them in a new, more useful table. For example, to dispatch order number 4362, you can see who it is for and their address.
+
+## Challenge: Join Orders with Products
+
+Currently, the order is joined with the customer. As a challenge, join the order with the product it relates to. Change the code to join the `orders` table with the `products` table and select the order number, product name, price, and stock.
+
+```sql
+SELECT orders.order_number, products.name, products.price, products.stock
+FROM orders
+INNER JOIN products ON orders.product_id = products.id;
+```
+
+Running this query joins the `orders` table with the `products` table, creating a new table based on this INNER JOIN. This demonstrates the flexibility and power of SQL database relationships when assembling data from various tables.

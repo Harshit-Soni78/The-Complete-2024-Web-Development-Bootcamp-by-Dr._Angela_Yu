@@ -43,3 +43,17 @@ INSERT INTO orders VALUES (1, 4362, 2, 1);
 ```
 
 Angela Yu has bought a Pencil; this is what the record represents.
+
+## Using INNER JOIN in SQL
+
+SQL provides a powerful feature called JOIN to combine tables. There are several types of joins, such as LEFT JOIN, RIGHT JOIN, and FULL JOIN, but the most commonly used is the INNER JOIN. INNER JOIN combines parts of tables where a particular foreign key matches.
+
+To join the `orders` table with the `customers` table and select the order number, first name, last name, and address, use the following SQL statement:
+
+```sql
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.id;
+```
+
+Running this query produces a joined table with fields from both tables. This allows searching through all tables and records, matching up orders, and joining them in a new, more useful table. For example, to dispatch order number 4362, you can see who it is for and their address.

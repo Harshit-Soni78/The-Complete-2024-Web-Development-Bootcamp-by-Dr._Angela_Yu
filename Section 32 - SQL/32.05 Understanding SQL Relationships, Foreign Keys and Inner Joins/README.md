@@ -69,3 +69,7 @@ INNER JOIN products ON orders.product_id = products.id;
 ```
 
 Running this query joins the `orders` table with the `products` table, creating a new table based on this INNER JOIN. This demonstrates the flexibility and power of SQL database relationships when assembling data from various tables.
+
+## Resources and Practice
+
+If there were any difficulties following the tutorial or if you want a copy of the completed table, a link to an online SQL version containing all data in the `orders`, `customers`, and `products` tables is available in the lesson resources. You can experiment with different code from W3Schools or elsewhere using SQLite.

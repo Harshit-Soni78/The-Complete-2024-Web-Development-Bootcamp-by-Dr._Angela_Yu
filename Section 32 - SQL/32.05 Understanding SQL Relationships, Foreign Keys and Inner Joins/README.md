@@ -26,3 +26,20 @@ Set the `customer_id` field as a foreign key referencing the `customers` table a
 If the concept of primary key and foreign key is unfamiliar, refer to documentation on W3Schools to understand how relationships are established in SQL using these keys.
 
 After correcting any syntax errors, such as using the correct brackets, running the command will create the `orders` table. The table will have four fields: `id` (primary key), `order_number`, `customer_id` (foreign key), and `product_id` (foreign key). These foreign keys link the `orders` table with the `customers` and `products` tables.
+
+## Inserting an Order Record
+
+Create the first order record in the `orders` table. The values are:
+
+- id: 1
+- order_number: 4362
+- customer_id: 2
+- product_id: 1
+
+In the `customers` table, the customer with id 2 is Angela Yu, and in the `products` table, the product with id 1 is a Pen. By establishing these relationships, it is possible to later join all relevant records and columns from all three tables as needed.
+
+```sql
+INSERT INTO orders VALUES (1, 4362, 2, 1);
+```
+
+Angela Yu has bought a Pencil; this is what the record represents.

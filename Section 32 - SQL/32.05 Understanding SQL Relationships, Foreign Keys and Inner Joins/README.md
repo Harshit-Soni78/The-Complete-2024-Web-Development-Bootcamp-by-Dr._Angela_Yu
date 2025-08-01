@@ -73,3 +73,10 @@ Running this query joins the `orders` table with the `products` table, creating 
 ## Resources and Practice
 
 If there were any difficulties following the tutorial or if you want a copy of the completed table, a link to an online SQL version containing all data in the `orders`, `customers`, and `products` tables is available in the lesson resources. You can experiment with different code from W3Schools or elsewhere using SQLite.
+
+## Key Takeaways
+
+- SQL relationships are established using foreign keys that link tables together.
+- The `orders` table uses foreign keys to reference both `customers` and `products` tables.
+- INNER JOIN is used to combine data from multiple tables based on matching foreign and primary keys.
+- SQL joins allow for flexible and powerful data retrieval across related tables.

@@ -35,3 +35,16 @@ Finally, we close the connection with `db.end()`. This simple process allows us 
 We will explore these steps in detail and perform many such operations. This introduction gives you a taste of how to use Postgres with Node and Express backends, emphasizing its common usage and helpful methods that simplify working with this powerful database.
 
 The npm package we use is called `node-postgres`, known as `pg` on npm. We will install it to simplify all operations with our Postgres database. Its high number of weekly downloads shows it is heavily relied upon by developers, confirming that we are following professional practices.
+
+## Installing Postgres and pgAdmin
+
+To get started, we need to install two pieces of software:
+
+- The Postgres server, which runs the database server on our local computer.
+- pgAdmin, a graphical user interface to interact with the Postgres server, simplifying database management compared to using terminal commands.
+
+If you are working with a remote server, installing the Postgres server locally is not necessary. However, for local development, installing both is essential to avoid storage costs and ease database interaction.
+
+pgAdmin allows us to view, organize, and query our data through a user-friendly interface rather than command-line operations, vastly simplifying our workflow.
+
+The next lesson will provide instructions on how to download and install these software packages on your computer system.

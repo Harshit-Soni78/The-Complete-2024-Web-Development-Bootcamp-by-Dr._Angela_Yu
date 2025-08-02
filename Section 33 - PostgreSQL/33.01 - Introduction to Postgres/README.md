@@ -15,3 +15,23 @@ Our client, which is the front-end of the website, sends requests to the server-
 This app logic communicates with the database, which stores persistent data such as user details, emails, passwords, blog posts, to-do list items, social network likes, and more. Essentially, any data that needs to be stored permanently and retrieved based on certain conditions is managed here.
 
 For example, if a user wants to retrieve a blog post from November 2021, the app queries the database to fetch that data, then formats and sends it back to the client with the appropriate response codes.
+
+## Using Postgres with Node.js
+
+The code required to use Postgres is simple because special packages exist to integrate Postgres with Node.js. We use the `pg` npm package to set up and interact with Postgres in our Node backend easily.
+
+Let's review an example of how to interact with Postgres from a Node backend. First, we create a constant called `db` that contains all the details needed to connect to our Postgres database.
+
+You can think of the Postgres database as its own server. Previously, we had separate servers for the API backend and the website frontend running on different localhost ports. Similarly, the database runs on its own server, which can be local or hosted remotely in the cloud.
+
+To connect to the database, we need authentication details such as username, host, database name, password, and the port where the database server is running. These credentials allow us to authenticate and connect to the correct database to store our data.
+
+After setting these details in our constant, we use the `connect()` method from the Postgres package to establish a connection. Then, we use `db.query` extensively to execute SQL commands.
+
+Inside `db.query`, we write SQL code as a string. For example, the command `SELECT * FROM users` retrieves all records from the users table. If there are errors, we handle them; otherwise, we log all the rows returned.
+
+Finally, we close the connection with `db.end()`. This simple process allows us to start using Postgres with our Node backend.
+
+We will explore these steps in detail and perform many such operations. This introduction gives you a taste of how to use Postgres with Node and Express backends, emphasizing its common usage and helpful methods that simplify working with this powerful database.
+
+The npm package we use is called `node-postgres`, known as `pg` on npm. We will install it to simplify all operations with our Postgres database. Its high number of weekly downloads shows it is heavily relied upon by developers, confirming that we are following professional practices.

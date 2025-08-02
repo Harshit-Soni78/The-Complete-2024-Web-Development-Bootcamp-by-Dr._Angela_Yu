@@ -48,3 +48,10 @@ If you are working with a remote server, installing the Postgres server locally 
 pgAdmin allows us to view, organize, and query our data through a user-friendly interface rather than command-line operations, vastly simplifying our workflow.
 
 The next lesson will provide instructions on how to download and install these software packages on your computer system.
+
+## Key Takeaways
+
+- Postgres is a widely used, advanced open-source relational database management system.
+- It is free to use and supported by a large community, making it ideal for career opportunities.
+- Postgres integrates with Node.js backend using the `pg` package to manage database connections and queries.
+- Installing Postgres server and pgAdmin UI simplifies local database management and interaction.

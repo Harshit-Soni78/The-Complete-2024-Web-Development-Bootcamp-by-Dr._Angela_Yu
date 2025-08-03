@@ -45,3 +45,13 @@ db.query("SELECT * FROM capitals", (err, res) => {
   db.end();
 });
 ```
+
+## Project Structure and Setup
+
+In the current lesson, you will see a zip file called World Capital Quiz. Download and extract it onto your computer and open it inside VS Code. You will see all of the files prepared for you. First, navigate to the file path and install all the Node modules by running:
+
+```bash
+npm install
+```
+
+Once done, look inside index.ejs, which defines the simple quiz application. The main.css and background image are hosted in the public folder. In index.js, the middleware uses express.static to define the static folder as the public folder, so it can be linked in HTML and other parts of the code.

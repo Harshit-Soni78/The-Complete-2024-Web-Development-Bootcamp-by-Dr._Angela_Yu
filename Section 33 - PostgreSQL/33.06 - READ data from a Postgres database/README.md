@@ -130,3 +130,14 @@ db.query("SELECT * FROM flags", (err, res) => {
 ```
 
 Once you run this code in index.js, you will have the same game, now powered by the database. The game is slightly harder than the previous one. Observe your data, make sure you know what is going on, and update your code as needed.
+
+## Conclusion
+
+Show off any modifications you make, or create a table of your own and make a quiz of your own. Let me know what you have built and what your friends and family think about it. In the next lesson, we will dive deeper into Postgres and running databases with our backend.
+
+## Key Takeaways
+
+- Connecting Node.js to a Postgres database involves configuring the pg client with username, host, database, password, and port.
+- SQL queries such as `SELECT * FROM capitals` are used to fetch data from the database for use in applications.
+- The pg package allows Node.js applications to interact with Postgres, retrieve data, and close connections properly.
+- Quiz applications can be powered by dynamic data from Postgres tables, enhancing interactivity and scalability.

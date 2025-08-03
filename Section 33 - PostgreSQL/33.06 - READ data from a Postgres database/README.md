@@ -104,3 +104,29 @@ Now, quiz is replaced with an array of records from the database. The rest of th
 ## Exercise: Flags Quiz
 
 Download the other zip file in this class, 8.2 Postgres READ.zip, and extract it. Open it in VS Code. This project uses the flags table. Install the required packages and use nodemon to run solution.js. On localhost:3000, you will see a quiz where you have to guess the country from the flag. The fields are named differently: the country is called name, and the flag is called flag.
+
+## Solution Walkthrough
+
+Install and import pg from the Postgres module. Set up the database connection with the same settings as before. Connect to the database and run the query to select all from the flags table. Set quiz to res.rows and close the connection.
+
+```js
+import pg from "pg";
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: "your_password",
+  port: 5432,
+});
+db.connect();
+db.query("SELECT * FROM flags", (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    quiz = res.rows;
+  }
+  db.end();
+});
+```
+
+Once you run this code in index.js, you will have the same game, now powered by the database. The game is slightly harder than the previous one. Observe your data, make sure you know what is going on, and update your code as needed.

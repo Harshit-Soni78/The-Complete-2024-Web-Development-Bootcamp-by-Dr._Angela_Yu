@@ -100,3 +100,7 @@ db.query("SELECT * FROM capitals", (err, res) => {
 ```
 
 Now, quiz is replaced with an array of records from the database. The rest of the code can remain as it is, using the quiz array, which now contains database data instead of hardcoded data. Use nodemon to run index.js, and on localhost:3000, you will see a new country name from the database each time you refresh.
+
+## Exercise: Flags Quiz
+
+Download the other zip file in this class, 8.2 Postgres READ.zip, and extract it. Open it in VS Code. This project uses the flags table. Install the required packages and use nodemon to run solution.js. On localhost:3000, you will see a quiz where you have to guess the country from the flag. The fields are named differently: the country is called name, and the flag is called flag.

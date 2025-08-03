@@ -63,3 +63,40 @@ The basic application, back-end, and front-end are already built. The express ap
 The input element uses autofocus and autocomplete="off" for better user experience. The answer is submitted to the /submit path using a POST request, and the answer is accessed via req.body.answer. The trim method is used to remove spaces at the beginning and end of the answer. The answer is checked against the capital in the currentQuestion object, which is set to a random object from the quiz array.
 
 Both the user's answer and the correct answer are converted to lowercase using toLowerCase() to normalize casing. If the answer is correct, the score increases, and the next question is set up. The index.ejs is rendered with the new question and updated score.
+
+## Replacing Hardcoded Data with Database Data
+
+The step we are interested in is to tap into our database and get all the entries. First, explore the existing code. Then, stop the server and use npm to install the pg package:
+
+```bash
+npm install pg
+```
+
+Once installed, import pg from the "pg" module. Define a new client and configure it as before. The only thing to change is the database name if you used a different one. The password is the one set during Postgres installation, and the port remains 5432.
+
+```js
+import pg from "pg";
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: "your_password",
+  port: 5432,
+});
+```
+
+After configuring, use db.connect() to start the connection. Decide when to make the SQL query; it is best to do it once when index.js first starts up. Use db.query to run the SQL code and set quiz to the result rows.
+
+```js
+db.connect();
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    quiz = res.rows;
+  }
+  db.end();
+});
+```
+
+Now, quiz is replaced with an array of records from the database. The rest of the code can remain as it is, using the quiz array, which now contains database data instead of hardcoded data. Use nodemon to run index.js, and on localhost:3000, you will see a new country name from the database each time you refresh.

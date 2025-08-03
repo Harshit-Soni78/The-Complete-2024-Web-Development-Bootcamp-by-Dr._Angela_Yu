@@ -55,3 +55,11 @@ npm install
 ```
 
 Once done, look inside index.ejs, which defines the simple quiz application. The main.css and background image are hosted in the public folder. In index.js, the middleware uses express.static to define the static folder as the public folder, so it can be linked in HTML and other parts of the code.
+
+## Application Logic Overview
+
+The basic application, back-end, and front-end are already built. The express app runs on port 3000. There is a quiz item array containing three objects, each representing a record in the database with a country and a capital. A scorekeeper called totalCorrect is used. Middleware is set up to use body-parser and serve static files. In index.ejs, the total score and question.country are displayed, and there is an input for the user to enter the capital.
+
+The input element uses autofocus and autocomplete="off" for better user experience. The answer is submitted to the /submit path using a POST request, and the answer is accessed via req.body.answer. The trim method is used to remove spaces at the beginning and end of the answer. The answer is checked against the capital in the currentQuestion object, which is set to a random object from the quiz array.
+
+Both the user's answer and the correct answer are converted to lowercase using toLowerCase() to normalize casing. If the answer is correct, the score increases, and the next question is set up. The index.ejs is rendered with the new question and updated score.

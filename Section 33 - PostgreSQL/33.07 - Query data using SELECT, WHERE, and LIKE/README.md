@@ -52,3 +52,19 @@ To select multiple columns, separate the column names with commas. For example, 
 ```sql
 SELECT country, wheat_production FROM world_food;
 ```
+
+## Filtering Data with WHERE Clause
+
+To filter rows based on conditions, use the `WHERE` clause. For example, to find the rice production for the United States:
+
+```sql
+SELECT rice_production FROM world_food WHERE country = 'United States';
+```
+
+This query returns a single value indicating the rice production in million metric tons for the United States.
+
+You can use other comparison operators such as less than (`<`), greater than (`>`), less than or equal to (`<=`), and greater than or equal to (`>=`) in the `WHERE` clause. For example, to find all countries where wheat production is greater than 20 million metric tons:
+
+```sql
+SELECT country FROM world_food WHERE wheat_production > 20;
+```

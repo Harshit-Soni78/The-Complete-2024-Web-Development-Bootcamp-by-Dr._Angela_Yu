@@ -28,3 +28,13 @@ This command creates a table with an auto-incrementing `id` as the primary key, 
 To import data into the `world_food` table, right-click the table, select "Import/Export Data," and choose the downloaded CSV file. Ensure "Import" is selected and that the "Header" option is checked. Since the CSV does not include an `id` column, exclude it from the columns to import, allowing Postgres to auto-generate it.
 
 After importing, you will see nine rows with auto-generated IDs from 1 to 9, along with the corresponding country names and their rice and wheat production values.
+
+## Using the SELECT Statement
+
+The simplest way to retrieve data is to select all columns from a table using the asterisk (`*`). For example, to select everything from the `world_food` table, use:
+
+```sql
+SELECT * FROM world_food;
+```
+
+This query returns all rows and columns from the table.

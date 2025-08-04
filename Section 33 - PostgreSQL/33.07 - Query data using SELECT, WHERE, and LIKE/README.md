@@ -68,3 +68,25 @@ You can use other comparison operators such as less than (`<`), greater than (`>
 ```sql
 SELECT country FROM world_food WHERE wheat_production > 20;
 ```
+
+## Pattern Matching with LIKE
+
+Sometimes, you may want to perform fuzzy matching to find data that partially matches a pattern. The `LIKE` keyword allows this by using the percent sign (`%`) as a wildcard representing any sequence of characters.
+
+For example, to find all countries starting with the letter "U", you can use string concatenation with the `||` operator:
+
+```sql
+SELECT country FROM world_food WHERE country LIKE 'U' || '%';
+```
+
+This query returns countries such as Ukraine and United States, which start with "U".
+
+Similarly, to find all countries ending with the letter "a", use:
+
+```sql
+SELECT country FROM world_food WHERE country LIKE '%' || 'a';
+```
+
+This will return countries such as Australia, China, Ethiopia, and India.
+
+Note that in SQL, the `||` operator concatenates strings, unlike in many programming languages where it represents a logical OR.

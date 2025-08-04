@@ -90,3 +90,10 @@ SELECT country FROM world_food WHERE country LIKE '%' || 'a';
 This will return countries such as Australia, China, Ethiopia, and India.
 
 Note that in SQL, the `||` operator concatenates strings, unlike in many programming languages where it represents a logical OR.
+
+## Key Takeaways
+
+- Created a PostgreSQL table `world_food` with columns for country, rice production, and wheat production.
+- Imported CSV data into the PostgreSQL table, using `SERIAL` for auto-generated primary keys.
+- Used the `SELECT` statement to retrieve all columns, specific columns, and multiple columns from a table.
+- Applied the `WHERE` clause with conditions such as equality, greater than, and pattern matching using `LIKE` and string concatenation with `||`.

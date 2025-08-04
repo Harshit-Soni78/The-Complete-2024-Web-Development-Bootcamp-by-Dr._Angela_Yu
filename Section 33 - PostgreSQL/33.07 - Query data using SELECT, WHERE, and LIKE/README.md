@@ -38,3 +38,17 @@ SELECT * FROM world_food;
 ```
 
 This query returns all rows and columns from the table.
+
+### Selecting Specific Columns
+
+To select only one column, specify the column name instead of the asterisk. For example, to select only the `country` column:
+
+```sql
+SELECT country FROM world_food;
+```
+
+To select multiple columns, separate the column names with commas. For example, to select `country` and `wheat_production`:
+
+```sql
+SELECT country, wheat_production FROM world_food;
+```

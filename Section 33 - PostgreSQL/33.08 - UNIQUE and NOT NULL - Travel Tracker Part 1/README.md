@@ -60,3 +60,30 @@ country_codes.forEach(function (code) {
 ## Why Split the Countries String?
 
 Although we expect an array, EJS templating passes a string. By splitting the string by commas, we recreate the array in JavaScript. This allows us to loop through each country code and update the map accordingly.
+
+## Backend: Querying the Database
+
+The backend uses the `pg` module to connect to Postgres. The configuration includes the username, host, port, database name, and password. After connecting, we use `db.query` to select all country codes from the `visited_countries` table.
+
+```js
+const { Client } = require("pg");
+const db = new Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: "123456",
+  port: 5432,
+});
+db.connect();
+```
+
+```js
+db.query("SELECT country_code FROM visited_countries", (err, result) => {
+  if (err) throw err;
+  const countries = [];
+  result.rows.forEach((row) => {
+    countries.push(row.country_code);
+  });
+  // Pass countries to the template
+});
+```

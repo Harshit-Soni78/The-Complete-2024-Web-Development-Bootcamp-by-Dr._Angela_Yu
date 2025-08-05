@@ -87,3 +87,8 @@ db.query("SELECT country_code FROM visited_countries", (err, result) => {
   // Pass countries to the template
 });
 ```
+
+## Passing Data to the Frontend
+
+After retrieving the country codes, we pass them to `index.ejs` as a comma-separated string and also send the count of countries. The frontend splits this string and updates the map accordingly.
+

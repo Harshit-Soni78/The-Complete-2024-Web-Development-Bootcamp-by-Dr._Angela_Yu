@@ -45,3 +45,14 @@ After adding the country codes, click the save button to persist the data. The `
 ## Displaying Countries in the Application
 
 With data in the `visited_countries` table, the next step is to display these countries in the application. Run `nodemon solution1.js` and visit `localhost:3000` to see the countries highlighted on the map.
+
+## Understanding the Frontend Code
+
+In `index.ejs`, the countries are passed as a string and split by commas to form an array of country codes. Each code is used to select the corresponding SVG element on the map and change its fill color.
+
+```js
+var country_codes = countries.split(",");
+country_codes.forEach(function (code) {
+  document.getElementById(code).style.fill = "teal";
+});
+```

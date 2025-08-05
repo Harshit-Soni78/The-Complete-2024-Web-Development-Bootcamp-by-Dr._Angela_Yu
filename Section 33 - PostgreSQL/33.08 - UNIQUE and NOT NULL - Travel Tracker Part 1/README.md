@@ -27,3 +27,13 @@ CREATE TABLE visited_countries (
     country_code CHAR(2) UNIQUE NOT NULL
 );
 ```
+
+## Manually Adding Data
+
+We will manually add data to the `visited_countries` table using pgAdmin. Leave the `id` field empty to use the default value. Enter a two-letter country code (e.g., `FR` for France) in the `country_code` field, as it cannot be null.
+
+```text
+FR
+GB
+US
+```

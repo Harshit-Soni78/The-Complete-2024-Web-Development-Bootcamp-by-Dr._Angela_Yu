@@ -92,3 +92,13 @@ db.query("SELECT country_code FROM visited_countries", (err, result) => {
 
 After retrieving the country codes, we pass them to `index.ejs` as a comma-separated string and also send the count of countries. The frontend splits this string and updates the map accordingly.
 
+## Reviewing the Solution
+
+Review the code in `solution1.js` and compare it with your own implementation. There are multiple ways to achieve the same result. As long as your code works, it is acceptable.
+
+## Key Takeaways
+
+- The exercise involves building a website to track visited countries using a Postgres database and Node.js backend.
+- The `visited_countries` table uses `id` as a SERIAL PRIMARY KEY and `country_code` as a CHAR(2) with UNIQUE and NOT NULL constraints.
+- Data is manually added to the table, and the application retrieves and displays these countries on a world map using EJS and JavaScript.
+- The backend queries the database, processes the results, and passes the country codes to the frontend for visualization.

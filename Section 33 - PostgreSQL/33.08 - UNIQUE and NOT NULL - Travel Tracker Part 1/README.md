@@ -56,3 +56,7 @@ country_codes.forEach(function (code) {
   document.getElementById(code).style.fill = "teal";
 });
 ```
+
+## Why Split the Countries String?
+
+Although we expect an array, EJS templating passes a string. By splitting the string by commas, we recreate the array in JavaScript. This allows us to loop through each country code and update the map accordingly.

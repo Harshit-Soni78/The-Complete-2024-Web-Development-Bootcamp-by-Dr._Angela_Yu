@@ -7,3 +7,23 @@ In this exercise, we will build a website that allows us to track all the countr
 ## Application Overview
 
 The goal is to create an app where we can enter countries we have visited. This app is backed by a Postgres database. We will enter data into the database, and our front-end will display the countries in a visually appealing way.
+
+## Preparing the Project
+
+Ensure you have extracted the files and installed all Node modules. Open the project in VS Code. Inside `index.js`, you will find a basic Express app skeleton.
+
+## Creating the Database Table
+
+We will create a table named `visited_countries` with two columns:
+
+- `id`: SERIAL, PRIMARY KEY
+- `country_code`: CHAR(2), NOT NULL, UNIQUE
+
+This ensures that each country code is unique and not empty, preventing duplicate or null entries.
+
+```sql
+CREATE TABLE visited_countries (
+    id SERIAL PRIMARY KEY,
+    country_code CHAR(2) UNIQUE NOT NULL
+);
+```

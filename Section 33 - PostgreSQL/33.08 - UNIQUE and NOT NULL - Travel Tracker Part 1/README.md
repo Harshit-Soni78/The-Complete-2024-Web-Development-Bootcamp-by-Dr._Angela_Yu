@@ -41,3 +41,7 @@ US
 ## Saving Data and Primary Key Behavior
 
 After adding the country codes, click the save button to persist the data. The `id` values are automatically generated and must be unique. If a previous entry was rejected, its `id` may be skipped, but uniqueness is maintained.
+
+## Displaying Countries in the Application
+
+With data in the `visited_countries` table, the next step is to display these countries in the application. Run `nodemon solution1.js` and visit `localhost:3000` to see the countries highlighted on the map.

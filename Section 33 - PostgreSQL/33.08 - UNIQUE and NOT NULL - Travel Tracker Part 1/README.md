@@ -37,3 +37,7 @@ FR
 GB
 US
 ```
+
+## Saving Data and Primary Key Behavior
+
+After adding the country codes, click the save button to persist the data. The `id` values are automatically generated and must be unique. If a previous entry was rejected, its `id` may be skipped, but uniqueness is maintained.

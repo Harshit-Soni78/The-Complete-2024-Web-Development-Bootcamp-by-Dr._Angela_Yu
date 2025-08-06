@@ -55,3 +55,9 @@ db.query("INSERT INTO visited_countries (country_code) VALUES ($1)", [
 ```
 
 In the SQL command, use dollar sign placeholders for the values you want to insert. The array after the comma contains the corresponding variables or expressions, which are inserted in order.
+
+## Handling Form Input and Database Logic
+
+In your `index.js`, handle the form entry by checking which action the form uses and catching it in your server. With body-parser installed and enabled, you can access the data from the input. Check the country name the user typed against the countries table to get the corresponding country code, then save that code into the `visited_countries` table. Use this data to update the world map.
+
+There are several programming challenges here, involving some thinking, debugging, and trial and error. Give it a good attempt.

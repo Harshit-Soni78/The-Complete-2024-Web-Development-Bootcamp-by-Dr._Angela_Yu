@@ -19,3 +19,23 @@ INSERT INTO world_food (country, rice_production, wheat_production) VALUES ('Ita
 The columns in the parentheses specify which columns to insert into, and the VALUES are provided in the same order. Strings in SQL should be enclosed in single quotes. Once you have your columns and values, end the command with a semicolon. After running the command, you can view your data and see that the new row has been inserted.
 
 Previously, we used pgAdmin to insert rows, but now we need to know how to do it using SQL because we will need to insert new data whenever a user adds a new country they have visited. This must be done programmatically.
+
+## Creating a Countries Table for Country Codes
+
+To continue and complete our Travel Tracker application, we will create a new table that allows us to reference the country name a user types in with the country code of that country. Most users will not have the two-letter country code memorized, so we should handle this in the back end. For example, if someone types in Angola, we should look up the two-letter code (AO) and save that code into the `visited_countries` table.
+
+We will create a new table by importing data from a CSV file called `countries.csv`. The table will be called `countries` and created inside your world database. The columns will be as follows:
+
+- `id`: SERIAL PRIMARY KEY
+- `country_code`: CHAR(2)
+- `country_name`: VARCHAR(100)
+
+```sql
+CREATE TABLE countries (
+    id SERIAL PRIMARY KEY,
+    country_code CHAR(2),
+    country_name VARCHAR(100)
+);
+```
+
+After creating the table, import the data from `countries.csv`, ensuring that the header is checked and all columns have data. Once the import is complete, you will have all the countries in the world listed in the table, with their corresponding country codes.

@@ -39,3 +39,7 @@ CREATE TABLE countries (
 ```
 
 After creating the table, import the data from `countries.csv`, ensuring that the header is checked and all columns have data. Once the import is complete, you will have all the countries in the world listed in the table, with their corresponding country codes.
+
+## Integrating with the Application
+
+Now, let us use this to create the final part of our application. You can see a demo by running `solution2.js` with nodemon and navigating to `localhost:3000`. You can type in a country, such as Japan, and click add. The country will light up and be added to your Travel Tracker. You can continue adding countries, and the total count will increase, tracking all the places you have visited.

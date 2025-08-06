@@ -61,3 +61,42 @@ In the SQL command, use dollar sign placeholders for the values you want to inse
 In your `index.js`, handle the form entry by checking which action the form uses and catching it in your server. With body-parser installed and enabled, you can access the data from the input. Check the country name the user typed against the countries table to get the corresponding country code, then save that code into the `visited_countries` table. Use this data to update the world map.
 
 There are several programming challenges here, involving some thinking, debugging, and trial and error. Give it a good attempt.
+
+## Solution Walkthrough
+
+Inside `solution2.js`, we have made some modifications. We created a new route with `app.post()` because the form in `index.ejs` posts to the `/add` route. We catch this in our code and access the input from the form, which has the name `country`. This allows us to get whatever the user typed into the box.
+
+```js
+app.post("/add", (req, res) => {
+  const countryInput = req.body.country;
+  db.query(
+    "SELECT country_code FROM countries WHERE country_name = $1",
+    [countryInput],
+    (err, result) => {
+      if (result.rows.length !== 0) {
+        const countryCode = result.rows[0].country_code;
+        db.query(
+          "INSERT INTO visited_countries (country_code) VALUES ($1)",
+          [countryCode],
+          (err2, result2) => {
+            res.redirect("/");
+          }
+        );
+      } else {
+        res.redirect("/");
+      }
+    }
+  );
+});
+```
+
+We use `db.query()` and the SELECT keyword to look for the country_code from our countries table where the country_name matches the input. If a result is found, we grab the country_code and insert it into the `visited_countries` table. Finally, we redirect back to the home page, which queries the database for all visited country codes to display in the application.
+
+You may notice that the function to check which countries have been visited is split off, but it is optional. Having it all inside `app.get()` is perfectly fine. Now, if you test the app, entering a country name such as Germany will light it up, and the logic should work as expected. Step 2 is now complete.
+
+## Key Takeaways
+
+- Learned how to use the INSERT command in PostgreSQL to add new data to a table.
+- Understood how to create and import data into a new table for country codes and names.
+- Explored parameterized queries in Node.js using the pg package to safely insert dynamic data.
+- Implemented logic to map user input country names to country codes and update the visited countries table programmatically.

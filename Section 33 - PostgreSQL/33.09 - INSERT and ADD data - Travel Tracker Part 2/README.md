@@ -43,3 +43,15 @@ After creating the table, import the data from `countries.csv`, ensuring that th
 ## Integrating with the Application
 
 Now, let us use this to create the final part of our application. You can see a demo by running `solution2.js` with nodemon and navigating to `localhost:3000`. You can type in a country, such as Japan, and click add. The country will light up and be added to your Travel Tracker. You can continue adding countries, and the total count will increase, tracking all the places you have visited.
+
+## Parameterized Queries in Node.js
+
+When writing SQL queries and using the INSERT INTO command, we insert values directly when they are hard-coded. However, in our Node back-end, we use `db.query()` from the pg NPM package. This allows us to insert parameters dynamically. The first argument is the SQL command, and the second is an array of values to insert into the command. This enables us to insert variables or expressions, not just hard-coded values.
+
+```js
+db.query("INSERT INTO visited_countries (country_code) VALUES ($1)", [
+  countryCode,
+]);
+```
+
+In the SQL command, use dollar sign placeholders for the values you want to insert. The array after the comma contains the corresponding variables or expressions, which are inserted in order.

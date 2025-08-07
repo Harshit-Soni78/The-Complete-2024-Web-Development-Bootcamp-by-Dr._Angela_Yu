@@ -33,3 +33,14 @@ To further improve matching, we convert the user input to lowercase using JavaSc
 ## Final Testing and Summary
 
 With these improvements implemented in solution4.js, typing "Tanzania" and clicking ADD successfully adds the country despite the official name being longer in the database. These enhancements address common edge cases and improve the robustness and user experience of the Travel Tracker app. As you continue testing your app, you may discover additional edge cases to fix by refining your SQL queries and error handling.
+
+## Conclusion
+
+This process exemplifies software development where we identify edge cases, bugs, and user experience issues, then improve our code accordingly. Thank you for building this World Tracker with me. If you have visited many places and want to share your World Tracker with numerous countries added, feel free to share in the Q&A section. In the next lesson, we will continue with PostgreSQL and explore establishing relationships within the database.
+
+## Key Takeaways
+
+- Implemented error handling with try-catch blocks to improve user experience when adding countries.
+- Used SQL's WHERE LIKE pattern to allow fuzzy matching of country names in queries.
+- Converted user input and database values to lowercase to ensure case-insensitive matching.
+- Addressed edge cases such as duplicate country additions and non-existent country entries gracefully.

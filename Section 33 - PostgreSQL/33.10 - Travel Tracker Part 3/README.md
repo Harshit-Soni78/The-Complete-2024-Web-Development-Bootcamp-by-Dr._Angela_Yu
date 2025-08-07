@@ -19,3 +19,9 @@ In the index.ejs file, the input placeholder is set using EJS to display either 
 ## Reviewing the Solution in solution3.js
 
 In solution3.js, the function that checks all visited countries is already split out for reuse. The first try-catch block wraps the query that searches for a country_name matching the user input. If this fails, the error is logged, and the index.ejs page is rerendered with the current countries and an error message "Country name does not exist, try again." The second try-catch block wraps the insertion query and handles duplicate entries similarly by logging the error and rerendering the page with an appropriate message.
+
+## Handling Long Country Names with SQL WHERE LIKE Pattern
+
+Some countries in the database have long official names, such as "United Republic of Tanzania." Users are unlikely to type the full official name, so a direct match query would fail. To address this, we use the SQL WHERE LIKE pattern to perform fuzzy matching. This allows us to match a substring within the country_name column, enabling users to input partial names like "Tanzania" and still find the correct country_code.
+
+The WHERE LIKE query uses wildcards (%) concatenated before and after the user input, allowing any text to appear before or after the search term. For example, if the input is "Tanzania," the query matches any country_name containing "Tanzania" anywhere in the string.

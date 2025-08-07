@@ -25,3 +25,7 @@ In solution3.js, the function that checks all visited countries is already split
 Some countries in the database have long official names, such as "United Republic of Tanzania." Users are unlikely to type the full official name, so a direct match query would fail. To address this, we use the SQL WHERE LIKE pattern to perform fuzzy matching. This allows us to match a substring within the country_name column, enabling users to input partial names like "Tanzania" and still find the correct country_code.
 
 The WHERE LIKE query uses wildcards (%) concatenated before and after the user input, allowing any text to appear before or after the search term. For example, if the input is "Tanzania," the query matches any country_name containing "Tanzania" anywhere in the string.
+
+## Ensuring Case-Insensitive Matching
+
+To further improve matching, we convert the user input to lowercase using JavaScript's `toLowerCase()` method. Correspondingly, we wrap the country_name column in the SQL query with the `LOWER()` function. This ensures that the comparison is case-insensitive, allowing inputs like "tanzania" or "TANZANIA" to match the database entry regardless of casing.

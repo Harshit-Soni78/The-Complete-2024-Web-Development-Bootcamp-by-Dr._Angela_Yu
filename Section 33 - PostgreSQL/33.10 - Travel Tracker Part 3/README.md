@@ -29,3 +29,7 @@ The WHERE LIKE query uses wildcards (%) concatenated before and after the user i
 ## Ensuring Case-Insensitive Matching
 
 To further improve matching, we convert the user input to lowercase using JavaScript's `toLowerCase()` method. Correspondingly, we wrap the country_name column in the SQL query with the `LOWER()` function. This ensures that the comparison is case-insensitive, allowing inputs like "tanzania" or "TANZANIA" to match the database entry regardless of casing.
+
+## Final Testing and Summary
+
+With these improvements implemented in solution4.js, typing "Tanzania" and clicking ADD successfully adds the country despite the official name being longer in the database. These enhancements address common edge cases and improve the robustness and user experience of the Travel Tracker app. As you continue testing your app, you may discover additional edge cases to fix by refining your SQL queries and error handling.

@@ -15,3 +15,7 @@ The second try-catch block will wrap the insertion query into the visited_countr
 ## Passing Error Messages to the Front-End
 
 In the index.ejs file, the input placeholder is set using EJS to display either the default message "Enter the country name" or an error message passed from the back-end. By passing error messages from our try-catch blocks, we can dynamically update the placeholder to inform the user of issues such as invalid country names or duplicate entries.
+
+## Reviewing the Solution in solution3.js
+
+In solution3.js, the function that checks all visited countries is already split out for reuse. The first try-catch block wraps the query that searches for a country_name matching the user input. If this fails, the error is logged, and the index.ejs page is rerendered with the current countries and an error message "Country name does not exist, try again." The second try-catch block wraps the insertion query and handles duplicate entries similarly by logging the error and rerendering the page with an appropriate message.

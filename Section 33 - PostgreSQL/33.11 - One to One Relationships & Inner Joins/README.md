@@ -19,3 +19,9 @@ When you think of a One to One relationship, it means that there is one entry in
 An example of this is represented using SQL code. Here, we are creating two tables: one called `student` and the other called `contact_detail`. These tables represent different pieces of data about a student in an imaginary school. The first table has the `first_name` and `last_name` of the student, and a PRIMARY KEY to represent the `id` of that record. This is a simplified example, but you can imagine a student table containing such information.
 
 Every so often, you might need to contact the student's parents, so you would need to look up the student in the `contact_detail` table. Here, we extend the student table by adding more details related to their contacts, such as telephone number or address. While all of this could be inside the student table, it is not modular. Tables are more efficient if we can separate them into different tasks or roles.
+
+## Linking Tables with One to One Relationship
+
+To link them, we have a One to One relationship between the `id`s. The `id` of the student is the PRIMARY KEY of the student table, and we use that same `id` when we create a record in the `contact_detail` table. This is set to be UNIQUE, so it cannot reoccur in this table. We cannot map two student ids to two different records, for example. We set it as an integer because the id is an integer, a whole number. The REFERENCES keyword in Postgres sets this field as a FOREIGN KEY.
+
+Now we have a PRIMARY KEY that uniquely identifies all records in the student table, and a FOREIGN KEY that identifies the relationship between records in the `contact_detail` table and the records in the student table.

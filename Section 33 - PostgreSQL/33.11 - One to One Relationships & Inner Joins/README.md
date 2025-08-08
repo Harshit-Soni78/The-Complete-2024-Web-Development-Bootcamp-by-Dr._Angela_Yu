@@ -52,3 +52,14 @@ JOIN contact_detail ON student.id = contact_detail.id;
 The SELECT \* selects everything from the student table. The JOIN keyword performs what is known as an INNER JOIN, joining two tables based on criteria determined by the ON keyword. Here, we look inside the student table, find the id (the Primary Key), and check for equality with the id in the contact_detail table. When they match, we find the record containing all details of that student. The FOREIGN KEY and PRIMARY KEY match, and we get the complete record.
 
 Running this command results in a single table with all fields corresponding to that entry. This is how we use a One to One relationship.
+
+## Practice Exercise
+
+Try this out as an exercise. Enter the command into your pgAdmin. If you need to copy the command, it is available in `queries.sql`. You should end up with the same table being generated. Paste in your query, ensure you are in the correct database, and hit Run. This command will utilize the One to One relationship and bring up the joined table.
+
+## Key Takeaways
+
+- One to One relationships modularize databases by splitting tables and linking them via unique IDs.
+- The FOREIGN KEY and PRIMARY KEY constraints enforce referential integrity between related tables.
+- INNER JOINs are used to combine data from related tables based on matching keys.
+- SQL comments use two dashes (--) and do not execute as code.

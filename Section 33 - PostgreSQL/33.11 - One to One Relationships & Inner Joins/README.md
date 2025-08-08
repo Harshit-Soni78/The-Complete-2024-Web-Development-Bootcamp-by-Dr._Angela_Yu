@@ -39,3 +39,16 @@ Collapse all your databases, then create a new database called `school`. Click S
 Now that the code is in, create the two tables by running those commands. If you go into Schemas and hit Refresh, you should see the two tables created. They do not yet have any data. Populate some data by copying the part from the Data section and pasting it into the Query section. Hit Run to insert the data into the tables.
 
 The first command inserts into the students table, adding a student named Angela Yu. Then, insert details into the `contact_detail` table, including telephone number, address, and the FOREIGN KEY, the student id. Since the student table's Primary Key is SERIAL, the id starts from 1, and this is the only entry added so far. The id for this student is 1, which is inserted into the `contact_detail` table as the id of this record. An imaginary telephone number and address are added, and using this FOREIGN KEY, it is linked to the PRIMARY KEY. These two records, though in different tables, are now linked through this 1:1 relationship.
+
+## Using One to One Relationships with INNER JOIN
+
+To use this One to One relationship, if we want to bring up the entire record, we use SQL. The following code selects all fields from the student table and joins it with the contact_detail table using an INNER JOIN, matching the ids.
+
+```sql
+SELECT * FROM student
+JOIN contact_detail ON student.id = contact_detail.id;
+```
+
+The SELECT \* selects everything from the student table. The JOIN keyword performs what is known as an INNER JOIN, joining two tables based on criteria determined by the ON keyword. Here, we look inside the student table, find the id (the Primary Key), and check for equality with the id in the contact_detail table. When they match, we find the record containing all details of that student. The FOREIGN KEY and PRIMARY KEY match, and we get the complete record.
+
+Running this command results in a single table with all fields corresponding to that entry. This is how we use a One to One relationship.

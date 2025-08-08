@@ -29,3 +29,13 @@ Now we have a PRIMARY KEY that uniquely identifies all records in the student ta
 ## Database Design and Visualization
 
 We are now getting into the realm of database design. Often, people design their databases using drawings, which you can create yourself using tools like draw.io. You can create tables, add fields, and plan different relationships and links between tables. This is an easy, at-a-glance way to see how we have a 1:1 relationship between the id fields in these two tables.
+
+## Exercise: Creating Tables in PostgreSQL
+
+You should create this in Postgres yourself. Complete these sessions as an exercise to practice creating these relationships. First, go into the resources for this session and download the 8.5 Family Travel Tracker. This file contains all the starting files needed for the final exercise, and also a file called `queries.sql` with all the queries from this lesson. This allows you to copy commands and put them into Postgres, avoiding typos or spelling errors.
+
+Collapse all your databases, then create a new database called `school`. Click Save, and the school database will be created. Click on the Query tool to connect to the school database. Paste in the queries you copied. The lines starting with two dashes (--) are comments, which separate different parts of the queries. In SQL, comments are created using two dashes, unlike JavaScript which uses two forward slashes. Comments will not be executed as code.
+
+Now that the code is in, create the two tables by running those commands. If you go into Schemas and hit Refresh, you should see the two tables created. They do not yet have any data. Populate some data by copying the part from the Data section and pasting it into the Query section. Hit Run to insert the data into the tables.
+
+The first command inserts into the students table, adding a student named Angela Yu. Then, insert details into the `contact_detail` table, including telephone number, address, and the FOREIGN KEY, the student id. Since the student table's Primary Key is SERIAL, the id starts from 1, and this is the only entry added so far. The id for this student is 1, which is inserted into the `contact_detail` table as the id of this record. An imaginary telephone number and address are added, and using this FOREIGN KEY, it is linked to the PRIMARY KEY. These two records, though in different tables, are now linked through this 1:1 relationship.

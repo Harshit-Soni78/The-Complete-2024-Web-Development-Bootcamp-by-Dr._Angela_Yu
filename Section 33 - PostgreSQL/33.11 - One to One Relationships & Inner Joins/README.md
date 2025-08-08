@@ -25,3 +25,7 @@ Every so often, you might need to contact the student's parents, so you would ne
 To link them, we have a One to One relationship between the `id`s. The `id` of the student is the PRIMARY KEY of the student table, and we use that same `id` when we create a record in the `contact_detail` table. This is set to be UNIQUE, so it cannot reoccur in this table. We cannot map two student ids to two different records, for example. We set it as an integer because the id is an integer, a whole number. The REFERENCES keyword in Postgres sets this field as a FOREIGN KEY.
 
 Now we have a PRIMARY KEY that uniquely identifies all records in the student table, and a FOREIGN KEY that identifies the relationship between records in the `contact_detail` table and the records in the student table.
+
+## Database Design and Visualization
+
+We are now getting into the realm of database design. Often, people design their databases using drawings, which you can create yourself using tools like draw.io. You can create tables, add fields, and plan different relationships and links between tables. This is an easy, at-a-glance way to see how we have a 1:1 relationship between the id fields in these two tables.

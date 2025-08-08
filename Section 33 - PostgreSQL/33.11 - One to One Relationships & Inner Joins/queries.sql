@@ -16,3 +16,9 @@ INSERT INTO student (first_name, last_name)
 VALUES ('Angela', 'Yu');
 INSERT INTO contact_detail (id, tel, address)
 VALUES (1, '+123456789', '123 App Brewery Road');
+
+-- Join --
+SELECT * 
+FROM student
+JOIN contact_detail
+ON student.id = contact_detail.id

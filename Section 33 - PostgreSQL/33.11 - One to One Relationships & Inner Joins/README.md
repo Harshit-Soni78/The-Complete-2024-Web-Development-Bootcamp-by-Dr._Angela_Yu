@@ -13,3 +13,9 @@ Relationships are a significant aspect of SQL-type databases, and it is what the
 The first type of relationship we will look at is the simplest: a One to One relationship. In a crow's feet diagram, One to One relationships are represented in a specific way. On one side, we have a table called `student`, and on the other side, a table called `contact`. These two tables are linked together using a 1:1 relationship, and they are linked by the field that is the `id`.
 
 When you think of a One to One relationship, it means that there is one entry in the `student` table that maps to one entry in the `contact` table. Often, this is a way to modularize your database. For example, if you have a table with many columns, as the columns increase, your database becomes larger and more difficult to search. Many databases are optimized to have many records (rows), but they can struggle when you have too many fields (columns). Splitting a table using a One to One relationship can help.
+
+## Example: Creating Tables for One to One Relationship
+
+An example of this is represented using SQL code. Here, we are creating two tables: one called `student` and the other called `contact_detail`. These tables represent different pieces of data about a student in an imaginary school. The first table has the `first_name` and `last_name` of the student, and a PRIMARY KEY to represent the `id` of that record. This is a simplified example, but you can imagine a student table containing such information.
+
+Every so often, you might need to contact the student's parents, so you would need to look up the student in the `contact_detail` table. Here, we extend the student table by adding more details related to their contacts, such as telephone number or address. While all of this could be inside the student table, it is not modular. Tables are more efficient if we can separate them into different tasks or roles.

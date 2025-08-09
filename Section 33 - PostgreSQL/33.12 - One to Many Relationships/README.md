@@ -65,3 +65,15 @@ JOIN homework_submission ON student.id = homework_submission.student_id;
 ```
 
 This query selects all columns from both tables where the `student.id` matches the `homework_submission.student_id`. The result is a joined table showing each homework submission alongside the corresponding student information.
+
+### Selecting Specific Columns
+
+If you want to narrow down the results to specific columns for clarity, you can specify them in the SELECT statement.
+
+```sql
+SELECT student.id, student.first_name, student.last_name, homework_submission.mark
+FROM student
+JOIN homework_submission ON student.id = homework_submission.student_id;
+```
+
+This query returns a concise table with the student's id, first name, last name, and the mark for each homework submission, making it easier to understand.

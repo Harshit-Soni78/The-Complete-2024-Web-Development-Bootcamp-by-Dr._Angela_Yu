@@ -41,3 +41,16 @@ Let's create this table in pgAdmin to work with it. Open the query editor, paste
 ### Naming Conventions for Tables
 
 Be mindful of pluralization when naming tables. Some prefer plural names like `contact_details`, `homework_submissions`, `students`, while others prefer singular names like `contact_detail`, `student`. It is important to choose a consistent naming scheme and stick to it to maintain clarity and avoid confusion.
+
+### Inserting Data into homework_submission
+
+Now that the `homework_submission` table is created, let's add some data. The `id` field is automatically generated, so we only need to insert values for `mark` and `student_id`.
+
+```sql
+INSERT INTO homework_submission (mark, student_id) VALUES
+    (85, 1),
+    (90, 1),
+    (78, 1);
+```
+
+This inserts three homework submissions with different marks, all associated with the same student whose `id` is 1.

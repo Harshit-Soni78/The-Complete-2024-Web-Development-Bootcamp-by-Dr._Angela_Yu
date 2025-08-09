@@ -77,3 +77,10 @@ JOIN homework_submission ON student.id = homework_submission.student_id;
 ```
 
 This query returns a concise table with the student's id, first name, last name, and the mark for each homework submission, making it easier to understand.
+
+## Key Takeaways
+
+- One to Many relationships are common in databases where one record in a table relates to multiple records in another.
+- The Foreign Key in the Many side table links back to the Primary Key in the One side table.
+- SQL JOIN operations allow combining data from related tables based on matching keys.
+- Consistent naming conventions for tables (singular or plural) are important for clarity and maintenance.

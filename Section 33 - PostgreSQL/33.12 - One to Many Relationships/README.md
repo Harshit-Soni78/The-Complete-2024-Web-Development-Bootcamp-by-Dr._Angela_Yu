@@ -37,3 +37,7 @@ This SQL command creates the `homework_submission` table. The `id` field is set 
 The `REFERENCES` keyword is used to set up the Foreign Key. This means that the `student_id` in the `homework_submission` table must correspond to an existing `id` in the `student` table. This enforces referential integrity between the two tables.
 
 Let's create this table in pgAdmin to work with it. Open the query editor, paste the SQL command, and execute it under the school database. After refreshing, you will see the new table called `homework_submission`.
+
+### Naming Conventions for Tables
+
+Be mindful of pluralization when naming tables. Some prefer plural names like `contact_details`, `homework_submissions`, `students`, while others prefer singular names like `contact_detail`, `student`. It is important to choose a consistent naming scheme and stick to it to maintain clarity and avoid confusion.

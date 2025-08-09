@@ -11,3 +11,9 @@ The way a One to Many relationship works is if you consider a case where you hav
 In this example, we have our students table as before. In our school, we have students, and each student makes many homework submissions. This is how we end up with a One to Many relationship. Each piece of homework can only have one student who did the work. We do not have group projects in our school, but one student can be associated with many pieces of homework. Therefore, if you take the student as a starting point, this is a One to Many relationship. However, if you take the homework submission as the starting point, then you would call this a Many to One relationship.
 
 Another example to consider is a customer database. Suppose you sell Christmas trees and want to keep track of your customers. A customer can make many orders. For instance, they might make an order for a tree in 2012, another order in 2020, and so on. Here, the orders table represents the Many side, and the customer table represents the One side. To represent this relationship, we need a Many to One relationship.
+
+### Crow's Feet Notation in Database Design
+
+In our database design, the homework table has a crow's feet representation linked to the student id field. This field is the Foreign Key in the homework table, while the id in the student table is the Primary Key. In crow's feet notation, the Many side is represented by a three-legged bird's feet symbol, and the One side has a single line. This notation visually represents the One to Many relationship.
+
+Each homework submission has its own Primary Key because there are many pieces of homework submitted, so each record must be uniquely identified. The Foreign Key links back to the student who created it by storing the student's id.

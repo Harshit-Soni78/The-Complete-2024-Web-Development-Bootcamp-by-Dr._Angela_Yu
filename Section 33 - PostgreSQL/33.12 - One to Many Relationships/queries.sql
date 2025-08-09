@@ -5,3 +5,7 @@ CREATE TABLE homework_submission (
   student_id INTEGER REFERENCES student(id)
 );
 
+-- Data --
+INSERT INTO homework_submission (mark, student_id)
+VALUES (98, 1), (87, 1), (88, 1)
+

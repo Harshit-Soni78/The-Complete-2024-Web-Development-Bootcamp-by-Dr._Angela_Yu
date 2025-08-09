@@ -31,3 +31,9 @@ CREATE TABLE homework_submission (
 ```
 
 This SQL command creates the `homework_submission` table. The `id` field is set as SERIAL, which automatically generates unique identifiers starting from 1 and incrementing for each new record. The `student_id` field is a Foreign Key referencing the `id` field in the `student` table, establishing the Many to One relationship.
+
+### Setting up the Foreign Key Relationship
+
+The `REFERENCES` keyword is used to set up the Foreign Key. This means that the `student_id` in the `homework_submission` table must correspond to an existing `id` in the `student` table. This enforces referential integrity between the two tables.
+
+Let's create this table in pgAdmin to work with it. Open the query editor, paste the SQL command, and execute it under the school database. After refreshing, you will see the new table called `homework_submission`.

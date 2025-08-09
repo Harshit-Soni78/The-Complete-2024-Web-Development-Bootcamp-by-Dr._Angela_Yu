@@ -54,3 +54,14 @@ INSERT INTO homework_submission (mark, student_id) VALUES
 ```
 
 This inserts three homework submissions with different marks, all associated with the same student whose `id` is 1.
+
+### Viewing Joined Data
+
+To better understand the relationship, we can write SQL code to join the `student` and `homework_submission` tables. This will allow us to see the homework submissions along with the student details.
+
+```sql
+SELECT * FROM student
+JOIN homework_submission ON student.id = homework_submission.student_id;
+```
+
+This query selects all columns from both tables where the `student.id` matches the `homework_submission.student_id`. The result is a joined table showing each homework submission alongside the corresponding student information.

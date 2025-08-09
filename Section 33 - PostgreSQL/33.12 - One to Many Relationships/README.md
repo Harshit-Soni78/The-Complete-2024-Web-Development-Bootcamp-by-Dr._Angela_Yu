@@ -17,3 +17,17 @@ Another example to consider is a customer database. Suppose you sell Christmas t
 In our database design, the homework table has a crow's feet representation linked to the student id field. This field is the Foreign Key in the homework table, while the id in the student table is the Primary Key. In crow's feet notation, the Many side is represented by a three-legged bird's feet symbol, and the One side has a single line. This notation visually represents the One to Many relationship.
 
 Each homework submission has its own Primary Key because there are many pieces of homework submitted, so each record must be uniquely identified. The Foreign Key links back to the student who created it by storing the student's id.
+
+### Creating the homework_submission Table
+
+Let's create the `homework_submission` table. This table has three fields: a PRIMARY KEY field that uniquely identifies each record, a `mark` field representing the student's score, and a `student_id` field that links to the student who created the homework. For simplicity, only these three fields are included, though in practice, there could be additional fields such as teacher, class, or date.
+
+```sql
+CREATE TABLE homework_submission (
+    id SERIAL PRIMARY KEY,
+    mark INTEGER,
+    student_id INTEGER REFERENCES student(id)
+);
+```
+
+This SQL command creates the `homework_submission` table. The `id` field is set as SERIAL, which automatically generates unique identifiers starting from 1 and incrementing for each new record. The `student_id` field is a Foreign Key referencing the `id` field in the `student` table, establishing the Many to One relationship.

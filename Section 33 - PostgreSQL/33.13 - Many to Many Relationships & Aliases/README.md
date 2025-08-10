@@ -37,3 +37,13 @@ After creating these tables, refreshing the database will show the new tables: c
 We add students and classes. For example, student with id 2 is added, and classes such as English literature, maths, and physics are added with ids 1, 2, and 3 respectively.
 
 Enrollment records are created to link students to classes. For example, Student 1 is enrolled in Class 1 and Class 2 (English and maths), and Student 2 (Jack Bauer) is enrolled in Class 2 and Class 3 (maths and physics).
+
+### Using JOIN to Query Many to Many Relationships
+
+We can use the JOIN keyword to take advantage of this Many to Many relationship. For example, selecting everything from the enrollment table and joining it with the student and class tables on matching foreign keys.
+
+This results in a joined table showing all enrollment records along with corresponding student and class information. Each unique record in the enrollment table is represented, with duplicated student or class data appearing multiple times as appropriate.
+
+We can then query this joined table to answer questions such as how many students are taking maths (two students), which classes Angela is taking (maths and English), or which classes Angela and Jack are taking together.
+
+This demonstrates how a Many to Many relationship can represent data where one student attends many classes and one class has many students.

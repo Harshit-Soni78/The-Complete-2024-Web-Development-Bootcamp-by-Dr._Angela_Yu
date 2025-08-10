@@ -26,3 +26,7 @@ FROM enrollment
 JOIN student ON student.id = enrollment.student_id
 JOIN class ON class.id = enrollment.class_id;
 
+SELECT student.id AS id, first_name, last_name, title
+FROM enrollment 
+JOIN student ON student.id = enrollment.student_id
+JOIN class ON class.id = enrollment.class_id;

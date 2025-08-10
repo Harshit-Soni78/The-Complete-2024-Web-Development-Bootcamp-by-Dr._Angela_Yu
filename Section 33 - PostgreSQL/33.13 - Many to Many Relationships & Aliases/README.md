@@ -61,3 +61,10 @@ This makes the code shorter and easier to write, especially in longer queries wh
 The AS keyword is optional when setting aliases for tables. For example, writing `enrollment e` instead of `enrollment AS e` achieves the same aliasing effect.
 
 However, it is recommended to use the AS keyword when aliasing columns, as it improves readability and reduces confusion in SELECT statements.
+
+## Key Takeaways
+
+- Many to Many relationships involve two entities where each can relate to many instances of the other.
+- In PostgreSQL, Many to Many relationships are represented using a junction table with foreign keys referencing the related tables.
+- The `AS` keyword allows creating aliases for tables and columns to simplify and clarify SQL queries.
+- Aliases can be set with or without the `AS` keyword, but using `AS` for column aliases improves readability.

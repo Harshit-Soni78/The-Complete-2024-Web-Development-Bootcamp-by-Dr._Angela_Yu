@@ -31,3 +31,9 @@ The enrollment table contains student_id and class_id, both set up as foreign ke
 This primary key prevents duplicate records such as multiple entries of Student 1 enrolled in Class 2. Each record in the enrollment table is unique.
 
 After creating these tables, refreshing the database will show the new tables: class and enrollment. We can then add data to these tables to work with.
+
+### Adding Data
+
+We add students and classes. For example, student with id 2 is added, and classes such as English literature, maths, and physics are added with ids 1, 2, and 3 respectively.
+
+Enrollment records are created to link students to classes. For example, Student 1 is enrolled in Class 1 and Class 2 (English and maths), and Student 2 (Jack Bauer) is enrolled in Class 2 and Class 3 (maths and physics).

@@ -36,3 +36,9 @@ SELECT s.id AS id, first_name, last_name, title
 FROM enrollment AS e
 JOIN student AS s ON s.id = e.student_id
 JOIN class AS c ON c.id = e.class_id;
+
+
+SELECT s.id AS id, first_name, last_name, title
+FROM enrollment e
+JOIN student s ON s.id = e.student_id
+JOIN class c ON c.id = e.class_id;

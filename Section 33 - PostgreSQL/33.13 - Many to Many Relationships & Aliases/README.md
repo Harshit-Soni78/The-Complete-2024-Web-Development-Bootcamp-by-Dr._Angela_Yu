@@ -47,3 +47,17 @@ This results in a joined table showing all enrollment records along with corresp
 We can then query this joined table to answer questions such as how many students are taking maths (two students), which classes Angela is taking (maths and English), or which classes Angela and Jack are taking together.
 
 This demonstrates how a Many to Many relationship can represent data where one student attends many classes and one class has many students.
+
+## Aliases in SQL
+
+An alias is an alternative name for a table or column, established using the AS keyword. For example, selecting fields such as first_name, last_name, title, and renaming student.id as stud for clarity in the output.
+
+Using aliases helps when dealing with multiple fields named id from different tables, allowing each to have a distinct name in the query result for easier understanding.
+
+Aliases can also simplify SQL queries by shortening table names. For example, setting aliases such as enrollment as e, student as s, and class as c allows referencing tables with these short names instead of full names.
+
+This makes the code shorter and easier to write, especially in longer queries where typing full table names repeatedly can be tedious.
+
+The AS keyword is optional when setting aliases for tables. For example, writing `enrollment e` instead of `enrollment AS e` achieves the same aliasing effect.
+
+However, it is recommended to use the AS keyword when aliasing columns, as it improves readability and reduces confusion in SELECT statements.

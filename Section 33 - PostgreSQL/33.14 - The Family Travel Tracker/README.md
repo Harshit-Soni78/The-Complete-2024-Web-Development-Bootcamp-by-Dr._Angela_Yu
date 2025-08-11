@@ -124,3 +124,14 @@ When a user adds a new country, the backend handles a POST request to `/add`. Th
 ```
 
 This ensures the country is matched to the user who entered it. After insertion, redirect back to the home page to show the updated countries for the current user.
+
+## Conclusion
+
+You now have a website where you can add new family members, select a color for them, and add them to the list. You can view the countries each member has visited and add new countries unique to each person. This is achieved using the power of relationships in PostgreSQL. If you struggled, there is no shame in looking at the solutions to understand what is going on and then applying what you have learned to your own code.
+
+## Key Takeaways
+
+- Established a One to Many relationship between users and visited countries in the Family Travel Tracker.
+- Updated SQL tables to include foreign keys and enable multi-user functionality.
+- Modified backend logic to handle dynamic user selection, country addition, and color assignment.
+- Demonstrated how to use SQL JOINs and parameterized queries to fetch user-specific data.

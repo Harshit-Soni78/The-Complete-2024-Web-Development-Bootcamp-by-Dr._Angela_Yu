@@ -59,3 +59,21 @@ JOIN users ON users.id = visited_countries.user_id;
 ```
 
 This will show a table where each user is listed with the countries they have visited, and their associated color. You can now get all the countries a particular user has been to, or the color of that user to be represented on the map.
+
+## Updating Backend Logic for Multi-User Functionality
+
+Once the database is set up, the next step is to modify `index.js` to add multi-user functionality. There are many changes between `index.js` and `solution.js`. In VS Code, you can compare the two files to see what was changed.
+
+The first change is in the `checkVisited()` function, which is called when the user hits the home route. Previously, you could simply select all country codes from `visited_countries` because it represented only one user. Now, since we have multiple users and a One to Many relationship, we need to change the code to take advantage of the more advanced database structure.
+
+```js
+db.query(
+  "SELECT country_code FROM visited_countries JOIN users ON users.id = visited_countries.user_id WHERE user_id = $1",
+  [currentUserId],
+  (err, result) => {
+    // handle result
+  }
+);
+```
+
+This query joins the `visited_countries` and `users` tables, filtering by the current user's id. The result is a list of country codes for the selected user. The number of items in the result represents the total number of countries a user has been to.

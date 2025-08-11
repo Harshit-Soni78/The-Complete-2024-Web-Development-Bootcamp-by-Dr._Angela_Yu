@@ -47,3 +47,15 @@ CREATE TABLE visited_countries (
     user_id INTEGER REFERENCES users(id)
 );
 ```
+
+## Querying with JOINs
+
+After creating the tables and inserting data, you can use a JOIN to display which countries each user has visited. For example, you can select from `visited_countries` joining the `users` table where the user's table id matches the Foreign Key `user_id`.
+
+```sql
+SELECT users.name, users.color, visited_countries.country_code
+FROM visited_countries
+JOIN users ON users.id = visited_countries.user_id;
+```
+
+This will show a table where each user is listed with the countries they have visited, and their associated color. You can now get all the countries a particular user has been to, or the color of that user to be represented on the map.

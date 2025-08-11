@@ -31,3 +31,19 @@ If you get stuck, you can go into `queries.sql` and scroll down to see the SQL s
 One of the first things to consider is establishing the relationship between the `users` and `visited_countries` tables. In this case, we have a One to Many relationship, because one user can visit many countries. To establish this relationship, we can either alter the `visited_countries` table to add a Foreign Key, or simply drop the previous tables and recreate them.
 
 To establish a One to Many relationship, we create a Foreign Key that points from the Many side (`visited_countries`) to the Primary Key on the One side (`users`). In this way, one user can have many visited countries. The Foreign Key is called `user_id`, which is an integer because the Primary Key for the user is also an integer. `REFERENCES` sets up this field as the Foreign Key, pointing to the `users` table and the `id` property.
+
+### Example SQL for Creating Tables and Relationships
+
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    color VARCHAR(50)
+);
+
+CREATE TABLE visited_countries (
+    id SERIAL PRIMARY KEY,
+    country_code VARCHAR(2),
+    user_id INTEGER REFERENCES users(id)
+);
+```

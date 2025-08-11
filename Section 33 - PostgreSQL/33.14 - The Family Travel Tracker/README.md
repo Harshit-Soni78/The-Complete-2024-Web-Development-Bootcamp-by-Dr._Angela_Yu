@@ -100,3 +100,9 @@ If you encounter bugs, use `console.log()` and `typeof` to check data types. Thi
 ## Rendering the User Tabs in EJS
 
 In `index.ejs`, the tabs at the top of the website are rendered by looping through each user in the users array. Each tab uses the user's id, name, and color to populate the input values, background colors, and labels. When a tab is selected, the form submits a POST request with the selected user's id.
+
+## Handling User Selection and Adding New Users
+
+When the `/user` route is hit via POST, the backend sets the `currentUserId` to the selected tab's value. If the request body contains `add` with the value `new`, it means the user clicked the button to add a new family member, and the backend renders `new.ejs`.
+
+In `new.ejs`, the form asks for the user's name and color. When submitted, it makes a POST request to `/new` with the name and selected color. These colors correspond to CSS named colors and are stored in the database.

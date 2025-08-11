@@ -96,3 +96,7 @@ const currentUser = users.find((user) => user.id == currentUserId);
 ```
 
 If you encounter bugs, use `console.log()` and `typeof` to check data types. This can help debug issues where the match fails due to type differences.
+
+## Rendering the User Tabs in EJS
+
+In `index.ejs`, the tabs at the top of the website are rendered by looping through each user in the users array. Each tab uses the user's id, name, and color to populate the input values, background colors, and labels. When a tab is selected, the form submits a POST request with the selected user's id.

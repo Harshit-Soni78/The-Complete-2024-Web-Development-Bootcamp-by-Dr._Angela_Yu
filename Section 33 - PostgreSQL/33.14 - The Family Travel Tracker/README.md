@@ -106,3 +106,11 @@ In `index.ejs`, the tabs at the top of the website are rendered by looping throu
 When the `/user` route is hit via POST, the backend sets the `currentUserId` to the selected tab's value. If the request body contains `add` with the value `new`, it means the user clicked the button to add a new family member, and the backend renders `new.ejs`.
 
 In `new.ejs`, the form asks for the user's name and color. When submitted, it makes a POST request to `/new` with the name and selected color. These colors correspond to CSS named colors and are stored in the database.
+
+## Inserting a New User into the Database
+
+```sql
+    INSERT INTO users (name, color) VALUES ($1, $2) RETURNING *;
+```
+
+The `RETURNING *` clause returns the new record that was added, allowing you to get the new user's id and assign it to `currentUserId`. After this, redirect to the home route, which uses `currentUserId` to get all the countries that user has been to.

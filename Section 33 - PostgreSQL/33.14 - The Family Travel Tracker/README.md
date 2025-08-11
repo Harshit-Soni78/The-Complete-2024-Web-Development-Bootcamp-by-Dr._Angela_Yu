@@ -77,3 +77,22 @@ db.query(
 ```
 
 This query joins the `visited_countries` and `users` tables, filtering by the current user's id. The result is a list of country codes for the selected user. The number of items in the result represents the total number of countries a user has been to.
+
+## Handling User Colors and User List
+
+The users table now contains a color associated with each user. We want to use this data to update the list of users and pass it to `index.ejs` for rendering the tabs and colors. The users list is a list of dictionaries with id, name, and color.
+
+```js
+db.query("SELECT * FROM users", (err, result) => {
+  const users = result.rows;
+  // handle users
+});
+```
+
+You can find the current user from the list by checking where the user's id matches the currentUserId. In JavaScript, you can use the `find()` function or a simple for loop. Be careful with data types; use two equal signs (`==`) instead of three (`===`) to avoid issues when comparing numbers and strings.
+
+```js
+const currentUser = users.find((user) => user.id == currentUserId);
+```
+
+If you encounter bugs, use `console.log()` and `typeof` to check data types. This can help debug issues where the match fails due to type differences.

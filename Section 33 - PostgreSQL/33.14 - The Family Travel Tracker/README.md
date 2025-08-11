@@ -114,3 +114,13 @@ In `new.ejs`, the form asks for the user's name and color. When submitted, it ma
 ```
 
 The `RETURNING *` clause returns the new record that was added, allowing you to get the new user's id and assign it to `currentUserId`. After this, redirect to the home route, which uses `currentUserId` to get all the countries that user has been to.
+
+## Adding Countries for a User
+
+When a user adds a new country, the backend handles a POST request to `/add`. The only change is that, instead of just adding to the table, you now insert the country code along with the user's id.
+
+```sql
+    INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2);
+```
+
+This ensures the country is matched to the user who entered it. After insertion, redirect back to the home page to show the updated countries for the current user.

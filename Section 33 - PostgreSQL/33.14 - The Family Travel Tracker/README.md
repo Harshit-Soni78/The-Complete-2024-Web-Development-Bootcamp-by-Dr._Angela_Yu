@@ -17,3 +17,11 @@ This is the goal we are trying to achieve. This is not an easy challenge, so som
 For example, when you click on the button that hits the `/user` route with the value of "new" under the name of "add", this is not yet handled in `index.js`. That is for you to do. The new route for creating a user in `new.ejs` will make a POST request and add various things such as the name and the color corresponding to a CSS color as the value. You will need to handle that in this route and make adjustments as needed to other routes such as `/get`, etc.
 
 One thing to note: in the syntax highlighting for this EJS file, `index.ejs`, it may highlight as an error and the whole file appears red. Do not worry; this is perfectly functioning code. The syntax highlighting is just confused by the EJS angle brackets inside a string. Everything inside `index.ejs` is working despite these warnings. You do not need to touch anything inside `index.ejs`, other than to look at it to know what routes are being hit and what names and values are used so you know how to handle them.
+
+## Planning the Database Schema
+
+Before starting the exercise, remember what we learned about relationships in Postgres and think about how you need to change the tables and add relationships as necessary. We will need a `users` table that sets up each user with their name and the color they are represented by on the map. These colors should be CSS colors, such as teal, powder blue, red, blue, green, yellow. The table should have a Primary Key that can be linked to the `visited_countries` table.
+
+The `visited_countries` table probably needs to be updated or recreated so that we can establish a relationship between the countries that have been visited and the user who did the visiting. Consider how you might create those tables from scratch. If you need to delete any tables because altering is complicated, you can always right-click and delete them in pgAdmin.
+
+If you get stuck, you can go into `queries.sql` and scroll down to see the SQL solution for the exercise. You can copy the entire line of code to set up the database as shown in the solution, with all the sample data, relationships, and tables recreated for you.

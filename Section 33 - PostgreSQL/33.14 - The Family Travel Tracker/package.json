@@ -1,0 +1,19 @@
+{
+  "name": "33.14---the-family-travel-tracker",
+  "version": "1.0.0",
+  "description": "Now that we have seen all of these different types of relationships and created these relationships, we have done a significant amount of work around how to join tables, set up relationships, primary keys, and foreign keys. It is now time to apply all of that knowledge into a real exercise where we have to think and come up with the results ourselves. This is the part where we convert information into knowledge—something that is taught into something that is truly understood.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}

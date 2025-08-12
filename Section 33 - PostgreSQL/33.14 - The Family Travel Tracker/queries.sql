@@ -96,3 +96,9 @@ JOIN class c ON c.id = e.class_id;
 
 DROP TABLE IF EXISTS visited_countries, users;
 
+CREATE TABLE users(
+id SERIAL PRIMARY KEY,
+name VARCHAR(15) UNIQUE NOT NULL,
+color VARCHAR(15)
+);
+

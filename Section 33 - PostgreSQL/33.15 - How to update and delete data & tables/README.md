@@ -39,3 +39,13 @@ To add a unique constraint to existing columns, use the `ALTER TABLE` command wi
 ALTER TABLE visited_countries ADD CONSTRAINT unique_user_country UNIQUE (user_id, country_code);
 
 Attempting to insert duplicate combinations after applying this constraint will result in an error, preventing duplicate data entries and allowing the application to notify users accordingly.
+
+### DROP TABLE
+
+The `DROP TABLE` command deletes an entire table from the database. Use this command with caution as it permanently removes the table and its data.
+
+Example:
+
+DROP TABLE IF EXISTS visited_countries;
+
+This command is equivalent to right-clicking a table in pgAdmin and selecting delete.

@@ -89,3 +89,11 @@ DELETE FROM visited_countries WHERE user_id = 1 AND country_code = 'FR';
 This deletes the entry where the user with `user_id` 1 has been to France (`country_code` 'FR').
 
 Using these commands, you have comprehensive control over your Postgres database schemas and data, enabling you to manage projects effectively.
+
+## Key Takeaways
+
+- The `ALTER TABLE` command is used to modify table schemas, including renaming tables, changing column data types, and adding new columns.
+- Unique constraints can be applied to combinations of columns to prevent duplicate data entries.
+- The `DROP TABLE` command deletes entire tables from the database and should be used with caution.
+- The `UPDATE` command modifies specific data entries in a table, while the `DELETE` command removes data rows based on conditions.
+- The `ORDER BY` clause allows sorting query results in ascending or descending order based on specified columns.

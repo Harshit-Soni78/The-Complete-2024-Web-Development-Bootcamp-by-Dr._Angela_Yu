@@ -49,3 +49,13 @@ Example:
 DROP TABLE IF EXISTS visited_countries;
 
 This command is equivalent to right-clicking a table in pgAdmin and selecting delete.
+
+### UPDATE Command
+
+To modify specific data entries within a table, use the `UPDATE` command. The syntax includes specifying the table, setting new values for columns, and applying conditions to target specific rows.
+
+Example:
+
+UPDATE users SET name = 'Angelina' WHERE id = 1;
+
+This updates the `name` column to "Angelina" for the user with `id` equal to 1.

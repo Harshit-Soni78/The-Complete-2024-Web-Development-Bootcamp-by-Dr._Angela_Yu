@@ -59,3 +59,15 @@ Example:
 UPDATE users SET name = 'Angelina' WHERE id = 1;
 
 This updates the `name` column to "Angelina" for the user with `id` equal to 1.
+
+### ORDER BY Clause
+
+The `ORDER BY` clause sorts query results based on specified columns in ascending (`ASC`) or descending (`DESC`) order.
+
+Example to sort users by `id` ascending:
+
+SELECT \* FROM users ORDER BY id ASC;
+
+To sort by the `name` column in descending order:
+
+SELECT \* FROM users ORDER BY name DESC;

@@ -71,3 +71,21 @@ SELECT \* FROM users ORDER BY id ASC;
 To sort by the `name` column in descending order:
 
 SELECT \* FROM users ORDER BY name DESC;
+
+### DELETE Command
+
+To remove specific rows from a table, use the `DELETE` command with a condition.
+
+Example:
+
+DELETE FROM visited_countries WHERE id = 6;
+
+This deletes the row with `id` equal to 6 from the `visited_countries` table.
+
+You can also specify multiple conditions:
+
+DELETE FROM visited_countries WHERE user_id = 1 AND country_code = 'FR';
+
+This deletes the entry where the user with `user_id` 1 has been to France (`country_code` 'FR').
+
+Using these commands, you have comprehensive control over your Postgres database schemas and data, enabling you to manage projects effectively.

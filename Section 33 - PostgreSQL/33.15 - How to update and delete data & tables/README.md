@@ -25,3 +25,17 @@ ALTER TABLE contact_detail ALTER COLUMN telephone TYPE VARCHAR(20);
 You can also add new columns using `ALTER TABLE` with the `ADD` command. For example, to add an `email` column of type `TEXT`:
 
 ALTER TABLE contact_detail ADD COLUMN email TEXT;
+
+### Applying Unique Constraints
+
+Consider a table named `example` with three integer columns: `a`, `b`, and `c`. We can enforce a unique constraint on the combination of columns `a` and `c` to ensure their combined values are unique across rows.
+
+This means that while `a` or `c` individually may have duplicate values, the pair `(a, c)` must be unique. For example, if one row has `(a=1, c=1)`, another row cannot have the same combination but could have `(a=1, c=2)`.
+
+In practical applications, such as a Family Travel Tracker, a table `visited_countries` might store `user_id` and `country_code`. While multiple users can visit the same country, the combination of `user_id` and `country_code` must be unique to avoid duplicate entries.
+
+To add a unique constraint to existing columns, use the `ALTER TABLE` command with `ADD CONSTRAINT`. For example:
+
+ALTER TABLE visited_countries ADD CONSTRAINT unique_user_country UNIQUE (user_id, country_code);
+
+Attempting to insert duplicate combinations after applying this constraint will result in an error, preventing duplicate data entries and allowing the application to notify users accordingly.

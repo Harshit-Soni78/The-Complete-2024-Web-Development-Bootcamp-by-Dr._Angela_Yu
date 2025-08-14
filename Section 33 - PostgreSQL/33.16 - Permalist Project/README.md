@@ -79,3 +79,16 @@ After deletion, redirect to the home route to refresh the list. Errors are logge
 You can enhance the project by adding features such as sorting items by creation date, adding new columns to the database using `ALTER` commands, or creating multiple to-do lists for different time frames or categories.
 
 Consider implementing relationships between lists or users, such as a family to-do list where different members have assigned chores. These upgrades can make the project more personalized and functional.
+
+## Conclusion
+
+This project demonstrates how to use CRUD operations with a Postgres database in a Node.js backend to persist data in a live project. It is a common coding challenge and a great project to showcase in interviews.
+
+Feel free to experiment with your code, make improvements, and enjoy the learning process. Once completed, you can proceed to the next lesson with a capstone challenge.
+
+## Key Takeaways
+
+- Built a permanent to-do list application using Postgres for data persistence.
+- Implemented full CRUD operations (Create, Read, Update, Delete) with Node.js, Express, and Postgres.
+- Learned to connect and query a Postgres database using the pg package.
+- Explored opportunities for project enhancements such as multiple lists and additional data columns.

@@ -73,3 +73,9 @@ The delete action is triggered by checking a checkbox associated with an item. T
 The checkbox input includes the item id as its value, so the server knows which item to delete. In the `/delete` route, retrieve the id and run an SQL `DELETE FROM` statement where the `id` matches.
 
 After deletion, redirect to the home route to refresh the list. Errors are logged if any occur.
+
+## Opportunities for Enhancement
+
+You can enhance the project by adding features such as sorting items by creation date, adding new columns to the database using `ALTER` commands, or creating multiple to-do lists for different time frames or categories.
+
+Consider implementing relationships between lists or users, such as a family to-do list where different members have assigned chores. These upgrades can make the project more personalized and functional.

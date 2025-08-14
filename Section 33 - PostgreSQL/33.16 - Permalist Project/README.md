@@ -51,3 +51,11 @@ Assign the query results to an `items` array, which is then passed to the front-
 In `index.ejs`, loop through the `listItems` array and create a row for each item. Each row includes a checkbox, a paragraph displaying the item title, and buttons for editing and deleting.
 
 The item title is displayed using EJS syntax to insert the `item.title` value. The edit button triggers the front-end JavaScript to toggle the input field for editing.
+
+## Creating New Items
+
+Users can add new items using an input field named `newItem`. When the form is submitted, it sends a POST request to the `/add` route with the new item text.
+
+In the `/add` POST route, retrieve the new item text from the request body and insert it into the `items` table in the database using an SQL `INSERT INTO` statement. The `id` column is auto-generated.
+
+After successful insertion, redirect to the home route to refresh the page and display the updated list. Errors are caught and logged to the console.

@@ -59,3 +59,9 @@ Users can add new items using an input field named `newItem`. When the form is s
 In the `/add` POST route, retrieve the new item text from the request body and insert it into the `items` table in the database using an SQL `INSERT INTO` statement. The `id` column is auto-generated.
 
 After successful insertion, redirect to the home route to refresh the page and display the updated list. Errors are caught and logged to the console.
+
+## Updating Items
+
+The update functionality is handled in the `/edit` POST route. The form submits the updated item title and the item id as hidden inputs.
+
+Use an SQL `UPDATE` statement to set the `title` column to the new value where the `id` matches the submitted id. After updating, redirect to the home route to refresh the list.

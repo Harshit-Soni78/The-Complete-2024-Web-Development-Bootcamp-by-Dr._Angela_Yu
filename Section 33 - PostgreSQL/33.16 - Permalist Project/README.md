@@ -45,3 +45,9 @@ In `index.js`, import the `pg` module and configure the database client with you
 Use a try-catch block to run a SQL query that selects all records from the `items` table, ordering them by `id` in ascending order. This query fetches the to-do list items from the database.
 
 Assign the query results to an `items` array, which is then passed to the front-end `index.ejs` file for rendering. The data structure returned is an array of objects with key-value pairs corresponding to the table columns.
+
+## Rendering Items in the Front-End
+
+In `index.ejs`, loop through the `listItems` array and create a row for each item. Each row includes a checkbox, a paragraph displaying the item title, and buttons for editing and deleting.
+
+The item title is displayed using EJS syntax to insert the `item.title` value. The edit button triggers the front-end JavaScript to toggle the input field for editing.

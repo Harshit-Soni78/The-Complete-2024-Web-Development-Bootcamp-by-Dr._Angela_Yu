@@ -19,3 +19,13 @@ If you need a refresher on how EJS works, you can revisit earlier modules in the
 To run the project, navigate to the project directory, run `npm i` to install required packages, and use `nodemon` to run `index.js`. Visiting `localhost:3000` will display the to-do list, but currently, data is stored only in memory and not persisted.
 
 Adding an item like "Write essay" will add it to the list, but restarting the server will reset the list because the data is not persisted in a database yet.
+
+## Understanding the Current Code
+
+Explore the `index.js` file to understand how the current to-do list works. Note that the edit and delete routes currently do not function, but the front-end interface is operational.
+
+In `index.ejs`, observe how items are pulled and added into the form, including the edit form that posts to `/edit` and the delete form that posts to `/delete`. Understand how the names and values are accessed through `body-parser` in POST requests.
+
+The front-end JavaScript includes a handler function that toggles the visibility of elements when the edit button is clicked, changing a paragraph element into an input element to allow editing.
+
+When the edit button is clicked, the paragraph and edit button are hidden, and the "done" button and input field are shown. The input field starts with the original title value but can be edited by the user.

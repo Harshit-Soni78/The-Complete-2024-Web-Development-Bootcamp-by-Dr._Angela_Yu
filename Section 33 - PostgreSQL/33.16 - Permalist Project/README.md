@@ -65,3 +65,11 @@ After successful insertion, redirect to the home route to refresh the page and d
 The update functionality is handled in the `/edit` POST route. The form submits the updated item title and the item id as hidden inputs.
 
 Use an SQL `UPDATE` statement to set the `title` column to the new value where the `id` matches the submitted id. After updating, redirect to the home route to refresh the list.
+
+## Deleting Items
+
+The delete action is triggered by checking a checkbox associated with an item. The checkbox has an `onchange` event that submits the form to the `/delete` POST route.
+
+The checkbox input includes the item id as its value, so the server knows which item to delete. In the `/delete` route, retrieve the id and run an SQL `DELETE FROM` statement where the `id` matches.
+
+After deletion, redirect to the home route to refresh the list. Errors are logged if any occur.

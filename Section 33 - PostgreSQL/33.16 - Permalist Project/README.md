@@ -37,3 +37,11 @@ Create a new Postgres database named `Permalist`. Inside this database, create a
 The `title` column is set as `NOT NULL` to enforce that every item must have a title. You can customize the schema as you prefer, but this setup is the basis for the project.
 
 You can insert test data into the table to match the initial array items, such as "Buy milk" and "Finish homework". This helps to verify that the database integration works correctly.
+
+## Connecting to the Database and Reading Data
+
+In `index.js`, import the `pg` module and configure the database client with your user, host, password, port, and database name (`permalist`). Connect to the database to start querying data.
+
+Use a try-catch block to run a SQL query that selects all records from the `items` table, ordering them by `id` in ascending order. This query fetches the to-do list items from the database.
+
+Assign the query results to an `items` array, which is then passed to the front-end `index.ejs` file for rendering. The data structure returned is an array of objects with key-value pairs corresponding to the table columns.

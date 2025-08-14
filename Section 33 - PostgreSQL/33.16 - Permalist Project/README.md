@@ -29,3 +29,11 @@ In `index.ejs`, observe how items are pulled and added into the form, including 
 The front-end JavaScript includes a handler function that toggles the visibility of elements when the edit button is clicked, changing a paragraph element into an input element to allow editing.
 
 When the edit button is clicked, the paragraph and edit button are hidden, and the "done" button and input field are shown. The input field starts with the original title value but can be edited by the user.
+
+## Database Setup
+
+Create a new Postgres database named `Permalist`. Inside this database, create a table called `items` with two columns: a primary key `id` (serially generated) and a `title` column of type `VARCHAR(100)` to store the to-do item titles.
+
+The `title` column is set as `NOT NULL` to enforce that every item must have a title. You can customize the schema as you prefer, but this setup is the basis for the project.
+
+You can insert test data into the table to match the initial array items, such as "Buy milk" and "Finish homework". This helps to verify that the database integration works correctly.

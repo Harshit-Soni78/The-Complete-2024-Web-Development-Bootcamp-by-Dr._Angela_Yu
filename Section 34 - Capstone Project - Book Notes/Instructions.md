@@ -64,3 +64,12 @@ I read a lot of books but after I finish reading them I often don't remember all
 
 - Use what you have learnt about GitHub to commit and push your project to GitHub so that you can share it with other students in the Q&A area, I'd love to see what you've build too! You can tweet at me @yu_angela
 - Include a Readme.md file that explains how to start your server, what commands are needed to run your code. e.g. `npm i`  and then `nodemon index.js`
+
+## Recommended Resources
+
+- Express.js: [**Getting Started Guide**](https://expressjs.com/en/starter/installing.html)
+- Node.js: [**Documentation**](https://nodejs.org/en/docs/)
+- Axios: [**Documentation**](https://axios-http.com/docs/intro)
+- Postgres: [**Documentation**](https://www.postgresql.org/docs/current/index.html)
+- pg: [**Documentation**](https://node-postgres.com/)
+- Open Library Covers API:  [https://openlibrary.org/dev/docs/api/covers](https://openlibrary.org/dev/docs/api/covers)

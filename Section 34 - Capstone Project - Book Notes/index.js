@@ -34,6 +34,11 @@ app.get("/", async (req, res) => {
     }
 });
 
+// GET /new - show form to add a new book
+app.get("/new", (req, res) => {
+    res.render("new.ejs");
+});
+
 
 
 

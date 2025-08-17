@@ -19,6 +19,21 @@ const db = new pg.Client({
 });
 db.connect();
 
+// Routes
+
+// GET / - display all books
+app.get("/", async (req, res) => {
+    const orderBy = req.query.orderBy || "date_read"; // Default sort by date_read
+    try {
+        const result = await db.query(`SELECT * FROM books ORDER BY ${orderBy} DESC`);
+        const books = result.rows;
+        res.render("index.ejs", { books: books });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Error fetching books from database");
+    }
+});
+
 
 
 

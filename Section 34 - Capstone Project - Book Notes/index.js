@@ -39,6 +39,21 @@ app.get("/new", (req, res) => {
     res.render("new.ejs");
 });
 
+// POST /new - add a new book to the database
+app.post("/new", async (req, res) => {
+    const { title, author, rating, review, date_read, isbn } = req.body;
+    try {
+        await db.query(
+            "INSERT INTO books (title, author, rating, review, date_read, isbn) VALUES ($1, $2, $3, $4, $5, $6)",
+            [title, author, rating, review, date_read, isbn]
+        );
+        res.redirect("/");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Error adding book to database");
+    }
+});
+
 
 
 

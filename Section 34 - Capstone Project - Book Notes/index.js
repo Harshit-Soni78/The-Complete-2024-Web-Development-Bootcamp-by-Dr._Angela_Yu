@@ -83,7 +83,17 @@ app.post("/books/:id/edit", async (req, res) => {
     }
 });
 
-
+// POST /books/:id/delete - delete a book from the database
+app.post("/books/:id/delete", async (req, res) => {
+    const id = req.params.id;
+    try {
+        await db.query("DELETE FROM books WHERE id = $1", [id]);
+        res.redirect("/");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Error deleting book from database");
+    }
+});
 
 
 app.listen(port, () => {

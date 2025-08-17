@@ -54,6 +54,19 @@ app.post("/new", async (req, res) => {
     }
 });
 
+// GET /books/:id/edit - show form to edit a book
+app.get("/books/:id/edit", async (req, res) => {
+    const id = req.params.id;
+    try {
+        const result = await db.query("SELECT * FROM books WHERE id = $1", [id]);
+        const book = result.rows[0];
+        res.render("edit.ejs", { book: book });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Error fetching book from database");
+    }
+});
+
 
 
 

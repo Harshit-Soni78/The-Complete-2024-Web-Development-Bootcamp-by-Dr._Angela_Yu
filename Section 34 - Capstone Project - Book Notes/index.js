@@ -67,6 +67,22 @@ app.get("/books/:id/edit", async (req, res) => {
     }
 });
 
+// POST /books/:id/edit - update a book in the database
+app.post("/books/:id/edit", async (req, res) => {
+    const id = req.params.id;
+    const { title, author, rating, review, date_read, isbn } = req.body;
+    try {
+        await db.query(
+            "UPDATE books SET title = $1, author = $2, rating = $3, review = $4, date_read = $5, isbn = $6 WHERE id = $7",
+            [title, author, rating, review, date_read, isbn, id]
+        );
+        res.redirect("/");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Error updating book in database");
+    }
+});
+
 
 
 

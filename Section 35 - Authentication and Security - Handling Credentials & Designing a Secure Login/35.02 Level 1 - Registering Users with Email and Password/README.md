@@ -15,3 +15,10 @@ npm i
 ```
 
 The required packages are `body-parser`, `EJS`, `Express`, and `pg` for the database. If any of these are new, it may mean previous modules were skipped. It is assumed that you are comfortable with Postgres Database, EJS templating, Node, and Express.
+
+## Running the Server
+
+After running `npm install`, start the server using Nodemon and open `index.js`. Once the server is running on port 3000, navigate to `localhost:3000` to view the website. The homepage is simple, with Login and Register buttons.
+
+Inside the `views` folder, there are partials, home, login, register, and a `secrets.ejs` page. The `secrets.ejs` page is simple and can only be accessed after authentication. The goal is to prevent unauthorized access to this page, rendering it only when the user has registered and logged in.
+

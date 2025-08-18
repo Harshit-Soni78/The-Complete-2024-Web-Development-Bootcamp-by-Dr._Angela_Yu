@@ -37,3 +37,10 @@ Our website structure is simple. It has a home page with two buttons: one to reg
 The remainder of the website is kept simple to focus on the complex topic of authentication. I have created some starting files for you to download so we can focus on learning authentication without distractions like Bootstrap and styling.
 
 Once you are ready, proceed to the next lesson where we will begin with Level 1 Security Authentication.
+
+## Key Takeaways
+
+- Authentication is essential for associating user-generated data with individual accounts.
+- It enables users to securely log in and access private information.
+- Authentication can restrict access to certain website areas based on user status.
+- The tutorial progresses from basic account creation to advanced security measures like OAuth and social logins.

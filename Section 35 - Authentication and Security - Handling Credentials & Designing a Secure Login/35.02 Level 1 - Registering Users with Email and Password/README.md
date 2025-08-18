@@ -119,3 +119,7 @@ if (result.rows.length > 0) {
   // User not found
 }
 ```
+
+## Security Considerations
+
+Currently, passwords are stored in plain text in the database. This is not secure, as anyone with access to the database can see all user passwords. In the next lesson, encryption, salting, and hashing will be introduced to improve security.

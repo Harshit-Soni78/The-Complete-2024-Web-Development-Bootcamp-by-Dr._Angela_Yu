@@ -123,3 +123,10 @@ if (result.rows.length > 0) {
 ## Security Considerations
 
 Currently, passwords are stored in plain text in the database. This is not secure, as anyone with access to the database can see all user passwords. In the next lesson, encryption, salting, and hashing will be introduced to improve security.
+
+## Key Takeaways
+
+- Users can register and log in using email and password, with data stored in a PostgreSQL database.
+- The registration process checks for duplicate emails to enforce uniqueness.
+- User credentials are currently stored in plain text, which is insecure and will be improved in future lessons.
+- Error handling and database connection management are essential for robust authentication flows.

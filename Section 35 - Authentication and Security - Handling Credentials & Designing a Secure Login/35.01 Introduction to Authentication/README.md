@@ -9,3 +9,9 @@ As we create our website or web application for users, these users will start ge
 Users sign up to our website using a username and a password. Essentially, we create an ID card for them to uniquely identify them in our database and save all the data they generate onto that account. The next time they return to the website, they can use their username and password to log in and access all of their possibly private information.
 
 This prevents everyone from being able to see private messages you send on platforms like Facebook or direct messages on Twitter. Authentication is simple in this regard.
+
+## Additional Reasons for Authentication
+
+Another reason to add authentication is to restrict access to certain areas of the website depending on the user's status. For example, if you were Spotify or Netflix and charged a subscription for accessing certain parts of the website, once the user pays, you update their account in your database to indicate they have paid and are allowed to access the content they are entitled to.
+
+These are some reasons why you might want to add authentication to your website. However, authentication can be implemented in a number of ways.

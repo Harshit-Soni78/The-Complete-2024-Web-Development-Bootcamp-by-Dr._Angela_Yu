@@ -25,3 +25,7 @@ We will start from very basic account creation, adding the user to our database,
 Once you understand and build authentication from the bottom up, I will show you ways to simplify your work using third-party libraries like Passport. We will learn how to progress from a website secured with minimal protection to one consistent with industry standards of good security.
 
 If you are not interested in learning authentication from the basics to the most complicated, you can skip ahead to the end where we cover OAuth using third-party social logins such as Google or Facebook. However, I strongly recommend following the entire tutorial to build a solid foundation and understand the topic thoroughly.
+
+## Building a Website That Keeps Secrets
+
+We will build a website that keeps secrets. There is an app called Whisper that allows people to submit their secrets anonymously. Whatever they post is not associated with an email or username, allowing people to express themselves more freely. This is the concept we will try to replicate by the end of this module.

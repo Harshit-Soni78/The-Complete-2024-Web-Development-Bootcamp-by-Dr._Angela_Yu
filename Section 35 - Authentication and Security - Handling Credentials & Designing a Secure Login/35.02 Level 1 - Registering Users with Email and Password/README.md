@@ -99,3 +99,23 @@ try {
   // Handle error appropriately
 }
 ```
+
+## Logging In Users
+
+To log in, check if the user exists in the database using the entered email. If found, compare the entered password with the stored password. If they match, render the `secrets.ejs` page. If not, inform the user of an incorrect password or that the user is not registered.
+
+```js
+const result = await client.query("SELECT * FROM users WHERE email = $1", [
+  email,
+]);
+if (result.rows.length > 0) {
+  const user = result.rows[0];
+  if (password === user.password) {
+    // Render secrets page
+  } else {
+    // Incorrect password
+  }
+} else {
+  // User not found
+}
+```

@@ -65,3 +65,37 @@ const client = new Client({
 client.connect();
 ```
 
+## Inserting User Data
+
+To insert the email and password into the `users` table upon registration, use the following query:
+
+```js
+await client.query("INSERT INTO users (email, password) VALUES ($1, $2)", [
+  email,
+  password,
+]);
+```
+
+After successful insertion, render the `secrets.ejs` page. If a user tries to register with an email that already exists, a UNIQUE constraint error occurs. To handle this, check if the user already exists before inserting.
+
+```js
+const checkResult = await client.query("SELECT * FROM users WHERE email = $1", [
+  email,
+]);
+if (checkResult.rows.length > 0) {
+  // Handle already registered user
+} else {
+  // Insert new user
+}
+```
+
+It is important to wrap database queries in a try-catch block to handle errors such as connection issues or query failures.
+
+```js
+try {
+  // Database operations
+} catch (error) {
+  console.log(error);
+  // Handle error appropriately
+}
+```

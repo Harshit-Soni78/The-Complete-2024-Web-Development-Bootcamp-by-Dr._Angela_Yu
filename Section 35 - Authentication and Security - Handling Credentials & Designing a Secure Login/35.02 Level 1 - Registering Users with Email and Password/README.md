@@ -27,3 +27,15 @@ Inside the `views` folder, there are partials, home, login, register, and a `sec
 The `index.js` file includes the basic structure. The GET routes simply render the home, login, and register pages. The POST routes are where users can register and log in by submitting forms.
 
 On both the register and login pages, the forms POST to their respective routes. Each form has two input fields: one named `username` and one named `password`. These fields are targeted using `body-parser` to access the submitted data.
+
+## Logging User Input
+
+The first challenge is to log the values entered into the username and password fields in both the register and login routes. This is done by accessing `req.body.username` and `req.body.password`.
+
+```js
+const username = req.body.username;
+const password = req.body.password;
+```
+
+These lines are used in both the register and login routes. After verifying that the logging works, remove the console logs and rename the variable from `username` to `email` for clarity.
+

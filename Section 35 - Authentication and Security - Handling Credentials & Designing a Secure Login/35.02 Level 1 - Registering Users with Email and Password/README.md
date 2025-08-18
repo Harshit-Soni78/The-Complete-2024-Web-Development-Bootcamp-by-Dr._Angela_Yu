@@ -22,3 +22,8 @@ After running `npm install`, start the server using Nodemon and open `index.js`.
 
 Inside the `views` folder, there are partials, home, login, register, and a `secrets.ejs` page. The `secrets.ejs` page is simple and can only be accessed after authentication. The goal is to prevent unauthorized access to this page, rendering it only when the user has registered and logged in.
 
+## Understanding the Routes
+
+The `index.js` file includes the basic structure. The GET routes simply render the home, login, and register pages. The POST routes are where users can register and log in by submitting forms.
+
+On both the register and login pages, the forms POST to their respective routes. Each form has two input fields: one named `username` and one named `password`. These fields are targeted using `body-parser` to access the submitted data.

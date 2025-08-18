@@ -39,3 +39,29 @@ const password = req.body.password;
 
 These lines are used in both the register and login routes. After verifying that the logging works, remove the console logs and rename the variable from `username` to `email` for clarity.
 
+## Adding Users to the Database
+
+The next step is to add the user's email and password to the database upon registration. A new database called `secrets` is created, and a `users` table is set up with `id`, `email`, and `password` fields. The `email` field is set to NOT NULL and UNIQUE.
+
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255)
+);
+```
+
+After creating the database and table, connect to the database in `index.js` by importing `pg` and setting up the connection.
+
+```js
+const { Client } = require("pg");
+const client = new Client({
+  user: "postgres",
+  host: "localhost",
+  database: "secrets",
+  password: "123456",
+  port: 5432,
+});
+client.connect();
+```
+

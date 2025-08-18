@@ -29,3 +29,11 @@ If you are not interested in learning authentication from the basics to the most
 ## Building a Website That Keeps Secrets
 
 We will build a website that keeps secrets. There is an app called Whisper that allows people to submit their secrets anonymously. Whatever they post is not associated with an email or username, allowing people to express themselves more freely. This is the concept we will try to replicate by the end of this module.
+
+## Website Structure
+
+Our website structure is simple. It has a home page with two buttons: one to register and one to log in. Once the user has registered or logged in and been authenticated, they can access the secrets page.
+
+The remainder of the website is kept simple to focus on the complex topic of authentication. I have created some starting files for you to download so we can focus on learning authentication without distractions like Bootstrap and styling.
+
+Once you are ready, proceed to the next lesson where we will begin with Level 1 Security Authentication.

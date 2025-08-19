@@ -1,0 +1,19 @@
+{
+  "name": "35.02-level-1---registering-users-with-email-and-password",
+  "version": "1.0.0",
+  "description": "In this lesson, Level 1 Authentication is introduced. Users are allowed to register and log in to the website by entering an email and password. This is the most basic way of authenticating a user, and it is also the least secure, but it is a starting point.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}

@@ -61,3 +61,15 @@ As a result, Queen Elizabeth accused Mary, Queen of Scots, of treason, leading t
 This story illustrates that weak encryption systems can put user passwords at risk and cause severe consequences, such as loss of trust or reputation, as seen in companies like TalkTalk or Equifax.
 
 If you are interested in more stories and learning about cryptography and encryption, a great book recommendation is "The Code Book" by Simon Singh.
+
+## Modern Encryption: AES 256
+
+Today, we use much more secure encryption methods such as AES 256. Although it involves complex mathematics, the essential process remains the same: we have plain text and an encryption key, which is kept secret and not shared with others.
+
+Encrypting a string with AES produces a much longer ciphertext, making it difficult to deduce the original text length.
+
+If the recipient knows the encryption key, for example, "TOPSECRET," they can decrypt the ciphertext back to the original message.
+
+However, a weakness of this symmetric encryption is that if someone obtains the encryption key, they can decrypt all data encrypted with it.
+
+This means that if a hacker gains access to the key, they can decrypt every user's password, which is highly undesirable.

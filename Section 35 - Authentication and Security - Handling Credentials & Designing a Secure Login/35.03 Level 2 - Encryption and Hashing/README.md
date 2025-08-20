@@ -73,3 +73,47 @@ If the recipient knows the encryption key, for example, "TOPSECRET," they can de
 However, a weakness of this symmetric encryption is that if someone obtains the encryption key, they can decrypt all data encrypted with it.
 
 This means that if a hacker gains access to the key, they can decrypt every user's password, which is highly undesirable.
+
+## Hashing: Securing Passwords Without Keys
+
+How can we make passwords more secure? The biggest flaw in our current authentication method is the need for an encryption key to both encrypt and decrypt passwords.
+
+If a hacker is motivated enough to access your database, it is likely not difficult for them to also obtain your encryption key, even if it is stored securely on your server.
+
+Hashing addresses this weakest link by removing the need for an encryption key.
+
+You might ask, if there is no encryption key, how can we decrypt the password back into plain text? The answer is: we do not.
+
+When a user registers, they enter a password, which we convert into a hash using a hash function and store that hash in our database.
+
+Hash functions are mathematical equations designed to make it almost impossible to reverse the hash back into the original password.
+
+How is it possible to quickly compute a hash from a password but make reversing it nearly impossible? Consider the following example.
+
+What are the factors of 377 other than 1 and 377? 377 is not a prime number; it has other factors.
+
+You might try dividing 377 by 2, which is 188.5, not a whole number, so 2 is not a factor. Dividing by 3 gives 125.666..., also not a factor.
+
+After testing multiple numbers, you find that 13 and 29 are factors of 377.
+
+This process of finding factors is tedious and time-consuming.
+
+However, multiplying 13 by 29 to get 377 is quick and easy.
+
+This simplified example illustrates how a hash function works: it is easy to compute the hash (multiplying factors) but hard to reverse it (finding factors).
+
+Real hash functions add complexity to make reversing nearly impossible with current computing power.
+
+For example, calculating the hash might take a millisecond, but reversing it could take years, making it impractical for hackers.
+
+When a user registers, we hash their password and store the hash. Later, when they log in, we hash the entered password and compare it to the stored hash.
+
+If the hashes match, the login password is correct. At no point do we store the password in plain text or reverse the hash.
+
+Only the user knows their original password.
+
+Hashing also has its own challenges because as soon as a problem arises, motivated hackers find solutions.
+
+In the next lesson, we will explore how hackers can attempt to crack user passwords.
+
+For all of that and more, I will see you there.

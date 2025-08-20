@@ -43,3 +43,21 @@ For example, if we take the password "qwerty" and use the Caesar cipher with a s
 To decrypt, knowing the key allows us to shift the ciphertext back by one to recover the original password.
 
 The Caesar cipher is a very weak encryption method. It is incredibly easy to figure out the original text even without the key.
+
+### Historical Example of Weak Encryption
+
+To illustrate the dangers of weak encryption, consider a story from history. In the 1500s, the land now called the United Kingdom was divided into two large areas: Scotland and England, ruled by Mary, Queen of Scots, and Queen Elizabeth I, respectively.
+
+Both queens wanted more power and land. Mary, Queen of Scots, plotted with Lord Babington to assassinate Queen Elizabeth to become the legitimate heir to both thrones.
+
+To communicate secretly, they used ciphertext to encrypt their letters, hoping to conceal the subject if the letters fell into the wrong hands.
+
+However, their encryption method, a letter substitution similar to the Caesar cipher, was very weak. Queen Elizabeth's chief decoder deciphered their letters and discovered their encryption key.
+
+He then wrote a letter back to Lord Babington to extract the names of all co-conspirators.
+
+As a result, Queen Elizabeth accused Mary, Queen of Scots, of treason, leading to her execution.
+
+This story illustrates that weak encryption systems can put user passwords at risk and cause severe consequences, such as loss of trust or reputation, as seen in companies like TalkTalk or Equifax.
+
+If you are interested in more stories and learning about cryptography and encryption, a great book recommendation is "The Code Book" by Simon Singh.

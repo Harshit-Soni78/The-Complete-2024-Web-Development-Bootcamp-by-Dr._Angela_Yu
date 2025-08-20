@@ -41,3 +41,10 @@ Although websites encourage adding capital letters, lowercase letters, numbers, 
 After this lesson, you will know how to keep yourself more secure. In the next lesson, we will address vulnerabilities caused by weak hashing algorithms and learn how to combat hackers who use dictionary attacks or hash tables to attack databases.
 
 As a quick bonus, if you want to trick your friends into thinking you are a hacker, at least according to Hollywood, check out a website called hackertyper.net. You can just mash the keyboard and it produces something that looks extremely realistic. However, be cautious not to do this on an airplane or in a government building unless you want to be investigated.
+
+## Key Takeaways
+
+- Many websites still store or transmit passwords insecurely, such as in plain text.
+- Hackers use hash tables and dictionary attacks to efficiently crack hashed passwords.
+- Modern GPUs can compute billions of hashes per second, making brute force attacks faster.
+- The most effective way to secure passwords is to use long, complex passwords that resist hash table and brute force attacks.

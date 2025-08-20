@@ -117,3 +117,10 @@ Hashing also has its own challenges because as soon as a problem arises, motivat
 In the next lesson, we will explore how hackers can attempt to crack user passwords.
 
 For all of that and more, I will see you there.
+
+## Key Takeaways
+
+- Storing passwords in plain text is highly insecure and legally risky.
+- Encryption transforms data into ciphertext using a key, but symmetric encryption keys can be compromised.
+- The Caesar cipher is a simple, weak encryption method easily broken.
+- Hashing securely stores passwords without needing a key, making it nearly impossible to reverse-engineer the original password.

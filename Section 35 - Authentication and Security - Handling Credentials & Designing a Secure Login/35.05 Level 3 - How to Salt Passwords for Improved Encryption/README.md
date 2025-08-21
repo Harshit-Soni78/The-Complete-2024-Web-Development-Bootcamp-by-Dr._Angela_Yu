@@ -20,3 +20,9 @@ For example, if Emily's password is "qwerty" and we generate a random salt, we a
 
 The salt is stored in the database alongside the hash, and the user does not need to remember it. When the user logs in, their entered password is combined with the stored salt, and if the resulting hash matches the stored hash, the password is correct.
 
+### Limitations of MD5 and the Need for Better Hashing Algorithms
+
+Previously, we noted that it is possible to generate about 20 billion MD5 hashes per second. Even with salting, it is still feasible to generate hash tables with all salt combinations relatively quickly using modern GPUs.
+
+To increase security, we can use a different hashing algorithm that is intentionally slow. This is where Bcrypt comes in.
+

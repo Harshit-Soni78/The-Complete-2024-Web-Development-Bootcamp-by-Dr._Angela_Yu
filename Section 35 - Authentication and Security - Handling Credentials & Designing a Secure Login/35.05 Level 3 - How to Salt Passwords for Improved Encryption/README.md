@@ -43,3 +43,14 @@ This approach is clever because as computers get faster (following Moore's Law),
 ### Storing User Credentials with Salting and Hashing
 
 In the user database, each user's username, randomly generated salt, and the hash after the specified number of salting rounds are stored. When a user logs in, their entered password is combined with the stored salt and hashed through the same number of rounds. The resulting hash is compared to the stored hash to verify the password.
+
+## Implementing Bcrypt in a Node.js Project
+
+We will now implement Bcrypt and salting rounds into our website's authentication system. The package we will use is called "bcrypt," available on NPM.
+
+First, download and extract the project files for this lesson. Open the project in VS Code. Inside the `index.js` file, you will find the code from the previous lesson, which currently does not include hashing.
+
+In the `package.json` file, you will notice the new dependency `bcrypt`. Bcrypt uses the Blowfish algorithm, a modern and secure method to ensure that current computational skills cannot decode passwords in a reasonable time.
+
+To set up, navigate to the project directory and run `npm install` to add all node modules.
+

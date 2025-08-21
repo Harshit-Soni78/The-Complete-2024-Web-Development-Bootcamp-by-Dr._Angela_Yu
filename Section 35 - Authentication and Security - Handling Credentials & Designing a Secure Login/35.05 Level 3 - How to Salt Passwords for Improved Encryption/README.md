@@ -32,3 +32,11 @@ Bcrypt is an industry-standard hashing algorithm used to keep users' passwords s
 
 For example, cracking a password hashed with MD5 might take three seconds, but with Bcrypt, it could take about eight months, which is generally not worth a hacker's effort.
 
+### Salt Rounds in Bcrypt
+
+Bcrypt introduces the concept of salt rounds, which refers to how many times the password is salted and hashed. The more rounds, the "saltier" and more secure the password becomes against hackers.
+
+For instance, if the original password is "qwerty" and a random salt is generated, passing this through Bcrypt once produces a hash (one round). If we take that hash, add the same salt, and hash it again, we get a different hash (two rounds). The number of times this process is repeated is the number of salt rounds.
+
+This approach is clever because as computers get faster (following Moore's Law), the number of salt rounds can be increased to maintain security without changing the hashing algorithm or code, just by adjusting a single number.
+

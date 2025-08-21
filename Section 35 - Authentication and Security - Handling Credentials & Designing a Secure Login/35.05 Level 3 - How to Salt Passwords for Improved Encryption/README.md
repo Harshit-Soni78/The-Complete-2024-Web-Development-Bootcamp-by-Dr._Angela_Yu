@@ -12,3 +12,11 @@ Salting takes hashing a step further. In addition to the password, a random set 
 
 This means that no matter how simple the user's password is, adding the salt increases its complexity and length, thereby making the user database much more secure.
 
+### Example of Salting
+
+Consider the previous problem where three users had the same password, which was evident because they all had the same hash. If we had generated a random salt for each user and combined it with their password before hashing, their hashes would be different in the database.
+
+For example, if Emily's password is "qwerty" and we generate a random salt, we append the salt to her password and then hash the combined string. This hash will differ from Tony's or Angela's hashes because their salts are different.
+
+The salt is stored in the database alongside the hash, and the user does not need to remember it. When the user logs in, their entered password is combined with the stored salt, and if the resulting hash matches the stored hash, the password is correct.
+

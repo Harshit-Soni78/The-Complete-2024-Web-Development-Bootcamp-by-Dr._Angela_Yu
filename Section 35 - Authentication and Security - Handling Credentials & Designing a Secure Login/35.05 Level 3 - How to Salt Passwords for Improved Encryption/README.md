@@ -96,3 +96,23 @@ Note that the callback is asynchronous because we wait for the database save ope
 
 Start the server and navigate to the home page. Register a new user with a password such as "123456". In the database, you will see the new user with a hashed password instead of the plain text password.
 
+### Comparing Passwords During Login
+
+When a user tries to log in, you cannot simply hash the entered password and compare it to the stored hash because Bcrypt's salting rounds produce different hashes each time.
+
+Instead, use Bcrypt's `compare()` method, which compares the entered password with the stored hash and returns whether they match.
+
+```js
+bcrypt.compare(loginPassword, storedHashedPassword, function (err, result) {
+  if (err) {
+    console.log(err);
+  } else if (result === true) {
+    res.render("secrets");
+  } else {
+    res.send("Incorrect password.");
+  }
+});
+```
+
+The order of arguments in `compare()` is important: the first is the plain text password entered by the user, and the second is the stored hashed password.
+

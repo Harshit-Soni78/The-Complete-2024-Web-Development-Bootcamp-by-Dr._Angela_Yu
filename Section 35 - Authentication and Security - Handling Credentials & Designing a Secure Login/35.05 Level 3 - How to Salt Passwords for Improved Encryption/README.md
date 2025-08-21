@@ -70,3 +70,25 @@ const saltRounds = 10;
 
 The number of salt rounds depends on the desired security level. More rounds increase computation time and security.
 
+### Hashing Passwords During Registration
+
+In the register POST route, before saving the user's email and password to the database, hash the password using bcrypt's `hash()` method. This method takes the password, the number of salt rounds, and a callback function that returns an error or the hashed string.
+
+```js
+bcrypt.hash(password, saltRounds, async function (err, hash) {
+  if (err) {
+    console.log(err);
+  } else {
+    // Store hash in your password DB.
+    const newUser = new User({
+      email: email,
+      password: hash,
+    });
+    await newUser.save();
+    res.render("secrets");
+  }
+});
+```
+
+Note that the callback is asynchronous because we wait for the database save operation to complete before rendering the "secrets" page.
+

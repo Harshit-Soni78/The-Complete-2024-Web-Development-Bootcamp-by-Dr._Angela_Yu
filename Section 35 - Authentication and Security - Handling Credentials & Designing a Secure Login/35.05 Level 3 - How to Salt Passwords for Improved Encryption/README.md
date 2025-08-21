@@ -116,3 +116,6 @@ bcrypt.compare(loginPassword, storedHashedPassword, function (err, result) {
 
 The order of arguments in `compare()` is important: the first is the plain text password entered by the user, and the second is the stored hashed password.
 
+### Testing Login
+
+Try logging in with the correct password to see a successful login. Try logging in with an incorrect password to see the "Incorrect password" message.

@@ -54,3 +54,19 @@ In the `package.json` file, you will notice the new dependency `bcrypt`. Bcrypt 
 
 To set up, navigate to the project directory and run `npm install` to add all node modules.
 
+### Importing Bcrypt and Setting Salt Rounds
+
+Import the bcrypt module:
+
+```js
+import bcrypt from "bcrypt";
+```
+
+Define the number of salt rounds:
+
+```js
+const saltRounds = 10;
+```
+
+The number of salt rounds depends on the desired security level. More rounds increase computation time and security.
+

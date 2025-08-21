@@ -40,3 +40,6 @@ For instance, if the original password is "qwerty" and a random salt is generate
 
 This approach is clever because as computers get faster (following Moore's Law), the number of salt rounds can be increased to maintain security without changing the hashing algorithm or code, just by adjusting a single number.
 
+### Storing User Credentials with Salting and Hashing
+
+In the user database, each user's username, randomly generated salt, and the hash after the specified number of salting rounds are stored. When a user logs in, their entered password is combined with the stored salt and hashed through the same number of rounds. The resulting hash is compared to the stored hash to verify the password.

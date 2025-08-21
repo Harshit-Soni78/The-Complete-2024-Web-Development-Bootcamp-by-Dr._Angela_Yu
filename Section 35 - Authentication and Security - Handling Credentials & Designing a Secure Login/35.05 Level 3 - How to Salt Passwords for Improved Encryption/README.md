@@ -26,3 +26,9 @@ Previously, we noted that it is possible to generate about 20 billion MD5 hashes
 
 To increase security, we can use a different hashing algorithm that is intentionally slow. This is where Bcrypt comes in.
 
+### Bcrypt: Industry Standard for Password Hashing
+
+Bcrypt is an industry-standard hashing algorithm used to keep users' passwords safe. While GPUs can compute 20 billion MD5 hashes per second, they can only compute about 17,000 Bcrypt hashes per second. This dramatic difference makes it much harder for hackers to generate precompiled hash tables.
+
+For example, cracking a password hashed with MD5 might take three seconds, but with Bcrypt, it could take about eight months, which is generally not worth a hacker's effort.
+

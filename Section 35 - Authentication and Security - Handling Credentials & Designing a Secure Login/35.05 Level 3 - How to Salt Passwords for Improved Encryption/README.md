@@ -92,3 +92,7 @@ bcrypt.hash(password, saltRounds, async function (err, hash) {
 
 Note that the callback is asynchronous because we wait for the database save operation to complete before rendering the "secrets" page.
 
+### Testing Registration
+
+Start the server and navigate to the home page. Register a new user with a password such as "123456". In the database, you will see the new user with a hashed password instead of the plain text password.
+

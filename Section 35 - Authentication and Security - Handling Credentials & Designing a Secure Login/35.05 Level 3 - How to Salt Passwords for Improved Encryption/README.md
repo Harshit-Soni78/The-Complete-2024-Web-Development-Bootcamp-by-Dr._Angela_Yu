@@ -119,3 +119,16 @@ The order of arguments in `compare()` is important: the first is the plain text 
 ### Testing Login
 
 Try logging in with the correct password to see a successful login. Try logging in with an incorrect password to see the "Incorrect password" message.
+
+## Conclusion
+
+We have now implemented hashing and salting, significantly improving password security. Even if someone hacks into the database, they will only see hashed passwords, making it infeasible to retrieve the original passwords.
+
+In the next lesson, we will learn about implementing cookies and sessions to maintain user login states without requiring repeated logins.
+
+## Key Takeaways
+
+- Salting enhances password security by adding unique random characters before hashing.
+- Bcrypt is a slow hashing algorithm that significantly increases the difficulty of brute-force attacks.
+- Salt rounds in Bcrypt allow adjustable computational complexity to keep up with advancing hardware.
+- Implementing hashing and salting properly protects stored passwords even if the database is compromised.

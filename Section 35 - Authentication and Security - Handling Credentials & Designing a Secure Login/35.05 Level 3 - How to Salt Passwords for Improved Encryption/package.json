@@ -1,0 +1,20 @@
+{
+  "name": "35.05-level-3---how-to-salt-passwords-for-improved-encryption",
+  "version": "1.0.0",
+  "description": "Now that we have examined some vulnerabilities associated with hashed passwords, it is time to level up and learn about a method to prevent dictionary attacks and hash table cracking. This method is called salting.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}

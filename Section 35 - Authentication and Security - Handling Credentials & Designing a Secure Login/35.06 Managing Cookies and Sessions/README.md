@@ -15,3 +15,7 @@ If you delete these cookies and refresh the website, Amazon will forget your pre
 From a web development perspective, when you visit Amazon, your browser makes a GET request to Amazon's server, which responds with the necessary HTML, CSS, and JavaScript files. Adding an item to your cart sends a POST request, prompting the server to create a cookie with your session data and instruct your browser to save it.
 
 When you return to Amazon, your browser sends the saved cookie with the GET request, allowing the server to identify you and restore your previous session, such as displaying your cart items. This process is akin to cracking open a fortune cookie to reveal your previous shopping activity.
+
+## Sessions and Authentication
+
+Sessions represent the period during which a browser interacts with a server. Typically, a session starts when you log in to a website, creating a cookie that contains your authenticated user credentials. This cookie allows you to browse the site without logging in repeatedly until you log out, which ends the session and destroys the cookie.

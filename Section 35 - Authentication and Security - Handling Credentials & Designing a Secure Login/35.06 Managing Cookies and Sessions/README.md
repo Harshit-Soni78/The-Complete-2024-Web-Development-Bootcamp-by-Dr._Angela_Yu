@@ -203,3 +203,14 @@ app.get("/secrets", (req, res) => {
   }
 });
 ```
+
+## Conclusion
+
+Persisting user sessions with cookies and sessions is essential for modern web authentication. Passport.js provides a flexible and straightforward way to implement various authentication strategies and manage sessions securely. Remember to store sensitive secrets, like session keys, in environment variables to protect them from exposure.
+
+## Key Takeaways
+
+- Cookies store session identifiers on the browser to maintain user state across visits.
+- Sessions represent a period of interaction between a browser and server, maintained via cookies.
+- Passport.js simplifies authentication by supporting multiple strategies and session management.
+- Proper middleware order and session configuration are crucial for secure and persistent user authentication.

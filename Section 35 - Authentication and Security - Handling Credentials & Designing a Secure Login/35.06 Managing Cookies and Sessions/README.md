@@ -72,3 +72,34 @@ app.get("/secrets", (req, res) => {
   }
 });
 ```
+
+### Implementing the Local Strategy
+
+Import `Strategy` from `passport-local` and configure Passport to use it. The strategy's verify function receives the username, password, and a callback. It should verify the user's credentials asynchronously, typically by querying the database and comparing hashed passwords.
+
+Example setup:
+
+```js
+const LocalStrategy = require("passport-local").Strategy;
+
+passport.use(
+  new LocalStrategy(async (username, password, cb) => {
+    try {
+      // Query database for user by username
+      const user = await findUserByUsername(username);
+      if (!user) {
+        return cb(null, false, { message: "User not found" });
+      }
+      // Compare password with hashed password
+      const match = await bcrypt.compare(password, user.password);
+      if (match) {
+        return cb(null, user);
+      } else {
+        return cb(null, false, { message: "Incorrect password" });
+      }
+    } catch (err) {
+      return cb(err);
+    }
+  })
+);
+```

@@ -26,3 +26,22 @@ We will implement cookies and sessions using Passport.js, a flexible Node.js aut
 
 To begin, install the necessary packages: `express-session` for session persistence and `passport` along with `passport-local` for local authentication strategy. These are included in the project's `package.json` and can be installed with `npm install`.
 
+### Setting Up Express Session Middleware
+
+Import `session` from `express-session` and configure it as middleware in your Express app. Key options include:
+
+- `secret`: a string used to sign the session cookie, acting as an encryption key.
+- `resave`: set to `false` to avoid forcing session save if unmodified.
+- `saveUninitialized`: set to `true` to save uninitialized sessions.
+
+Example configuration:
+
+```js
+app.use(
+  session({
+    secret: "TOPSECRETWORD",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+```

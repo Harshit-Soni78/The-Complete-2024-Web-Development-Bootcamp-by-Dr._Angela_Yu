@@ -56,3 +56,19 @@ Example:
 app.use(passport.initialize());
 app.use(passport.session());
 ```
+
+### Protecting Routes with Authentication Check
+
+To restrict access to certain routes, such as `/secrets`, check if the user is authenticated using Passport's `req.isAuthenticated()` method. If authenticated, render the protected page; otherwise, redirect to the login page.
+
+Example:
+
+```js
+app.get("/secrets", (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render("secrets");
+  } else {
+    res.redirect("/login");
+  }
+});
+```

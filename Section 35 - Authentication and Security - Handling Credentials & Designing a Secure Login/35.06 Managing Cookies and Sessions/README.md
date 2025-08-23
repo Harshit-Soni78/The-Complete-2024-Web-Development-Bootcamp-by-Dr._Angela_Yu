@@ -124,3 +124,19 @@ passport.deserializeUser(async (id, done) => {
   }
 });
 ```
+
+### Using Passport Middleware in Routes
+
+Instead of manually handling authentication logic in your login route, use Passport's `authenticate` middleware. It triggers the configured strategy and handles success and failure redirects.
+
+Example:
+
+```js
+app.post(
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/secrets",
+    failureRedirect: "/login",
+  })
+);
+```

@@ -10,3 +10,8 @@ You can view cookies in Chrome by navigating to Settings, searching for "cookie,
 
 If you delete these cookies and refresh the website, Amazon will forget your previous session, and your cart will be empty. Cookies are widely used to save browsing sessions and enable features like retargeting ads, where other websites remind you of items you viewed on Amazon.
 
+## How Cookies and Sessions Work in Web Development
+
+From a web development perspective, when you visit Amazon, your browser makes a GET request to Amazon's server, which responds with the necessary HTML, CSS, and JavaScript files. Adding an item to your cart sends a POST request, prompting the server to create a cookie with your session data and instruct your browser to save it.
+
+When you return to Amazon, your browser sends the saved cookie with the GET request, allowing the server to identify you and restore your previous session, such as displaying your cart items. This process is akin to cracking open a fortune cookie to reveal your previous shopping activity.

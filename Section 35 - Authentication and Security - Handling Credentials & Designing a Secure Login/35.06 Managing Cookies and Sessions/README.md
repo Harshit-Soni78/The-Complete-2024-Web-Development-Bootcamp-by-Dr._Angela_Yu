@@ -186,3 +186,20 @@ app.post("/register", async (req, res) => {
   }
 });
 ```
+
+### Accessing Authenticated User Data
+
+Within routes, you can access the authenticated user's data via `req.user`. This is useful for personalizing content or verifying permissions.
+
+Example:
+
+```js
+app.get("/secrets", (req, res) => {
+  if (req.isAuthenticated()) {
+    console.log(req.user); // User data
+    res.render("secrets");
+  } else {
+    res.redirect("/login");
+  }
+});
+```

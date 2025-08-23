@@ -19,3 +19,10 @@ When you return to Amazon, your browser sends the saved cookie with the GET requ
 ## Sessions and Authentication
 
 Sessions represent the period during which a browser interacts with a server. Typically, a session starts when you log in to a website, creating a cookie that contains your authenticated user credentials. This cookie allows you to browse the site without logging in repeatedly until you log out, which ends the session and destroys the cookie.
+
+## Implementing Cookies and Sessions with Passport.js
+
+We will implement cookies and sessions using Passport.js, a flexible Node.js authentication library. Passport supports various authentication strategies, including local username and password, as well as third-party services like Google, Facebook, LinkedIn, and Twitter.
+
+To begin, install the necessary packages: `express-session` for session persistence and `passport` along with `passport-local` for local authentication strategy. These are included in the project's `package.json` and can be installed with `npm install`.
+

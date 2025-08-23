@@ -140,3 +140,20 @@ app.post(
   })
 );
 ```
+
+### Setting Cookie Expiry
+
+You can configure the session cookie's expiry using the `cookie.maxAge` option in the session middleware. This value is specified in milliseconds.
+
+Example setting a one-day expiry:
+
+```js
+app.use(
+  session({
+    secret: "TOPSECRETWORD",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 1 day
+  })
+);
+```

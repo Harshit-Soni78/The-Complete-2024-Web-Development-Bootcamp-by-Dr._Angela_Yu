@@ -157,3 +157,32 @@ app.use(
   })
 );
 ```
+
+### Implementing Registration with Passport
+
+When registering a new user, insert the user into the database and use `req.login()` to authenticate and start a session immediately. This method serializes the user and redirects to the protected route.
+
+Example:
+
+```js
+app.post("/register", async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const result = await db.query(
+      "INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *",
+      [req.body.email, hashedPassword]
+    );
+    const user = result.rows[0];
+    req.login(user, (err) => {
+      if (err) {
+        console.log(err);
+        return res.redirect("/register");
+      }
+      return res.redirect("/secrets");
+    });
+  } catch (err) {
+    console.log(err);
+    res.redirect("/register");
+  }
+});
+```

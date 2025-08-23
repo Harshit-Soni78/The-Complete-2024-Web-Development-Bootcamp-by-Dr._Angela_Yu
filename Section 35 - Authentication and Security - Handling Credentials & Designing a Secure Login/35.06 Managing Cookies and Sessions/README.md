@@ -45,3 +45,14 @@ app.use(
   })
 );
 ```
+
+### Initializing Passport Middleware
+
+After setting up the session middleware, initialize Passport and its session handling middleware. The order is important: session middleware must come before Passport initialization.
+
+Example:
+
+```js
+app.use(passport.initialize());
+app.use(passport.session());
+```

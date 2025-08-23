@@ -103,3 +103,24 @@ passport.use(
   })
 );
 ```
+
+### Serializing and Deserializing Users
+
+Passport requires serialization and deserialization of user information to manage sessions. Serialization saves user data to the session, while deserialization retrieves it for use in requests.
+
+Example:
+
+```js
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser(async (id, done) => {
+  try {
+    const user = await findUserById(id);
+    done(null, user);
+  } catch (err) {
+    done(err);
+  }
+});
+```

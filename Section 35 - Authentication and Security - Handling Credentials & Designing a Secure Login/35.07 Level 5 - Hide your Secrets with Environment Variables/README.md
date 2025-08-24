@@ -98,3 +98,7 @@ PG_PORT="your_db_port"
 ```
 
 Access these in your code using `process.env.PG_USER` and so on. This ensures that sensitive information is not exposed in your codebase.
+
+## Conclusion
+
+Environment variables are essential for keeping secrets and sensitive information out of your codebase and version control. Always use a `.gitignore` file to prevent uploading secrets. If your project requires API keys, especially paid ones, remember to use environment variables.

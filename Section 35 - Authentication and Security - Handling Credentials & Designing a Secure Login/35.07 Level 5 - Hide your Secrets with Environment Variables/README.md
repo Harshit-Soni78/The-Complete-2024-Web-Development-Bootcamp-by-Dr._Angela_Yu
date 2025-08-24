@@ -26,3 +26,19 @@ To implement environment variables in your project and keep secrets safe, downlo
 ```bash
 npm install
 ```
+
+## Creating the .env File
+
+After installing, the next step is to move the secret out of `index.js` by creating a `.env` file at the top level of your project. This file should only have the extension `.env`. If done correctly, a gear icon may appear in your editor (such as VS Code with the vscode-icons extension).
+
+```bash
+SESSION_SECRET="your_secret_string"
+```
+
+The format for environment variables is as follows:
+
+- The variable name is in all caps, words separated by underscores.
+- There is no constructor like `const` or `var`.
+- The value is a string enclosed in double quotes.
+- No spaces around the equal sign.
+- Each variable is on a new line, with no commas or semicolons.

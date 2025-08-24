@@ -69,3 +69,7 @@ When using source control like Git, initialize a repository for your project. No
 ```
 
 GitHub provides a list of common files to ignore for Node.js projects, such as `node_modules` and `.env` files. This is important to avoid uploading large dependencies and sensitive information.
+
+## Demonstration: What Not to Do
+
+If you create a repository and commit both `.env` and your code file, both will be visible on GitHub. This exposes your secrets, which is a security risk.

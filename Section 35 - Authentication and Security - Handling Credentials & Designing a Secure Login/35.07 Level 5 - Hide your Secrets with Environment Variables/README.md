@@ -59,3 +59,13 @@ env.config();
 ```
 
 Now, running your code will work as before, but the secret is no longer visible in `index.js`.
+
+## Using Source Control and .gitignore
+
+When using source control like Git, initialize a repository for your project. Normally, you will add the `.env` file type to `.gitignore`, which is a separate file that tells Git not to upload certain files. This prevents secrets from being uploaded to GitHub or other repositories.
+
+```bash
+.env
+```
+
+GitHub provides a list of common files to ignore for Node.js projects, such as `node_modules` and `.env` files. This is important to avoid uploading large dependencies and sensitive information.

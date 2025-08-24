@@ -84,3 +84,17 @@ node_modules/
 ```
 
 Initialize your repository, commit, and push. This time, `.env` will not be uploaded, keeping your secrets safe.
+
+## Practice: Moving Database Credentials to Environment Variables
+
+Another part of your code that should use environment variables is your database setup. Normally, your database would be hosted remotely, and anyone with the access credentials could access it. Move the user, host, database, password, and port into environment variables.
+
+```bash
+PG_USER="your_db_user"
+PG_HOST="your_db_host"
+PG_DATABASE="your_db_name"
+PG_PASSWORD="your_db_password"
+PG_PORT="your_db_port"
+```
+
+Access these in your code using `process.env.PG_USER` and so on. This ensures that sensitive information is not exposed in your codebase.

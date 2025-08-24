@@ -42,3 +42,20 @@ The format for environment variables is as follows:
 - The value is a string enclosed in double quotes.
 - No spaces around the equal sign.
 - Each variable is on a new line, with no commas or semicolons.
+
+## Accessing Environment Variables in Code
+
+After saving the `.env` file, return to `index.js`. Replace the secret with the following code to access the environment variable:
+
+```js
+process.env.SESSION_SECRET;
+```
+
+To load the `.env` file into the environment, import and configure dotenv as follows:
+
+```js
+const env = require("dotenv");
+env.config();
+```
+
+Now, running your code will work as before, but the secret is no longer visible in `index.js`.

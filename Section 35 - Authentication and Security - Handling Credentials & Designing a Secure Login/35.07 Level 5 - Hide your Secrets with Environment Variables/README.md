@@ -18,3 +18,11 @@ For an app to work, secrets are needed to encrypt the database. When collaborati
 ## What Are Environment Variables?
 
 Environment variables are essentially a very simple file where sensitive variables, such as encryption keys and API keys, are kept. In this lesson, the use of the popular package `dotenv` is demonstrated. The number of weekly downloads shows how heavily developers depend on this module to keep secrets off the internet and secure.
+
+## Setting Up Environment Variables with dotenv
+
+To implement environment variables in your project and keep secrets safe, download and extract the folder called `9.4 Environment Variables`. Inside `package.json`, the package used is `dotenv`. If not already there, stop your server, navigate to this module, and run the following command to install the package:
+
+```bash
+npm install
+```

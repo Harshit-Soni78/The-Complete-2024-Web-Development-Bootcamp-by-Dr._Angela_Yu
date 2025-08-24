@@ -102,3 +102,10 @@ Access these in your code using `process.env.PG_USER` and so on. This ensures th
 ## Conclusion
 
 Environment variables are essential for keeping secrets and sensitive information out of your codebase and version control. Always use a `.gitignore` file to prevent uploading secrets. If your project requires API keys, especially paid ones, remember to use environment variables.
+
+## Key Takeaways
+
+- Environment variables help keep sensitive information like API keys and secrets out of your codebase and version control.
+- The dotenv package is widely used to manage environment variables in Node.js projects.
+- Environment variables are defined in a .env file and accessed in code via process.env.
+- Always add your .env file to .gitignore to prevent secrets from being uploaded to public repositories.

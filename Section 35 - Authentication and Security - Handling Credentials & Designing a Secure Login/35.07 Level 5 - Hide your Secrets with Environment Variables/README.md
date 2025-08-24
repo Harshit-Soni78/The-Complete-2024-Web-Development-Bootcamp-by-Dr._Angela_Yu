@@ -73,3 +73,14 @@ GitHub provides a list of common files to ignore for Node.js projects, such as `
 ## Demonstration: What Not to Do
 
 If you create a repository and commit both `.env` and your code file, both will be visible on GitHub. This exposes your secrets, which is a security risk.
+
+## Demonstration: The Proper Way
+
+Instead, create a `.gitignore` file with the following content:
+
+```bash
+.env
+node_modules/
+```
+
+Initialize your repository, commit, and push. This time, `.env` will not be uploaded, keeping your secrets safe.

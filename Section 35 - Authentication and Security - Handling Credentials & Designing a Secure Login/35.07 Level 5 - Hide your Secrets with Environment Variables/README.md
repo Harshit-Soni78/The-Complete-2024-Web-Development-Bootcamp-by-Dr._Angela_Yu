@@ -14,3 +14,7 @@ For an app to work, secrets are needed to encrypt the database. When collaborati
 
 - **Convenience:** When deploying large applications, the process is complicated. Environment variables allow you to change certain variables without modifying the codebase.
 - **Security:** It is not a good idea to store authentication keys or API keys in the same place as your code. Environment variables allow you to separate sensitive information from your codebase.
+
+## What Are Environment Variables?
+
+Environment variables are essentially a very simple file where sensitive variables, such as encryption keys and API keys, are kept. In this lesson, the use of the popular package `dotenv` is demonstrated. The number of weekly downloads shows how heavily developers depend on this module to keep secrets off the internet and secure.

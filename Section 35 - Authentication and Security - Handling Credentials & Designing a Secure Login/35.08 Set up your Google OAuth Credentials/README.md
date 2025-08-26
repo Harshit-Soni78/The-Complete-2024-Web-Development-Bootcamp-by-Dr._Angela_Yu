@@ -12,3 +12,10 @@ Navigate to [https://console.cloud.google.com/](https://console.cloud.google.com
 
 ![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-49-6b508927f9aa87ff3fcd168678572dfa.png)
 
+## Create a new project
+
+There's a drop down on the top left where you can select a project or create a new one. Create your own project called "Secrets".
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-49-efc614e3351267bc481a64dcc0f8bca7.png)
+
+You can leave the location as "No organisation".

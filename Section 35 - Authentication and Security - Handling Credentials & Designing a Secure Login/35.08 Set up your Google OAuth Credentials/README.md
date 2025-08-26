@@ -50,3 +50,11 @@ Scopes are the fields that you will receive once the user logs in through google
 
 You don't need to add any test users.
 
+## Create your client ID
+
+Once your done, navigate back to "Credentials", click "Create Credentials - OAuth client ID.
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-1f0b020c81b09b592f3391f5a2aa608a.png)
+
+and **choose Web Application**
+

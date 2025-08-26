@@ -77,3 +77,11 @@ This is the path where your users are redirected to after they have authenticate
 ![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-07febedcee1534c5c5e9627cd13c06a2.png)
 
 and finally click "**Create**" to create your client ID.
+
+## Copy your Client ID and Client Secret
+
+Make a note of these two, as you'll need them in the next lesson
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-51-b6d2ce6cbd50ccdb507f3870f17611fd.png)
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-51-d245907cb8bbbef7d455cc353d849e86.png)

@@ -65,3 +65,15 @@ use:
 `http://localhost:3000`
 
 ![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-341b8001ef83dd091451bba9548ab715.png)
+
+## Add localhost to your redirect URI
+
+use:
+
+`http://localhost:3000/auth/google/secrets`
+
+This is the path where your users are redirected to after they have authenticated with google. You basically want to show your logged in users the secret page, so that's what you need to configure here.
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-07febedcee1534c5c5e9627cd13c06a2.png)
+
+and finally click "**Create**" to create your client ID.

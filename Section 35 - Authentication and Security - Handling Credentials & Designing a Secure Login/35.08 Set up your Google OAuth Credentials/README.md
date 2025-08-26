@@ -58,3 +58,10 @@ Once your done, navigate back to "Credentials", click "Create Credentials - OAut
 
 and **choose Web Application**
 
+## Add localhost to your Javascript origins
+
+use:
+
+`http://localhost:3000`
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-341b8001ef83dd091451bba9548ab715.png)

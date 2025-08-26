@@ -41,3 +41,12 @@ Select "External" for the application type. We be staying in testing mode, so we
 Fill in the required information like the app name, the support email, and the developer email addresses. Then click continue. You don't need to provide a domain or logo.
 
 ![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-253f75e5ce0cd18bc2e7e7ae15f31781.png)
+
+## Configure your Scope
+
+Scopes are the fields that you will receive once the user logs in through google. We're just interested in the email so click on "Add Or Remove Scopes". And add a checkmark:
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-916c75bfadb999a940e91c5b4da1d8a8.png)
+
+You don't need to add any test users.
+

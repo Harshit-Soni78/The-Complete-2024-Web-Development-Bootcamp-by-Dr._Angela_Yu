@@ -19,3 +19,9 @@ There's a drop down on the top left where you can select a project or create a n
 ![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-49-efc614e3351267bc481a64dcc0f8bca7.png)
 
 You can leave the location as "No organisation".
+
+## Access "Credentials" under APIs & Services
+
+Click on the hamburger menu and navigate to "Credentials".
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-49-cf316bcb8ded4612f7f261e7aef24a73.png)

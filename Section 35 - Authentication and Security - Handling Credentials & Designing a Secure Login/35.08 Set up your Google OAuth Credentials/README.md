@@ -25,3 +25,19 @@ You can leave the location as "No organisation".
 Click on the hamburger menu and navigate to "Credentials".
 
 ![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-49-cf316bcb8ded4612f7f261e7aef24a73.png)
+
+## Configure Consent Screen
+
+Before you can create your credentials you'll have to configure the consent screen. You'll be prompted to do this when you click "Create OAuth Client ID", but there's also a tab on the side where you can do this right away.
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-49-b12ed0e1f250307e9acfe5aed5302a22.png)
+
+You'll get taken to a form and will have to provide some information about yourself and your app. You're basically configuring the screen that the user sees when they are in the process of granting your app access to their information.
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-bc840898f53ff9415294f7fa0e52eec4.png)
+
+Select "External" for the application type. We be staying in testing mode, so we won't need to go through the verification process for our app.
+
+Fill in the required information like the app name, the support email, and the developer email addresses. Then click continue. You don't need to provide a domain or logo.
+
+![Google Console Image](https://img-c.udemycdn.com/redactor/raw/article_lecture/2024-01-14_12-47-50-253f75e5ce0cd18bc2e7e7ae15f31781.png)

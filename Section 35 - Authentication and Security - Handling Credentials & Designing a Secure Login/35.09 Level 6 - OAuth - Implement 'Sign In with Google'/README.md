@@ -124,3 +124,13 @@ try {
   return done(err, null);
 }
 ```
+
+## Testing the Google Login Implementation
+
+Start your server and navigate to the Register page. Click the "Sign up with Google" button, select your Google account, and proceed with the login.
+
+If successful, your server console will log the user's Google profile information.
+
+Check your database to confirm that the new user has been added with the correct email and placeholder password.
+
+Sessions should persist across browser refreshes, even when logging in with Google.

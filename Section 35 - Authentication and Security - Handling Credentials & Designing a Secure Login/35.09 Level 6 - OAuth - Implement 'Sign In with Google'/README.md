@@ -152,3 +152,7 @@ app.get("/logout", (req, res, next) => {
   });
 });
 ```
+
+## Conclusion
+
+With these implementations, your application now supports login with email and password, login with Google, and logout functionality. The next steps involve enabling users to add and view their own secrets, completing the project.

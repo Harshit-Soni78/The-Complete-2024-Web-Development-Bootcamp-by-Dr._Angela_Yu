@@ -15,3 +15,9 @@ To illustrate, imagine building a new social network called Bracebook, designed 
 On the login page, users can choose to sign in manually or use Facebook login. When using Facebook login, our application makes a GET request to Facebook requesting the user's friends list. Facebook responds with a POST request containing the list of friends and their emails. Our server then compares these emails with our database to identify existing users, allowing automatic friend connections on Bracebook.
 
 Similarly, LinkedIn uses Google OAuth to access a user's Gmail contacts to help them find connections without manually entering email addresses.
+
+## Benefits of Using OAuth for Authentication
+
+Using OAuth delegates the responsibility of securely managing passwords to large companies like Facebook and Google. These companies have robust security measures such as hashing, salting, peppering passwords, encrypting databases, and complex mathematical protections to safeguard user credentials.
+
+As web developers, implementing all these security measures ourselves would be time-consuming and complex. By leveraging OAuth, we reduce liability and improve security by relying on trusted providers to authenticate users.

@@ -21,3 +21,22 @@ Similarly, LinkedIn uses Google OAuth to access a user's Gmail contacts to help 
 Using OAuth delegates the responsibility of securely managing passwords to large companies like Facebook and Google. These companies have robust security measures such as hashing, salting, peppering passwords, encrypting databases, and complex mathematical protections to safeguard user credentials.
 
 As web developers, implementing all these security measures ourselves would be time-consuming and complex. By leveraging OAuth, we reduce liability and improve security by relying on trusted providers to authenticate users.
+
+## Key Features of OAuth
+
+OAuth is special because it offers three main features:
+
+- **Granular Level of Access:** Developers can request specific data from the user's account, such as profile information or email address.
+- **Read-only or Read-and-Write Access:** Apps can request permission to either read data or also write data on behalf of the user.
+- **Revocable Access:** Users can revoke the access granted to third-party apps at any time from their account settings without needing to visit the third-party website.
+
+## OAuth Workflow Overview
+
+1. **App Registration:** We register our web application with the third-party provider (e.g., Facebook, Google) to obtain a client ID.
+2. **User Login:** When a user chooses to log in with the third-party provider, they are redirected to the provider's login page.
+3. **User Authentication:** The user logs in on the trusted provider's site.
+4. **Permission Granting:** The user reviews and grants the requested permissions.
+5. **Authorization Code:** Our app receives an authorization code confirming successful login.
+6. **Access Token Exchange:** We exchange the authorization code for an access token, which allows us to request user data as permitted.
+
+The authorization code is like a single-use ticket, while the access token acts like a longer-term pass to access user data.

@@ -95,3 +95,32 @@ app.get(
   })
 );
 ```
+
+## Handling User Data in the Google Strategy Callback
+
+Inside the Google strategy callback, implement logic to check if the user already exists in your database by querying with the email from the Google profile.
+
+If the user does not exist, insert a new user record with the email and a placeholder password (e.g., "google") to differentiate Google sign-in users from local users.
+
+If the user exists, proceed with that user.
+
+Use a try-catch block to handle any errors during database operations.
+
+```js
+try {
+  const result = await db.query("SELECT * FROM users WHERE email = $1", [
+    profile.email,
+  ]);
+  if (result.rows.length === 0) {
+    const newUser = await db.query(
+      "INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *",
+      [profile.email, "google"]
+    );
+    return done(null, newUser.rows[0]);
+  } else {
+    return done(null, result.rows[0]);
+  }
+} catch (err) {
+  return done(err, null);
+}
+```

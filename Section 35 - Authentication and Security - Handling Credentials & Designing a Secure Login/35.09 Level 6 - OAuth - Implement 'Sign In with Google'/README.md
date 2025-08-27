@@ -70,3 +70,28 @@ passport.use(
   )
 );
 ```
+
+## Setting Up Routes for Google Authentication
+
+Create a GET route `/auth/google` that triggers Passport's Google authentication middleware. Specify the scope to request the user's profile and email.
+
+Both login and registration can use this same route.
+
+After successful authentication, Google will redirect to `/auth/google/secrets`, which you also need to handle with Passport middleware specifying success and failure redirects.
+
+```js
+app.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+```
+
+```js
+app.get(
+  "/auth/google/secrets",
+  passport.authenticate("google", {
+    successRedirect: "/secrets",
+    failureRedirect: "/login",
+  })
+);
+```

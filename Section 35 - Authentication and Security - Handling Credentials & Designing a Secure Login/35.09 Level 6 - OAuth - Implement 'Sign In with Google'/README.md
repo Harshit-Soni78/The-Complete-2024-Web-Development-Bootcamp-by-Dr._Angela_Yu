@@ -156,3 +156,10 @@ app.get("/logout", (req, res, next) => {
 ## Conclusion
 
 With these implementations, your application now supports login with email and password, login with Google, and logout functionality. The next steps involve enabling users to add and view their own secrets, completing the project.
+
+## Key Takeaways
+
+- OAuth is an open standard for token-based authorization that enables secure third-party authentication.
+- OAuth allows granular access control, specifying exactly what user data an app can access.
+- Delegating authentication to providers like Google or Facebook enhances security and reduces developer liability.
+- Implementing OAuth with Passport.js involves setting up strategies, handling callbacks, and managing user sessions.

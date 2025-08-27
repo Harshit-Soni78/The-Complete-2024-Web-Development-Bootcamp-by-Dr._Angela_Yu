@@ -134,3 +134,21 @@ If successful, your server console will log the user's Google profile informatio
 Check your database to confirm that the new user has been added with the correct email and placeholder password.
 
 Sessions should persist across browser refreshes, even when logging in with Google.
+
+## Implementing Logout Functionality
+
+To allow users to log out, create a GET route `/logout` that calls the `logout` method on the request object. Handle any errors and redirect the user to the home page after logout.
+
+This enables users to safely end their session and test other login methods.
+
+```js
+app.get("/logout", (req, res, next) => {
+  req.logout((err) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    res.redirect("/");
+  });
+});
+```

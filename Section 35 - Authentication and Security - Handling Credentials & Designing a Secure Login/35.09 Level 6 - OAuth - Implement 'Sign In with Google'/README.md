@@ -40,3 +40,33 @@ OAuth is special because it offers three main features:
 6. **Access Token Exchange:** We exchange the authorization code for an access token, which allows us to request user data as permitted.
 
 The authorization code is like a single-use ticket, while the access token acts like a longer-term pass to access user data.
+
+## Implementing "Sign In with Google" Using Passport.js
+
+Before starting, ensure you have set up Google OAuth credentials as described in the previous lesson and updated your `.env` file with your Google Client ID and Client Secret.
+
+In your project, install the `passport-google-oauth2` module, which enables the Google login strategy.
+
+Import the `GoogleStrategy` from the module and configure it in your `index.js` file just below your existing local strategy setup.
+
+```js
+const GoogleStrategy = require("passport-google-oauth2").Strategy;
+```
+
+```js
+passport.use(
+  "google",
+  new GoogleStrategy(
+    {
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL: "http://localhost:3000/auth/google/secrets",
+      userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
+    },
+    async (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
+      // Further processing will be done here
+    }
+  )
+);
+```

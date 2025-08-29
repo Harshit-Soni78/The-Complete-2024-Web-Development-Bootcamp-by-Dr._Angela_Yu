@@ -52,3 +52,23 @@ app.get("/submit", (req, res) => {
   }
 });
 ```
+
+## Implementing the Submit POST Route
+
+When a user submits their secret via the form on `submit.ejs`, a POST request is sent to `/submit`. We will handle this request by extracting the secret from the request body and updating the user's record in the database with this secret. After successful update, the user will be redirected to the `/secrets` page to view their secret.
+
+```js
+app.post("/submit", async (req, res) => {
+  const submittedSecret = req.body.secret;
+
+  try {
+    await db.query("UPDATE users SET secret = $1 WHERE email = $2", [
+      submittedSecret,
+      req.user.email,
+    ]);
+    res.redirect("/secrets");
+  } catch (error) {
+    console.log(error);
+  }
+});
+```

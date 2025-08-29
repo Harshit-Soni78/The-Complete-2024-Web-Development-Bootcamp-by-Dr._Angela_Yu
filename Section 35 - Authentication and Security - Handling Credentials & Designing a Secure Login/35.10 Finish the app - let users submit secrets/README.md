@@ -34,3 +34,7 @@ To achieve this functionality, you need to:
 - Create a POST route for `/submit` to handle secret submissions, updating the database accordingly.
 
 These tasks are marked as TODOs in the provided project files.
+
+### Reminder on Environment Variables
+
+Ensure your `.env` file contains your actual Google OAuth credentials by replacing `YOUR_CLIENT_ID` and `YOUR_CLIENT_SECRET` with your own `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. This is necessary for the Google login functionality to work correctly.

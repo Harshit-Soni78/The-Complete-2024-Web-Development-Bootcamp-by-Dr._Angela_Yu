@@ -117,3 +117,14 @@ After implementing these changes:
 - Logging out and back in should persist the secret display.
 
 This confirms that the secret submission and retrieval functionality works as intended.
+
+## Conclusion and Next Steps
+
+This project demonstrates how to integrate user authentication with personalized data storage and retrieval. You have learned to:
+
+- Extend the database schema.
+- Protect routes based on authentication.
+- Handle form submissions and update the database.
+- Dynamically render user-specific content.
+
+Consider applying these authentication and data management techniques to your own projects to deepen your understanding.

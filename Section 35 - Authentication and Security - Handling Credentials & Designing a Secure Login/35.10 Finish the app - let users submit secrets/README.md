@@ -96,3 +96,11 @@ app.get("/secrets", async (req, res) => {
   }
 });
 ```
+
+## Updating the secrets.ejs Template
+
+Modify the `secrets.ejs` file to replace the static secret text with an EJS tag that dynamically displays the secret passed from the server. This allows the page to show the user's submitted secret or the default message.
+
+```ejs
+<p><%= secret %></p>
+```

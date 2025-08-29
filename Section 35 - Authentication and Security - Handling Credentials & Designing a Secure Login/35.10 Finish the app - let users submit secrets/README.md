@@ -128,3 +128,10 @@ This project demonstrates how to integrate user authentication with personalized
 - Dynamically render user-specific content.
 
 Consider applying these authentication and data management techniques to your own projects to deepen your understanding.
+
+## Key Takeaways
+
+- Added a new `secret` column to the users table to store user-submitted secrets.
+- Implemented authentication checks to restrict access to the secret submission page.
+- Created GET and POST routes to display the submission form and handle secret submissions.
+- Updated the secrets page to dynamically display the user's secret from the database.

@@ -38,3 +38,17 @@ These tasks are marked as TODOs in the provided project files.
 ### Reminder on Environment Variables
 
 Ensure your `.env` file contains your actual Google OAuth credentials by replacing `YOUR_CLIENT_ID` and `YOUR_CLIENT_SECRET` with your own `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. This is necessary for the Google login functionality to work correctly.
+
+## Implementing the Submit GET Route
+
+We will create a GET route at `/submit` that renders the secret submission page. This route should only be accessible to authenticated users. If a user is not authenticated, they will be redirected to the login page.
+
+```js
+app.get("/submit", (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render("submit.ejs");
+  } else {
+    res.redirect("/login");
+  }
+});
+```

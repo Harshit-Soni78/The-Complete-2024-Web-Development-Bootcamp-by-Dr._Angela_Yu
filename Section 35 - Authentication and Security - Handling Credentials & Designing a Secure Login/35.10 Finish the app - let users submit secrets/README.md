@@ -72,3 +72,27 @@ app.post("/submit", async (req, res) => {
   }
 });
 ```
+
+## Updating the Secrets GET Route
+
+We will update the GET route for `/secrets` to retrieve the secret associated with the logged-in user from the database. If the user has a secret, it will be passed to the `secrets.ejs` template for rendering. If no secret exists, a default message or placeholder will be shown instead.
+
+```js
+app.get("/secrets", async (req, res) => {
+  try {
+    const result = await db.query("SELECT secret FROM users WHERE email = $1", [
+      req.user.email,
+    ]);
+
+    const userSecret = result.rows[0] ? result.rows[0].secret : null;
+
+    if (userSecret) {
+      res.render("secrets.ejs", { secret: userSecret });
+    } else {
+      res.render("secrets.ejs", { secret: "You should submit a secret!" });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
+```

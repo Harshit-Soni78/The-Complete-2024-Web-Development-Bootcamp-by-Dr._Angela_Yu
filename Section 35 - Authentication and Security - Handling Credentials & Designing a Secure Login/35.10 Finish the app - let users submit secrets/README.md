@@ -104,3 +104,16 @@ Modify the `secrets.ejs` file to replace the static secret text with an EJS tag 
 ```ejs
 <p><%= secret %></p>
 ```
+
+## Testing the Application
+
+After implementing these changes:
+
+- Log in as a user.
+- The secrets page should display the user's secret if one exists.
+- Click "Submit a Secret" to navigate to the submission page.
+- Enter a new secret and submit.
+- The secret should be saved and displayed on the secrets page.
+- Logging out and back in should persist the secret display.
+
+This confirms that the secret submission and retrieval functionality works as intended.

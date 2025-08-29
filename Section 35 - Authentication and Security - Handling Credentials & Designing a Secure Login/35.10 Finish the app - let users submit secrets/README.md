@@ -23,3 +23,14 @@ The first step is to add a new column named `secret` to the `users` table. This 
 - When the secrets page is re-rendered, the user's secret is displayed instead of the default message.
 
 This ensures that secrets remain private and accessible only to authenticated users.
+
+### Tasks to Complete
+
+To achieve this functionality, you need to:
+
+- Add the `secret` column to the `users` table.
+- Update the GET route for `/secrets` to retrieve the user's secret from the database if it exists.
+- Create a GET route for `/submit` that renders the submission page only if the user is authenticated; otherwise, redirect to login.
+- Create a POST route for `/submit` to handle secret submissions, updating the database accordingly.
+
+These tasks are marked as TODOs in the provided project files.

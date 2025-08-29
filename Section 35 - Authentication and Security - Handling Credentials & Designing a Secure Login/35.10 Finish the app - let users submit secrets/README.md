@@ -11,3 +11,15 @@ We will modify the application so that users can submit their own secrets. The `
 ### Database Update: Adding a Secret Column
 
 The first step is to add a new column named `secret` to the `users` table. This column will hold data of type `text`. After adding this column, users should be able to log in, navigate to the submit page, and enter their secret. Upon submission, the secret will be saved in the database under their user record.
+
+### User Experience Flow
+
+- Users log in to the website.
+- They click the "Submit a Secret" button, which navigates to the `submit.ejs` page.
+- Users type their secret, for example:
+  - "I'm scared of clowns."
+  - "Despite learning surfing for years, I'm still not very good."
+- Upon hitting Submit, the secret is saved in the database linked to their user record.
+- When the secrets page is re-rendered, the user's secret is displayed instead of the default message.
+
+This ensures that secrets remain private and accessible only to authenticated users.

@@ -29,3 +29,7 @@ For example, when you reach the bottom of the Twitter feed, it detects this even
 In the past, websites like Facebook required page refreshes to see updates such as friend requests or pokes. Nowadays, notifications handle these updates. Each component listens for changes on the server and updates its own appearance and data independently.
 
 Imagine if every part of the Facebook website was its own component: the news feed, each post, and so on. If a new comment appears on a post, only that post component updates itself without affecting the rest of the website. This is one of React's greatest strengths.
+
+### Efficient Re-rendering with Diffing
+
+React efficiently re-renders changes by comparing the new version of the DOM tree with the old one, a process called diffing. When a change occurs, such as new data arriving or user interaction, React identifies the differences and re-renders only the affected components. For example, if an input changes from empty to checked, only that component re-renders. This efficiency makes your web app faster and more interactive.

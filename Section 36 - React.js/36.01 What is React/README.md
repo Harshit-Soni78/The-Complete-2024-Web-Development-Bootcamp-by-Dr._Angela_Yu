@@ -19,3 +19,13 @@ Effectively, React breaks down a complex user interface into a component tree. F
 React vastly simplifies website structure. For example, creating a simple Navbar with Bootstrap requires writing a lot of HTML, which can be hard to organize and debug. In React, components are represented as if they were HTML elements, allowing you to create custom elements with defined styling and functionality. These components can be slotted into an overall structure, keeping your web app's code clean, reusable, and modular.
 
 This modularity is excellent for programming clean code and building apps that scale well, even when they become large and complex. You can think of components as ingredients in a burger; depending on your needs, you can mix and match components and customize them accordingly.
+
+### Combining HTML, CSS, and JavaScript
+
+React benefits from combining small amounts of HTML, CSS, and JavaScript into single components. Each component manages its own styling and functionality. You can create several components, each performing different functions and having distinct appearances. This approach enables websites like Twitter to load the feed screen without refreshing the entire page visibly.
+
+For example, when you reach the bottom of the Twitter feed, it detects this event and requests more data from the server to populate the feed component. The rest of the app remains unchanged without needing any updates. This design also enables websites to be highly interactive.
+
+In the past, websites like Facebook required page refreshes to see updates such as friend requests or pokes. Nowadays, notifications handle these updates. Each component listens for changes on the server and updates its own appearance and data independently.
+
+Imagine if every part of the Facebook website was its own component: the news feed, each post, and so on. If a new comment appears on a post, only that post component updates itself without affecting the rest of the website. This is one of React's greatest strengths.

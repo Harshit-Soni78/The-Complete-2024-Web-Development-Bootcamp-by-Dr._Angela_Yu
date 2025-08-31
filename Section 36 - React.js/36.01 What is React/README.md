@@ -33,3 +33,11 @@ Imagine if every part of the Facebook website was its own component: the news fe
 ### Efficient Re-rendering with Diffing
 
 React efficiently re-renders changes by comparing the new version of the DOM tree with the old one, a process called diffing. When a change occurs, such as new data arriving or user interaction, React identifies the differences and re-renders only the affected components. For example, if an input changes from empty to checked, only that component re-renders. This efficiency makes your web app faster and more interactive.
+
+### React's Popularity and Demand
+
+React is not the only front-end framework, but it has gained significant popularity. Google Trends shows that React has overtaken Angular and Vue in search interest over the past two years. Stack Overflow surveys rank React JS as the most popular web framework, just below jQuery.
+
+React is used by many prominent companies such as Airbnb, Uber, Facebook, and Netflix. It is one of the fastest-growing and most in-demand skills in web development. Job listings for full-stack developers or front-end engineers frequently require knowledge of React and Node, both covered in this course.
+
+I hope this introduction has excited you to learn React. Without further ado, let's get started and dive into using React JS.

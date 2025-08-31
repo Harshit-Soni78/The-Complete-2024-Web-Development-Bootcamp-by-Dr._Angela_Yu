@@ -15,3 +15,10 @@ and as you build up your skills, as you build more projects, then you will be ab
 Basically, do not shoot for the moon right at the beginning, instead, build up your reputation and build up your skills, while you are giving your clients excellent service for not very much money.
 
 And this way, within a year or so, you will have enough projects to show off and enough clients who will vouch for you, then you can shoot for the moon.
+
+## Key Takeaways
+
+- Building a portfolio and client references is essential to start freelancing.
+- Begin with platforms like Fiverr to practice client communication and project delivery.
+- Gradually move to higher-paying platforms such as Upwork, Guru, or Freelancer.
+- Focus on excellent service and skill development rather than immediate high earnings.

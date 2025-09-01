@@ -65,3 +65,19 @@ import ReactDOM from "react-dom";
 ```
 
 Using `import` and `export` helps modularize dependencies and organize code better. The React module in the curriculum includes a dedicated lesson on ES6 imports and exports.
+
+## Rendering Multiple Elements
+
+ReactDOM's `render()` method only accepts a single HTML element. If you try to render two elements side by side, it will not work. The solution is to wrap multiple elements inside a single `div`.
+
+```js
+ReactDOM.render(
+  <div>
+    <h1>Hello world!</h1>
+    <p>This is a paragraph.</p>
+  </div>,
+  document.getElementById("root")
+);
+```
+
+By wrapping elements inside a `div`, you can render multiple elements as a single unit. This is a fundamental concept in React for creating complex layouts.

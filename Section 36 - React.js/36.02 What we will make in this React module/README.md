@@ -13,3 +13,7 @@ The major project you will work towards is an application called Keeper, which i
 To build these projects, you will learn many new technologies and tools, especially focusing on the React framework. This includes understanding JSX, Props, Components, Containers, and how to work with the Virtual DOM.
 
 You will also learn about State management and Declarative Programming, including the use of React Hooks such as `useState`.
+
+## Deep Dive into ES6 JavaScript
+
+Another significant aspect of this module is learning many ES6 (also known as ES2015) JavaScript concepts. You will deepen your understanding of JavaScript by exploring features such as destructuring, the spread operator, `map` and `filter` methods, as well as `import` and `export` statements.

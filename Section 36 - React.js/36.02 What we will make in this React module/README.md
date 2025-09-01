@@ -7,3 +7,9 @@ In this module, you will be creating several projects. One of these is a registr
 ## Main Project: Keeper App
 
 The major project you will work towards is an application called Keeper, which is a clone of Google Keep. This app allows you to quickly take notes and add them to your personal Keeper app whenever you have new ideas.
+
+## Technologies and Concepts Covered
+
+To build these projects, you will learn many new technologies and tools, especially focusing on the React framework. This includes understanding JSX, Props, Components, Containers, and how to work with the Virtual DOM.
+
+You will also learn about State management and Declarative Programming, including the use of React Hooks such as `useState`.

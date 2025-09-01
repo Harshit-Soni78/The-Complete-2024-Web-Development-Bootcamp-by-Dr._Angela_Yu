@@ -54,3 +54,14 @@ document.getElementById("root").appendChild(h1);
 ```
 
 Both approaches achieve the same result, but JSX is more readable and concise. Babel also allows you to use modern JavaScript features, such as arrow functions and the `map` function, and compiles them for compatibility with all browsers.
+
+## Using ES6 Import Syntax
+
+A recent feature in JavaScript is the `import` keyword. Instead of requiring modules, you can import them as follows:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+```
+
+Using `import` and `export` helps modularize dependencies and organize code better. The React module in the curriculum includes a dedicated lesson on ES6 imports and exports.

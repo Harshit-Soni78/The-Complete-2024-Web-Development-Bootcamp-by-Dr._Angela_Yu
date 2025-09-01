@@ -32,3 +32,25 @@ document.getElementById("root");
 ```
 
 After running this code, you will see the HTML injected into your website, even though you have not modified the HTML file directly. This demonstrates how ReactDOM's `render()` method displays an `h1` inside the `root` div.
+
+## Understanding JSX and Babel
+
+JSX allows you to write HTML directly inside JavaScript files. Behind the scenes, a compiler (Babel) converts this HTML into JavaScript. If you comment out the React import, you will encounter errors because React is not defined.
+
+Inside the React module, Babel acts as a JavaScript compiler. It converts next-generation JavaScript (ES6, ES7, ES8) and JSX into JavaScript that all browsers can understand.
+
+For example, Babel will convert JSX code like the following into JavaScript:
+
+```js
+<h1>Hello world!</h1>
+```
+
+This gets compiled to a `createElement` call in JavaScript, which is equivalent to manually creating elements and appending them to the DOM.
+
+```js
+var h1 = document.createElement("h1");
+h1.innerHTML = "Hello world!";
+document.getElementById("root").appendChild(h1);
+```
+
+Both approaches achieve the same result, but JSX is more readable and concise. Babel also allows you to use modern JavaScript features, such as arrow functions and the `map` function, and compiles them for compatibility with all browsers.

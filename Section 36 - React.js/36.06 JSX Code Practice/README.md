@@ -58,3 +58,11 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+
+## JSX Syntax and Formatting
+
+When saving your code, the editor may automatically reformat it for readability. For example, empty tags like `<li></li>` may be converted to self-closing tags like `<li />` if they contain no content.
+
+However, list elements typically contain text, so ensure you add content inside each `<li>` to avoid self-closing tags where inappropriate.
+
+In this example, the list items are "Bacon", "Noodles", and "Mushrooms."

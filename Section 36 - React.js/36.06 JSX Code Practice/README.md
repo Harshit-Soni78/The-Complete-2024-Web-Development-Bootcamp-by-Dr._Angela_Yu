@@ -29,3 +29,12 @@ These imports allow you to use React's features and render elements to the DOM.
 ```js
 ReactDOM.render(<h1>My favorite foods.</h1>, document.getElementById("root"));
 ```
+
+## Rendering Elements
+
+The `render()` method from `ReactDOM` requires two arguments:
+
+1. **What to show:** The React element or component to render.
+2. **Where to show it:** The DOM element where the React element should be inserted.
+
+In this case, we render an `h1` heading with the text "My favorite foods." inside the DOM element with the id `root`.

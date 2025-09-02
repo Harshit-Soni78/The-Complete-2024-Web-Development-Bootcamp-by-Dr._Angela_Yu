@@ -77,3 +77,16 @@ You have successfully created a React website with:
 All elements are rendered inside the `div` with the id `root`.
 
 If you encountered any difficulties, you can experiment with the completed code provided in the course resources to compare and learn.
+
+## Next Steps
+
+Once you are comfortable with rendering HTML elements into the DOM using React, the next lesson will cover adding JavaScript expressions inside these HTML elements using JSX.
+
+This will enhance your ability to create dynamic and interactive React applications.
+
+## Key Takeaways
+
+- Created a React app from scratch by importing React and ReactDOM modules.
+- Used ReactDOM.render() to display a single root element containing a heading and an unordered list.
+- Wrapped multiple elements inside a single parent div to comply with React's render method requirements.
+- Learned about JSX syntax, including self-closing tags and embedding JavaScript expressions in HTML elements.

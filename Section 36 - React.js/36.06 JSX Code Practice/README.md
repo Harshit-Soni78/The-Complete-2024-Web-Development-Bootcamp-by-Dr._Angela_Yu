@@ -66,3 +66,14 @@ When saving your code, the editor may automatically reformat it for readability.
 However, list elements typically contain text, so ensure you add content inside each `<li>` to avoid self-closing tags where inappropriate.
 
 In this example, the list items are "Bacon", "Noodles", and "Mushrooms."
+
+## Summary
+
+You have successfully created a React website with:
+
+- An `h1` heading
+- An unordered list with three list items
+
+All elements are rendered inside the `div` with the id `root`.
+
+If you encountered any difficulties, you can experiment with the completed code provided in the course resources to compare and learn.

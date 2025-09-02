@@ -15,7 +15,18 @@ function App() {
         it should contain 3 list elements. <br />
       </p>
 
+      <h1>My Favourite Food</h1>
+      <ul>
+        <li>Bacon</li>
+        <li>Noodles</li>
+        <li>Jamon</li>
+      </ul>
 
+      <ol>
+        <li>Study</li>
+        <li>Hard</li>
+        <li>Boy</li>
+      </ol>
     </>
   );
 }

@@ -38,3 +38,23 @@ The `render()` method from `ReactDOM` requires two arguments:
 2. **Where to show it:** The DOM element where the React element should be inserted.
 
 In this case, we render an `h1` heading with the text "My favorite foods." inside the DOM element with the id `root`.
+
+## Adding Multiple Elements
+
+Since the `render()` method can only accept a single element, you cannot directly render multiple sibling elements like an `h1` and a `ul` side by side.
+
+To solve this, wrap the `h1` and the `ul` inside a single parent `div`. This way, the `render()` method receives one root element, which contains the children elements.
+
+```js
+ReactDOM.render(
+  <div>
+    <h1>My favorite foods.</h1>
+    <ul>
+      <li>Bacon</li>
+      <li>Noodles</li>
+      <li>Mushrooms</li>
+    </ul>
+  </div>,
+  document.getElementById("root")
+);
+```

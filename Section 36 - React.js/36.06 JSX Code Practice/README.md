@@ -16,3 +16,16 @@ By the end of this challenge, you should have created a website using React that
 - An unordered list (`ul`) with three list items (`li`)
 
 For example, a list of favorite foods can be displayed with a heading and three bullet points.
+
+## Starting the React Application
+
+To create the React app from scratch, first import the necessary modules:
+
+- Import `React` from the "react" module.
+- Import `ReactDOM` from the "react-dom" module.
+
+These imports allow you to use React's features and render elements to the DOM.
+
+```js
+ReactDOM.render(<h1>My favorite foods.</h1>, document.getElementById("root"));
+```

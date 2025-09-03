@@ -34,3 +34,7 @@ const num = 7;
   <p>Your lucky number is {num}</p>
 </div>
 ```
+
+## Multiple HTML Elements in JSX
+
+If you have more than one HTML element, wrap them inside a single parent element, such as a `<div>`, to avoid syntax errors.

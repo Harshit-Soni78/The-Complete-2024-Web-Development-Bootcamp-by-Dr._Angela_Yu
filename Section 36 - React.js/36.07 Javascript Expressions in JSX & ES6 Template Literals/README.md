@@ -19,3 +19,18 @@ To insert the value of a JavaScript variable into HTML within JSX, wrap the vari
 ```js
 <h1>Hello {name}</h1>
 ```
+
+## Challenge: Insert a Lucky Number
+
+Try creating a new `const` with your lucky number, and render a paragraph that says, "Your lucky number is..." followed by the value of your variable.
+
+```js
+const num = 7;
+```
+
+```js
+<div>
+  <h1>Hello {name}</h1>
+  <p>Your lucky number is {num}</p>
+</div>
+```

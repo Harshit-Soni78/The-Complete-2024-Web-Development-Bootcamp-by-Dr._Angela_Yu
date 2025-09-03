@@ -11,3 +11,11 @@ Suppose we have a variable that we want to insert. For example, if we have a `co
 ```js
 const name = "Angela";
 ```
+
+## Injecting JavaScript into HTML with Curly Braces
+
+To insert the value of a JavaScript variable into HTML within JSX, wrap the variable in curly braces. This tells JSX to interpret the content as JavaScript, not as a string.
+
+```js
+<h1>Hello {name}</h1>
+```

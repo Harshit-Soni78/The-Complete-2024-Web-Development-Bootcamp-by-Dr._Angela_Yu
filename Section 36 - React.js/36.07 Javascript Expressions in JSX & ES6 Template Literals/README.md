@@ -79,3 +79,11 @@ Alternatively, you can use multiple sets of curly braces to insert variables and
   Hello {fName} {lName}
 </h1>
 ```
+
+## ES6 Template Literals in JSX
+
+ES6 introduced template literals, which allow string interpolation using backticks and `${}` syntax. This is another way to combine variables in JSX.
+
+```js
+<h1>{`${fName} ${lName}`}</h1>
+```

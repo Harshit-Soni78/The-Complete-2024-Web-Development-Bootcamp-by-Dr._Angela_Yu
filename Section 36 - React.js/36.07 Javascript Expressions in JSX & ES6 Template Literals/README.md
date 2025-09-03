@@ -87,3 +87,14 @@ ES6 introduced template literals, which allow string interpolation using backtic
 ```js
 <h1>{`${fName} ${lName}`}</h1>
 ```
+
+## Recap and Practice
+
+We have explored several ways to inject JavaScript expressions into JSX, including variable insertion, arithmetic expressions, and template literals. Practice these methods to become comfortable with JSX expressions.
+
+## Key Takeaways
+
+- JSX allows you to insert JavaScript expressions inside HTML by wrapping them in curly braces.
+- Only JavaScript expressions (not statements) can be injected into JSX.
+- ES6 template literals provide another way to interpolate variables into strings.
+- Multiple methods exist for combining variables and strings in JSX, including concatenation, multiple curly braces, and template literals.

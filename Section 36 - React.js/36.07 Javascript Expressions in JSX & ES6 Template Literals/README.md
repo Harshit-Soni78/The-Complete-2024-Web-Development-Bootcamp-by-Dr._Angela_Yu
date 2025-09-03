@@ -58,3 +58,24 @@ Only JavaScript expressions can be injected into JSX using curly braces. Stateme
 //   return 7;
 // }
 ```
+
+## Combining Variables for Full Name
+
+Suppose you want to display a full name using two variables, `fName` and `lName`. There are several ways to combine them in JSX.
+
+```js
+const fName = "Angela";
+const lName = "Yu";
+```
+
+```js
+<h1>Hello {fName + " " + lName}</h1>
+```
+
+Alternatively, you can use multiple sets of curly braces to insert variables and spaces:
+
+```js
+<h1>
+  Hello {fName} {lName}
+</h1>
+```

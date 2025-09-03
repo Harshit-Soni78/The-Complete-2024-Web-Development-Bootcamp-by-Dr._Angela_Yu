@@ -47,3 +47,14 @@ You can insert any JavaScript expression inside curly braces in JSX. For example
     <p>3 + 4 = {3 + 4}</p>
     <p>Random number: {Math.floor(Math.random() * 10)}</p>
 ```
+
+## Expressions vs. Statements in JSX
+
+Only JavaScript expressions can be injected into JSX using curly braces. Statements, such as `if` statements, are not allowed. An expression is something that evaluates to a value, while a statement performs an action.
+
+```js
+// Invalid in JSX
+// if (name === "Angela") {
+//   return 7;
+// }
+```

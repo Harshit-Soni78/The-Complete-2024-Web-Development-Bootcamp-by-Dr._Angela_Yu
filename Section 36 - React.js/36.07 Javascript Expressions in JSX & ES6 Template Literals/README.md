@@ -38,3 +38,12 @@ const num = 7;
 ## Multiple HTML Elements in JSX
 
 If you have more than one HTML element, wrap them inside a single parent element, such as a `<div>`, to avoid syntax errors.
+
+## Using JavaScript Expressions in JSX
+
+You can insert any JavaScript expression inside curly braces in JSX. For example, you can perform arithmetic operations or generate random numbers.
+
+```js
+    <p>3 + 4 = {3 + 4}</p>
+    <p>Random number: {Math.floor(Math.random() * 10)}</p>
+```

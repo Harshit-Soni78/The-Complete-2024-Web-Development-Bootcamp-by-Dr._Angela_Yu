@@ -100,3 +100,10 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+
+## Key Takeaways
+
+- Practiced creating a React app from scratch displaying dynamic content.
+- Learned to insert JavaScript expressions inside JSX using curly braces.
+- Used JavaScript's `Date` object and `getFullYear()` method to dynamically display the current year.
+- Understood the importance of calling functions with parentheses to get their return values in JSX.

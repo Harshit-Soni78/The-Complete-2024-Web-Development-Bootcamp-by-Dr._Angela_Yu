@@ -66,3 +66,13 @@ A common mistake is forgetting the parentheses when calling `getFullYear`. Witho
 If you try to insert the function without calling it, React will warn: "Functions are not valid as a React child."
 
 Always remember to call the function with parentheses to get the value.
+
+## Summary of Approaches
+
+You can insert the JavaScript expression directly inside the JSX curly braces, for example:
+
+`{new Date().getFullYear()}`
+
+Alternatively, you can assign the year to a constant and insert that constant into JSX.
+
+Both approaches work correctly.

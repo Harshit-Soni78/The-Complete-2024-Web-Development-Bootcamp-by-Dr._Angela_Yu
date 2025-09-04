@@ -58,3 +58,11 @@ This returns the current year, such as 2019.
 ## Inserting the Dynamic Year into JSX
 
 Instead of logging the year, we insert it into our paragraph element. When the date changes, for example to 2022, the year displayed will update automatically because it is dynamically calculated based on the current date.
+
+## Common Mistakes
+
+A common mistake is forgetting the parentheses when calling `getFullYear`. Without parentheses, you pass the function itself rather than its return value.
+
+If you try to insert the function without calling it, React will warn: "Functions are not valid as a React child."
+
+Always remember to call the function with parentheses to get the value.

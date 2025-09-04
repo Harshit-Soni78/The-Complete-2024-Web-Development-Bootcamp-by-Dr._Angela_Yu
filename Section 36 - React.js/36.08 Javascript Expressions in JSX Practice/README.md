@@ -16,3 +16,15 @@ I have a pet peeve with websites that have hard-coded copyright years, so I want
 This challenge involves React, JSX, and plain JavaScript.
 
 Pause the video, attempt the challenge, and then return to review the solution together.
+
+## Setting Up the React App
+
+We have been practicing creating React apps from scratch frequently, which helps make the process second nature. I have imported React and ReactDOM from their respective modules. We will use ReactDOM to render some HTML.
+
+We will display two paragraph elements: the first will say "Created by..." with a name, and the second will show the copyright with the current year.
+
+Since React cannot render more than one HTML element at the root, we will wrap these paragraphs inside a `<div>`.
+
+Next, we get the root div from the document using `document.getElementById` to render our React elements inside it.
+
+Now, we can see our two paragraphs: "Created by YOURNAME" and "Copyright CURRENTYEAR". This is not very exciting yet, so let's insert some JavaScript into our HTML.

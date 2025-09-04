@@ -28,3 +28,11 @@ Since React cannot render more than one HTML element at the root, we will wrap t
 Next, we get the root div from the document using `document.getElementById` to render our React elements inside it.
 
 Now, we can see our two paragraphs: "Created by YOURNAME" and "Copyright CURRENTYEAR". This is not very exciting yet, so let's insert some JavaScript into our HTML.
+
+## Defining Constants for Name and Year
+
+First, I will create a constant called `name` with my name as the value. Then, I will create a constant called `year` and initially hardcode it as 2019 so we can see it inserted.
+
+In the JSX, we use curly braces to insert JavaScript expressions. For example, in the first paragraph, we insert the `name` constant inside curly braces to display "Created by Angela".
+
+Similarly, we insert the `year` constant inside the second paragraph for the copyright.

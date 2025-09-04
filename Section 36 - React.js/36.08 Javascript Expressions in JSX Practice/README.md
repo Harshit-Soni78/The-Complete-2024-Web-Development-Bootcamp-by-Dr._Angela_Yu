@@ -36,3 +36,11 @@ First, I will create a constant called `name` with my name as the value. Then, I
 In the JSX, we use curly braces to insert JavaScript expressions. For example, in the first paragraph, we insert the `name` constant inside curly braces to display "Created by Angela".
 
 Similarly, we insert the `year` constant inside the second paragraph for the copyright.
+
+## Making the Year Dynamic
+
+The challenging part is to avoid hardcoding the year. Instead, we want to use JavaScript to fetch the current year dynamically.
+
+If you are unsure how to do this, Google "get the current year in JavaScript". This leads us to create a new `Date()` object and call its `getFullYear()` method.
+
+The `getFullYear()` method returns the year of the specified date. By creating a new `Date()` object without arguments, we get the current date and time.

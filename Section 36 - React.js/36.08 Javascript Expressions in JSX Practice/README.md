@@ -54,3 +54,7 @@ If we log `currentDate` to the console, it shows the full date and time, for exa
 Now, to get the current year, we call `currentDate.getFullYear()`. Since this is a method, we must include parentheses to invoke it.
 
 This returns the current year, such as 2019.
+
+## Inserting the Dynamic Year into JSX
+
+Instead of logging the year, we insert it into our paragraph element. When the date changes, for example to 2022, the year displayed will update automatically because it is dynamically calculated based on the current date.

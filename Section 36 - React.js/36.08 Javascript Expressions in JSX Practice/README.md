@@ -76,3 +76,9 @@ You can insert the JavaScript expression directly inside the JSX curly braces, f
 Alternatively, you can assign the year to a constant and insert that constant into JSX.
 
 Both approaches work correctly.
+
+## Additional Resources
+
+I have included a completed sandbox with this code in the Course Resources for this lesson. If you are unsure about anything, experiment with the code until you are comfortable with JSX and JavaScript.
+
+In the next lesson, we will learn more about styling HTML elements using React.

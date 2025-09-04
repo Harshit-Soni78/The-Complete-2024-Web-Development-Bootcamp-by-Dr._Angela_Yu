@@ -82,3 +82,21 @@ Both approaches work correctly.
 I have included a completed sandbox with this code in the Course Resources for this lesson. If you are unsure about anything, experiment with the code until you are comfortable with JSX and JavaScript.
 
 In the next lesson, we will learn more about styling HTML elements using React.
+
+## Code Example
+
+Here is the complete ReactDOM render call with the dynamic name and year constants:
+
+```js
+const name = "Angela";
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+
+ReactDOM.render(
+  <div>
+    <p>Created by {name}</p>
+    <p>Copyright {year}</p>
+  </div>,
+  document.getElementById("root")
+);
+```

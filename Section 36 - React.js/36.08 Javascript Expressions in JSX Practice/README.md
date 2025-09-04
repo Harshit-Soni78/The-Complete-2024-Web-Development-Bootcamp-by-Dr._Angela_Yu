@@ -44,3 +44,13 @@ The challenging part is to avoid hardcoding the year. Instead, we want to use Ja
 If you are unsure how to do this, Google "get the current year in JavaScript". This leads us to create a new `Date()` object and call its `getFullYear()` method.
 
 The `getFullYear()` method returns the year of the specified date. By creating a new `Date()` object without arguments, we get the current date and time.
+
+## Using the Date Object
+
+Let's create a constant called `currentDate` and set it equal to `new Date()`. This object represents the current date and time at the moment of execution.
+
+If we log `currentDate` to the console, it shows the full date and time, for example, "Friday, November 8th 2019" in Greenwich Mean Time.
+
+Now, to get the current year, we call `currentDate.getFullYear()`. Since this is a method, we must include parentheses to invoke it.
+
+This returns the current year, such as 2019.

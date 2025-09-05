@@ -117,3 +117,15 @@ const grayscaleImg = imgURL + "?grayscale";
 ```
 
 When you refresh, the image is shown in grayscale. This is possible because JavaScript expressions can be used as attribute values in JSX.
+
+## Accessibility and Linting Warnings
+
+CodeSandbox includes a linter that warns about missing `alt` text for images. Always provide descriptive `alt` text for accessibility.
+
+```jsx
+    <img className="food-img" src="bacon.jpg" alt="bacon" />
+    <img className="food-img" src="jamon.jpg" alt="jamon" />
+    <img className="food-img" src="noodles.jpg" alt="noodles" />
+```
+
+Providing `alt` text removes linter warnings and helps users with screen readers understand what is displayed on the page.

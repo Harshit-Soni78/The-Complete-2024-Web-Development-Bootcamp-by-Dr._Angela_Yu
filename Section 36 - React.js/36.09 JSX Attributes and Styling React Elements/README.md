@@ -43,3 +43,15 @@ In HTML, attributes are not camel-cased. For example, `contenteditable` is all o
 ```
 
 If you set `contentEditable` to `true`, the element becomes editable. If you set it to `false`, it is not editable. If you use the HTML attribute style (all lowercase), it will not work the same way in JSX. Always use camelCase for attributes in JSX.
+
+## Disabling Spellcheck in Editable Elements
+
+When editing an element in Chrome, spellcheck may be activated. To turn off spellcheck, use the `spellCheck` attribute in camelCase.
+
+```jsx
+<h1 contentEditable={true} spellCheck={false}>
+  Editable Heading
+</h1>
+```
+
+Now, when editing the `h1`, spellcheck is disabled. The most common attribute you will add is `className`, as this is the preferred way to add styling to React elements.

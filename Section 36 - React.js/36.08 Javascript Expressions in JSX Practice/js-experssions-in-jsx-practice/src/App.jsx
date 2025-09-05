@@ -1,4 +1,5 @@
 const name = "Harshit Soni"
+const currYear = new Date().getFullYear();
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At iste corrupti neque quod laudantium accusantium repellendus nam rerum ea ratione blanditiis delectus, nostrum ipsa labore aliquid sit dolorum alias voluptas!</p>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At iste corrupti neque quod laudantium accusantium repellendus nam rerum ea ratione blanditiis delectus, nostrum ipsa labore aliquid sit dolorum alias voluptas!</p>
       <h2>Created by {name}</h2>
+      <h3>Copyright {currYear}</h3>
     </>
   )
 }

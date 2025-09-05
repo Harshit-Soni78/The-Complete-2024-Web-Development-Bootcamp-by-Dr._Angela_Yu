@@ -88,3 +88,17 @@ Apply this class to all three image elements using the `className` attribute.
 ```
 
 When you save and refresh your website, all images are rendered as 100 by 100 pixel squares because the CSS is applied.
+
+## Using JavaScript Expressions as Attribute Values
+
+You can insert JavaScript as an attribute value in JSX. For example, using a service like Lorem Picsum, you can generate a random image URL and use it as the `src` for an image element.
+
+```js
+const img = "https://picsum.photos/200";
+```
+
+```jsx
+<img src={img} />
+```
+
+In JSX, image elements must be self-closing if they have no children. If you omit the closing tag, JSX will throw an error. HTML is forgiving, but JSX is not.

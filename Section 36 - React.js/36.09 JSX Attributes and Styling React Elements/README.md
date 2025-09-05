@@ -102,3 +102,18 @@ const img = "https://picsum.photos/200";
 ```
 
 In JSX, image elements must be self-closing if they have no children. If you omit the closing tag, JSX will throw an error. HTML is forgiving, but JSX is not.
+
+## JavaScript Expressions in JSX Attributes
+
+You can use JavaScript expressions as attribute values by enclosing them in curly braces. For example, to turn a Picsum image grayscale, append `?grayscale` to the URL.
+
+```js
+const imgURL = "https://picsum.photos/200";
+const grayscaleImg = imgURL + "?grayscale";
+```
+
+```jsx
+<img src={grayscaleImg} />
+```
+
+When you refresh, the image is shown in grayscale. This is possible because JavaScript expressions can be used as attribute values in JSX.

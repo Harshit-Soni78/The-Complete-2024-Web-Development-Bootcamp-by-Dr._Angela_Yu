@@ -67,3 +67,24 @@ ul {
 ```
 
 When you refresh the page, your unordered list should turn blue. You can target classes, IDs, and HTML elements directly in CSS.
+
+## Applying CSS Classes to Images
+
+Suppose you have a `div` with three image elements. To make each image a 100px by 100px square, create a class in your CSS file.
+
+```css
+.food-img {
+  height: 100px;
+  width: 100px;
+}
+```
+
+Apply this class to all three image elements using the `className` attribute.
+
+```jsx
+    <img className="food-img" src="image1.jpg" />
+    <img className="food-img" src="image2.jpg" />
+    <img className="food-img" src="image3.jpg" />
+```
+
+When you save and refresh your website, all images are rendered as 100 by 100 pixel squares because the CSS is applied.

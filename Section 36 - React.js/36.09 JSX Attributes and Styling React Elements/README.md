@@ -27,3 +27,19 @@ However, if we open the Chrome Developer Tools, we see a warning: "Invalid DOM p
 ```
 
 As soon as we change this to `className` and reload the site, the warning goes away. The proper name of this attribute is `className`.
+
+## JSX File Type and Attribute Naming
+
+If you see a warning about an unrecognized angle bracket in your `index.js` file, it is because the file is being treated as a standard JavaScript file, not a JSX file. In `index.html`, when importing your script, you should specify the type as `text/jsx` if you are using JSX code.
+
+```html
+<script src="index.js" type="text/jsx"></script>
+```
+
+In HTML, attributes are not camel-cased. For example, `contenteditable` is all one word. In JSX, the convention is to use camelCase, so `contenteditable` becomes `contentEditable`.
+
+```jsx
+<h1 contentEditable={true}>Editable Heading</h1>
+```
+
+If you set `contentEditable` to `true`, the element becomes editable. If you set it to `false`, it is not editable. If you use the HTML attribute style (all lowercase), it will not work the same way in JSX. Always use camelCase for attributes in JSX.

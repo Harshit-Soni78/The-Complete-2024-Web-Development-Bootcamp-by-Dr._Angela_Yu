@@ -129,3 +129,14 @@ CodeSandbox includes a linter that warns about missing `alt` text for images. Al
 ```
 
 Providing `alt` text removes linter warnings and helps users with screen readers understand what is displayed on the page.
+
+## Practice and Next Steps
+
+You are encouraged to experiment with the code, try recreating the website, and use the completed code as a reference. Take time to get comfortable using attributes and styling React elements. Once ready, proceed to the next lesson on inline styling in JSX.
+
+## Key Takeaways
+
+- Styling React elements requires using the `className` attribute instead of `class`.
+- JSX attributes that have more than one word must be written in camelCase.
+- CSS classes should be defined in kebab-case and applied via `className` in JSX.
+- JavaScript expressions can be used as attribute values in JSX by enclosing them in curly braces.

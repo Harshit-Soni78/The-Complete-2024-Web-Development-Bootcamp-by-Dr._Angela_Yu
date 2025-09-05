@@ -55,3 +55,15 @@ When editing an element in Chrome, spellcheck may be activated. To turn off spel
 ```
 
 Now, when editing the `h1`, spellcheck is disabled. The most common attribute you will add is `className`, as this is the preferred way to add styling to React elements.
+
+## Using CSS with React Elements
+
+Just because you are using React to create HTML elements does not mean what you have learned about CSS or HTML becomes invalid. For example, you can target `ul` elements in your CSS and change their color.
+
+```css
+ul {
+  color: blue;
+}
+```
+
+When you refresh the page, your unordered list should turn blue. You can target classes, IDs, and HTML elements directly in CSS.

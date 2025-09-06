@@ -6,7 +6,7 @@ const img = "https://picsum.photos/200"
 function App() {
   return (
   <div>
-
+    <h1>My Favourite Foods</h1>
   </div>
   )
 }

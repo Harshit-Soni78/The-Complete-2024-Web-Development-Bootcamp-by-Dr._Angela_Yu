@@ -45,3 +45,10 @@ I recommend experimenting with different CSS properties by consulting the docume
 Once you are comfortable with inline styles, proceed to the next lesson where you will apply both inline and class-based styles. The project file is saved in the course resources for you to experiment with. The best way to overcome confusion is to clear the slate and try to implement what you have learned independently, referring back to the final code if needed.
 
 Have fun experimenting, and I will see you in the next lesson.
+
+## Key Takeaways
+
+- Inline styles in React require a JavaScript object as the value for the style attribute, not a string.
+- JavaScript objects for styles use camelCase property names instead of kebab-case.
+- Values for style properties must be strings, including those with spaces.
+- Inline styles are useful for dynamic styling that changes during runtime, such as responding to user actions or time changes.

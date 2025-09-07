@@ -1,3 +1,9 @@
+const costomStyle = {
+  color: "red",
+  fontSize: "20px",
+  border: "1px solid black"
+}
+
 costomStyle.color = "blue"
 
 function App() {

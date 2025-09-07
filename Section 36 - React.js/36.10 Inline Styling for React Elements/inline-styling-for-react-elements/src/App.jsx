@@ -1,7 +1,7 @@
 function App() {
   return (
   <div>
-    <h1 className="heading">My Favourite Foods</h1>
+    <h1 style={{color: "blue"}}>My Favourite Foods</h1>
   </div>
   )
 }

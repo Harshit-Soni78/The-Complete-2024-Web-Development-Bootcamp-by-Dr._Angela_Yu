@@ -23,10 +23,16 @@ function App() {
 
   var currTime = new Date().getHours()
 
-  if(4 <= currTime && currTime < 12) greeting = "Good Morning";
-  else if (12 <= currTime && currTime < 18) greeting = "Good Afternoon";
-  else if (18 <= currTime && currTime <= 24 || 0 <= currTime && currTime < 4) greeting = "Good Evening";
+  if(4 <= currTime && currTime < 12){
+     greeting = "Good Morning";
+  }
+  else if (12 <= currTime && currTime < 18){
+    greeting = "Good Afternoon";
+  }
+  else if (18 <= currTime && currTime <= 24 || 0 <= currTime && currTime < 4){
+    greeting = "Good Evening";
 
+  }
   return (
     <>
         <h1>{greeting}</h1>

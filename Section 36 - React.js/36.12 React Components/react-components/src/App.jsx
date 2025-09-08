@@ -1,12 +1,10 @@
-function Heading (){
-  return <h1>My Favourite Foods</h1>
-}
+import Heading from "./components/Heading";
 
 function App() {
   return (
     <>
       <div>
-        <Heading/>
+        <Heading />
         <ul>
           <li>Bacon</li>
           <li>Jamon</li>

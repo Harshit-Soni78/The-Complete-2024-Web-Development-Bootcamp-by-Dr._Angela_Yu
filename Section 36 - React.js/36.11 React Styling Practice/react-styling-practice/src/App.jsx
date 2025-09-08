@@ -19,23 +19,27 @@ function App() {
   // to install the node modules and
   // npm run dev
   // to launch your react project in your browser
-  var greeting = "Hello";
 
+  var greeting = "Hello";
+  var inlineStyle = {color: "black"}
   var currTime = new Date().getHours()
 
   if(4 <= currTime && currTime < 12){
      greeting = "Good Morning";
+     inlineStyle = {color: "red"}
   }
   else if (12 <= currTime && currTime < 18){
     greeting = "Good Afternoon";
+    inlineStyle = {color: "green"}
   }
   else if (18 <= currTime && currTime <= 24 || 0 <= currTime && currTime < 4){
     greeting = "Good Evening";
-
+    inlineStyle = {color: "blue"}
   }
+
   return (
     <>
-        <h1>{greeting}</h1>
+        <h1 style={inlineStyle}>{greeting}</h1>
         <h1>{currTime}</h1>
     </>
   )

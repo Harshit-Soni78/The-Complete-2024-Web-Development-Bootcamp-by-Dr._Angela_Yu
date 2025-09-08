@@ -1,8 +1,12 @@
+function Heading (){
+  return <h1>My Favourite Foods</h1>
+}
+
 function App() {
   return (
     <>
       <div>
-        <h1>My Favourite Foods</h1>
+        <Heading/>
         <ul>
           <li>Bacon</li>
           <li>Jamon</li>

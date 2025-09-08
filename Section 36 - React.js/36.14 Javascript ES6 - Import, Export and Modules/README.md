@@ -17,3 +17,31 @@ This `math.js` file becomes a new module. We can export whatever we want to be u
 Now, back in `index.js`, I can import `pi` from the file `./math.js`. I will keep the extension to make it easier to see. After importing `pi`, I can use it inside my code and replace the content of the first list item with the value of `pi`.
 
 Notice that I am importing the constant `pi` from `math.js`, which specifies a single default export. When importing a default export, I can name it whatever I want, as long as I update my code consistently.
+
+### Exporting Multiple Things
+
+What if we had more than one thing in `math.js`? How would we export multiple things? In addition to the default export, we can write another export statement with curly braces to define all non-default exports. For example, we can add `doublePi` and `triplePi` functions alongside the default export.
+
+Now, back in `index.js`, I can still use the default export `pi`. I can also import the other exports by adding a comma and curly braces with the exact names of the exported functions: `doublePi` and `triplePi`.
+
+It is important to note that the names of the named exports matter. We cannot rename `doublePi` arbitrarily when importing; it must match the export name. There can only be one default export per file, but multiple named exports differentiated by their names.
+
+After importing `doublePi` and `triplePi`, I can use them in my list items. Since these are functions, I must call them with parentheses to get their return values.
+
+Now, our website displays the value of `pi` (exported as default), the value of `doublePi` (which returns `pi` multiplied by 2), and `triplePi` (which returns `pi` multiplied by 3). All three values come from a single import statement from a different file.
+
+The `import` and `export` keywords and the concept of modules allow us to split large JavaScript files into smaller, manageable components. This modularity is what React components leverage.
+
+This capability is not new or unique to ES6. Previously, when we were not using Babel or ES6, in Node.js apps we used `var react = require('react')`. This code does roughly the same thing, but the `require` function comes from Node.js itself, not JavaScript.
+
+If you are interested in the difference between Node.js `require` and ES6 `import/export`, there is a Stack Overflow discussion linked for deeper understanding. Note that browser support for ES6 is about 80%, meaning 20% of users might not render ES6 code correctly without transpilation.
+
+We can safely use ES6 everywhere in our app because we rely on Babel to convert it into a format compatible with all browsers. I prefer the `import` and `export` syntax because it clearly shows what is happening: importing the default export from a module or importing specific named exports.
+
+If you do not want to separate default and named exports, you can use a wildcard import with the asterisk (`*`). This imports everything from the module as an object with a name you specify.
+
+For example, `import * as pi from './math.js'` imports everything as the object `pi`. Logging this object shows it has properties `doublePi()`, `triplePi()`, and a `default` property holding the default export value.
+
+We can then access the values as `pi.default`, `pi.doublePi()`, and `pi.triplePi()`. This achieves the same result as before but imports the entire module as one object.
+
+However, using wildcard imports loses the benefit of having a single default export and importing only what is needed. Using specific imports makes your code clearer and more efficient. This is why wildcard imports are discouraged in many style guides.

@@ -1,10 +1,12 @@
+import PI, { doublePi, triplePi } from "./math.js";
+
 function App() {
   return (
     <>
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        <li>{PI}</li>
+        <li>{doublePi()}</li>
+        <li>{triplePi()}</li>
       </ul>
     </>
   );

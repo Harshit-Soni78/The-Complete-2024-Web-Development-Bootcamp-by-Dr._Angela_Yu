@@ -45,3 +45,18 @@ For example, `import * as pi from './math.js'` imports everything as the object 
 We can then access the values as `pi.default`, `pi.doublePi()`, and `pi.triplePi()`. This achieves the same result as before but imports the entire module as one object.
 
 However, using wildcard imports loses the benefit of having a single default export and importing only what is needed. Using specific imports makes your code clearer and more efficient. This is why wildcard imports are discouraged in many style guides.
+
+## Summary
+
+In this lesson, we explored the `import` and `export` keywords. A single file can have only one default export, which can be imported under any name. To import other exports, use curly braces with exact names. Once imported, you can use these constants or functions as if they existed in the current file.
+
+Splitting files this way makes them easier to understand and debug. This modularity helps build more complex and interesting applications. In the next lesson, we will practice using `import` and `export` further with a challenge.
+
+If you are comfortable with these concepts and can apply them, proceed to the next lesson to complete the challenge.
+
+## Key Takeaways
+
+- ES6 modules allow splitting JavaScript code into manageable, reusable files using `import` and `export`.
+- A single file can have one default export, which can be imported with any name.
+- Multiple named exports can be declared and must be imported with their exact names.
+- Using wildcard imports (`import * as`) imports everything as an object but is discouraged for clarity and efficiency.

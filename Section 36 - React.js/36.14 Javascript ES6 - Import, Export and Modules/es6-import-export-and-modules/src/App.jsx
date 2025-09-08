@@ -8,6 +8,9 @@ function App() {
         <li>{pi.default}</li>
         <li>{pi.doublePi()}</li>
         <li>{pi.triplePi()}</li>
+        {/* <li>{PI}</li>
+        <li>{doublePi()}</li>
+        <li>{triplePi()}</li> */}
       </ul>
     </>
   );

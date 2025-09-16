@@ -1,7 +1,8 @@
-import { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Note from "./components/Note";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     //1. Create a new React app.
@@ -22,7 +23,11 @@ function App() {
     // to install the node modules and
     // npm run dev
     // to launch your react project in your browser
-    <h1>Hello</h1>
+    <>
+    <Header/>
+    <Note/>
+    <Footer/>
+    </>
   );
 }
 

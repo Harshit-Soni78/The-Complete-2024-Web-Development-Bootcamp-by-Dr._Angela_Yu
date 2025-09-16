@@ -1,22 +1,24 @@
 import ContactCard from "./components/ContactCard";
 import { contacts } from "./contacts.js";
-import Avatar from "./components/Avatar.jsx";
+
+function createCard(contact) {
+  return (
+    <ContactCard
+    id={contact.id}
+      key={contact.id}
+      name={contact.name}
+      imgURL={contact.imgURL}
+      phone={contact.phone}
+      email={contact.email}
+    />
+  );
+}
 
 function App() {
   return (
     <>
-    
       <h1 className="heading">My Contacts</h1>
-    <Avatar imgURL=""/>
-      {Object.values(contacts).map((element, index) => (
-        <ContactCard
-          key={index}
-          name={element.name}
-          imgURL={element.imgURL}
-          phone={element.phone}
-          email={element.email}
-        />
-      ))}
+      {contacts.map(createCard)}
     </>
   );
 }

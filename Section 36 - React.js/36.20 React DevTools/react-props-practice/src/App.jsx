@@ -1,9 +1,13 @@
 import ContactCard from "./components/ContactCard";
 import { contacts } from "./contacts.js";
+import Avatar from "./components/Avatar.jsx";
 
 function App() {
   return (
     <>
+    
+      <h1 className="heading">My Contacts</h1>
+    <Avatar imgURL=""/>
       {Object.values(contacts).map((element, index) => (
         <ContactCard
           key={index}

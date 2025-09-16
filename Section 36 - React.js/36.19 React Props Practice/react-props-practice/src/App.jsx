@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  return <></>;
 }
 
-export default App
+export default App;
+
+//1. Apply CSS styles to App.jsx component
+//to match the appearance on the completed app:
+//https://c6fkx.csb.app/
+//2. Extract the contact card as a reusable Card component.
+//3. Use props to render the default Beyonce contact card
+//so the Card component can be reused for other contacts.
+//4. Import the contacts.js file to create card components.
+
+// If you're running this locally in VS Code use the commands:
+// npm install
+// to install the node modules and
+// npm run dev
+// to launch your react project in your browser

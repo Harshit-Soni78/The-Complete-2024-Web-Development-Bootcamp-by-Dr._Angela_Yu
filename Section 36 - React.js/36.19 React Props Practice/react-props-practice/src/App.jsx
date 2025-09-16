@@ -1,5 +1,20 @@
+import ContactCard from "./components/ContactCard";
+import { contacts } from "./contacts.js";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      {Object.values(contacts).map((element, index) => (
+        <ContactCard
+          key={index}
+          name={element.name}
+          imgURL={element.imgURL}
+          phone={element.phone}
+          email={element.email}
+        />
+      ))}
+    </>
+  );
 }
 
 export default App;

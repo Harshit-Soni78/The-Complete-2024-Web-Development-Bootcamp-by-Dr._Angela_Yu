@@ -104,3 +104,32 @@ console.log(newNumbers);
 ```
 
 While this works, it requires more code and manual array management compared to `filter`.
+
+## The reduce() Function
+
+The `reduce` function accumulates a single value by processing each item in an array.
+
+For example, to sum all numbers in the `numbers` array, using `forEach` we might do:
+
+```js
+let total = 0;
+numbers.forEach(function (currentNumber) {
+  total += currentNumber;
+});
+console.log(total);
+```
+
+Using `reduce`, this can be simplified to:
+
+```js
+const total = numbers.reduce(function (accumulator, currentNumber) {
+  return accumulator + currentNumber;
+});
+console.log(total);
+```
+
+Here, `accumulator` holds the accumulated value, and `currentNumber` is the current item in the array.
+
+Logging the values of `accumulator` and `currentNumber` during each iteration helps understand how `reduce` works.
+
+Initially, `accumulator` is set to the first value, and `currentNumber` is the second. On subsequent iterations, `accumulator` is the result of the previous addition, and `currentNumber` moves through the array until the end.

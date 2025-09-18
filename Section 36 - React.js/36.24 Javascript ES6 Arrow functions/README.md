@@ -96,3 +96,16 @@ const entries = emojiTerms.map((term) => (
 ```
 
 It is good practice in React to use parentheses when returning a component with many properties, even if it is a single element.
+
+## Further Reading
+
+For more information, refer to the article from Mozilla on arrow functions, which provides in-depth coverage and background.
+
+In the next lesson, we will return to React coding, applying these JavaScript concepts.
+
+## Key Takeaways
+
+- Arrow functions provide a concise syntax for writing JavaScript functions.
+- Parentheses around parameters can be omitted if there is only one parameter.
+- The `return` keyword and curly braces can be omitted for single-expression arrow functions.
+- Arrow functions are commonly used with array methods like `map`, `filter`, and `reduce` in React.

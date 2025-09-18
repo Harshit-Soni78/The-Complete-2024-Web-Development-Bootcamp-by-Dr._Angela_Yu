@@ -62,3 +62,45 @@ const newNumbers = numbers.map(function (x) {
 The `map` function is more concise because it returns a new array automatically, unlike `forEach` where we must create and manage the new array ourselves.
 
 This feature is particularly useful in React when creating custom components and mapping data to them.
+
+## The filter() Function
+
+Another useful array method is `filter()`. It creates a new array by keeping only the items that return `true` for a specified condition.
+
+For example, to filter numbers greater than 10 from the `numbers` array, we can use:
+
+```js
+const newNumbers = numbers.filter(function (num) {
+  return num > 10;
+});
+console.log(newNumbers);
+```
+
+This will output an array containing only numbers greater than 10, such as 56 and 48.
+
+We can also filter for numbers less than 10 by changing the condition:
+
+```js
+const newNumbers = numbers.filter(function (num) {
+  return num < 10;
+});
+console.log(newNumbers);
+```
+
+This will output numbers such as 3, 2, and 5.
+
+Using `filter` is a concise way to add conditions to arrays and create new arrays with only the items that meet those conditions.
+
+To compare, here is how we would achieve the same filtering using `forEach`:
+
+```js
+const newNumbers = [];
+numbers.forEach(function (num) {
+  if (num < 10) {
+    newNumbers.push(num);
+  }
+});
+console.log(newNumbers);
+```
+
+While this works, it requires more code and manual array management compared to `filter`.

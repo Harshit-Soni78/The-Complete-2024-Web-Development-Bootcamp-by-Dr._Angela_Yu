@@ -38,3 +38,13 @@ const square = (x) => x * x;
 The inputs of the function are placed before the arrow, and the body of the function follows. The fat arrow is what denotes the function.
 
 Be careful with the syntax. The equals sign and right angle bracket must be together with no space between them.
+
+## Multiple Parameters and Shortening Syntax
+
+If there are multiple input parameters, such as `x` and `y`, parentheses are required.
+
+```js
+const multiply = (x, y) => x * y;
+```
+
+If there is only one parameter, parentheses can be omitted. If the function body is a single expression, the `return` keyword and curly braces can also be omitted.

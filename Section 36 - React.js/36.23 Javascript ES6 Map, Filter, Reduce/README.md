@@ -167,3 +167,15 @@ It is not necessary to memorize all these functions. Instead, focus on understan
 When you need to perform an operation on arrays, recall the goals of these methods: `map` for transforming arrays, `filter` for selecting items, `reduce` for accumulating values, and `find`/`findIndex` for locating items.
 
 Consult the MDN Developer Docs for detailed information and examples on each method. These functions have been supported across browsers since before ES6, ensuring compatibility.
+
+## Practical Challenge: Truncating Emoji Meanings
+
+Let's apply what we've learned with a challenge.
+
+You have an array called `emojipedia` imported from a file, which contains objects with a `meaning` property holding text.
+
+Your task is to create a new array containing only the `meaning` text from each object, but truncated to a maximum of 100 characters.
+
+This is useful for creating uniformly sized cards or boxes on a webpage.
+
+Hint: Use the `substring` method to truncate strings.

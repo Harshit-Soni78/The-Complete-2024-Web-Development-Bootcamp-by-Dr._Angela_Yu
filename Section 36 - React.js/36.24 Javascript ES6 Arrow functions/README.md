@@ -48,3 +48,15 @@ const multiply = (x, y) => x * y;
 ```
 
 If there is only one parameter, parentheses can be omitted. If the function body is a single expression, the `return` keyword and curly braces can also be omitted.
+
+## Using Arrow Functions with Array Methods
+
+Arrow functions are especially useful with array methods like `map`, `filter`, and `reduce`.
+
+```js
+const newNumbers = numbers.map((x) => x * x);
+```
+
+This syntax is much shorter. However, for beginners, it may be harder to understand. Depending on the project, team, and comfort level, one can choose whether to use this syntax.
+
+In React, array functions like `map`, `filter`, and `reduce` are used frequently, so arrow functions are common.

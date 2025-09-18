@@ -179,3 +179,26 @@ Your task is to create a new array containing only the `meaning` text from each 
 This is useful for creating uniformly sized cards or boxes on a webpage.
 
 Hint: Use the `substring` method to truncate strings.
+
+## Solution Using map and substring
+
+We can use the `map` function to iterate over the `emojipedia` array and return a new array of truncated meanings.
+
+Example implementation:
+
+```js
+const newEmojipedia = emojipedia.map(function (emojiEntry) {
+  return emojiEntry.meaning.substring(0, 100);
+});
+console.log(newEmojipedia);
+```
+
+This code maps through each emoji entry, accesses the `meaning` property, truncates it to 100 characters using `substring(0, 100)`, and returns the truncated string.
+
+The resulting `newEmojipedia` array contains all meanings truncated to the same length, which is useful for consistent UI layouts.
+
+If you did not complete this challenge, try implementing it yourself and experiment with the code until it makes sense.
+
+Review the documentation for `map` and `substring` to deepen your understanding.
+
+In the next lesson, we will learn about ES6-specific features such as the fat arrow (arrow functions) to further simplify our code.

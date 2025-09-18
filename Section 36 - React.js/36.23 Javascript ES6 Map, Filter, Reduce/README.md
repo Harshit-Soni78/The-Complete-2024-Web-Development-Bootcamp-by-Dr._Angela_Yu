@@ -133,3 +133,29 @@ Here, `accumulator` holds the accumulated value, and `currentNumber` is the curr
 Logging the values of `accumulator` and `currentNumber` during each iteration helps understand how `reduce` works.
 
 Initially, `accumulator` is set to the first value, and `currentNumber` is the second. On subsequent iterations, `accumulator` is the result of the previous addition, and `currentNumber` moves through the array until the end.
+
+## The find() and findIndex() Functions
+
+The `find` function returns the first item in an array that matches a condition, stopping the search once found.
+
+For example, to find the first number greater than 10:
+
+```js
+const firstNumberGreaterThanTen = numbers.find(function (num) {
+  return num > 10;
+});
+console.log(firstNumberGreaterThanTen);
+```
+
+The `findIndex` function works similarly but returns the index of the first matching item instead of the item itself:
+
+```js
+const indexFirstNumberGreaterThanTen = numbers.findIndex(function (num) {
+  return num > 10;
+});
+console.log(indexFirstNumberGreaterThanTen);
+```
+
+This will output the index of the first number greater than 10, which is 1 since arrays are zero-indexed.
+
+These functions are useful for quickly locating items or their positions in arrays without processing the entire array.

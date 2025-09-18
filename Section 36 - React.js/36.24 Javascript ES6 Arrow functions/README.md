@@ -79,3 +79,20 @@ const filteredNumbers = numbers.filter((num) => num > 10);
 // Example: Refactoring reduce
 const sum = numbers.reduce((acc, num) => acc + num);
 ```
+
+## Applying Arrow Functions in React
+
+In React, arrow functions can be used to simplify code when mapping over arrays to create components.
+
+```js
+const entries = emojiTerms.map((term) => (
+  <Entry
+    key={term.id}
+    emoji={term.emoji}
+    name={term.name}
+    meaning={term.meaning}
+  />
+));
+```
+
+It is good practice in React to use parentheses when returning a component with many properties, even if it is a single element.

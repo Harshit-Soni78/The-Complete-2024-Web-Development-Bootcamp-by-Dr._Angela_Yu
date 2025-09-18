@@ -159,3 +159,11 @@ console.log(indexFirstNumberGreaterThanTen);
 This will output the index of the first number greater than 10, which is 1 since arrays are zero-indexed.
 
 These functions are useful for quickly locating items or their positions in arrays without processing the entire array.
+
+## Understanding and Using These Methods
+
+It is not necessary to memorize all these functions. Instead, focus on understanding their purpose and how they work.
+
+When you need to perform an operation on arrays, recall the goals of these methods: `map` for transforming arrays, `filter` for selecting items, `reduce` for accumulating values, and `find`/`findIndex` for locating items.
+
+Consult the MDN Developer Docs for detailed information and examples on each method. These functions have been supported across browsers since before ES6, ensuring compatibility.

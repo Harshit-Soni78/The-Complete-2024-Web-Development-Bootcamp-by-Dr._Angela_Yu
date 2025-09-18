@@ -1,3 +1,5 @@
+import emojipedia from "./emojipedia";
+
 var numbers = [3, 56, 2, 48, 5];
 
 //Map -Create a new array by doing something with each item in an array.
@@ -10,10 +12,20 @@ var numbers = [3, 56, 2, 48, 5];
 
 //FindIndex - find the index of the first item that matches.
 
+// const meaningsArray = emojipedia.map(function(emojientry){
+//   emojientry.meaning.substring(0,101)
+// })
+
+const meaningsArray = emojipedia.map((emojientry)=>{
+  emojientry.meaning.substring(0,101)
+})
+
+console.log(meaningsArray)
+
 function App() {
   return (
     <>
-
+      <h1>Hello</h1>
     </>
   )
 }

@@ -60,3 +60,22 @@ const newNumbers = numbers.map((x) => x * x);
 This syntax is much shorter. However, for beginners, it may be harder to understand. Depending on the project, team, and comfort level, one can choose whether to use this syntax.
 
 In React, array functions like `map`, `filter`, and `reduce` are used frequently, so arrow functions are common.
+
+## Challenge: Refactoring to Arrow Functions
+
+As a challenge, comment out the original code and convert anonymous functions to arrow functions for `map`, `filter`, and `reduce`. Simplify them as much as possible.
+
+```js
+// Example: Refactoring map
+const newNumbers = numbers.map((x) => x * x);
+```
+
+```js
+// Example: Refactoring filter
+const filteredNumbers = numbers.filter((num) => num > 10);
+```
+
+```js
+// Example: Refactoring reduce
+const sum = numbers.reduce((acc, num) => acc + num);
+```

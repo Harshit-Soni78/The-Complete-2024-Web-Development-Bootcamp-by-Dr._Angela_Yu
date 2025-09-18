@@ -202,3 +202,10 @@ If you did not complete this challenge, try implementing it yourself and experim
 Review the documentation for `map` and `substring` to deepen your understanding.
 
 In the next lesson, we will learn about ES6-specific features such as the fat arrow (arrow functions) to further simplify our code.
+
+## Key Takeaways
+
+- The `map` function creates a new array by applying a function to each item in the original array.
+- The `filter` function creates a new array containing only items that meet a specified condition.
+- The `reduce` function accumulates a single value by processing each item in an array.
+- The `find` and `findIndex` functions locate the first item or its index that matches a condition, stopping early once found.

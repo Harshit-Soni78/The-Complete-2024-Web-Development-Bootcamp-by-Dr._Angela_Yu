@@ -26,3 +26,15 @@ console.log(newNumbers);
 ```
 
 This approach uses an anonymous function. If the function only exists within another function, it usually does not need a name.
+
+## Arrow Function Syntax
+
+Arrow functions take this a step further by allowing the omission of the `function` keyword. Instead, an equals sign and a right angle bracket (`=>`) are used.
+
+```js
+const square = (x) => x * x;
+```
+
+The inputs of the function are placed before the arrow, and the body of the function follows. The fat arrow is what denotes the function.
+
+Be careful with the syntax. The equals sign and right angle bracket must be together with no space between them.

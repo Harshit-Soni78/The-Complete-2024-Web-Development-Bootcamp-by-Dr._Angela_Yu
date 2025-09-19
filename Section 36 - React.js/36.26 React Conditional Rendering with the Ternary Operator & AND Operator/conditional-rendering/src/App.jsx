@@ -1,15 +1,22 @@
-function App() {
+import LoginForm from "./components/LoginForm";
 
+var isLoggedIn = false;
+
+// function renderCondintionally() {
+//   if (isLoggedIn == true) {
+//     return <h1>Hello</h1>;
+//   } else {
+//     return <LoginForm />;
+//   }
+// }
+
+function App() {
+  // return <div className="container">{renderCondintionally()}</div>;
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <form className="form">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
+      {isLoggedIn == true ? <h1>Hello</h1> : <LoginForm />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

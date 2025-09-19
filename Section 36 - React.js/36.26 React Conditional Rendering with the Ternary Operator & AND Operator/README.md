@@ -125,3 +125,13 @@ const currentTime = new Date().getHours();
 
 return <div>{currentTime > 12 && <h1>Why are you still working?</h1>}</div>;
 ```
+
+## Explanation of the AND Operator in React
+
+If the left-hand side condition (`currentTime > 12`) is true, React evaluates and renders the right-hand side `<h1>` component.
+
+If the condition is false, React skips rendering the right-hand side, resulting in nothing being rendered.
+
+This is equivalent to rendering `null` in the false case of a ternary operator.
+
+This technique is widely used in React codebases for concise conditional rendering.

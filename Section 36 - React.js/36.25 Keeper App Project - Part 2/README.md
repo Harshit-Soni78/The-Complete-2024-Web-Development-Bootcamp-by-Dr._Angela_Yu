@@ -13,3 +13,7 @@ The goal of this challenge is straightforward: render all notes currently stored
 ## Expected Outcome
 
 The finished app should display all notes dynamically. When you add a new entry in the `Notes.js` file, it should appear immediately in the app. This dynamic rendering is possible because we will map through the notes array.
+
+## Reviewing the Current App.js Setup
+
+Let's examine our `App.js` file inside the components folder. Currently, the `Note` component is rendered only once and is hardcoded with fixed title and content. This approach will not work if we want to use our custom notes from `Notes.js`.

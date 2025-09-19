@@ -45,3 +45,7 @@ We replace the single hardcoded `Note` component with a map over the `notes` arr
 ## Adding Unique Key Props
 
 When rendering lists in React, each component must have a unique `key` prop to help React identify which items have changed. We set the `key` prop to `noteItem.key`, which is defined in `Notes.js`. This removes console warnings and ensures React's reconciliation works efficiently.
+
+## Simplifying with Arrow Functions
+
+We can simplify our map callback function by using ES6 arrow function syntax. We move the function inline inside the `map()`, remove the `function` keyword, and use the fat arrow `=>`. Since the function returns a single expression, we omit the `return` keyword and curly braces, making the code more concise and readable.

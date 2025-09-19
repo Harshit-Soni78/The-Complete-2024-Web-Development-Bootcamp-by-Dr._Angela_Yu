@@ -9,3 +9,7 @@ Since the last time we worked on our Keeper app, we have learned many new concep
 This is the Keeper app part 2. You can obtain the starting CodeSandbox from the course resources. If you prefer to work locally, download a copy, then run `npm install` followed by `npm start` to run it on a local server. If you are working in CodeSandbox, simply fork your own copy.
 
 The goal of this challenge is straightforward: render all notes currently stored inside our `Notes.js` file, which contains an array called `notes`, into our Keeper app as separate `Note` components. This will utilize many concepts learned previously, especially props and mapping.
+
+## Expected Outcome
+
+The finished app should display all notes dynamically. When you add a new entry in the `Notes.js` file, it should appear immediately in the app. This dynamic rendering is possible because we will map through the notes array.

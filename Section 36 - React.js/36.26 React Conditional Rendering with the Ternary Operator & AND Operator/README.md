@@ -41,3 +41,37 @@ function renderConditionally() {
 
 return <div>{renderConditionally()}</div>;
 ```
+
+## Improving Code Structure with Components
+
+This approach works but is verbose and not very elegant. Since conditional rendering is common in React, there are better ways to handle it.
+
+First, it makes sense to extract the login form into its own `Login` component instead of leaving it as plain HTML. This promotes reusability and adheres to the single responsibility principle, which states that each component should have one responsibility.
+
+Next, create an `Input` component to encapsulate each input field. Since inputs have different attributes like `type` and `placeholder`, use props to make the `Input` component reusable.
+
+Try creating these components yourself before continuing.
+
+```js
+import React from "react";
+
+function Login() {
+  return (
+    <form>
+      <Input type="text" placeholder="Username" />
+      <Input type="password" placeholder="Password" />
+      <button>Login</button>
+    </form>
+  );
+}
+
+export default Login;
+```
+
+```js
+function Input(props) {
+  return <input type={props.type} placeholder={props.placeholder} />;
+}
+
+export default Input;
+```

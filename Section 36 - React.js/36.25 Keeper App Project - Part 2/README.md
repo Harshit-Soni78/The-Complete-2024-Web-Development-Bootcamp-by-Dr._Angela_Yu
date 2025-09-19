@@ -37,3 +37,7 @@ Our `Notes.js` file contains multiple notes with different titles and content. I
 ## Exporting and Importing Notes Array
 
 To use the `notes` array in `App.js`, we export it from `Notes.js` using `export default notes;`. Then, in `App.js`, we import it with `import notes from '../notes';`. This gives us access to the array for mapping.
+
+## Implementing the Map Function
+
+We replace the single hardcoded `Note` component with a map over the `notes` array. We call `notes.map()` and pass a function that takes a single `noteItem` and returns a `Note` component with props `title` and `content` set to `noteItem.title` and `noteItem.content` respectively. This JSX expression is wrapped in curly braces to embed JavaScript inside JSX.

@@ -41,3 +41,7 @@ To use the `notes` array in `App.js`, we export it from `Notes.js` using `export
 ## Implementing the Map Function
 
 We replace the single hardcoded `Note` component with a map over the `notes` array. We call `notes.map()` and pass a function that takes a single `noteItem` and returns a `Note` component with props `title` and `content` set to `noteItem.title` and `noteItem.content` respectively. This JSX expression is wrapped in curly braces to embed JavaScript inside JSX.
+
+## Adding Unique Key Props
+
+When rendering lists in React, each component must have a unique `key` prop to help React identify which items have changed. We set the `key` prop to `noteItem.key`, which is defined in `Notes.js`. This removes console warnings and ensures React's reconciliation works efficiently.

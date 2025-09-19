@@ -29,3 +29,7 @@ Inside the `Note` function, which is called from `App.js`, we receive an object 
 ## Debugging Props with React Dev Tools
 
 Using React Dev Tools, we can inspect the `Note` component to verify that the props `title` and `content` are correctly passed. This helps identify any typos or mismatches in prop names that could cause missing content.
+
+## Rendering Multiple Notes Using Map
+
+Our `Notes.js` file contains multiple notes with different titles and content. Instead of creating many `Note` components manually, we use the `map` function to iterate over the `notes` array and render a `Note` component for each item. This approach is efficient and scalable.

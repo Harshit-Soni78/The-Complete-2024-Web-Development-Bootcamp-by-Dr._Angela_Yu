@@ -75,3 +75,25 @@ function Input(props) {
 
 export default Input;
 ```
+
+## Using the Ternary Operator for Inline Conditional Rendering
+
+Instead of using a function with an if-else statement, you might want to perform conditional rendering inline within JSX.
+
+However, directly placing an if-else statement inside JSX curly braces causes an error because JSX expects an expression, not a statement.
+
+Statements perform actions (like if-else, loops), while expressions resolve to a value.
+
+JavaScript provides the ternary operator, which is an expression that can replace if-else statements inline.
+
+The ternary operator syntax is:
+
+`condition ? exprIfTrue : exprIfFalse`
+
+For example, `isLoggedIn ? <h1>Hello</h1> : <Login />` renders the `<h1>` if `isLoggedIn` is true, otherwise renders the `<Login />` component.
+
+This allows concise inline conditional rendering in JSX.
+
+```js
+return <div>{isLoggedIn ? <h1>Hello</h1> : <Login />}</div>;
+```

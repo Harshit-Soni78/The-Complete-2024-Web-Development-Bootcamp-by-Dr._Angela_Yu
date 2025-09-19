@@ -105,3 +105,23 @@ Since `isLoggedIn` is already a boolean, you can simplify the ternary condition 
 So instead of `isLoggedIn === true ? ...`, simply use `isLoggedIn ? ...`.
 
 This makes the code cleaner and easier to read.
+
+## Rendering Conditionally Without an Else Case Using the AND Operator
+
+Sometimes, you may want to render a component only if a condition is true, and render nothing otherwise.
+
+For example, you might want to display a message if the current time is after 12 o'clock.
+
+You can achieve this using the ternary operator with `null` as the false case, but there is a shorter way using the AND operator (`&&`).
+
+In JavaScript, the AND operator evaluates the left expression; if it is true, it evaluates and returns the right expression; if false, it returns false immediately.
+
+In React, if the left condition is false, nothing is rendered (equivalent to `null`). If true, the right side expression is rendered.
+
+This pattern is commonly used for conditional rendering without an else case.
+
+```js
+const currentTime = new Date().getHours();
+
+return <div>{currentTime > 12 && <h1>Why are you still working?</h1>}</div>;
+```

@@ -17,3 +17,7 @@ The finished app should display all notes dynamically. When you add a new entry 
 ## Reviewing the Current App.js Setup
 
 Let's examine our `App.js` file inside the components folder. Currently, the `Note` component is rendered only once and is hardcoded with fixed title and content. This approach will not work if we want to use our custom notes from `Notes.js`.
+
+## Passing Custom Props to Note Component
+
+To customize the `Note` component, we will pass props for the title and content. We move the existing hardcoded title and content into props named `title` and `content` respectively. This allows us to pass different values dynamically to each `Note` component.

@@ -135,3 +135,19 @@ If the condition is false, React skips rendering the right-hand side, resulting 
 This is equivalent to rendering `null` in the false case of a ternary operator.
 
 This technique is widely used in React codebases for concise conditional rendering.
+
+## Summary
+
+- You can use functions with if-else statements for conditional rendering but it can be verbose.
+- The ternary operator allows inline conditional rendering with a concise syntax.
+- The AND operator (`&&`) can render components only when a condition is true, rendering nothing otherwise.
+- Extracting reusable components like `Login` and `Input` promotes cleaner code and single responsibility.
+
+In the next lesson, you will apply these concepts and practice using the ternary and AND operators in React.
+
+## Key Takeaways
+
+- React conditional rendering can be achieved using functions, ternary operators, or the AND operator.
+- The ternary operator allows inline conditional expressions with a concise syntax: `condition ? exprIfTrue : exprIfFalse`.
+- The AND operator (`&&`) can be used to render components only when a condition is true, rendering nothing otherwise.
+- Extracting reusable components like `Login` and `Input` promotes single responsibility and cleaner code structure.

@@ -97,3 +97,11 @@ This allows concise inline conditional rendering in JSX.
 ```js
 return <div>{isLoggedIn ? <h1>Hello</h1> : <Login />}</div>;
 ```
+
+## Simplifying Boolean Checks
+
+Since `isLoggedIn` is already a boolean, you can simplify the ternary condition by removing the explicit comparison to `true`.
+
+So instead of `isLoggedIn === true ? ...`, simply use `isLoggedIn ? ...`.
+
+This makes the code cleaner and easier to read.

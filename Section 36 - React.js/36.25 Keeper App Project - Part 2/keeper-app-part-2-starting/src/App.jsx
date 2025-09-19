@@ -1,4 +1,3 @@
-
 //Challenge. Render all the notes inside notes.js as a seperate Note
 //component.
 
@@ -11,12 +10,19 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Note from "./components/Note";
+import notes from "./notes";
 
 function App() {
   return (
     <div>
       <Header />
-      <Note />
+      {notes.map((element) => (
+        <Note
+          id={element.key}
+          title={element.title}
+          content={element.content}
+        />
+      ))}
       <Footer />
     </div>
   );

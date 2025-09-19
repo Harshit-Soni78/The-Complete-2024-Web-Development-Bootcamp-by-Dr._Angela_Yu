@@ -35,3 +35,16 @@ Testing this out, when `isRegistered` is false, we see the Register screen with 
 There are several ways to achieve this. For example, you could use a ternary operator: add a question mark to check the condition, render the input if true, and render `null` if false. This gives the same effect. However, the shortest way to create this kind of conditional rendering is through the use of the `&&` operator, which allows you to delete the `null` and extra syntax.
 
 In fact, you can simplify the condition from `props.isRegistered === false` to `!props.isRegistered`. This negation operator turns the value to the opposite of what it used to be, effectively checking if `isRegistered` is false. This results in a one-line statement that accomplishes everything we want.
+
+## Conclusion
+
+Did you manage to get this challenge right? If not, be sure to head back to your own code and try to complete it now that you have watched the video. We will be using this concept of conditional rendering a lot in the coming lessons. It is a fundamental part of React, so be sure you are comfortable with it before moving on.
+
+In the next lesson, we will discuss a big topic: State, and how we can track and change state in our apps. For all of that and more, I will see you there.
+
+## Key Takeaways
+
+- Conditional rendering in React allows showing different components based on state or props.
+- Passing state variables as props enables child components to render conditionally.
+- The logical AND operator (`&&`) is an efficient way to conditionally render components.
+- Using the negation operator (`!`) simplifies checking for false conditions in rendering logic.

@@ -11,3 +11,13 @@ If the user is indeed registered, then we want to show them a Login screen. But 
 This is the final functionality you are aiming for: when `userIsRegistered` is set to false, you see a Register screen with Username, Password, Confirm Password fields, and the button says "Register." When `userIsRegistered` is set to true, you see a Login screen with just Username, Password fields, and the button says "Login."
 
 Go ahead and fork the starting project for this challenge and try to complete it. Pause the video now and come back if you need to see a walkthrough of the solution.
+
+## Step 1: Conditional Button Text
+
+The first task is to show the word "Login" as the button text if `userIsRegistered` is true. Currently, inside our `Form.jsx`, the button text says "Register." We want to switch that text depending on the value of our `userIsRegistered` variable. However, this variable lives inside `App.js` and cannot be moved directly.
+
+To get the value over to the `Form` component, we can pass it as a prop. Let's create a prop called `isRegistered` and set it equal to the value of `userIsRegistered`. Frequently, when rendering things conditionally, you do so via props that have been passed over.
+
+Now, inside our `Form` component, we can receive those props and check for `isRegistered` in order to render something different inside our button. We want to check if `props.isRegistered` is true; if so, we show the word "Login," otherwise we show "Register." Remember to wrap this expression inside curly braces to render it properly.
+
+When we go back to `App.js` and switch `userIsRegistered` from false to true, the button text changes to "Login." When it is false, it changes back to "Register." This completes step 1.

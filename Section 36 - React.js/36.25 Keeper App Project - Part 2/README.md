@@ -33,3 +33,7 @@ Using React Dev Tools, we can inspect the `Note` component to verify that the pr
 ## Rendering Multiple Notes Using Map
 
 Our `Notes.js` file contains multiple notes with different titles and content. Instead of creating many `Note` components manually, we use the `map` function to iterate over the `notes` array and render a `Note` component for each item. This approach is efficient and scalable.
+
+## Exporting and Importing Notes Array
+
+To use the `notes` array in `App.js`, we export it from `Notes.js` using `export default notes;`. Then, in `App.js`, we import it with `import notes from '../notes';`. This gives us access to the array for mapping.

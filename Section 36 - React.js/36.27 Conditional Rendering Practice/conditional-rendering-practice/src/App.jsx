@@ -10,15 +10,14 @@
 // npm run dev
 // to launch your react project in your browser
 
-import React from "react";
 import Form from "./components/Form";
 
-var userIsRegistered = false;
+var userIsRegistered = true;
 
 function App() {
   return (
     <div className="container">
-      <Form />
+      <Form isRegistered={userIsRegistered}/>
     </div>
   );
 }

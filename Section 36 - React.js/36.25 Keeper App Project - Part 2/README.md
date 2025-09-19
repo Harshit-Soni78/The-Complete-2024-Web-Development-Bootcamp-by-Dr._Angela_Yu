@@ -25,3 +25,7 @@ To customize the `Note` component, we will pass props for the title and content.
 ## Accessing Props Inside Note Component
 
 Inside the `Note` function, which is called from `App.js`, we receive an object called `props` containing the properties `title` and `content`. We inject these into the JSX by placing `props.title` inside the `<h1>` tag and `props.content` inside the paragraph tag. This ensures the `Note` component displays the dynamic content passed from `App.js`.
+
+## Debugging Props with React Dev Tools
+
+Using React Dev Tools, we can inspect the `Note` component to verify that the props `title` and `content` are correctly passed. This helps identify any typos or mismatches in prop names that could cause missing content.

@@ -43,3 +43,11 @@ The `useState` function returns an array with two items: the current state value
 For example, calling `useState(0)` sets the initial state to 0. Logging the returned array shows the first item as the state value and the second as a function.
 
 You can access the current state value using `state[0]`. Replace the hardcoded 0 in the `<h1>` with `state[0]` to display the current state. The UI now reflects the state value.
+
+### Destructuring Assignment
+
+Using `state[0]` and `state[1]` is not very readable. JavaScript ES6 provides destructuring assignment, which allows unpacking values from arrays into distinct variables.
+
+For example, given an array `rgb` with three values representing red, green, and blue, you can destructure it as `[red, green, blue] = rgb` to assign meaningful variable names.
+
+Applying this to `useState`, you can write `[count, setCount] = useState(0)`, where `count` is the current state value and `setCount` is the function to update it. This improves code readability and maintainability.

@@ -33,3 +33,13 @@ This happens because React elements are not real DOM elements; ReactDOM renders 
 React solves this problem with Hooks, specifically the `useState` hook, which is ideal for managing state. Hooks must be used inside functional components, so we need to create a function component to use them.
 
 Let's move all the code into an `App.js` file and render the `App` component from `index.js`. Inside `App`, wrap the JSX inside a function called `App` and return the JSX. This simplifies the rendering process and removes the need for repeated `ReactDOM.render` calls.
+
+### Using the `useState` Hook
+
+Inside the `App` component, create a constant called `state` and set it equal to `React.useState()`. This function comes from the React module. You can import it directly as a named export and then use `useState` without the `React.` prefix.
+
+The `useState` function returns an array with two items: the current state value and a function to update it.
+
+For example, calling `useState(0)` sets the initial state to 0. Logging the returned array shows the first item as the state value and the second as a function.
+
+You can access the current state value using `state[0]`. Replace the hardcoded 0 in the `<h1>` with `state[0]` to display the current state. The UI now reflects the state value.

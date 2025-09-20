@@ -57,3 +57,9 @@ Applying this to `useState`, you can write `[count, setCount] = useState(0)`, wh
 Inside the `increase` function, call `setCount` with the new value to update the state. For example, `setCount(count + 1)` increments the count by one. This triggers React to re-render the component and update the UI accordingly.
 
 When the app loads, `useState` sets the initial value of `count`. When the user clicks the plus button, the `increase` function calls `setCount` to update the state, causing the UI to reflect the new count value.
+
+### Challenge: Adding a Decrease Button
+
+Create another button with a minus sign. When clicked, it should decrease the count by one. Implement a `decrease` function that calls `setCount(count - 1)` and assign it to the button's `onClick` handler.
+
+Now, pressing the plus button increases the count, and pressing the minus button decreases it. This demonstrates the power of the `useState` hook for managing interactive state in React components.

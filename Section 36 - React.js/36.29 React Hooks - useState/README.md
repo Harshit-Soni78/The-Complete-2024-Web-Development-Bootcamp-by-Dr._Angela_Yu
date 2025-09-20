@@ -23,3 +23,7 @@ Now, when clicking the plus button, the `increase` function is called, and the m
 ### Attempting to Update the Count
 
 To increase the count, one might try to write `count++` inside the `increase` function. Logging the value of `count` inside this function shows that it does increase by 1 each time the button is pressed. However, the user interface does not update; the displayed number remains unchanged.
+
+### Understanding React Rendering
+
+This happens because React elements are not real DOM elements; ReactDOM renders them onto the screen. To update the display, ReactDOM must re-render the elements. One way to force this is to call `ReactDOM.render` again inside the `increase` function. Doing so causes the UI to update correctly, but this approach is inefficient and leads to repetitive code.

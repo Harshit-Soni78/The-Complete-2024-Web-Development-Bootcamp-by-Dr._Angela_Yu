@@ -27,3 +27,9 @@ To increase the count, one might try to write `count++` inside the `increase` fu
 ### Understanding React Rendering
 
 This happens because React elements are not real DOM elements; ReactDOM renders them onto the screen. To update the display, ReactDOM must re-render the elements. One way to force this is to call `ReactDOM.render` again inside the `increase` function. Doing so causes the UI to update correctly, but this approach is inefficient and leads to repetitive code.
+
+### Introducing React Hooks and `useState`
+
+React solves this problem with Hooks, specifically the `useState` hook, which is ideal for managing state. Hooks must be used inside functional components, so we need to create a function component to use them.
+
+Let's move all the code into an `App.js` file and render the `App` component from `index.js`. Inside `App`, wrap the JSX inside a function called `App` and return the JSX. This simplifies the rendering process and removes the need for repeated `ReactDOM.render` calls.

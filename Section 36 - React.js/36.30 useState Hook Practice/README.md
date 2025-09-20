@@ -56,3 +56,13 @@ function updateTime() {
 ```
 
 Assign this function to the button's onClick event. Now, every time you press the Get Time button, the time variable will update and re-render in your React app.
+
+## Part 2: Using setInterval for Automatic Updates
+
+To automatically update the time every second, call setInterval inside your App function. Instead of calling another function, trigger `updateTime` every 1000 milliseconds.
+
+```js
+setInterval(updateTime, 1000);
+```
+
+This will update the time variable every second, creating a dynamic, refreshing h1 element.

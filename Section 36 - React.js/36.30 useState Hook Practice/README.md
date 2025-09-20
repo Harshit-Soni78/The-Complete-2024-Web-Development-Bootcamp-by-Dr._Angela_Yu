@@ -11,3 +11,7 @@ The first part of the challenge is to display the current time inside an h1 elem
 ## Expected Behavior
 
 When you refresh the app, it should load the time in the h1 element. Each time you click the Get Time button, the h1 should update to show the latest time at the moment the button is pressed. You can press it every second to update, and this is the goal for part 1 of the challenge.
+
+## Part 2: Automatic Time Updates
+
+As an addition to the challenge, in part 2, update the time every second so that it refreshes dynamically without needing to press the Get Time button. To achieve this, use the setInterval() method. If you do not specify the interval time, setInterval will attempt to call the function every millisecond, which can crash your CodeSandbox and make it unresponsive.

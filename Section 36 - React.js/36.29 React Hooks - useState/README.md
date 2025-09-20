@@ -63,3 +63,11 @@ When the app loads, `useState` sets the initial value of `count`. When the user 
 Create another button with a minus sign. When clicked, it should decrease the count by one. Implement a `decrease` function that calls `setCount(count - 1)` and assign it to the button's `onClick` handler.
 
 Now, pressing the plus button increases the count, and pressing the minus button decreases it. This demonstrates the power of the `useState` hook for managing interactive state in React components.
+
+### Recap
+
+- State enables interactivity by allowing dynamic updates in the app.
+- The `useState` hook provides state management inside functional components.
+- It returns a pair: the current state value and a function to update it.
+- Destructuring assignment improves code clarity when using hooks.
+- State updates trigger efficient re-rendering of only the necessary UI parts.

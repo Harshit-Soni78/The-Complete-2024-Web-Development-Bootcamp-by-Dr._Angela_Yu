@@ -19,3 +19,7 @@ Next, we need to trigger some code whenever the button is clicked. In HTML, butt
 Let's create a function called `increase` that logs the message 'I got clicked.' Assign this function to the button's `onClick` attribute using curly braces.
 
 Now, when clicking the plus button, the `increase` function is called, and the message is logged in the console. This confirms that the click handling works.
+
+### Attempting to Update the Count
+
+To increase the count, one might try to write `count++` inside the `increase` function. Logging the value of `count` inside this function shows that it does increase by 1 each time the button is pressed. However, the user interface does not update; the displayed number remains unchanged.

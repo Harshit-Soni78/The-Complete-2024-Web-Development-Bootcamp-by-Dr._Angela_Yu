@@ -25,3 +25,19 @@ However, we do not want the line-through to always be present. Instead, we want 
 We apply the `strikeThrough` style conditionally using a ternary operator inside the JSX curly braces. If `isDone` is true, the strikethrough style is applied; otherwise, no style is applied (null). When `isDone` is false, the text appears normal; when it switches to true, the strikethrough styling updates the user interface accordingly.
 
 This approach exemplifies **Declarative Programming**. We declare how the user interface should look under different conditions based on the state, rather than manually manipulating the DOM.
+
+## Imperative Programming Contrast
+
+In contrast, **Imperative Programming** involves directly manipulating DOM elements. For example, using JavaScript, we might select an element with `document.getElementById` and set its properties manually, such as changing the `textDecoration` style to `line-through`. This approach explicitly tells the element what to do.
+
+For instance, deleting the previous React code and keeping only a paragraph element, we can use JavaScript to select the "root" div and set its `textDecoration` style to `line-through`. When this code executes, the style updates immediately.
+
+Often, we create event listeners such as a button labeled "Change to strike-through" with an `onClick` handler that calls a function to apply the styling imperatively. Clicking the button triggers the function, which changes the element's appearance by setting the style property directly. Another button can revert the style back to normal by setting `textDecoration` to null.
+
+This imperative approach involves getting a reference to an element and setting its properties each time a change is desired.
+
+Returning to the declarative style with the `isDone` state variable, instead of manipulating the DOM directly, we simply update the state variable to true or false. However, this alone does not update the UI because React elements must be re-rendered to reflect changes in properties such as styles.
+
+To enable re-rendering and state management, React provides **Hooks**, a powerful and relatively new concept. Hooks are functions that allow us to hook into the state of our application to read or modify it.
+
+In the next lesson, we will introduce the most commonly used React Hook, `useState`, which enables effective state management and UI updates.

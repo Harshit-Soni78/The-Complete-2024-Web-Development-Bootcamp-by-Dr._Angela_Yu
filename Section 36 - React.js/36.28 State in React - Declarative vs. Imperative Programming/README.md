@@ -15,3 +15,13 @@ Consider the difference between ice and water. They are essentially the same sub
 In code, we would track a variable, such as temperature, and define how the user interface changes depending on different values of that variable.
 
 For example, consider a simple to-do list application with an App component containing a ListItem component that hosts a single paragraph of text. We want the text to have a line-through style when the list item is clicked. We can achieve this by introducing a state variable called `isDone`, initially set to false. When the user clicks the to-do list item, we switch `isDone` from false to true, and the paragraph element updates its appearance to reflect this change by applying strikethrough styling.
+
+## Example in CodeSandbox
+
+Here is a simple App component with a single paragraph element displaying the text "Buy milk." We can use conditional rendering with a variable `isDone` set to false to change the appearance of the component. Inside the `<p>` element, we add a `style` property set to a JavaScript object with the key `textDecoration` and the value `line-through`. This styling creates a line-through effect on the text.
+
+However, we do not want the line-through to always be present. Instead, we want it to appear only when `isDone` is true. To simplify the code, we extract the styling object into a constant named `strikeThrough`.
+
+We apply the `strikeThrough` style conditionally using a ternary operator inside the JSX curly braces. If `isDone` is true, the strikethrough style is applied; otherwise, no style is applied (null). When `isDone` is false, the text appears normal; when it switches to true, the strikethrough styling updates the user interface accordingly.
+
+This approach exemplifies **Declarative Programming**. We declare how the user interface should look under different conditions based on the state, rather than manually manipulating the DOM.

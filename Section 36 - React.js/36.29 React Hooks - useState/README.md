@@ -11,3 +11,11 @@ The code is simple: it renders a single `div` containing an `<h1>` and a button.
 ### Initial Approach to State
 
 Currently, the `<h1>` contains a hardcoded value, which will not work for dynamic updates. Let's create a new variable called `count` and set it equal to 0. Then, replace the hardcoded value with this variable `count`. So far, nothing changes in the user interface.
+
+### Handling Button Clicks
+
+Next, we need to trigger some code whenever the button is clicked. In HTML, button elements have an `onClick` attribute, which can be set to a function to be triggered on click. In React, attributes are converted to camel case, so we use `onClick`.
+
+Let's create a function called `increase` that logs the message 'I got clicked.' Assign this function to the button's `onClick` attribute using curly braces.
+
+Now, when clicking the plus button, the `increase` function is called, and the message is logged in the console. This confirms that the click handling works.

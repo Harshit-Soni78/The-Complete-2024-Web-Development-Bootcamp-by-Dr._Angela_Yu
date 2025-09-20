@@ -29,3 +29,17 @@ const now = new Date().toLocaleTimeString();
 ```
 
 Log the value to ensure it works, and remove the log statement from index.js. You should now see the time in your console. The next step is to display this time inside the h1 element.
+
+## Using useState to Track Time
+
+Because the time will change continuously and you need to keep track of its state, use the useState Hook. Create a new constant as a destructured array. The first item is the state variable (for example, `time`), and the second item is the function to update this state (for example, `setTime`). Set the initial value to `now`.
+
+```js
+const [time, setTime] = useState(now);
+```
+
+Use this state variable inside your h1 element by replacing the hardcoded time with curly braces to insert the dynamic value.
+
+```js
+<h1>{time}</h1>
+```

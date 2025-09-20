@@ -43,3 +43,16 @@ Use this state variable inside your h1 element by replacing the hardcoded time w
 ```js
 <h1>{time}</h1>
 ```
+
+## Updating Time on Button Click
+
+When the user clicks the Get Time button, trigger a function to update the time to the latest value. Create a function called `updateTime` and set it as the onClick handler for the button.
+
+```js
+function updateTime() {
+  const newTime = new Date().toLocaleTimeString();
+  setTime(newTime);
+}
+```
+
+Assign this function to the button's onClick event. Now, every time you press the Get Time button, the time variable will update and re-render in your React app.

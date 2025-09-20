@@ -19,3 +19,13 @@ As an addition to the challenge, in part 2, update the time every second so that
 ## Preventing Issues with setInterval
 
 Always specify the time period before the function in setInterval to avoid performance problems. If your CodeSandbox becomes unresponsive, your progress will be saved. Simply close everything, restart Chrome, and return to your sandbox.
+
+## Implementing the Solution in App.jsx
+
+All the action will take place inside App.jsx. First, use the following line of code to get the current time:
+
+```js
+const now = new Date().toLocaleTimeString();
+```
+
+Log the value to ensure it works, and remove the log statement from index.js. You should now see the time in your console. The next step is to display this time inside the h1 element.

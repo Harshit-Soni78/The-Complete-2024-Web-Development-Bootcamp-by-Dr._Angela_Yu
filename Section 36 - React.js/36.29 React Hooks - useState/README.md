@@ -51,3 +51,9 @@ Using `state[0]` and `state[1]` is not very readable. JavaScript ES6 provides de
 For example, given an array `rgb` with three values representing red, green, and blue, you can destructure it as `[red, green, blue] = rgb` to assign meaningful variable names.
 
 Applying this to `useState`, you can write `[count, setCount] = useState(0)`, where `count` is the current state value and `setCount` is the function to update it. This improves code readability and maintainability.
+
+### Updating State with `setCount`
+
+Inside the `increase` function, call `setCount` with the new value to update the state. For example, `setCount(count + 1)` increments the count by one. This triggers React to re-render the component and update the UI accordingly.
+
+When the app loads, `useState` sets the initial value of `count`. When the user clicks the plus button, the `increase` function calls `setCount` to update the state, causing the UI to reflect the new count value.

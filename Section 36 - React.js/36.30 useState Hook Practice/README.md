@@ -15,3 +15,7 @@ When you refresh the app, it should load the time in the h1 element. Each time y
 ## Part 2: Automatic Time Updates
 
 As an addition to the challenge, in part 2, update the time every second so that it refreshes dynamically without needing to press the Get Time button. To achieve this, use the setInterval() method. If you do not specify the interval time, setInterval will attempt to call the function every millisecond, which can crash your CodeSandbox and make it unresponsive.
+
+## Preventing Issues with setInterval
+
+Always specify the time period before the function in setInterval to avoid performance problems. If your CodeSandbox becomes unresponsive, your progress will be saved. Simply close everything, restart Chrome, and return to your sandbox.

@@ -11,3 +11,17 @@ The task is to use variable names to destructure the code from `practice.js` wit
 Errors in the console are unrelated to your code and are due to the HTML table structure in React. The focus is on destructuring, so the aim is to resolve errors by adding code to destructure the array inside `practice.js`.
 
 If you are unsure where to start or get stuck, it is recommended to watch the video for a deeper dive into destructuring nested arrays, providing default values, and more. Begin by forking a copy of the starting sandbox. Initially, ignore the challenge and create space in `index.js`, starting with data from `data.js`.
+
+## Destructuring Arrays
+
+An array called `animals` contains two objects. The first step is to export `animals` as the default export and import it into `index.js`. Logging `animals` helps visualize the data, which is a common practice when handling data from APIs or frameworks like React.
+
+The array contains two objects: one is a cat, and the other is a dog. To destructure this array, create a new constant. Since it is an array, use square brackets for the variable names.
+
+```js
+const [cat, dog] = animals;
+```
+
+This code extracts the first item as `cat` and the second as `dog`. Logging `cat` shows it as a single object with two properties. This is equivalent to writing `var cat = animals[0]`, but with more concise syntax.
+
+When destructuring arrays or objects, variable names must be unique within the file. Attempting to destructure into a variable name already declared will result in an error.

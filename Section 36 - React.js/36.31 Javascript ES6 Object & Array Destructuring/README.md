@@ -25,3 +25,17 @@ const [cat, dog] = animals;
 This code extracts the first item as `cat` and the second as `dog`. Logging `cat` shows it as a single object with two properties. This is equivalent to writing `var cat = animals[0]`, but with more concise syntax.
 
 When destructuring arrays or objects, variable names must be unique within the file. Attempting to destructure into a variable name already declared will result in an error.
+
+## Destructuring Objects
+
+After extracting `cat` from `animals`, it is now an object. To destructure this object, use curly braces and specify the properties to extract.
+
+```js
+const { name, sound } = cat;
+```
+
+Now, `name` and `sound` are variables equivalent to `cat.name` and `cat.sound`. Logging `sound` prints 'meow'. This approach is more convenient than repeatedly accessing properties through the original array.
+
+A key difference between destructuring arrays and objects is naming. With arrays, variable names can be arbitrary, but with objects, the names must match the property keys.
+
+If you attempt to use a different name, such as `animalSound` instead of `sound`, the result will be `undefined` since the key does not exist in the object.

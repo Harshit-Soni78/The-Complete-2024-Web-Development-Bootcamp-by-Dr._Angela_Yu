@@ -39,3 +39,21 @@ Now, `name` and `sound` are variables equivalent to `cat.name` and `cat.sound`. 
 A key difference between destructuring arrays and objects is naming. With arrays, variable names can be arbitrary, but with objects, the names must match the property keys.
 
 If you attempt to use a different name, such as `animalSound` instead of `sound`, the result will be `undefined` since the key does not exist in the object.
+
+## Renaming and Default Values in Object Destructuring
+
+To assign different variable names to properties, use a colon to provide an alternative name.
+
+```js
+const { name: catName, sound: catSound } = cat;
+```
+
+Now, `catName` and `catSound` are available instead of `name` and `sound`. This is useful when working with data from public APIs where property names may not be ideal.
+
+To provide default values during destructuring, use the equals sign. If the property is undefined, the default value is used.
+
+```js
+const { name = "Fluffy", sound = "Purr" } = cat;
+```
+
+If `cat` does not have a `name`, logging `name` will print 'Fluffy'. This approach ensures that missing data does not cause issues in your application.

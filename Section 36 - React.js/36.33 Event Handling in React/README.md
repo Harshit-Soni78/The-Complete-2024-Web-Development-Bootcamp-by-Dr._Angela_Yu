@@ -51,3 +51,7 @@ function handleClick() {
 ## Exploring Other Events: Mouse Over and Mouse Out
 
 Besides click events, you can respond to other events such as `onMouseOver` and `onMouseOut`. These allow you to detect when the mouse hovers over or leaves an element.
+
+## Challenge: Change Button Background on Hover
+
+Try adding `onMouseOver` and `onMouseOut` attributes to the button so that hovering over the Submit button changes its background color from white to black, and moving the mouse away changes it back to white. Use the style attribute to set the background color conditionally.

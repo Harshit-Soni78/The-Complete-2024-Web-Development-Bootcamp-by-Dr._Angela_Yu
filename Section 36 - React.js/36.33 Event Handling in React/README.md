@@ -15,3 +15,19 @@ Start by forking the starting sandbox. The form consists of three components:
 - An `h1` element that says "Hello"
 - An input of type text with a placeholder asking for a name
 - A Submit button
+
+## Handling Click Events
+
+You can tap into simple events such as when a button is clicked by using attributes on HTML elements. In JSX, these attribute names are camel-cased. For example, to handle a button click, you can use the `onClick` attribute and pass a function to it.
+
+```js
+function handleClick() {
+  console.log("Clicked");
+}
+```
+
+```js
+<button onClick={handleClick}>Submit</button>
+```
+
+Whenever you click the submit button, the console logs the word "Clicked". This demonstrates that you can trigger any code you want when the button is clicked.

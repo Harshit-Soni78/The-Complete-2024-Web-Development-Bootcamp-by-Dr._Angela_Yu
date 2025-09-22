@@ -38,3 +38,18 @@ const {
   speedStats: { topSpeed: teslaTopSpeed },
 } = tesla;
 ```
+
+## Extracting Top Colour from Nested Arrays
+
+Next, we want to extract the most popular color for each car. This information is stored in the `coloursByPopularity` array. We destructure this array to get the first color, renaming it to `hondaTopColour` and `teslaTopColour` respectively.
+
+```js
+const {
+  coloursByPopularity: [hondaTopColour],
+} = honda;
+const {
+  coloursByPopularity: [teslaTopColour],
+} = tesla;
+```
+
+Now, the variables `hondaTopColour` and `teslaTopColour` hold the most popular colors for the Honda and Tesla models, respectively. This completes the destructuring needed to display the model, top speed, and top colour for each car in a table or UI.

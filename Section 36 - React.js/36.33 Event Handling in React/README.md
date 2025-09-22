@@ -55,3 +55,13 @@ Besides click events, you can respond to other events such as `onMouseOver` and 
 ## Challenge: Change Button Background on Hover
 
 Try adding `onMouseOver` and `onMouseOut` attributes to the button so that hovering over the Submit button changes its background color from white to black, and moving the mouse away changes it back to white. Use the style attribute to set the background color conditionally.
+
+## Hint: Inline Styling in JSX
+
+You can change the appearance of an HTML element by using the `style` attribute. In JSX, style values are provided as objects, and CSS properties use camelCase.
+
+```js
+    style={{ backgroundColor: "black" }}
+```
+
+However, the goal is to change the background color only when the mouse is hovering over the button. You will need to use state and conditional rendering.

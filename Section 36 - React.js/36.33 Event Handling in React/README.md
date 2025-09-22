@@ -99,3 +99,14 @@ Attach these handlers to the button's `onMouseOver` and `onMouseOut` attributes.
 ```
 
 Now, when you hover over the button, it turns black. When your mouse leaves, it turns white again. This is achieved using conditional rendering, inline styles, event listeners, and state management.
+
+## Conclusion
+
+In this lesson, you learned how to handle various events in React, manage state, and use conditional rendering and inline styles to create interactive components. In the next lesson, we will explore how to use forms in React and handle events from form inputs.
+
+## Key Takeaways
+
+- React allows handling user events such as clicks, mouse over, and mouse out using event attributes in JSX.
+- State management with `useState` is essential for dynamic UI updates based on user interactions.
+- Inline styling and conditional rendering enable real-time visual feedback in response to events.
+- Event handlers like `onClick`, `onMouseOver`, and `onMouseOut` can be used to trigger custom logic and UI changes.

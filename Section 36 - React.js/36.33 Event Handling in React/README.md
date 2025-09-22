@@ -65,3 +65,37 @@ You can change the appearance of an HTML element by using the `style` attribute.
 ```
 
 However, the goal is to change the background color only when the mouse is hovering over the button. You will need to use state and conditional rendering.
+
+## Solution: Managing Mouse Over State
+
+Create a state variable to track whether the mouse is over the button.
+
+```js
+const [isMousedOver, setMouseOver] = useState(false);
+```
+
+Define event handler functions for mouse over and mouse out events.
+
+```js
+function handleMouseOver() {
+  setMouseOver(true);
+}
+
+function handleMouseOut() {
+  setMouseOver(false);
+}
+```
+
+Attach these handlers to the button's `onMouseOver` and `onMouseOut` attributes. Use the `isMousedOver` state to conditionally set the background color.
+
+```js
+<button
+  style={{ backgroundColor: isMousedOver ? "black" : "white" }}
+  onMouseOver={handleMouseOver}
+  onMouseOut={handleMouseOut}
+>
+  Submit
+</button>
+```
+
+Now, when you hover over the button, it turns black. When your mouse leaves, it turns white again. This is achieved using conditional rendering, inline styles, event listeners, and state management.

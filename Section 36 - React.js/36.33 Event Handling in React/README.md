@@ -47,3 +47,7 @@ function handleClick() {
   setHeadingText("Submitted");
 }
 ```
+
+## Exploring Other Events: Mouse Over and Mouse Out
+
+Besides click events, you can respond to other events such as `onMouseOver` and `onMouseOut`. These allow you to detect when the mouse hovers over or leaves an element.

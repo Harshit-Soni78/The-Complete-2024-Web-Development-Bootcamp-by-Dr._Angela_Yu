@@ -20,3 +20,21 @@ const [honda, tesla] = cars;
 ```
 
 With this destructuring, we can now access properties such as `honda.model` and `tesla.model` directly without errors. Logging `honda` outputs the entire Honda Civic object.
+
+## Accessing Nested Properties: Top Speed
+
+The `topSpeed` property is nested inside another object called `speedStats`. To access it, we destructure the `honda` or `tesla` object further. We first extract the `speedStats` object, then destructure it to get `topSpeed` and optionally `zeroToSixty`. We also rename `topSpeed` to `hondaTopSpeed` for clarity.
+
+```js
+const {
+  speedStats: { topSpeed: hondaTopSpeed, zeroToSixty },
+} = honda;
+```
+
+We repeat the same destructuring for the Tesla object to extract its top speed similarly.
+
+```js
+const {
+  speedStats: { topSpeed: teslaTopSpeed },
+} = tesla;
+```

@@ -31,3 +31,19 @@ function handleClick() {
 ```
 
 Whenever you click the submit button, the console logs the word "Clicked". This demonstrates that you can trigger any code you want when the button is clicked.
+
+## Changing State on Click
+
+Suppose you want to change the text in the `h1` when the button is clicked. You can use a state variable for this purpose.
+
+```js
+const [headingText, setHeadingText] = useState("Hello");
+```
+
+Now, when the button is clicked, you can update the heading text to "Submitted" using the `setHeadingText` function.
+
+```js
+function handleClick() {
+  setHeadingText("Submitted");
+}
+```

@@ -50,3 +50,7 @@ Using `useState`, we initialize both with empty strings and update them accordin
 ### Important Note on Setting State
 
 When setting state with a variable, do not wrap it in curly braces. For example, use `setHeading(name)` instead of `setHeading({name})`. The latter sets the state to an object rather than the string value, which is not desired. Use console logs to verify the values if unsure.
+
+### Using HTML Form Elements
+
+Typically, inputs and submit buttons are placed inside an HTML `<form>` element. The submit button can have a `type="submit"` attribute to indicate its role. Clicking the submit button inside a form triggers the form's `onSubmit` event, which by default causes the page to refresh as the form submits data via POST or GET requests.

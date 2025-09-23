@@ -54,3 +54,7 @@ When setting state with a variable, do not wrap it in curly braces. For example,
 ### Using HTML Form Elements
 
 Typically, inputs and submit buttons are placed inside an HTML `<form>` element. The submit button can have a `type="submit"` attribute to indicate its role. Clicking the submit button inside a form triggers the form's `onSubmit` event, which by default causes the page to refresh as the form submits data via POST or GET requests.
+
+### Preventing Default Form Submission Behavior
+
+To prevent the page from refreshing on form submission, we can handle the form's `onSubmit` event and call `event.preventDefault()` inside the handler. This stops the default behavior, allowing us to process the form data without a page reload.

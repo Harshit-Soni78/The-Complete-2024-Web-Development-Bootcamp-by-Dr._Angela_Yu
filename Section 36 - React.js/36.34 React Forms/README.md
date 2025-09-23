@@ -33,3 +33,7 @@ What if we want to update the heading text only when the user clicks the Submit 
 - Update `headingText` inside `handleClick` using the current value of `name`.
 
 Try implementing this yourself before continuing.
+
+### Implementing the Submit Button Handler
+
+We add an `onClick` handler to the Submit button that calls `handleClick`. This function does not need to use the event object; it simply updates the `headingText` state with the current `name` value. This way, the heading updates only when the Submit button is clicked.

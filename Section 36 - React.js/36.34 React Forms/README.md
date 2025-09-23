@@ -23,3 +23,13 @@ We can display the `name` state inside the `h1` element by embedding it in curly
 ### Controlled Components in React
 
 In HTML, input elements manage their own state via the `value` attribute. However, in React, we set the input's `value` attribute to the state variable (e.g., `name`) to maintain a single source of truth. This approach ensures that the displayed input value and the state are always synchronized. Components that follow this pattern are called _controlled components_.
+
+### Challenge: Updating Heading Only on Submit
+
+What if we want to update the heading text only when the user clicks the Submit button, rather than on every keystroke? To achieve this, we can:
+
+- Add an `onClick` event listener to the Submit button that triggers a `handleClick` function.
+- Maintain a separate state variable, such as `headingText`, to store the displayed heading.
+- Update `headingText` inside `handleClick` using the current value of `name`.
+
+Try implementing this yourself before continuing.

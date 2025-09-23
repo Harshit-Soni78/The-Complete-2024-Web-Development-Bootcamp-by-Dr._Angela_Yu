@@ -37,3 +37,12 @@ Try implementing this yourself before continuing.
 ### Implementing the Submit Button Handler
 
 We add an `onClick` handler to the Submit button that calls `handleClick`. This function does not need to use the event object; it simply updates the `headingText` state with the current `name` value. This way, the heading updates only when the Submit button is clicked.
+
+### Managing Separate State Variables
+
+We create two state variables:
+
+- `name` to track the input field's current value.
+- `headingText` to track the text displayed in the heading.
+
+Using `useState`, we initialize both with empty strings and update them accordingly. Inside `handleClick`, we call `setHeading(name)` to update the heading text.

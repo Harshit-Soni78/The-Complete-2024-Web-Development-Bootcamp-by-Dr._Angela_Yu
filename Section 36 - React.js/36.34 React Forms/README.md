@@ -46,3 +46,7 @@ We create two state variables:
 - `headingText` to track the text displayed in the heading.
 
 Using `useState`, we initialize both with empty strings and update them accordingly. Inside `handleClick`, we call `setHeading(name)` to update the heading text.
+
+### Important Note on Setting State
+
+When setting state with a variable, do not wrap it in curly braces. For example, use `setHeading(name)` instead of `setHeading({name})`. The latter sets the state to an object rather than the string value, which is not desired. Use console logs to verify the values if unsure.

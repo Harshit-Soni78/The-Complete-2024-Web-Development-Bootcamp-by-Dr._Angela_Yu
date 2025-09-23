@@ -19,3 +19,7 @@ To use the input value elsewhere in the component, such as displaying it in an `
 ### Displaying State in the Component
 
 We can display the `name` state inside the `h1` element by embedding it in curly braces after the word "Hello". As the user types, the `handleChange` function updates the `name` state, and the displayed text updates accordingly.
+
+### Controlled Components in React
+
+In HTML, input elements manage their own state via the `value` attribute. However, in React, we set the input's `value` attribute to the state variable (e.g., `name`) to maintain a single source of truth. This approach ensures that the displayed input value and the state are always synchronized. Components that follow this pattern are called _controlled components_.

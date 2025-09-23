@@ -15,3 +15,7 @@ The function triggered by `onChange` receives an event object representing the e
 ### Using State to Reflect Input Value
 
 To use the input value elsewhere in the component, such as displaying it in an `h1` element, we need to store it in state. We can create a state variable `name` and a setter function `setName` using the `useState` hook, initializing it with an empty string. Then, inside `handleChange`, we call `setName(event.target.value)` to update the state with the current input value. This way, the `name` state reflects what the user has typed.
+
+### Displaying State in the Component
+
+We can display the `name` state inside the `h1` element by embedding it in curly braces after the word "Hello". As the user types, the `handleChange` function updates the `name` state, and the displayed text updates accordingly.

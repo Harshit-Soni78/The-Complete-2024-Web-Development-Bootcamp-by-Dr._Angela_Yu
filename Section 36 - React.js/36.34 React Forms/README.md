@@ -7,3 +7,7 @@ In the previous lesson, we explored handling simple events such as clicking or h
 ### Capturing User Input with onChange
 
 To get user input from an input element, we use the `onChange` event, which triggers every time the input's value changes. We can create a function called `handleChange` that is triggered on each change. For example, logging "Changed" inside this function and passing it to the input's `onChange` attribute will call `handleChange` every time the user types a new letter.
+
+### Accessing the Input Value from the Event Object
+
+The function triggered by `onChange` receives an event object representing the event that occurred. This event object contains useful properties. For example, `event.target.value` gives the current value of the input. Other properties such as `event.target.placeholder` or `event.target.type` can also be accessed. Logging `event.target.value` inside `handleChange` shows the current input text every time it changes.

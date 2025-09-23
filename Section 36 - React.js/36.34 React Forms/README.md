@@ -58,3 +58,19 @@ Typically, inputs and submit buttons are placed inside an HTML `<form>` element.
 ### Preventing Default Form Submission Behavior
 
 To prevent the page from refreshing on form submission, we can handle the form's `onSubmit` event and call `event.preventDefault()` inside the handler. This stops the default behavior, allowing us to process the form data without a page reload.
+
+### Summary
+
+- Use controlled components by tying input values to state.
+- Use `onChange` to update state as the user types.
+- Use a separate state variable to update displayed content only on submit.
+- Prevent default form submission behavior to avoid page refreshes.
+
+In the next lesson, we will compare using class components versus hooks to manage state in React.
+
+## Key Takeaways
+
+- React forms use controlled components where the input value is tied to state, ensuring a single source of truth.
+- The `onChange` event on inputs triggers every time the input value changes, passing an event object with useful properties.
+- To update displayed content only on form submission, maintain separate state variables for input value and displayed heading.
+- Prevent the default form submission behavior using `event.preventDefault()` to avoid page refreshes.

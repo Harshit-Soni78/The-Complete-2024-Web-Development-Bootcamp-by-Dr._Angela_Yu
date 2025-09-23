@@ -11,3 +11,7 @@ To get user input from an input element, we use the `onChange` event, which trig
 ### Accessing the Input Value from the Event Object
 
 The function triggered by `onChange` receives an event object representing the event that occurred. This event object contains useful properties. For example, `event.target.value` gives the current value of the input. Other properties such as `event.target.placeholder` or `event.target.type` can also be accessed. Logging `event.target.value` inside `handleChange` shows the current input text every time it changes.
+
+### Using State to Reflect Input Value
+
+To use the input value elsewhere in the component, such as displaying it in an `h1` element, we need to store it in state. We can create a state variable `name` and a setter function `setName` using the `useState` hook, initializing it with an empty string. Then, inside `handleChange`, we call `setName(event.target.value)` to update the state with the current input value. This way, the `name` state reflects what the user has typed.

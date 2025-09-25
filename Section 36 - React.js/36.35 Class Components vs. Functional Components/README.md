@@ -37,3 +37,18 @@ Here is the functional component equivalent of our counter app using Hooks. This
 In this example, there is no use of the `this` keyword. The state is kept together in a constant, with `count` and `setCount` destructured from the `useState` function. To update the count, you simply call `setCount`. To use the count value, you refer to the `count` variable directly.
 
 This approach allows you to build React applications entirely with functional components, avoiding the need to convert components into classes just to manage state.
+
+## Current Usage and Community Trends
+
+While you may still encounter class components in existing codebases, especially those using `this.state` and `this.setState`, the React community is increasingly embracing Hooks.
+
+New and future React code is generally written using Hooks and functional components, as this pattern is clearer and easier to maintain.
+
+This lesson aimed to clarify the differences between class components and functional components with Hooks, so you are not confused when encountering class components in the wild. Typically, class components are used to manage state, which can now be achieved equivalently with the `useState` Hook in functional components.
+
+## Key Takeaways
+
+- React components can be created using either functional components or class components.
+- Class components were traditionally used to manage state before Hooks were introduced.
+- Hooks provide a simpler, clearer way to manage state in functional components without the boilerplate of classes.
+- The React community is moving towards using Hooks for new code, though class components still exist in legacy code.

@@ -13,3 +13,13 @@ However, there is another way to create React components: using classes. Instead
 Classes are not called like functions, so they do not have parentheses. This class must extend the `Component` class from the React module. This inheritance turns your class into a React Component.
 
 To render content inside this component, you must add your code inside a `render()` method. This approach requires a few extra lines of code but results in the same output as functional components.
+
+## State Management with Class Components
+
+Historically, the main reason developers converted functional components into class components was to manage state. According to React's documentation on State and Lifecycle, using state required converting functions into classes.
+
+Let's look at a simple counter app example using a class component. This component has a single button that increases the count when clicked.
+
+In this example, the class component renders an `h1` and a button. When the button is clicked, it calls an `increase()` function. This function calls the pre-built `setState` method to update the state object with new values.
+
+This approach works similarly to using Hooks but involves more boilerplate code. It can be harder to reason about, especially when state management is scattered across multiple components. Additionally, it requires binding methods and can become complicated when reusing state functionality across components.

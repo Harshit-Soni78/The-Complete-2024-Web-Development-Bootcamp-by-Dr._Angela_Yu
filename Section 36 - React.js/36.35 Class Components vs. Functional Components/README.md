@@ -23,3 +23,17 @@ Let's look at a simple counter app example using a class component. This compone
 In this example, the class component renders an `h1` and a button. When the button is clicked, it calls an `increase()` function. This function calls the pre-built `setState` method to update the state object with new values.
 
 This approach works similarly to using Hooks but involves more boilerplate code. It can be harder to reason about, especially when state management is scattered across multiple components. Additionally, it requires binding methods and can become complicated when reusing state functionality across components.
+
+## Introduction of Hooks
+
+In 2018, the React team introduced Hooks to solve these problems and others. Hooks provide a simpler and more powerful way to manage state and side effects in functional components.
+
+The React documentation recommends using Hooks for new code because they make state management clearer and easier to understand.
+
+It is important to note that Hooks can only be used inside functional components, not class components. However, existing class components can coexist with functional components using Hooks.
+
+Here is the functional component equivalent of our counter app using Hooks. This version saves many lines of code by removing the boilerplate required for classes.
+
+In this example, there is no use of the `this` keyword. The state is kept together in a constant, with `count` and `setCount` destructured from the `useState` function. To update the count, you simply call `setCount`. To use the count value, you refer to the `count` variable directly.
+
+This approach allows you to build React applications entirely with functional components, avoiding the need to convert components into classes just to manage state.

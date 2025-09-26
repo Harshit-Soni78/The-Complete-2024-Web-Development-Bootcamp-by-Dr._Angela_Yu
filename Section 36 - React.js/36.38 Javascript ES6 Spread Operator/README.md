@@ -37,3 +37,25 @@ const user = { fullName, id: 1, username: "jamesbond007" };
 ```
 
 In this case, the `user` object contains a key `fullName` with a value that is the `fullName` object, resulting in nesting. The spread operator avoids this by merging all properties into the same object.
+
+## Simplifying State Updates with the Spread Operator
+
+The spread operator is useful for simplifying code, such as updating state in React. Instead of using multiple if-statements, the spread operator can be used to add previous values and update the relevant property.
+
+```js
+return {
+  ...prevValue,
+  [name]: value,
+};
+```
+
+This code returns an object that includes all previous properties and adds a new key-value pair. However, if the key is written as `name` without brackets, it creates a property with the literal key `name` instead of using the value of the variable.
+
+```js
+return {
+  ...prevValue,
+  name: value,
+};
+```
+
+To use a variable as a key in an object, square bracket syntax is required. This ensures that the value of the variable is used as the key, not the string 'name'.

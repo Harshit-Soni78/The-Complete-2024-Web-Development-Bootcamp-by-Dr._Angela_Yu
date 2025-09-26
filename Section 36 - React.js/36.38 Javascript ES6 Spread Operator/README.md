@@ -76,3 +76,16 @@ const obj = { [key]: value };
 ```
 
 This syntax allows the value of the variable to be used as the key in the object, rather than being interpreted as a literal string.
+
+## Further Simplifying Code
+
+The code can be shortened further by removing the `return` statement and outer curly braces if only a single object is being returned. However, JavaScript may interpret this as the function body, so parentheses are needed to indicate that it is an object.
+
+```js
+setContact((prevValue) => ({
+  ...prevValue,
+  [name]: value,
+}));
+```
+
+Although this syntax is concise, it can be confusing due to the number of curly braces and parentheses. Simplifying code is beneficial when it maintains clarity.

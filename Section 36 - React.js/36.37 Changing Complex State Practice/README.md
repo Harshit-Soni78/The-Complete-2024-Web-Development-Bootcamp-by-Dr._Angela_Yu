@@ -57,3 +57,10 @@ Set the first input's value to `contact.fName`, the second to `contact.lName`, a
 This code is quite long and verbose, but it helps to understand what is happening behind the scenes when managing complex state in React.
 
 In the next lesson, we will learn how to simplify this code significantly by using the ES6 spread operator, reducing it to just two or three lines.
+
+## Key Takeaways
+
+- Managed complex state in React by using an object to hold multiple related values.
+- Updated state immutably by using the previous state and conditionally changing only the relevant property.
+- Handled form inputs with a single change handler by leveraging the input's name attribute.
+- Bound input values to state to keep the UI and state synchronized.

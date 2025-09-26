@@ -45,3 +45,9 @@ After implementing this, test the app by opening Chrome Developer Tools, inspect
 You will see that typing in the first name input updates only the `fName` property, typing in the last name input updates only the `lName` property, and typing in the email input updates only the `email` property.
 
 This approach ensures that the state updates correctly without affecting other properties.
+
+## Binding Input Values to State
+
+The last step is to add the `value` attribute to each input and bind it to the corresponding property in the `contact` state object.
+
+Set the first input's value to `contact.fName`, the second to `contact.lName`, and the third to `contact.email`. This keeps the inputs controlled and synchronized with the state.

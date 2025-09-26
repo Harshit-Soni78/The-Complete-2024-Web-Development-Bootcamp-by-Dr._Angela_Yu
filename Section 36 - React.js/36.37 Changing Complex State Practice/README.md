@@ -27,3 +27,21 @@ Instead of typing the same code three times, you can use multiple cursors by hol
 Add the `onChange` attribute to each input and set it to call a method called `handleChange()`, which you will define. This method receives an event whenever an input changes.
 
 Inside `handleChange()`, destructure the `event.target` object to extract the `name` and `value` properties. This allows you to know which input changed and what its new value is.
+
+### Updating the Contact Object Conditionally
+
+Next, update the `contact` object, but only update the field that has changed.
+
+Call `setContact()` with a function that receives the previous state as an argument. This allows you to update state based on the previous value.
+
+Inside this function, check the `name` of the input that triggered the change. If the name is `fName`, return a new object where only the `fName` property is updated. If the name is `lName` or `email`, return a new object updating the respective property.
+
+Use multiple return statements for each case, updating the corresponding property with the new value.
+
+Although this results in repeated code, it clearly shows how each input updates its corresponding property in the state object.
+
+After implementing this, test the app by opening Chrome Developer Tools, inspecting the component, and observing how the state updates as you type in each input.
+
+You will see that typing in the first name input updates only the `fName` property, typing in the last name input updates only the `lName` property, and typing in the email input updates only the `email` property.
+
+This approach ensures that the state updates correctly without affecting other properties.

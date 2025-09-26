@@ -51,3 +51,9 @@ This approach ensures that the state updates correctly without affecting other p
 The last step is to add the `value` attribute to each input and bind it to the corresponding property in the `contact` state object.
 
 Set the first input's value to `contact.fName`, the second to `contact.lName`, and the third to `contact.email`. This keeps the inputs controlled and synchronized with the state.
+
+## Conclusion and Next Steps
+
+This code is quite long and verbose, but it helps to understand what is happening behind the scenes when managing complex state in React.
+
+In the next lesson, we will learn how to simplify this code significantly by using the ES6 spread operator, reducing it to just two or three lines.

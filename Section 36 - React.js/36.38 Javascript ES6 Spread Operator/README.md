@@ -104,3 +104,10 @@ setContact(function (prevValue) {
 ```
 
 This approach takes some getting used to, but it is effective for updating state in React or similar scenarios. Experiment with the code to become more comfortable with this pattern.
+
+## Key Takeaways
+
+- The ES6 spread operator simplifies code by expanding arrays and objects into individual elements or properties.
+- Using the spread operator with objects allows merging properties without nesting.
+- Dynamic object keys in JavaScript require square bracket syntax to use variable values as keys.
+- Simplifying code is beneficial, but clarity should not be sacrificed for brevity.

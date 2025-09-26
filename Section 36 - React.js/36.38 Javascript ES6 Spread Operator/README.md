@@ -89,3 +89,18 @@ setContact((prevValue) => ({
 ```
 
 Although this syntax is concise, it can be confusing due to the number of curly braces and parentheses. Simplifying code is beneficial when it maintains clarity.
+
+## Preferred Approach for Clarity
+
+A preferred approach is to use a function that receives the previous value and returns a new object containing all previous properties and the updated key-value pair. This maintains clarity while still being concise.
+
+```js
+setContact(function (prevValue) {
+  return {
+    ...prevValue,
+    [name]: value,
+  };
+});
+```
+
+This approach takes some getting used to, but it is effective for updating state in React or similar scenarios. Experiment with the code to become more comfortable with this pattern.

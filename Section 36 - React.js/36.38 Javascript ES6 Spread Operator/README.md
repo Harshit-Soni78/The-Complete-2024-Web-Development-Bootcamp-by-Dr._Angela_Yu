@@ -59,3 +59,20 @@ return {
 ```
 
 To use a variable as a key in an object, square bracket syntax is required. This ensures that the value of the variable is used as the key, not the string 'name'.
+
+## Dynamic Object Keys in JavaScript
+
+This behavior is common in JavaScript. On Stack Overflow, a user wanted to use a variable as a key when creating a new object, but it was interpreted as a string. The solution, even before ES6, was to use array syntax to set the key.
+
+```js
+const obj = {};
+obj[key] = value;
+```
+
+With ES6 and modern JavaScript, the square bracket syntax can be used directly in object literals to achieve this.
+
+```js
+const obj = { [key]: value };
+```
+
+This syntax allows the value of the variable to be used as the key in the object, rather than being interpreted as a literal string.

@@ -15,3 +15,15 @@ Use the React Developer Tools to inspect the state as you change your code.
 Remember to apply the concepts discussed in previous lessons, including managing state with JavaScript objects, making use of the previous state when updating, working with forms in React, and handling events.
 
 At this point, it is best to try the challenge yourself and then return to review the solution walkthrough.
+
+## Managing State with an Object
+
+We have a constant called `contact` set to an object with three properties. We can update `contact` using `setContact`.
+
+When should we update the state? Probably when each of the inputs changes.
+
+Instead of typing the same code three times, you can use multiple cursors by holding down the option key and clicking to place cursors on multiple lines.
+
+Add the `onChange` attribute to each input and set it to call a method called `handleChange()`, which you will define. This method receives an event whenever an input changes.
+
+Inside `handleChange()`, destructure the `event.target` object to extract the `name` and `value` properties. This allows you to know which input changed and what its new value is.

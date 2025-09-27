@@ -80,3 +80,11 @@ function InputArea(props) {
   );
 }
 ```
+
+### Resetting the Input Field After Adding an Item
+
+After calling `props.onAdd` with the current `inputText`, we reset the input field by setting `inputText` back to an empty string using `setInputText('')`. This clears the input so the user can enter a new item easily.
+
+Now, when you refresh the app and type "Buy milk" into the input area, the state updates accordingly. Clicking the Add button calls the `addItem` function in the `App` component, adding the new item to the list and displaying it.
+
+This completes the basic component tree setup, where the `App` component manages the items array, `InputArea` manages the input state locally, and the two communicate via props and callbacks.

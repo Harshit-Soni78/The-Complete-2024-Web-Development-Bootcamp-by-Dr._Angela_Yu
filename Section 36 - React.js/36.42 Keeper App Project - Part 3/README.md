@@ -57,3 +57,10 @@ After submitting a note, we clear the input fields by resetting the `note` state
 This completes the full challenge, implementing add and delete note functionalities using React state, props, and event handling. If you encountered difficulties, reviewing previous lessons on these topics is recommended.
 
 In the next lesson, we will explore adding dependencies in React to utilize reusable components in our apps.
+
+## Key Takeaways
+
+- Implemented add note functionality by managing state for note title and content.
+- Passed new notes from child to parent component using callback props.
+- Managed an array of notes in state and rendered dynamic Note components.
+- Implemented delete note functionality using callbacks and array filtering with unique identifiers.

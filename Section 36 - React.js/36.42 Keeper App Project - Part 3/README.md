@@ -43,3 +43,9 @@ Inside the `Note` component, the DELETE button has an `onClick` handler that cal
 In the App component, we define a `deleteNote` function that receives an `id` and updates the `notes` array by filtering out the note with the matching index. This function is passed as the `onDelete` prop to each `Note` component.
 
 The `filter()` function iterates over the `prevNotes` array, returning all notes where the index does not equal the `id` of the note to delete. This effectively removes the targeted note from the array.
+
+### Passing Unique Identifiers to Notes
+
+To identify notes uniquely, we use the index parameter from the `map()` function as both the `key` and `id` prop for each `Note` component. This `id` is then passed back when the delete function is triggered.
+
+Inside the `Note` component, when the DELETE button is clicked, `props.onDelete(props.id)` is called to notify the App component which note to remove.

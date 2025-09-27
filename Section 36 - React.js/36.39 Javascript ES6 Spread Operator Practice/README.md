@@ -28,3 +28,11 @@ function handleChange(event) {
   setInputText(newValue);
 }
 ```
+
+## Adding Items to the List
+
+Next, create a state variable to hold the array of to-do items. Initialize it as an empty array. When the Add button is clicked, the current input text should be added to this array.
+
+```js
+const [items, setItems] = useState([]);
+```

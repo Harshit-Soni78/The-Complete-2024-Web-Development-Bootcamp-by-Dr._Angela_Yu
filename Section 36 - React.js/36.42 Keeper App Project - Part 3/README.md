@@ -23,3 +23,9 @@ In the `CreateArea` component, there is a form with an input for the title, a te
 We bind the input's value to `note.title` and the textarea's value to `note.content` to make them controlled components. To update these values on user input, we add an `onChange` handler to both elements, calling a function `handleChange()`.
 
 The `handleChange` function destructures the event target to extract `name` and `value`. We then update the `note` state by spreading the previous note and updating the key corresponding to `name` with the new `value`. This ensures that typing updates the state correctly.
+
+### Passing New Note Back to App Component
+
+Next, we add an `onClick` handler to the Add button that triggers a `submitNote` function. This function prevents the default form submission behavior using `event.preventDefault()` to avoid page reloads.
+
+We pass a function `addNote` as a prop named `onAdd` from the App component to `CreateArea`. Inside `submitNote`, we call `props.onAdd(note)` to send the current note back to the App component. This completes the data flow from child to parent.

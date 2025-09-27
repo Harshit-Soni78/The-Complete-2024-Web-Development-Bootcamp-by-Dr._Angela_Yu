@@ -58,3 +58,16 @@ function addItem() {
   });
 }
 ```
+
+## Clearing the Input After Adding an Item
+
+After adding the input text to the list, clear the input field by resetting `inputText` to an empty string. This improves user experience by preparing the input for the next entry.
+
+```js
+function addItem() {
+  setItems((prevItems) => {
+    return [...prevItems, inputText];
+  });
+  setInputText("");
+}
+```

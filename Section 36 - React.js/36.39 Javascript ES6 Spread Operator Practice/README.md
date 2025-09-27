@@ -17,3 +17,14 @@ The first step is to track the input's state as the user types. This is done by 
 ```js
 const [inputText, setInputText] = useState("");
 ```
+
+### Binding Input Value and Handling Changes
+
+To keep the input value controlled by React state, add a `value` property to the input element and set it to `inputText`. Then, add an `onChange` event handler to update the state whenever the input changes. The handler function retrieves the new value from the event and updates the state accordingly.
+
+```js
+function handleChange(event) {
+  const newValue = event.target.value;
+  setInputText(newValue);
+}
+```

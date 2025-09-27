@@ -69,3 +69,10 @@ Testing this, adding multiple items and clicking one removes it from the list, w
 This approach involves functional programming concepts common in React, where functions are passed into other functions, enabling flexible and dynamic behavior. It takes time to get comfortable with this pattern, so experimenting with the code, such as filtering on different conditions or using arrays of objects, is encouraged.
 
 The goal is to understand the concepts so you can look up and apply them when needed, rather than memorizing the code.
+
+## Key Takeaways
+
+- React apps benefit from splitting the UI into multiple components for better structure.
+- Props are read-only; to change UI state, use component state with hooks like `useState`.
+- Child components can invoke functions passed as props to communicate with parent components.
+- Managing state in parent components allows for centralized updates, such as deleting items from a list.

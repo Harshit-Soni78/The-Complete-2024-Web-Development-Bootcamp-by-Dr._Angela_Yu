@@ -15,3 +15,11 @@ The first step is to manage state for the note's title and content. We will crea
 ### Implementing Delete Note Functionality
 
 To delete notes, we will create a callback from the Note component that triggers a delete function in the App component. This function will use the `filter()` method to remove the note from the array. We will pass an identifier to the Note component to identify which note to delete.
+
+### Managing State in CreateArea Component
+
+In the `CreateArea` component, there is a form with an input for the title, a textarea for the content, and an Add button. We will create a stateful constant `note` with `setNote` to manage an object containing both `title` and `content` initialized as empty strings.
+
+We bind the input's value to `note.title` and the textarea's value to `note.content` to make them controlled components. To update these values on user input, we add an `onChange` handler to both elements, calling a function `handleChange()`.
+
+The `handleChange` function destructures the event target to extract `name` and `value`. We then update the `note` state by spreading the previous note and updating the key corresponding to `name` with the new `value`. This ensures that typing updates the state correctly.

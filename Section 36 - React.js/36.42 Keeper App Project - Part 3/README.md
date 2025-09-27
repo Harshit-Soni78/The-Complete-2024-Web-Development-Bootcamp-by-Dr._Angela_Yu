@@ -11,3 +11,7 @@ Although the steps sound simple, each involves several concepts learned previous
 ### Implementing Add Note Functionality
 
 The first step is to manage state for the note's title and content. We will create a constant to keep track of these values. When a new note is created, we will pass it back to the App component, which maintains an array of notes in state. This array will be used to render individual Note components for each note.
+
+### Implementing Delete Note Functionality
+
+To delete notes, we will create a callback from the Note component that triggers a delete function in the App component. This function will use the `filter()` method to remove the note from the array. We will pass an identifier to the Note component to identify which note to delete.

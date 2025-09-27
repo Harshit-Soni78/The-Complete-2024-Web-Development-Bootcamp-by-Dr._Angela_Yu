@@ -36,3 +36,13 @@ Next, create a state variable to hold the array of to-do items. Initialize it as
 ```js
 const [items, setItems] = useState([]);
 ```
+
+### Rendering the List Items
+
+Use the `map` function on the `items` array to render each item as a list element (`li`). For each `todoItem` in the array, return an `li` containing the item's text. Wrap the JavaScript expression in curly braces inside the JSX to ensure proper interpretation.
+
+```js
+{
+  items.map((todoItem) => <li>{todoItem}</li>);
+}
+```

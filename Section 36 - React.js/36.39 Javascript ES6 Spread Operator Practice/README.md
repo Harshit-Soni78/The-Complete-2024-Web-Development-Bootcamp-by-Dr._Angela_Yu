@@ -71,3 +71,14 @@ function addItem() {
   setInputText("");
 }
 ```
+
+## Summary and Next Steps
+
+You have now built a simple to-do list application that tracks input state, adds items to a list, renders them dynamically, and clears the input after adding. The next lesson will focus on managing component trees and passing state between components to build more complex applications.
+
+## Key Takeaways
+
+- Managed input state using React's `useState` hook to track user input dynamically.
+- Utilized the spread operator to add new items to an array immutably.
+- Rendered a dynamic list by mapping over an array of items to create list elements.
+- Cleared input field after adding an item to enhance user experience.

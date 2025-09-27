@@ -35,3 +35,11 @@ We pass a function `addNote` as a prop named `onAdd` from the App component to `
 In the App component, we create a stateful array `notes` with `setNotes` initialized as an empty array. The `addNote` function updates this array by spreading the previous notes and adding the new note at the end.
 
 To render notes, we replace the static sample note with a dynamic map over the `notes` array. For each `noteItem`, we return a `Note` component passing `title` and `content` as props. We wrap the map expression in curly braces to embed JavaScript in JSX.
+
+### Implementing Delete Note Functionality Inside Note
+
+Inside the `Note` component, the DELETE button has an `onClick` handler that calls a `handleClick` function. This function triggers a delete function passed from the App component via props (`props.onDelete`).
+
+In the App component, we define a `deleteNote` function that receives an `id` and updates the `notes` array by filtering out the note with the matching index. This function is passed as the `onDelete` prop to each `Note` component.
+
+The `filter()` function iterates over the `prevNotes` array, returning all notes where the index does not equal the `id` of the note to delete. This effectively removes the targeted note from the array.

@@ -49,3 +49,11 @@ The `filter()` function iterates over the `prevNotes` array, returning all notes
 To identify notes uniquely, we use the index parameter from the `map()` function as both the `key` and `id` prop for each `Note` component. This `id` is then passed back when the delete function is triggered.
 
 Inside the `Note` component, when the DELETE button is clicked, `props.onDelete(props.id)` is called to notify the App component which note to remove.
+
+### Clearing Inputs After Adding a Note
+
+After submitting a note, we clear the input fields by resetting the `note` state in `CreateArea` to an object with empty `title` and `content`. Since the input values are controlled by this state, they clear accordingly.
+
+This completes the full challenge, implementing add and delete note functionalities using React state, props, and event handling. If you encountered difficulties, reviewing previous lessons on these topics is recommended.
+
+In the next lesson, we will explore adding dependencies in React to utilize reusable components in our apps.

@@ -32,3 +32,51 @@ function InputArea(props) {
   // ... rest of the component
 }
 ```
+
+### Passing the addItem Function via Props
+
+The `addItem` function, which adds a new item to the `items` array, lives in the `App` component. It does not make sense to move it into `InputArea` because the `items` array is accessed by multiple components, including `ToDoItem` and `InputArea`.
+
+To allow `InputArea` to trigger `addItem`, we pass the `addItem` function as a prop named `onAdd` when rendering `InputArea` inside `App`.
+
+Inside `InputArea`, we access this function via `props.onAdd` and call it when the button is clicked, passing the current `inputText` as an argument.
+
+```js
+function App() {
+  const [items, setItems] = useState([]);
+
+  function addItem(newItem) {
+    setItems((prevItems) => [...prevItems, newItem]);
+  }
+
+  return (
+    <div>
+      <InputArea onAdd={addItem} />
+      {/* other components */}
+    </div>
+  );
+}
+```
+
+```js
+function InputArea(props) {
+  const [inputText, setInputText] = useState("");
+
+  function handleChange(event) {
+    const newValue = event.target.value;
+    setInputText(newValue);
+  }
+
+  function handleClick() {
+    props.onAdd(inputText);
+    setInputText("");
+  }
+
+  return (
+    <div>
+      <input onChange={handleChange} value={inputText} />
+      <button onClick={handleClick}>Add</button>
+    </div>
+  );
+}
+```

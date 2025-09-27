@@ -29,3 +29,9 @@ The `handleChange` function destructures the event target to extract `name` and 
 Next, we add an `onClick` handler to the Add button that triggers a `submitNote` function. This function prevents the default form submission behavior using `event.preventDefault()` to avoid page reloads.
 
 We pass a function `addNote` as a prop named `onAdd` from the App component to `CreateArea`. Inside `submitNote`, we call `props.onAdd(note)` to send the current note back to the App component. This completes the data flow from child to parent.
+
+### Managing Notes Array in App Component
+
+In the App component, we create a stateful array `notes` with `setNotes` initialized as an empty array. The `addNote` function updates this array by spreading the previous notes and adding the new note at the end.
+
+To render notes, we replace the static sample note with a dynamic map over the `notes` array. For each `noteItem`, we return a `Note` component passing `title` and `content` as props. We wrap the map expression in curly braces to embed JavaScript in JSX.

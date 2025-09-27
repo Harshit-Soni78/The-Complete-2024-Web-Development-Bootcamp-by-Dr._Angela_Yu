@@ -46,3 +46,15 @@ Use the `map` function on the `items` array to render each item as a list elemen
   items.map((todoItem) => <li>{todoItem}</li>);
 }
 ```
+
+## Handling the Add Button Click
+
+Add an `onClick` event handler to the Add button that triggers a function to add the current input text to the `items` array. This function uses the setter `setItems` to update the array by spreading the previous items and appending the new item.
+
+```js
+function addItem() {
+  setItems((prevItems) => {
+    return [...prevItems, inputText];
+  });
+}
+```

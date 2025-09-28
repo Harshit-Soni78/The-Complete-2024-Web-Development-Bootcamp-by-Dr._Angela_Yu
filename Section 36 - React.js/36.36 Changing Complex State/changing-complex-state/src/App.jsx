@@ -23,7 +23,7 @@ function App() {
       if (name === "fName") {
         return { fName: value, lName: prevValue.lName };
       } else if (name === "lName") {
-        return { fName: value.fName, lName: newValue };
+        return { fName: prevValue.fName, lName: value };
       }
     });
   }

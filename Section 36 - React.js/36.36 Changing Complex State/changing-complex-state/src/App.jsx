@@ -18,13 +18,12 @@ function App() {
   });
 
   function handleChange(event) {
-    const newValue = event.target.value;
-    const inputName = event.target.name;
+    const { value, name } = event.target;
     setFullName((prevValue) => {
-      if (inputName === "fName") {
-        return { fName: newValue, lName: prevValue.lName };
-      } else if (inputName === "lName") {
-        return { fName: prevValue.fName, lName: newValue };
+      if (name === "fName") {
+        return { fName: value, lName: prevValue.lName };
+      } else if (name === "lName") {
+        return { fName: value.fName, lName: newValue };
       }
     });
   }

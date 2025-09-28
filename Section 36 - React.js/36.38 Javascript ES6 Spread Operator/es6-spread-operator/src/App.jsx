@@ -4,30 +4,30 @@ function App() {
   const [contact, setContact] = useState({
     fName: "",
     lName: "",
-    email: ""
+    email: "",
   });
 
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setContact(prevValue => {
+    setContact((prevValue) => {
       if (name === "fName") {
         return {
           fName: value,
           lName: prevValue.lName,
-          email: prevValue.email
+          email: prevValue.email,
         };
       } else if (name === "lName") {
         return {
           fName: prevValue.fName,
           lName: value,
-          email: prevValue.email
+          email: prevValue.email,
         };
       } else if (name === "email") {
         return {
           fName: prevValue.fName,
           lName: prevValue.lName,
-          email: value
+          email: value,
         };
       }
     });

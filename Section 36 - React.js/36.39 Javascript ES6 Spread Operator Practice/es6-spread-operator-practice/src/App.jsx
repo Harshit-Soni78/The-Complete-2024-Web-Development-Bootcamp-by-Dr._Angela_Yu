@@ -7,12 +7,18 @@ import React, { useState } from "react";
 //3. The <ul> should display all the array items as <li>s
 
 function App() {
+  const [inputText, setInputText] = useState("");
+  const [items, setItems] = useState([]);
 
-  const [inputText, setInputText] = useState();
-
-  function handleChange(event){
+  function handleChange(event) {
     const newValue = event.target.value;
     setInputText(newValue);
+  }
+
+  function addItem() {
+    setItems((prevItems) => {
+      return [...prevItems, inputText];
+    });
   }
 
   return (
@@ -21,14 +27,16 @@ function App() {
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input type="text" onChange={handleChange} value={inputText}/>
-        <button>
+        <input type="text" onChange={handleChange} value={inputText} />
+        <button onClick={addItem}>
           <span>Add</span>
         </button>
       </div>
       <div>
         <ul>
-          <li>A Item</li>
+          {items.map((todoItem) => (
+            <li>{todoItem}</li>
+          ))}
         </ul>
       </div>
     </div>

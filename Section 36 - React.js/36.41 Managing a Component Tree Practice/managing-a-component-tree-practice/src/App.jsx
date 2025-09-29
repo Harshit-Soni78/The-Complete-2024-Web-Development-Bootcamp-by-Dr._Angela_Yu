@@ -22,19 +22,12 @@ import InputArea from "./components/InputArea";
 // to launch your react project in your browser
 
 function App() {
-  const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
 
-  function handleChange(event) {
-    const newValue = event.target.value;
-    setInputText(newValue);
-  }
-
-  function addItem() {
+  function addItem(inputText) {
     setItems((prevItems) => {
       return [...prevItems, inputText];
     });
-    setInputText("");
   }
 
   function deleteItem(id) {
@@ -50,7 +43,7 @@ function App() {
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <InputArea handleChange={handleChange} inputText={inputText} addItem={addItem}/>
+      <InputArea onAdd={addItem}/>
       <div>
         <ul>
           {items.map((todoItem, index) => (

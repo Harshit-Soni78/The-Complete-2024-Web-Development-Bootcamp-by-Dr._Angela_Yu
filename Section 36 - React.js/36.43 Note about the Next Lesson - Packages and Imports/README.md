@@ -28,3 +28,11 @@ And in the `.jsx` files should import the icons and the components like so:
 ```jsx
 1. import HighlightIcon from "@mui/icons-material/Highlight";
 ```
+
+### **Note.jsx**
+
+```jsx
+1. import DeleteIcon from "@mui/icons-material/Delete";
+```
+
+This way you'll avoid any warnings and errors. This is also the code you'll see used in the downloadable completed projects.

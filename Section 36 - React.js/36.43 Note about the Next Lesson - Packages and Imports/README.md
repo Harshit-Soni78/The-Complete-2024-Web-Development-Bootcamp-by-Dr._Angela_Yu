@@ -22,3 +22,9 @@ And in the `.jsx` files should import the icons and the components like so:
 2. import { Fab } from "@mui/material";
 3. import { Zoom } from "@mui/material";
 ```
+
+### **Header.jsx**
+
+```jsx
+1. import HighlightIcon from "@mui/icons-material/Highlight";
+```

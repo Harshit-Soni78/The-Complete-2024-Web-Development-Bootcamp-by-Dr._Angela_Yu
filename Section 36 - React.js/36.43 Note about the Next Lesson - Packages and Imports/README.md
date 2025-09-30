@@ -47,3 +47,11 @@ This is the code you'll see in the video in the package.json. Use the new code a
 ```
 
 and in the .jsx files, you'll see these imports, but use the code from above instead:
+
+#### CreateArea.jsx
+
+```jsx
+1. import AddIcon from "@material-ui/icons/Add";
+2. import Fab from "@material-ui/core/Fab";
+3. import Zoom from "@material-ui/core/Zoom";
+```

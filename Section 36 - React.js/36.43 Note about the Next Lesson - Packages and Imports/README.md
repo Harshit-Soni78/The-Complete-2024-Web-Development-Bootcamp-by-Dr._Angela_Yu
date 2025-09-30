@@ -36,3 +36,14 @@ And in the `.jsx` files should import the icons and the components like so:
 ```
 
 This way you'll avoid any warnings and errors. This is also the code you'll see used in the downloadable completed projects.
+
+### **Previous version of the code:**
+
+This is the code you'll see in the video in the package.json. Use the new code above:
+
+```json
+1. "@material-ui/core": "4.6.1",
+2. "@material-ui/icons":"4.5.1",
+```
+
+and in the .jsx files, you'll see these imports, but use the code from above instead:

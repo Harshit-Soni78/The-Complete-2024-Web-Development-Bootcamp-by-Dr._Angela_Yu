@@ -55,3 +55,9 @@ and in the .jsx files, you'll see these imports, but use the code from above ins
 2. import Fab from "@material-ui/core/Fab";
 3. import Zoom from "@material-ui/core/Zoom";
 ```
+
+#### Header.jsx
+
+```jsx
+1. import HighlightIcon from "@material-ui/icons/Highlight";
+```

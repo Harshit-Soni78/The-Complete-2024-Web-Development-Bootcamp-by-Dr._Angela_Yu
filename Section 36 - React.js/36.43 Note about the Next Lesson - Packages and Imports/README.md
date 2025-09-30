@@ -14,3 +14,11 @@ In the next lecture, we’ll be using components from the Material UI (MUI) pack
 ```
 
 And in the `.jsx` files should import the icons and the components like so:
+
+### **CreateArea.jsx**
+
+```jsx
+1. import AddIcon from "@mui/icons-material/Add";
+2. import { Fab } from "@mui/material";
+3. import { Zoom } from "@mui/material";
+```

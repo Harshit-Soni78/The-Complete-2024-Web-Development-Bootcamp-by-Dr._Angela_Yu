@@ -61,3 +61,9 @@ and in the .jsx files, you'll see these imports, but use the code from above ins
 ```jsx
 1. import HighlightIcon from "@material-ui/icons/Highlight";
 ```
+
+#### Note.jsx
+
+```jsx
+1. import DeleteIcon from"@material-ui/icons/Delete";
+```

@@ -131,3 +131,14 @@ After saving and refreshing, the background image appears, combining functionali
 ## Data Persistence in React
 
 If notes disappear after refreshing the page, it is because React is a front-end library and does not persist data. To save data, a backend such as Node and MongoDB is required.
+
+## Conclusion
+
+This project demonstrates how to use React and Material-UI to build functional and stylish applications. Continue to build more projects and share your work.
+
+## Key Takeaways
+
+- Material-UI provides pre-built React components and icons for rapid UI development.
+- Conditional rendering and state management enable dynamic UI behaviors, such as expanding input areas and animated buttons.
+- Styling and background patterns can be customized using external resources and CSS.
+- React is a front-end library and does not persist data without a backend.

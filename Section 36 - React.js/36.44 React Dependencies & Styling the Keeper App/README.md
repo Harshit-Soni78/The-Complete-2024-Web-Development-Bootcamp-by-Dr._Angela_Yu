@@ -13,3 +13,7 @@ To create these effects, pre-built components will be used by adding dependencie
 The first dependency to add is Material-UI. Click on the Add Dependency button and search for Material-UI. Both the core component and the icons component are needed: `@material-ui/core` and `@material-ui/icons`. If working locally, these can be installed using npm as shown in the documentation.
 
 Material-UI provides React components that are pre-built, allowing for customization of functionality and appearance. This enables faster app creation using Google's Material Design concept.
+
+## Using Material-UI Icons
+
+Navigate to the components list to find icons. Since `@material-ui/icons` and `@material-ui/core` are installed, icons can be imported and used as React components. For example, to use a delete icon, import `DeleteForeverIcon` from `@material-ui/icons/DeleteForever` and use it as a component.

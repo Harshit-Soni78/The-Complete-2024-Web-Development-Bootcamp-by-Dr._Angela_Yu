@@ -35,3 +35,11 @@ Now, creating a new note displays a trash bin icon. Using React components for i
 ## Adding an Add Icon to the Button
 
 To change the Add button from text to an icon, search for an appropriate add icon, copy the import statement, and add it to `CreateArea`. Replace the word Add with the `AddIcon` component.
+
+```jsx
+import AddIcon from "@material-ui/icons/Add";
+```
+
+```jsx
+<AddIcon />
+```

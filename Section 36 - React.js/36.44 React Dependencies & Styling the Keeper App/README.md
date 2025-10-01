@@ -93,3 +93,8 @@ function expand() {
 ```
 
 Add an `onClick` handler to the textarea to call the `expand` function. Conditionally render the title input only if `isExpanded` is true. The textarea should start with one row and expand to three rows when expanded.
+
+```jsx
+    {isExpanded && <input ... />}
+    <textarea rows={isExpanded ? 3 : 1} ... onClick={expand} />
+```

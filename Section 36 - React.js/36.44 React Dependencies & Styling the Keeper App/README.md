@@ -59,3 +59,5 @@ import Fab from "@material-ui/core/Fab";
   <AddIcon />
 </Fab>
 ```
+
+If the icon does not appear as expected, ensure the correct stylesheet and className are applied to the form. Copy the stylesheet from the starting project and update the form in `CreateArea` with the correct className to apply consistent styling.

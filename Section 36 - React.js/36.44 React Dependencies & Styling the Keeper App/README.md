@@ -114,3 +114,16 @@ import HighlightIcon from "@material-ui/icons/Highlight";
   <HighlightIcon /> Keeper
 </h1>
 ```
+
+## Adding a Background Pattern
+
+To achieve a patterned background, use a website like transparenttextures.com to find a texture. Copy the URL for the pattern and add it to the CSS for the body as a background image.
+
+```css
+body {
+  background: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+```
+
+After saving and refreshing, the background image appears, combining functionality and style.

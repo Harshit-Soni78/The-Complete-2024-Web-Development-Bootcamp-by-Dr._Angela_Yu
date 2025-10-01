@@ -61,3 +61,7 @@ import Fab from "@material-ui/core/Fab";
 ```
 
 If the icon does not appear as expected, ensure the correct stylesheet and className are applied to the form. Copy the stylesheet from the starting project and update the form in `CreateArea` with the correct className to apply consistent styling.
+
+## Adding Animation with the Zoom Component
+
+To animate the Fab button, wrap it inside a Zoom component from Material-UI. Import the Zoom component and use it with the `in` prop set to a boolean value. If `in` is true, the component transitions in; if false, it does not.

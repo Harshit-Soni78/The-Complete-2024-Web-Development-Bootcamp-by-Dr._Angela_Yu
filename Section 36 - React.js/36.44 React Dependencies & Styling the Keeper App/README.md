@@ -104,3 +104,13 @@ The Fab button should also only appear and zoom in when `isExpanded` is true. Us
 ## Adding a Highlight Icon to the Header
 
 To add a highlight icon to the Keeper title, copy the import statement for the highlight icon and use it inside the header's `h1` tag.
+
+```jsx
+import HighlightIcon from "@material-ui/icons/Highlight";
+```
+
+```jsx
+<h1>
+  <HighlightIcon /> Keeper
+</h1>
+```

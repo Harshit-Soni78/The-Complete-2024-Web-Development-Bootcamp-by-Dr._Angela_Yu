@@ -79,3 +79,7 @@ import Zoom from "@material-ui/core/Zoom";
 ```
 
 Refreshing the app now shows the Fab button zooming in with animation. To further enhance the UI, display the content input by default, and only show the title input and zoomed-in button when the content input is clicked. This can be achieved with conditional rendering.
+
+## Implementing Conditional Rendering for Expansion
+
+To manage expansion, create a state variable to track whether the `CreateArea` is expanded. Use `useState` to create `isExpanded` and `setExpanded`, initializing `isExpanded` to false. When the textarea is clicked, call a function to set `isExpanded` to true.

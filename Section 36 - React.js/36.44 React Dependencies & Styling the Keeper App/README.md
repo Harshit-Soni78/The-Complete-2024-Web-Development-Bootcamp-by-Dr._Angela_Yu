@@ -77,3 +77,5 @@ import Zoom from "@material-ui/core/Zoom";
   </Fab>
 </Zoom>
 ```
+
+Refreshing the app now shows the Fab button zooming in with animation. To further enhance the UI, display the content input by default, and only show the title input and zoomed-in button when the content input is clicked. This can be achieved with conditional rendering.

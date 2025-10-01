@@ -43,3 +43,5 @@ import AddIcon from "@material-ui/icons/Add";
 ```jsx
 <AddIcon />
 ```
+
+After refreshing, a large add sign appears. Using the icon allows it to scale up, unlike a simple plus sign. In the final version, the add button is fancier, changing color on hover and animating when expanded.

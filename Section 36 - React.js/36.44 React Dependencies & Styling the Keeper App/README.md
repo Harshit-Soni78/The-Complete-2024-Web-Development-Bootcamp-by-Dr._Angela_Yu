@@ -49,3 +49,13 @@ After refreshing, a large add sign appears. Using the icon allows it to scale up
 ## Using the Floating Action Button (Fab)
 
 Instead of a standard HTML button, use the Floating Action Button (Fab) from Material-UI. This button changes color on hover and supports animation. Import the Fab component and use it in `CreateArea`.
+
+```jsx
+import Fab from "@material-ui/core/Fab";
+```
+
+```jsx
+<Fab>
+  <AddIcon />
+</Fab>
+```

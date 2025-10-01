@@ -127,3 +127,7 @@ body {
 ```
 
 After saving and refreshing, the background image appears, combining functionality and style.
+
+## Data Persistence in React
+
+If notes disappear after refreshing the page, it is because React is a front-end library and does not persist data. To save data, a backend such as Node and MongoDB is required.

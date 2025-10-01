@@ -65,3 +65,15 @@ If the icon does not appear as expected, ensure the correct stylesheet and class
 ## Adding Animation with the Zoom Component
 
 To animate the Fab button, wrap it inside a Zoom component from Material-UI. Import the Zoom component and use it with the `in` prop set to a boolean value. If `in` is true, the component transitions in; if false, it does not.
+
+```jsx
+import Zoom from "@material-ui/core/Zoom";
+```
+
+```jsx
+<Zoom in={isExpanded}>
+  <Fab>
+    <AddIcon />
+  </Fab>
+</Zoom>
+```

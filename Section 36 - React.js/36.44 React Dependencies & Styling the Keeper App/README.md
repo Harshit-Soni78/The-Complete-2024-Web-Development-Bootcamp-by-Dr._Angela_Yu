@@ -98,3 +98,5 @@ Add an `onClick` handler to the textarea to call the `expand` function. Conditio
     {isExpanded && <input ... />}
     <textarea rows={isExpanded ? 3 : 1} ... onClick={expand} />
 ```
+
+The Fab button should also only appear and zoom in when `isExpanded` is true. Use the `isExpanded` property for the Zoom component's `in` prop.

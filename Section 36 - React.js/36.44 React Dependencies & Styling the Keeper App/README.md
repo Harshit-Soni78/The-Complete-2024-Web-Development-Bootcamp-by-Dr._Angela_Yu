@@ -83,3 +83,11 @@ Refreshing the app now shows the Fab button zooming in with animation. To furthe
 ## Implementing Conditional Rendering for Expansion
 
 To manage expansion, create a state variable to track whether the `CreateArea` is expanded. Use `useState` to create `isExpanded` and `setExpanded`, initializing `isExpanded` to false. When the textarea is clicked, call a function to set `isExpanded` to true.
+
+```jsx
+const [isExpanded, setExpanded] = useState(false);
+
+function expand() {
+  setExpanded(true);
+}
+```

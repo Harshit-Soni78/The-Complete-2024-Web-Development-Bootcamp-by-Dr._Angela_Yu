@@ -7,3 +7,9 @@ Now that most of the functionality is complete, the next step is to tidy things 
 ## Preparing the Project for Styling
 
 To create these effects, pre-built components will be used by adding dependencies. It is recommended to use the provided starting project or download a fresh copy if working locally, as there are changes in `styles.css` and a className added to the form in `CreateArea`. Without these, the UI may look different from the intended design. Fork the starting project to ensure consistency.
+
+## Adding Material-UI Dependencies
+
+The first dependency to add is Material-UI. Click on the Add Dependency button and search for Material-UI. Both the core component and the icons component are needed: `@material-ui/core` and `@material-ui/icons`. If working locally, these can be installed using npm as shown in the documentation.
+
+Material-UI provides React components that are pre-built, allowing for customization of functionality and appearance. This enables faster app creation using Google's Material Design concept.

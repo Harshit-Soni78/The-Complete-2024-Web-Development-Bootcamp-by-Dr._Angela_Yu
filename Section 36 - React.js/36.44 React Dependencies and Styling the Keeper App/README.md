@@ -17,3 +17,17 @@ Material-UI provides React components that are pre-built, allowing for customiza
 ## Using Material-UI Icons
 
 Navigate to the components list to find icons. Since `@material-ui/icons` and `@material-ui/core` are installed, icons can be imported and used as React components. For example, to use a delete icon, import `DeleteForeverIcon` from `@material-ui/icons/DeleteForever` and use it as a component.
+
+### Replacing the Delete Button with an Icon
+
+Change the DELETE button from text to an actual delete icon from Material-UI. Search for a suitable delete icon, copy the import statement, and use it in `Note.jsx` instead of the hardcoded text.
+
+```jsx
+import DeleteIcon from "@material-ui/icons/Delete";
+```
+
+```jsx
+<DeleteIcon />
+```
+
+Now, creating a new note displays a trash bin icon. Using React components for icons is beneficial because JavaScript, CSS, and HTML are combined in each component, allowing for additional functionality without extra code.

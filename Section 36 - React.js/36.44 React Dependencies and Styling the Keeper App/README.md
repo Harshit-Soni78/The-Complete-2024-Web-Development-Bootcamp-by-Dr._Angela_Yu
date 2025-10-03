@@ -45,3 +45,19 @@ import AddIcon from "@material-ui/icons/Add";
 ```
 
 After refreshing, a large add sign appears. Using the icon allows it to scale up, unlike a simple plus sign. In the final version, the add button is fancier, changing color on hover and animating when expanded.
+
+## Using the Floating Action Button (Fab)
+
+Instead of a standard HTML button, use the Floating Action Button (Fab) from Material-UI. This button changes color on hover and supports animation. Import the Fab component and use it in `CreateArea`.
+
+```jsx
+import Fab from "@material-ui/core/Fab";
+```
+
+```jsx
+<Fab>
+  <AddIcon />
+</Fab>
+```
+
+If the icon does not appear as expected, ensure the correct stylesheet and className are applied to the form. Copy the stylesheet from the starting project and update the form in `CreateArea` with the correct className to apply consistent styling.

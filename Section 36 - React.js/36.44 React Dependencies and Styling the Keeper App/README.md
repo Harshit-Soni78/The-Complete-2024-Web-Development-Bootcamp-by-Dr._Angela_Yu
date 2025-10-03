@@ -31,3 +31,17 @@ import DeleteIcon from "@material-ui/icons/Delete";
 ```
 
 Now, creating a new note displays a trash bin icon. Using React components for icons is beneficial because JavaScript, CSS, and HTML are combined in each component, allowing for additional functionality without extra code.
+
+## Adding an Add Icon to the Button
+
+To change the Add button from text to an icon, search for an appropriate add icon, copy the import statement, and add it to `CreateArea`. Replace the word Add with the `AddIcon` component.
+
+```jsx
+import AddIcon from "@material-ui/icons/Add";
+```
+
+```jsx
+<AddIcon />
+```
+
+After refreshing, a large add sign appears. Using the icon allows it to scale up, unlike a simple plus sign. In the final version, the add button is fancier, changing color on hover and animating when expanded.

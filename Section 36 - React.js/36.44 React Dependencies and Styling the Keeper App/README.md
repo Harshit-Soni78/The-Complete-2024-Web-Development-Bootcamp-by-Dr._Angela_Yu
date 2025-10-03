@@ -100,3 +100,17 @@ Add an `onClick` handler to the textarea to call the `expand` function. Conditio
 ```
 
 The Fab button should also only appear and zoom in when `isExpanded` is true. Use the `isExpanded` property for the Zoom component's `in` prop.
+
+## Adding a Highlight Icon to the Header
+
+To add a highlight icon to the Keeper title, copy the import statement for the highlight icon and use it inside the header's `h1` tag.
+
+```jsx
+import HighlightIcon from "@material-ui/icons/Highlight";
+```
+
+```jsx
+<h1>
+  <HighlightIcon /> Keeper
+</h1>
+```

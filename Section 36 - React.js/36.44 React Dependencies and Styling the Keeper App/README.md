@@ -61,3 +61,21 @@ import Fab from "@material-ui/core/Fab";
 ```
 
 If the icon does not appear as expected, ensure the correct stylesheet and className are applied to the form. Copy the stylesheet from the starting project and update the form in `CreateArea` with the correct className to apply consistent styling.
+
+## Adding Animation with the Zoom Component
+
+To animate the Fab button, wrap it inside a Zoom component from Material-UI. Import the Zoom component and use it with the `in` prop set to a boolean value. If `in` is true, the component transitions in; if false, it does not.
+
+```jsx
+import Zoom from "@material-ui/core/Zoom";
+```
+
+```jsx
+<Zoom in={isExpanded}>
+  <Fab>
+    <AddIcon />
+  </Fab>
+</Zoom>
+```
+
+Refreshing the app now shows the Fab button zooming in with animation. To further enhance the UI, display the content input by default, and only show the title input and zoomed-in button when the content input is clicked. This can be achieved with conditional rendering.

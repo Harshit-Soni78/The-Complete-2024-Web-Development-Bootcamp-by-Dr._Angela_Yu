@@ -132,3 +132,11 @@ This automation removes the need for intermediaries like Kickstarter to escrow f
 Smart contracts enable decentralized applications that execute automatically based on blockchain-stored code.
 
 In this module, we will learn how to create decentralized applications that perform actions automatically based on code stored on the blockchain.
+
+## Key Takeaways
+
+- The blockchain is essentially a ledger that records transactions in an immutable way.
+- Hashing is used instead of encryption to secure data, making it computationally infeasible to alter past records.
+- Blocks are linked by including the previous block's hash, forming a chain that ensures data integrity.
+- Distributed copies of the blockchain across multiple peers ensure trustlessness and prevent tampering.
+- Smart contracts enable code to be stored and executed on the blockchain, automating transactions and applications.

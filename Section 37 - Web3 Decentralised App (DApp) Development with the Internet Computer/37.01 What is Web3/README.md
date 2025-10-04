@@ -13,3 +13,13 @@ According to a LinkedIn survey, job opportunities for machine learning engineers
 The starting salary for junior blockchain developers in the United States is approximately $120,000, making it a highly lucrative career path compared to traditional web or mobile development roles.
 
 As of early 2022, the number of active blockchain or Web3 developers is experiencing significant growth, a trend expected to continue for the next five years.
+
+## Understanding Web3
+
+Web3 is essentially the new internet. Similar to the Internet boom of the late 1990s, Web3 is attracting massive investment and interest as it begins to take off.
+
+Web 3.0 refers to the third stage of the web's evolution:
+
+- **Web 1.0** (1990s): The read-only web, where users could only browse static websites such as GeoCities, Yahoo!, and Ask Jeeves.
+- **Web 2.0**: The interactive web, characterized by platforms like Facebook, Twitter, Instagram, TikTok, and Reddit, where users create and interact with content.
+- **Web 3.0**: The decentralized web, built on blockchain technology, enabling new types of applications and user control.

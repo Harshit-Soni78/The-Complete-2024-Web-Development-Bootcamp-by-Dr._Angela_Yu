@@ -29,3 +29,9 @@ Filecoin raised 257 million dollars through an initial coin offering (ICO), wher
 The future of decentralized applications is very promising. Anything involving a trustless, decentralized system that benefits both users and creators can be achieved. For example, instead of Uber drivers being exploited by Uber, you could have a user-and-driver-owned version of Uber. Everyone involved could receive tokens to govern and determine how the company operates, effectively owning shares as the company grows.
 
 You could also realize innovative ideas like online racing games where participants pay an entry fee, and winners receive cash prizes.
+
+## Pseudonymity in Web3
+
+Another significant benefit of Web3 is pseudonymity. This means you can be identified by a handle or username, preserving your privacy without revealing your real name or address. You can create valuable contributions and be recognized and rewarded by your pseudonym.
+
+This acts as a great equalizer, as it does not matter who you are, your race, gender, or age. Recognition is based solely on your work. For instance, three teenagers who created a decentralized finance project called Rari Capital, which simplifies lending and borrowing on blockchain, were interviewed by Forbes. They started building on the blockchain at age 16 and were able to raise funding and gain respect based on their work, despite their young age.

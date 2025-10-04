@@ -49,3 +49,10 @@ The main challenges with developing decentralized applications on Ethereum inclu
 To address these issues, the Internet Computer project was initiated by the Dfinity team as early as 2014. The goal is to build a scalable cloud computer that runs on a blockchain, combining the benefits of a trustless decentralized system with the ability to perform fast computations, store data directly on-chain, and create fully-fledged applications on the blockchain.
 
 This module will focus on building decentralized applications using the Internet Computer. The next lesson will delve deeper into how it works and how to get started building DApps on it.
+
+## Key Takeaways
+
+- Decentralized applications (DApps) are the foundation of Web3, enabling a new model for building startups and raising funds.
+- Web3 startups can raise money from day one by issuing tokens, transforming company governance through Decentralized Autonomous Organizations (DAOs).
+- Web3 offers benefits like pseudonymity, allowing creators to be recognized for their work regardless of identity.
+- Ethereum, while pioneering smart contracts, faces scalability and cost issues, leading to alternatives like the Internet Computer for building scalable, fully on-chain DApps.

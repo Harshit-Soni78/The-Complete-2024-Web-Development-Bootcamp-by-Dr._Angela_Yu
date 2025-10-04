@@ -58,3 +58,13 @@ For example, hashing "123" and "abc" both produce outputs with the same number o
 You can try the SHA-256 hash algorithm demo linked in the course resources. Typing any message generates a 64-character hash that changes with every input.
 
 The source code for SHA-256 is also available for review.
+
+### Why is hashing one-way?
+
+A simplified analogy is factoring numbers:
+
+- Multiplying two numbers (e.g., 2 times 4 equals 8) is easy.
+- Finding the factors of a number (e.g., factors of 8 are 1, 2, 4, 8) is more difficult.
+- For larger numbers, factoring becomes computationally intensive.
+
+Thus, going forwards (hashing) is easy, but going backwards (finding the original input) is practically impossible with current computing power.

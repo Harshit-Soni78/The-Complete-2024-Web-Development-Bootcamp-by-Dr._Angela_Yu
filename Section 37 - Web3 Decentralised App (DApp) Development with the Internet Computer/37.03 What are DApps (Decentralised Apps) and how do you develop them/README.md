@@ -15,3 +15,11 @@ In contrast, the Web3 approach completely flips this model on its head. Here, yo
 The way you run your company is also transformed by blockchain technology. You can form Decentralized Autonomous Organizations, or DAOs, which replace traditional boards of directors and organizational charts. Token holders, through special governance tokens, can vote on the future direction of the company or DApp.
 
 In these DAOs, users can contribute to the roadmap of the decentralized application. Everyone's incentives are aligned because if the application succeeds, the token price increases, making the tokens more valuable. Therefore, the company must make good decisions, and all DAO members are incentivized to participate and help the organization progress.
+
+## Comparing Traditional and Web3 Fundraising: Dropbox vs. Filecoin
+
+Consider the example of Dropbox, a successful startup that raised a series A funding round of 6 million dollars after coming out of Y Combinator. Dropbox allows users to store files on the cloud, accessible from anywhere, similar to Google Drive.
+
+Now, compare this to Filecoin, a Web3 competitor that offers similar decentralized file storage across millions of computers on the Internet. Instead of a single company hosting the data, Filecoin's decentralized approach provides massive redundancy and accessibility.
+
+Filecoin raised 257 million dollars through an initial coin offering (ICO), where the public could buy their minted coins. This amount dwarfs Dropbox's 6 million, illustrating how decentralized apps can raise funding earlier and often more than traditional methods like venture capital or angel investors.

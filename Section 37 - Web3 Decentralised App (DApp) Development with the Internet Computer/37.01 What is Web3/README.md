@@ -23,3 +23,15 @@ Web 3.0 refers to the third stage of the web's evolution:
 - **Web 1.0** (1990s): The read-only web, where users could only browse static websites such as GeoCities, Yahoo!, and Ask Jeeves.
 - **Web 2.0**: The interactive web, characterized by platforms like Facebook, Twitter, Instagram, TikTok, and Reddit, where users create and interact with content.
 - **Web 3.0**: The decentralized web, built on blockchain technology, enabling new types of applications and user control.
+
+## The Dawn of Web3 Applications
+
+Since 2018, developers have been building applications on the blockchain, marking the beginning of Web3. While cryptocurrencies like Bitcoin and Ethereum are well-known, this module focuses on building Web3 applications rather than investment advice.
+
+As developers, we have the power to shape the future of Web3 by creating innovative applications. Examples include:
+
+- **Helium**: A decentralized wireless network providing internet access in remote areas through individual 5G network hosts who earn cryptocurrency.
+- **PoolTogether**: A no-loss lottery where participants pool money to earn interest, which is awarded to a winner, while allowing participants to withdraw their original funds anytime.
+- **Axie Infinity**: A blockchain-based game similar to Pokémon, where players can buy, sell, and trade digital creatures called Axies, generating significant revenue for developers through transaction fees.
+
+For instance, Axie Infinity has seen nearly 3millionintradeswithin24hours,generatingapproximately3 million in trades within 24 hours, generating approximately 3millionintradeswithin24hours,generatingapproximately127,000 in developer fees, surpassing earnings of some mainstream triple-A games. This illustrates the immense potential of Web3 applications.

@@ -120,3 +120,15 @@ If one peer tries to alter their copy, their blockchain becomes invalid and no l
 This discrepancy reveals malicious behavior.
 
 Thus, distribution ensures integrity and trustlessness, as no single party controls the ledger.
+
+### Smart Contracts
+
+Beyond recording transactions, Ethereum introduced smart contracts, which are code stored and executed on the blockchain.
+
+For example, in a crowdfunding application, code can specify that if a funding goal is reached, funds are automatically transferred to the project owner.
+
+This automation removes the need for intermediaries like Kickstarter to escrow funds.
+
+Smart contracts enable decentralized applications that execute automatically based on blockchain-stored code.
+
+In this module, we will learn how to create decentralized applications that perform actions automatically based on code stored on the blockchain.

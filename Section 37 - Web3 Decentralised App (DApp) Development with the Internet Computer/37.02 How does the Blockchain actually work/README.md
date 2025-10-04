@@ -46,3 +46,15 @@ Thus, encryption allows going forwards and backwards between plaintext and ciphe
 If our ledger was secured using encryption, there would always be a way to decrypt it, meaning the ledger could still be altered illicitly.
 
 Instead, the blockchain uses hashing, which is similar to encryption but with key differences.
+
+### What is Hashing?
+
+Hashing is a mathematical formula that turns a message into a fixed-length hash code by passing it through a hash function.
+
+Unlike encryption, hashing produces an output of the same length regardless of input size, and it is a one-way function, making it infeasible to reverse.
+
+For example, hashing "123" and "abc" both produce outputs with the same number of characters.
+
+You can try the SHA-256 hash algorithm demo linked in the course resources. Typing any message generates a 64-character hash that changes with every input.
+
+The source code for SHA-256 is also available for review.

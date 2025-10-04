@@ -41,3 +41,11 @@ This acts as a great equalizer, as it does not matter who you are, your race, ge
 Now that you are ready to start building DApps, the first step is to choose a blockchain to build on. Options include Avalanche, Polkadot, Solana, among others. Currently, the largest number of DApps are built on Ethereum, primarily because it was the first blockchain to support smart contracts, allowing code to be embedded directly into the blockchain.
 
 However, Ethereum has fundamental problems that limit its suitability for Web3 DApps, the biggest being scalability. It is costly to perform computation and store data on Ethereum. For example, NFTs minted on Ethereum are not stored on-chain; instead, only a URL is stored, with the actual image hosted elsewhere, such as on IPFS through Filecoin or on private servers like Amazon AWS.
+
+## Limitations of Ethereum and the Internet Computer Solution
+
+The main challenges with developing decentralized applications on Ethereum include high costs for computation and storage, and the difficulty of having a proper backend with a database. As a result, many Ethereum-based DApps are composed of a patchwork of different services. For instance, their websites, including CSS, JavaScript, and images, are often hosted on centralized services like Amazon AWS.
+
+To address these issues, the Internet Computer project was initiated by the Dfinity team as early as 2014. The goal is to build a scalable cloud computer that runs on a blockchain, combining the benefits of a trustless decentralized system with the ability to perform fast computations, store data directly on-chain, and create fully-fledged applications on the blockchain.
+
+This module will focus on building decentralized applications using the Internet Computer. The next lesson will delve deeper into how it works and how to get started building DApps on it.

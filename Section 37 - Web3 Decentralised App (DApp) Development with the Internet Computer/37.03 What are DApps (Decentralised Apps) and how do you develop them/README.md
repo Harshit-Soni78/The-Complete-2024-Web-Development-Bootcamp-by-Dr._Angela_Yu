@@ -35,3 +35,9 @@ You could also realize innovative ideas like online racing games where participa
 Another significant benefit of Web3 is pseudonymity. This means you can be identified by a handle or username, preserving your privacy without revealing your real name or address. You can create valuable contributions and be recognized and rewarded by your pseudonym.
 
 This acts as a great equalizer, as it does not matter who you are, your race, gender, or age. Recognition is based solely on your work. For instance, three teenagers who created a decentralized finance project called Rari Capital, which simplifies lending and borrowing on blockchain, were interviewed by Forbes. They started building on the blockchain at age 16 and were able to raise funding and gain respect based on their work, despite their young age.
+
+## Getting Started with Building DApps: Choosing a Blockchain
+
+Now that you are ready to start building DApps, the first step is to choose a blockchain to build on. Options include Avalanche, Polkadot, Solana, among others. Currently, the largest number of DApps are built on Ethereum, primarily because it was the first blockchain to support smart contracts, allowing code to be embedded directly into the blockchain.
+
+However, Ethereum has fundamental problems that limit its suitability for Web3 DApps, the biggest being scalability. It is costly to perform computation and store data on Ethereum. For example, NFTs minted on Ethereum are not stored on-chain; instead, only a URL is stored, with the actual image hosted elsewhere, such as on IPFS through Filecoin or on private servers like Amazon AWS.

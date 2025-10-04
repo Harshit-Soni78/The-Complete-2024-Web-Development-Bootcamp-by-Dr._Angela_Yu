@@ -68,3 +68,33 @@ A simplified analogy is factoring numbers:
 - For larger numbers, factoring becomes computationally intensive.
 
 Thus, going forwards (hashing) is easy, but going backwards (finding the original input) is practically impossible with current computing power.
+
+### Applying Hashing to Blockchain
+
+To solve the problem of ledger immutability, Bitcoin uses hashing to encode all transaction data into a hash.
+
+A block in the blockchain is formed by combining data such as transaction details, date, and author, then hashing this combined information.
+
+This hash acts as the block's unique identifier or fingerprint.
+
+Each block's hash is unique, just like a fingerprint is unique to a person.
+
+For a block to be added to the blockchain, it must satisfy a predetermined requirement, such as its hash starting with a certain number of zeros.
+
+For example, the hash might need to start with three zeros.
+
+Since the hash changes with any change in data, we can modify a number called the nonce to find a hash that meets this requirement.
+
+The nonce is a number that is combined with the data to produce the hash.
+
+By incrementing the nonce, we try different hashes until one starts with the required number of zeros.
+
+This process is called mining.
+
+For example, by trying nonces starting from 1 upwards, we eventually find a nonce that produces a hash starting with three zeros, validating the block.
+
+Increasing the difficulty (requiring more leading zeros) makes mining take longer.
+
+If the data in the block is altered, the hash no longer meets the requirement, invalidating the block.
+
+Thus, any tampering is easily detected.

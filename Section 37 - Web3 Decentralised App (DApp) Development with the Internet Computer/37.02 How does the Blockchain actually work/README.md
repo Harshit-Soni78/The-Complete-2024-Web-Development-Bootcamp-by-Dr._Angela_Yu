@@ -26,3 +26,23 @@ However, there are two problems:
 What if someone could simply modify this ledger? For example, adding a zero to change 10 into 100. This kind of data tampering makes paper ledgers worthless, and the same issues would arise if this ledger was on the Internet.
 
 What we need is to make the history of transactions in this ledger immutable, essentially locked so it can no longer be changed.
+
+### How can we achieve immutability?
+
+One approach is encryption.
+
+The simplest example is the Caesar Cipher, used by Julius Caesar to communicate securely with his generals by shifting letters in a message by a fixed number of characters.
+
+For instance, A becomes E, B becomes F, and so on.
+
+You can try the Caesar cipher yourself using a demo linked in the course resources. Enter plain text and click Encrypt to see the letters shifted by a specified amount.
+
+For example, shifting by 4 turns E into I, L into P, etc.
+
+However, patterns remain, such as double L's becoming double P's, and with knowledge of the cipher, one can decrypt the message by trying all possible shifts from 1 to 26.
+
+Thus, encryption allows going forwards and backwards between plaintext and cipher text, but this also means ciphers can be broken.
+
+If our ledger was secured using encryption, there would always be a way to decrypt it, meaning the ledger could still be altered illicitly.
+
+Instead, the blockchain uses hashing, which is similar to encryption but with key differences.

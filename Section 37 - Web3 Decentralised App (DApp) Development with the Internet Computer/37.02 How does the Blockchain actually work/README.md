@@ -98,3 +98,13 @@ Increasing the difficulty (requiring more leading zeros) makes mining take longe
 If the data in the block is altered, the hash no longer meets the requirement, invalidating the block.
 
 Thus, any tampering is easily detected.
+
+### The Chain Part of Blockchain
+
+Blocks are chained together by including the hash of the previous block in the current block's data.
+
+This means each block's hash depends on the previous block's hash.
+
+If any previous block is altered, it changes its hash, which invalidates all subsequent blocks.
+
+Therefore, to tamper with a block, one would have to re-mine that block and all following blocks, which is computationally infeasible for large blockchains.

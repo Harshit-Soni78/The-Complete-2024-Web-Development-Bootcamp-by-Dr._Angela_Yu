@@ -108,3 +108,15 @@ This means each block's hash depends on the previous block's hash.
 If any previous block is altered, it changes its hash, which invalidates all subsequent blocks.
 
 Therefore, to tamper with a block, one would have to re-mine that block and all following blocks, which is computationally infeasible for large blockchains.
+
+### Distributed Blockchain
+
+To solve the problem of agreeing on the ledger's contents, the blockchain is distributed across multiple computers (peers).
+
+Each peer holds a full copy of the blockchain.
+
+If one peer tries to alter their copy, their blockchain becomes invalid and no longer matches the others.
+
+This discrepancy reveals malicious behavior.
+
+Thus, distribution ensures integrity and trustlessness, as no single party controls the ledger.

@@ -23,3 +23,9 @@ The installation may take some time. Once completed, it will indicate that the r
 After restarting, a setup pane should appear prompting you to create a username and password for Ubuntu. Enter these credentials carefully; note that the password will not be displayed on the screen as you type. It is advisable to choose a simple password since you will use it shortly during further installations.
 
 Once the Ubuntu setup is complete, open Windows PowerShell as an administrator again and run the command provided in the installation guide to verify the WSL installation. If you see "Ubuntu version 2" listed, you are ready to proceed.
+
+## Installing Visual Studio Code
+
+Navigate to the link provided in the installation guide to download the latest stable version of Visual Studio Code (VS Code). Run the installer, accept the agreement, and proceed with the default options. Ensure you select the option to add a desktop icon for quick access.
+
+After installation, VS Code will launch automatically.

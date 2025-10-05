@@ -15,3 +15,13 @@ Compound collects interest paid by borrowers and distributes that interest to le
 ## Our First Project: Earning Interest on Token Balances
 
 For our first project, we will write code to earn interest on a token balance using Motoko.
+
+## What is Motoko?
+
+Motoko is not related to "Ghost in the Shell." Instead, it is a programming language designed and created by the Dfinity team, led by Andreas Rossberg, one of the original co-creators of WebAssembly.
+
+Motoko is a modern, general-purpose programming language specifically designed for creating Internet Computer smart contracts.
+
+As we start using Motoko, you will notice many similarities to other programming languages you might already know, such as JavaScript, Swift, TypeScript, C, or Java.
+
+As we build more applications using Motoko, you will find it easy to switch from whichever programming language you have learned before.

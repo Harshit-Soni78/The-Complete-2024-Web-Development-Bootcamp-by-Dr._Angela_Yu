@@ -39,3 +39,12 @@ Currently, there are over 30,000 canisters running on the Internet Computer, wit
 Dfinity offers Developer Grant Programs providing between 25,000 to 100,000 dollars in no-strings-attached funding to help build applications on the Internet Computer. This is an excellent time to get started developing decentralized applications using this platform.
 
 In the upcoming lessons, we will learn how to set up our computers to develop decentralized applications on the Internet Computer. Once ready, proceed to the next lesson to begin building.
+
+## Key Takeaways
+
+- The Internet Computer aims to achieve blockchain singularity by running the entire base layer of the web securely.
+- Current decentralized applications are only partially decentralized, relying heavily on centralized Web2 infrastructure.
+- Ethereum's limitations in data storage and transaction speed hinder fully decentralized applications.
+- The Internet Computer uses a novel consensus algorithm and aggregates global data centers to create a scalable decentralized world computer.
+- Canisters on the Internet Computer act as persistent smart contracts that store program state, enabling new programming paradigms.
+- There are already thousands of canisters and hundreds of applications running on the Internet Computer, with developer grants available to encourage growth.

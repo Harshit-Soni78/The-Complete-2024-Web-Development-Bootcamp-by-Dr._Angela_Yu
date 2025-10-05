@@ -11,3 +11,7 @@ The project we are building is inspired by the Compound protocol, which is a mon
 For example, users can supply their Ether and earn interest on it, or borrow a token such as the Chainlink token, betting that the token's price will have decreased by the time they repay their loan.
 
 Compound collects interest paid by borrowers and distributes that interest to lenders of the token, while also taking a small fee for the service.
+
+## Our First Project: Earning Interest on Token Balances
+
+For our first project, we will write code to earn interest on a token balance using Motoko.

@@ -35,3 +35,25 @@ After installation, VS Code will launch automatically.
 From the installation guide, copy the link for the Motoko extension and paste it into your browser. Click "Install" in the browser to open the extension in VS Code. It is important to install the Motoko extension from the Dfinity Foundation, as there are multiple extensions with similar names.
 
 Next, install the Remote WSL extension, which allows you to use the terminal inside VS Code connected to the WSL environment.
+
+## Installing Node.js in WSL
+
+Even if you have Node.js installed on Windows, you must install it again within WSL to ensure compatibility with Dfinity and related tools.
+
+Open Ubuntu from the Start menu and run the Homebrew installation command provided in the installation guide. During installation, you will be prompted to enter the Ubuntu password you set earlier. Confirm the prompts by pressing Enter or typing 'Y' as required.
+
+After Homebrew installation, follow the "Next Steps" instructions to add Homebrew to your PATH environment variable. This manual setup is necessary for Homebrew to function correctly.
+
+Once Homebrew is configured, install Node.js version 16, which is the latest stable version compatible with the Internet Computer. Use the following command:
+
+brew install node@16
+
+If you encounter an error stating that "node16 is keg-only and was not symlinked," it means another Node.js version is installed. Resolve this by running:
+
+brew link node@16
+
+Verify the installation by typing:
+
+node --version
+
+The output should start with version 16.

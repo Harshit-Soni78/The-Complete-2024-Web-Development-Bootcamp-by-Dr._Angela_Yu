@@ -7,3 +7,13 @@ What exactly is the Internet Computer, and how can we build decentralized applic
 Back in 2019, Vitalik Buterin, the founder of Ethereum and the pioneer of smart contracts, was asked at Unchained Live about the biggest competitor to Ethereum. His answer was Dfinity's Internet Computer. This is partly because today's decentralized applications are only partially decentralized. They host a small amount of logic and data on a secure blockchain, but the majority of their logic and data reside on large Web2 companies.
 
 For example, many DApps use Amazon's AWS or Microsoft Azure to host data, or rely on browser extensions like Chrome's to connect wallets and enable users to spend and earn tokens. If most of a DApp is not on-chain, it is not truly decentralized and lacks the full benefits of decentralization. This means companies like Amazon or Microsoft could shut down your project at any time.
+
+## Limitations of Current Blockchains
+
+Why do we still rely on legacy infrastructure despite having blockchain technology? The reason is that current blockchains, such as Ethereum, were not built to host large amounts of data or handle many transactions. Ethereum was primarily designed to act as a ledger, not to manage heavy computation or data storage.
+
+Consider the volume of data created daily on Web2 platforms: approximately 500 million tweets and 95 million photos and videos shared on Instagram. Storing such data on traditional blockchains is infeasible. For example, storing one gigabyte of data on Ethereum costs about 350 million dollars at current prices. Since one gigabyte roughly equals 300 phone photos, storing 95 million photos would cost around 11 trillion dollars, which is completely unfeasible.
+
+This explains why fully-fledged decentralized applications are not created entirely on-chain with Ethereum. Ethereum simply was not designed to handle the entire tech stack of a web application. Additionally, the transaction processing speed limits how fast and large blockchain-based apps can be. Each new post in a decentralized social media app is a transaction, so the blockchain's transactions per second (TPS) limit the app's update speed and scalability.
+
+Currently, Ethereum takes about 14 seconds to create a new block and supports roughly 15 transactions per second. Imagine a Twitter fully on-chain on Ethereum: only four users could post tweets every minute, and each tweet might cost around 100 dollars due to high fees and slow speed.

@@ -47,3 +47,13 @@ Create a variable to hold the current value of money in the bank. For example, s
 ```
 
 If you want to read more about Motoko's style guide, refer to the official documentation. While style does not affect code execution, it is good practice to follow conventions when learning a new language.
+
+## Variable Assignment and Reassignment
+
+A variable in Motoko works similarly to variables in other languages. It is a container that can store data, such as the number 300. Since it is a variable, its value can change. To change the value, use the colon equals operator (`:=`) instead of a single equals sign.
+
+```mo
+    currentValue := 100;
+```
+
+At this point in the code, `currentValue` would be equal to 100.

@@ -94,3 +94,16 @@ After saving and redeploying, refreshing the Candid UI will show a field for ent
 ## Orthogonal Persistence and Variable Reset
 
 After deploying new code, you may notice that variables reset to their initial values. This is due to orthogonal persistence, which will be discussed in more detail in a future lesson. For now, remember that running `dfx deploy` resets all variables.
+
+## Challenge: Creating a Withdrawal Function
+
+Now that we have a `topUp` function with input, the next challenge is to create a function that allows users to withdraw an amount from the current value. The function should decrease `currentValue` by the specified amount and print the final value.
+
+```mo
+    public func withdrawal(amount: Nat) {
+      currentValue -= amount;
+      Debug.print(debug_show(currentValue));
+    }
+```
+
+After saving and redeploying, refreshing the Candid UI will display the new `withdrawal` function. Entering an amount, such as 10, and calling the function will decrease `currentValue` by 10.

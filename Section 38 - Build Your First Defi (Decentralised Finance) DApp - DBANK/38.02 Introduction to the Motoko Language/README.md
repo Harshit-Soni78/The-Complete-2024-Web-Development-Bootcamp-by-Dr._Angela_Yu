@@ -19,3 +19,9 @@ When the setup is complete, you will see the dfinity logo and confirmation that 
 ```
 
 Inside the project, you will find several files and folders, including a `readme`, a `.git` directory, a `src` folder for your code, and various configuration files. The most important is the `src` folder, where you will write all your code.
+
+## Opening the Project in a Code Editor
+
+Rather than working solely in the command line, open the project in your code editor, such as VS Code. Use the editor's Open function to select your project folder.
+
+Within the `src` folder, you will find a `main.mo` file. This is the Motoko file you will work with. There may be some pre-existing code, which you can delete to start from scratch and learn each line's purpose.

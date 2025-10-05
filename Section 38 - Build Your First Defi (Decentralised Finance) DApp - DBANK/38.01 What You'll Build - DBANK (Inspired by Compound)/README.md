@@ -25,3 +25,9 @@ Motoko is a modern, general-purpose programming language specifically designed f
 As we start using Motoko, you will notice many similarities to other programming languages you might already know, such as JavaScript, Swift, TypeScript, C, or Java.
 
 As we build more applications using Motoko, you will find it easy to switch from whichever programming language you have learned before.
+
+## Embracing Programmer Flexibility
+
+As programmers, we constantly encounter new programming languages and paradigms. It is a great exercise in programmer flexibility to learn new languages quickly and adapt to them.
+
+Once you are ready, proceed to the next lesson to start learning all about Motoko and how to build your very own decentralized application on the Internet Computer Protocol (ICP).

@@ -29,3 +29,9 @@ Once the Ubuntu setup is complete, open Windows PowerShell as an administrator a
 Navigate to the link provided in the installation guide to download the latest stable version of Visual Studio Code (VS Code). Run the installer, accept the agreement, and proceed with the default options. Ensure you select the option to add a desktop icon for quick access.
 
 After installation, VS Code will launch automatically.
+
+## Installing Required VS Code Extensions
+
+From the installation guide, copy the link for the Motoko extension and paste it into your browser. Click "Install" in the browser to open the extension in VS Code. It is important to install the Motoko extension from the Dfinity Foundation, as there are multiple extensions with similar names.
+
+Next, install the Remote WSL extension, which allows you to use the terminal inside VS Code connected to the WSL environment.

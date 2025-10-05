@@ -37,3 +37,13 @@ The first step is to create the class that will hold your canister. In Motoko, t
 ```
 
 With these lines, you have created a new canister. Inside this actor, you can use all the code you already know.
+
+## Variables and Naming Conventions in Motoko
+
+Create a variable to hold the current value of money in the bank. For example, start with $300. Each line must end with a semicolon, similar to JavaScript. Use the `var` keyword to create a variable and follow lower camel case for variable names. Use upper camel case for actor names, module names, and type names.
+
+```mo
+    var currentValue = 300;
+```
+
+If you want to read more about Motoko's style guide, refer to the official documentation. While style does not affect code execution, it is good practice to follow conventions when learning a new language.

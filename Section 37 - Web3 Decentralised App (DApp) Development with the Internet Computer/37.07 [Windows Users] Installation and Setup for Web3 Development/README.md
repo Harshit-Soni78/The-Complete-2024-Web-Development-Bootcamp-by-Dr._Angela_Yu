@@ -101,3 +101,23 @@ Back in Visual Studio Code, open the "hello" project folder located inside "ic-p
 If syntax highlighting is not active for Motoko files, navigate to the Extensions tab. You may find the Motoko extension disabled. Click "Install in WSL: Ubuntu" to enable it in the WSL remote environment.
 
 Return to "main.mo," and you should now see syntax highlighting applied. The project also contains HTML and JavaScript files.
+
+## Deploying and Running the Project
+
+Open the terminal menu in VS Code and select "New Terminal." Start the local Internet Computer by running:
+
+dfx start
+
+Once the local Internet Computer is running and you see the prompt, open a new terminal tab by clicking the split terminal button. Deploy the "hello" project with:
+
+dfx deploy
+
+After deployment completes and the prompt returns, start the server by running:
+
+npm start
+
+The terminal will display the URL where your project is running. Copy and paste this URL into your browser.
+
+When the page loads, enter your name and click the button. You should see a greeting displayed, indicating successful installation and setup for Internet Computer development.
+
+You are now ready to proceed to the next lesson and begin writing code for the Internet Computer.

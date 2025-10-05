@@ -107,3 +107,7 @@ Now that we have a `topUp` function with input, the next challenge is to create 
 ```
 
 After saving and redeploying, refreshing the Candid UI will display the new `withdrawal` function. Entering an amount, such as 10, and calling the function will decrease `currentValue` by 10.
+
+## Handling Errors in Withdrawal
+
+If a user attempts to withdraw more than the available amount, the current code will result in a natural subtraction underflow error. In the next lesson, we will learn how to use conditionals in Motoko to address this issue.

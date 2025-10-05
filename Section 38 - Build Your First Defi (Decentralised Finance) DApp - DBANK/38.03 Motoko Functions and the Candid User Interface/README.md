@@ -18,3 +18,13 @@ In Motoko, functions are created with the `func` keyword, similar to the Swift p
 ```
 
 Here, each time the `topUp()` function is called, it increases `currentValue` by 1. The previous debug print statement should be commented out to avoid confusion. At the end of the function, we print the new value of this variable using Motoko's `Debug.print` and `debug_show`.
+
+## Calling the Function and Syntax Requirements
+
+After defining the function, it can be called just below its creation. It is important to remember that every function in Motoko must be closed with a semicolon. If omitted, errors will occur.
+
+```mo
+    topUp();
+```
+
+When the function is called and the code is deployed using `dfx deploy`, the output will show that `currentValue` has been incremented by 1 and printed. This demonstrates how to call a function inside our DBank canister.

@@ -111,3 +111,13 @@ If you attempt to reassign a value to a constant created with `let`, Motoko will
 ```
 
 This will result in an error, as you cannot change the value of a constant.
+
+## Challenge: Printing a Constant
+
+Try using the print function to display the value stored in your constant `id`. Use `debug_show` to convert the value to text.
+
+```mo
+    Debug.print(debug_show(id));
+```
+
+After saving and deploying, you will see the value printed in the terminal, formatted with underscores for thousands and millions.

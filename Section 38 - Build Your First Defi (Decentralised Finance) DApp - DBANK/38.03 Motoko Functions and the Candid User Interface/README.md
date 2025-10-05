@@ -53,3 +53,9 @@ To allow external calls to the function, add the `public` modifier keyword. This
 ```
 
 After saving the file and redeploying with `dfx deploy`, the command line call to `topUp` will now execute successfully, and the incremented value will be printed.
+
+## Introducing the Candid UI
+
+Typing out command line calls repeatedly can be tedious. The Candid UI provides a simple user interface to trigger canister functions without manual command line input. Candid is an interface description language that allows interactive documentation and UI for canisters, similar to interactive API documentation like GitLab's 'try it out' feature.
+
+Instead of using the dfx command line, Candid UI allows specifying input arguments, generating random inputs, and displaying return values from canister methods. This provides a graphical interface for interacting with canisters.

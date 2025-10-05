@@ -57,3 +57,19 @@ Verify the installation by typing:
 node --version
 
 The output should start with version 16.
+
+## Installing DFX
+
+Copy the DFX installation command from the installation guide and paste it into the Ubuntu terminal. This process may take some time as it fetches and installs the DFX package, which enables local Internet Computer development.
+
+After installation, note the installation path provided. You need to manually add this path to your environment variables.
+
+Open Notepad and paste the stub command from the installation guide, replacing the placeholder "REPLACE WITH YOUR INSTALLATION PATH" with the actual path you noted. Ensure there is no space between the colon and the first forward slash.
+
+Copy the entire command and paste it back into the Ubuntu terminal to execute it.
+
+Verify that the DFX path was added by running the echo command shown in the installation guide. Finally, check the DFX version:
+
+dfx --version
+
+You should see a version number such as 0.9.3, confirming successful installation.

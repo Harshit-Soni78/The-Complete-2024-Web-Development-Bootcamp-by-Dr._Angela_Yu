@@ -17,3 +17,11 @@ Consider the volume of data created daily on Web2 platforms: approximately 500 m
 This explains why fully-fledged decentralized applications are not created entirely on-chain with Ethereum. Ethereum simply was not designed to handle the entire tech stack of a web application. Additionally, the transaction processing speed limits how fast and large blockchain-based apps can be. Each new post in a decentralized social media app is a transaction, so the blockchain's transactions per second (TPS) limit the app's update speed and scalability.
 
 Currently, Ethereum takes about 14 seconds to create a new block and supports roughly 15 transactions per second. Imagine a Twitter fully on-chain on Ethereum: only four users could post tweets every minute, and each tweet might cost around 100 dollars due to high fees and slow speed.
+
+## The Dfinity Solution
+
+The Dfinity organization has been researching solutions to these problems since at least 2015. Their goal is to make blockchain smart contracts scale, improve performance, and transform the simple ledger into a new form of computer capable of processing thousands of computations per second and storing data on-chain.
+
+They developed a novel consensus algorithm called threshold relay, which enables the Internet Computer to reach much faster speeds compared to other major layer one blockchains. The Internet Computer aggregates the compute capacity of many independent data centers worldwide and combines them using its protocol into a large, decentralized world computer.
+
+This decentralized computer is organized into individual units called canisters or canister smart chains. Canisters run processes, execute code, and store data for programs. Users can interact with canisters directly via HTTPS requests. Developers write code that compiles into WebAssembly modules with a flat memory model called a memory page.

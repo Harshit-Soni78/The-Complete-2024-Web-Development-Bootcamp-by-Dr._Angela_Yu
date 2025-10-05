@@ -40,3 +40,16 @@ To call a function from the command line, follow the structure provided in the d
 ```
 
 However, if the function is private, attempting to call it from the command line will result in an error stating that the canister has no update method called `topUp`. This is because the function is not visible outside the actor.
+
+## Making a Function Public
+
+To allow external calls to the function, add the `public` modifier keyword. This exposes the function to the public, enabling it to be called from outside the canister, such as from the command line.
+
+```mo
+    public func topUp() {
+      currentValue += 1;
+      Debug.print(debug_show(currentValue));
+    }
+```
+
+After saving the file and redeploying with `dfx deploy`, the command line call to `topUp` will now execute successfully, and the incremented value will be printed.

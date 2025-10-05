@@ -28,3 +28,15 @@ After defining the function, it can be called just below its creation. It is imp
 ```
 
 When the function is called and the code is deployed using `dfx deploy`, the output will show that `currentValue` has been incremented by 1 and printed. This demonstrates how to call a function inside our DBank canister.
+
+## Private vs Public Functions
+
+The function created above is a private function, meaning it is only accessible within the actor's curly braces. However, as seen in the Hello World application, functions within canisters can be called from the outside.
+
+To call a function from the command line, follow the structure provided in the documentation. After deploying, use the following command format:
+
+```bash
+    dfx canister call dbank topUp
+```
+
+However, if the function is private, attempting to call it from the command line will result in an error stating that the canister has no update method called `topUp`. This is because the function is not visible outside the actor.

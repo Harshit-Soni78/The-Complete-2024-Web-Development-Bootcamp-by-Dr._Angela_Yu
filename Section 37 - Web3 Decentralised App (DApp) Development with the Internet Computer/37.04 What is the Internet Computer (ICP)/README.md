@@ -33,3 +33,9 @@ Canisters manage memory by preserving program state, such as variables, collecti
 This eliminates the need for developers to manage data persistence or databases explicitly, as the program's state is maintained within the canister. This represents an evolution in smart contracts and a leap in programming paradigms, allowing developers to focus solely on logic while the Internet Computer handles the rest.
 
 Currently, there are over 30,000 canisters running on the Internet Computer, with hundreds of applications built on it. Examples include decentralized versions of Reddit and TikTok. Because everything is on-chain, new interaction models are possible. For instance, CanCan, a decentralized TikTok, rewards the first users who like a viral video with tokens that can be spent on real or virtual products.
+
+## Developer Opportunities
+
+Dfinity offers Developer Grant Programs providing between 25,000 to 100,000 dollars in no-strings-attached funding to help build applications on the Internet Computer. This is an excellent time to get started developing decentralized applications using this platform.
+
+In the upcoming lessons, we will learn how to set up our computers to develop decentralized applications on the Internet Computer. Once ready, proceed to the next lesson to begin building.

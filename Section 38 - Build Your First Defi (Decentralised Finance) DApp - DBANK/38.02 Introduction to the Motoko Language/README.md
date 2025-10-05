@@ -25,3 +25,15 @@ Inside the project, you will find several files and folders, including a `readme
 Rather than working solely in the command line, open the project in your code editor, such as VS Code. Use the editor's Open function to select your project folder.
 
 Within the `src` folder, you will find a `main.mo` file. This is the Motoko file you will work with. There may be some pre-existing code, which you can delete to start from scratch and learn each line's purpose.
+
+## Creating an Actor in Motoko
+
+The first step is to create the class that will hold your canister. In Motoko, this is called an `actor`. Use the `actor` keyword and give the class a name, such as `DBank`, then open a set of brackets.
+
+```mo
+    actor DBank {
+
+    }
+```
+
+With these lines, you have created a new canister. Inside this actor, you can use all the code you already know.

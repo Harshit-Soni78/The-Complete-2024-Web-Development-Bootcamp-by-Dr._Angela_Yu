@@ -121,3 +121,11 @@ The terminal will display the URL where your project is running. Copy and paste 
 When the page loads, enter your name and click the button. You should see a greeting displayed, indicating successful installation and setup for Internet Computer development.
 
 You are now ready to proceed to the next lesson and begin writing code for the Internet Computer.
+
+## Key Takeaways
+
+- Windows 10 version 2004 or above and 64-bit system are required for Internet Computer development.
+- Windows Subsystem for Linux (WSL) must be installed and configured properly.
+- Visual Studio Code with Motoko and Remote WSL extensions is essential for development.
+- Node.js version 16 and DFX must be installed within WSL to work with the Internet Computer.
+- The setup process includes creating a project directory, initializing a sample project, and deploying it locally using DFX.

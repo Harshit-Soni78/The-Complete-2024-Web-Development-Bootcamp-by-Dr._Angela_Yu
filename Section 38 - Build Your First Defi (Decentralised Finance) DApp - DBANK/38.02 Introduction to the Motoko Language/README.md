@@ -57,3 +57,31 @@ A variable in Motoko works similarly to variables in other languages. It is a co
 ```
 
 At this point in the code, `currentValue` would be equal to 100.
+
+## Debugging and Printing in Motoko
+
+To inspect and debug your code, use the Debug module from the Motoko Base Library. Import the module using the `import` keyword, specifying the path to the Debug module.
+
+```mo
+    import Debug "mo:base/Debug";
+```
+
+Now, you can use the `Debug.print` function to output text to the terminal during local development.
+
+```mo
+    Debug.print("hello");
+```
+
+To run your code, deploy your canister. First, start the local environment:
+
+```bash
+    dfx start
+```
+
+Then, in another terminal (without stopping the first process), deploy your canister:
+
+```bash
+    dfx deploy
+```
+
+After deployment, you will see the output from your print statement in the terminal.

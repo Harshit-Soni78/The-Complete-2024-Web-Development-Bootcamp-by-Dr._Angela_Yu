@@ -85,3 +85,13 @@ Then, in another terminal (without stopping the first process), deploy your cani
 ```
 
 After deployment, you will see the output from your print statement in the terminal.
+
+## Printing Variable Values
+
+If you try to print a variable such as `currentValue` directly using `Debug.print`, you will encounter a type mismatch error. The `print` function expects text, but `currentValue` is of type `nat` (natural number). To print non-text values, use the `debug_show` function.
+
+```mo
+    Debug.print(debug_show(currentValue));
+```
+
+Deploy again to see the output. The terminal will show the value of `currentValue` at that point in the code.

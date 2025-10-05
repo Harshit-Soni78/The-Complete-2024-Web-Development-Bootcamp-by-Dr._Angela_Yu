@@ -90,3 +90,7 @@ Typically, when topping up, you want to specify an amount rather than incrementi
 ```
 
 After saving and redeploying, refreshing the Candid UI will show a field for entering a natural number. Entering a value such as 12 and calling the function will increase the total amount by 12.
+
+## Orthogonal Persistence and Variable Reset
+
+After deploying new code, you may notice that variables reset to their initial values. This is due to orthogonal persistence, which will be discussed in more detail in a future lesson. For now, remember that running `dfx deploy` resets all variables.

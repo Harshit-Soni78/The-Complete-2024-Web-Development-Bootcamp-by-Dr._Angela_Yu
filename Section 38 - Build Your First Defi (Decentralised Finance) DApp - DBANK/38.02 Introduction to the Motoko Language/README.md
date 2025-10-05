@@ -95,3 +95,19 @@ If you try to print a variable such as `currentValue` directly using `Debug.prin
 ```
 
 Deploy again to see the output. The terminal will show the value of `currentValue` at that point in the code.
+
+## Using Constants with `let`
+
+In addition to `var`, Motoko provides the `let` keyword for constants. Use `let` when you want to create a variable that will never change, similar to constants in JavaScript.
+
+```mo
+    let id = 1234567890;
+```
+
+If you attempt to reassign a value to a constant created with `let`, Motoko will not allow it, as constants are immutable.
+
+```mo
+    id := 9876543210;
+```
+
+This will result in an error, as you cannot change the value of a constant.

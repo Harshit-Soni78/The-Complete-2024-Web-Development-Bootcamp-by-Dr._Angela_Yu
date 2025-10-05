@@ -111,3 +111,10 @@ After saving and redeploying, refreshing the Candid UI will display the new `wit
 ## Handling Errors in Withdrawal
 
 If a user attempts to withdraw more than the available amount, the current code will result in a natural subtraction underflow error. In the next lesson, we will learn how to use conditionals in Motoko to address this issue.
+
+## Key Takeaways
+
+- Functions in Motoko are defined using the `func` keyword and can be made public for external access.
+- The Candid UI provides an automatic frontend for interacting with canister functions without manual UI development.
+- Inputs can be added to Motoko functions by specifying parameter names and types, such as `Nat` for natural numbers.
+- Deploying new code resets variable states due to orthogonal persistence, and care must be taken to handle underflow errors in functions like withdrawal.

@@ -121,3 +121,14 @@ Try using the print function to display the value stored in your constant `id`. 
 ```
 
 After saving and deploying, you will see the value printed in the terminal, formatted with underscores for thousands and millions.
+
+## Conclusion
+
+Review the code and ensure you understand how to create variables, reassign values, create constants, import modules, and print values for debugging. In the next lesson, you will extend the dbank project to allow users to deposit and withdraw funds.
+
+## Key Takeaways
+
+- Learned how to create a new Internet Computer project using the dfx SDK and explored the project structure.
+- Understood the difference between `var` and `let` in Motoko, including variable reassignment and immutability.
+- Discovered how to use the Debug module to print text and variable values for debugging purposes.
+- Practiced importing modules, printing constants, and using Motoko's assignment operators.

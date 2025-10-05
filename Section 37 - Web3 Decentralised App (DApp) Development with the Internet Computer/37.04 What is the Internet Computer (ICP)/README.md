@@ -25,3 +25,11 @@ The Dfinity organization has been researching solutions to these problems since 
 They developed a novel consensus algorithm called threshold relay, which enables the Internet Computer to reach much faster speeds compared to other major layer one blockchains. The Internet Computer aggregates the compute capacity of many independent data centers worldwide and combines them using its protocol into a large, decentralized world computer.
 
 This decentralized computer is organized into individual units called canisters or canister smart chains. Canisters run processes, execute code, and store data for programs. Users can interact with canisters directly via HTTPS requests. Developers write code that compiles into WebAssembly modules with a flat memory model called a memory page.
+
+## Canisters and Persistent State
+
+Canisters manage memory by preserving program state, such as variables, collections, and arrays, within themselves. Each canister acts like a process or code sandbox, similar to Docker containers. The program state is preserved indefinitely, meaning the program behaves as if it never gets killed.
+
+This eliminates the need for developers to manage data persistence or databases explicitly, as the program's state is maintained within the canister. This represents an evolution in smart contracts and a leap in programming paradigms, allowing developers to focus solely on logic while the Internet Computer handles the rest.
+
+Currently, there are over 30,000 canisters running on the Internet Computer, with hundreds of applications built on it. Examples include decentralized versions of Reddit and TikTok. Because everything is on-chain, new interaction models are possible. For instance, CanCan, a decentralized TikTok, rewards the first users who like a viral video with tokens that can be spent on real or virtual products.

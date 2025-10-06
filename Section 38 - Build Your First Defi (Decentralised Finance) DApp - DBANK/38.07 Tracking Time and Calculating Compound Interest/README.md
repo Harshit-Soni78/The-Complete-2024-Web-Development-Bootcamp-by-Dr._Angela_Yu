@@ -49,3 +49,21 @@ Try implementing this by importing the Time module and printing the current time
 
     Debug.print(debug_show(startTime));
 ```
+
+## Calculating Elapsed Time and Compounding
+
+We create a public function `compound` that updates the current value by calculating the compound interest earned since the last update. First, we get the current time using `Time.now()`. Then, we calculate the elapsed time in nanoseconds by subtracting the stored `startTime` from the current time. To convert nanoseconds to seconds, we divide by 1,000,000,000 (one billion).
+
+Next, we apply the compound interest formula to update the current value.
+
+```mo
+    public func compound() : async () {
+      let currentTime = Time.now();
+      let timeElapsedNS = currentTime - startTime;
+      let timeElapsedS = timeElapsedNS / 1_000_000_000;
+
+      currentValue := currentValue * (1.01 ** timeElapsedS);
+
+      startTime := currentTime;
+    }
+```

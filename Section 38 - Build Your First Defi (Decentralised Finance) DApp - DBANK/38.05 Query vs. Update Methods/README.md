@@ -21,3 +21,13 @@ To create a query call in Motoko, you add the keyword `query` before the `func` 
 Note that in Motoko, function declarations must be separated by semicolons. Unlike JavaScript, omitting semicolons between functions will cause errors. It is good practice to add a semicolon after each function declaration for consistency, except possibly after the final function.
 
 The `checkBalance` function returns a value of type `Nat` (natural number). However, because it is a shared query function with an output, the return type must be asynchronous. This means the function's output type is `async Nat`. The `async` keyword indicates that the function returns its result asynchronously.
+
+### Understanding Synchronous vs. Asynchronous
+
+A synchronous program executes operations sequentially, like trains on a single track where the first train must move before the second can proceed. This means each operation must complete before the next begins.
+
+Asynchronous execution is like having multiple tracks where trains can move independently at their own pace. This allows operations to run concurrently without waiting for others to finish.
+
+On the web, synchronous loading is like a dial-up modem loading images one by one, freezing user interaction until all content is loaded. Asynchronous loading, common on modern websites, allows images and components to load independently, enabling users to interact with the site even while content is still loading.
+
+Similarly, in canister functions, the return value must be asynchronous to allow non-blocking, fast responses. This is why the `async` keyword is required in the return type of query functions.

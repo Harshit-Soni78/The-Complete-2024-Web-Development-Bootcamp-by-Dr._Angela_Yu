@@ -55,3 +55,10 @@ If you're wondering why I commented out the line that sets `currentValue` to 100
 Our stable variable can be declared with an initial state, but the next time the code runs and it hits this assignment, it will set it to whatever this value is. So we have to comment it out in order to see the stable variable in action.
 
 This is a really magical way of programming applications, which we will see more and more in the coming lessons. This was just a little taster, and I really want you to try it out for yourself, mess around with it, and see if you can get it to work for yourself. Really wrap your head around it by tweaking it, changing it, and seeing it with your own eyes.
+
+## Key Takeaways
+
+- Orthogonal persistence allows variables to retain their state across canister updates and redeployments on the Internet Computer.
+- Without persistence, variables reset to their initial values upon code redeployment, similar to traditional programming environments.
+- Adding the `stable` keyword to a variable declaration enables orthogonal persistence, preserving state automatically.
+- The `stable` variable retains its value through updates, downtime, and even power outages without requiring explicit database management.

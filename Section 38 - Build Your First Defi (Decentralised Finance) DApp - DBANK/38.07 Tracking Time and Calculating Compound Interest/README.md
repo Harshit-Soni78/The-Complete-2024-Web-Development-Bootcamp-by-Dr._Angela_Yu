@@ -35,3 +35,17 @@ In our protocol, for demonstration purposes, we give users 1% interest per secon
 $$A = P \times \left(1 + 0.01 \right)^{t}$$
 
 Where `t` is the total number of seconds elapsed.
+
+## Tracking Time in Motoko
+
+To calculate compound interest accurately, we need to track elapsed time. Motoko provides a Time module in its base library. Using the `Time.now()` function, we can get the current time in nanoseconds since January 1, 1970.
+
+Try implementing this by importing the Time module and printing the current time in nanoseconds to the terminal.
+
+```mo
+    import Time "mo:base/Time";
+
+    let startTime = Time.now();
+
+    Debug.print(debug_show(startTime));
+```

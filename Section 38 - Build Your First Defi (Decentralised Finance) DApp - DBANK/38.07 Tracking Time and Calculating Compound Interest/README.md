@@ -85,3 +85,9 @@ We also change variables such as `amount` and `tempValue` to `Float` to maintain
 ### Resetting Start Time After Compounding
 
 Since `startTime` was initially declared as a constant (`let`), it could not be updated. We change it to a mutable stable variable (`stable var`) so that after each compounding calculation, we reset `startTime` to the current time. This ensures that the next compound interest calculation uses the elapsed time since the last update, preventing overcompensation.
+
+## Testing the Compound Function
+
+After deploying the updated code, we can check the balance. Starting with 300,callingthe‘compound‘functiononceadds300, calling the \`compound\` function once adds 300,callingthe‘compound‘functiononceadds88 in interest within a few seconds. Calling it again increases the amount further, demonstrating how the principal grows with each compounding, resulting in faster accumulation of interest.
+
+Although an interest rate of 1% per second is unrealistic, it effectively illustrates how compound interest works and how we have created a working prototype of a decentralized finance application.

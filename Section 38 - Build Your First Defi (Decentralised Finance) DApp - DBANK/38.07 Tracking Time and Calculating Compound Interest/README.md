@@ -27,3 +27,11 @@ Where:
 - AAA is the amount of money accumulated after ttt units of time, including interest.
 
 For example, if the interest rate is 10%, it is represented as 0.1. If compounded annually, nnn is 1. The expression inside the parentheses is raised to the power of the total time multiplied by the compounding frequency.
+
+### Applying the Formula to Our Protocol
+
+In our protocol, for demonstration purposes, we give users 1% interest per second. Although this is quite high, it allows us to see changes quickly. Here, the interest rate is 0.01 (1% as a decimal), compounded once per second (n\=1n=1n\=1). The formula becomes:
+
+$$A = P \times \left(1 + 0.01 \right)^{t}$$
+
+Where `t` is the total number of seconds elapsed.

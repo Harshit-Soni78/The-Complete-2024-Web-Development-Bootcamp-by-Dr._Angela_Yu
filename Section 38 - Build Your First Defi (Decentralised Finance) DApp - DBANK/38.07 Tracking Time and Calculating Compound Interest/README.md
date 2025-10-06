@@ -81,3 +81,7 @@ We also change variables such as `amount` and `tempValue` to `Float` to maintain
 
     startTime : stable var Time.Time = Time.now();
 ```
+
+### Resetting Start Time After Compounding
+
+Since `startTime` was initially declared as a constant (`let`), it could not be updated. We change it to a mutable stable variable (`stable var`) so that after each compounding calculation, we reset `startTime` to the current time. This ensures that the next compound interest calculation uses the elapsed time since the last update, preventing overcompensation.

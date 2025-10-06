@@ -37,3 +37,21 @@ Similarly, in canister functions, the return value must be asynchronous to allow
 After deploying the canister with the `checkBalance` query function, you can observe how quickly it executes. In the Candid UI, the `checkBalance` function appears with a query button. Pressing it returns the value of `currentValue` almost instantly, for example, in 0.014 seconds.
 
 In contrast, calling update functions like `topUp` or `withdrawal` takes significantly longer, around 2 to 3 seconds, due to blockchain consensus and state modification.
+
+### Summary
+
+- **Update calls** modify the blockchain state and require consensus, resulting in slower execution times.
+- **Query calls** do not modify state and can return data quickly without consensus.
+- Use the `query` keyword before `func` to define query methods.
+- Query functions must return their output asynchronously using the `async` keyword.
+
+For more information, refer to the Internet Computer documentation on the difference between query and update methods.
+
+In the next lesson, we will explore the concept of orthogonal persistence in the Internet Computer, which explains how state is preserved between different updates of a canister.
+
+## Key Takeaways
+
+- Update methods modify the state and require writing to the blockchain, resulting in slower execution.
+- Query methods allow fast, read-only access to the current state without modifying it.
+- Query functions must return their output asynchronously using the `async` keyword.
+- Understanding the difference between query and update methods is crucial for efficient Internet Computer application development.

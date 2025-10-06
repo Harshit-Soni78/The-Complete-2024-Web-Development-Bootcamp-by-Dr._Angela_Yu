@@ -31,3 +31,9 @@ Asynchronous execution is like having multiple tracks where trains can move inde
 On the web, synchronous loading is like a dial-up modem loading images one by one, freezing user interaction until all content is loaded. Asynchronous loading, common on modern websites, allows images and components to load independently, enabling users to interact with the site even while content is still loading.
 
 Similarly, in canister functions, the return value must be asynchronous to allow non-blocking, fast responses. This is why the `async` keyword is required in the return type of query functions.
+
+### Deploying and Testing Query Functions
+
+After deploying the canister with the `checkBalance` query function, you can observe how quickly it executes. In the Candid UI, the `checkBalance` function appears with a query button. Pressing it returns the value of `currentValue` almost instantly, for example, in 0.014 seconds.
+
+In contrast, calling update functions like `topUp` or `withdrawal` takes significantly longer, around 2 to 3 seconds, due to blockchain consensus and state modification.

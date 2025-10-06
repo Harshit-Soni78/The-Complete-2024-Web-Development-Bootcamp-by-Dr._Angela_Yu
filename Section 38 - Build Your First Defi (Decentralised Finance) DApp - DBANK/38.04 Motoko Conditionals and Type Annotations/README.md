@@ -27,3 +27,18 @@ Within this constant, assign a type using a semicolon. Assign `tempValue` a data
 ```
 
 Replace the original comparison with `tempValue` so it is compared against zero. Now, there is no ambiguity regarding data types: the input amount is of type `Nat`, `currentValue` is of type `Nat`, and `tempValue` is explicitly typed as `Int`. By default, positive numbers are assigned the natural number data type unless specified otherwise.
+
+## Completing the If-Else Statement
+
+If `tempValue` is less than 0, add an else statement to handle this case. Use `Debug.print` to notify the developer that there is an issue.
+
+```mo
+    if (tempValue >= 0) {
+      currentValue := currentValue - amount;
+      Debug.print("Withdrawal successful");
+    } else {
+      Debug.print("Amount too large; currentValue less than 0");
+    }
+```
+
+In this case, since only text is being printed, `debug_show` is not needed. If unsure, review the earlier lesson on this topic.

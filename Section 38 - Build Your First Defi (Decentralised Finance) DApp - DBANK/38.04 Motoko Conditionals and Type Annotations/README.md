@@ -42,3 +42,22 @@ If `tempValue` is less than 0, add an else statement to handle this case. Use `D
 ```
 
 In this case, since only text is being printed, `debug_show` is not needed. If unsure, review the earlier lesson on this topic.
+
+## Verifying the Solution
+
+Test the function by attempting to withdraw a large amount. The operation does not fail; instead, the debug statement is triggered, indicating that the amount is too large and `currentValue` is less than 0. The value of `currentValue` remains unchanged, so the if-statement's main branch is not executed.
+
+When withdrawing a reasonable value, such as 10, the operation succeeds and 10 is subtracted from 100.
+
+## Conclusion
+
+This lesson demonstrates that many language features in Motoko are similar to those in other languages. The main differences are in the type system and how canisters are managed, which will be discussed further in future lessons.
+
+In the next lesson, the reasons for delays in method calls and the differences between update and query methods in canisters and the ICP will be explained.
+
+## Key Takeaways
+
+- Motoko's conditionals and control flow are similar to JavaScript.
+- Type mismatches can cause errors or warnings, especially with natural number subtraction.
+- Explicit type annotations help resolve ambiguity in Motoko.
+- Using if-else statements and debug printing improves error handling in Motoko functions.

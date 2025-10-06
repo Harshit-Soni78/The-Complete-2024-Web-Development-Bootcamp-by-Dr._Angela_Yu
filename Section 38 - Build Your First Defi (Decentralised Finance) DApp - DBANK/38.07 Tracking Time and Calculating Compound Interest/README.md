@@ -91,3 +91,14 @@ Since `startTime` was initially declared as a constant (`let`), it could not be 
 After deploying the updated code, we can check the balance. Starting with 300,callingthe‘compound‘functiononceadds300, calling the \`compound\` function once adds 300,callingthe‘compound‘functiononceadds88 in interest within a few seconds. Calling it again increases the amount further, demonstrating how the principal grows with each compounding, resulting in faster accumulation of interest.
 
 Although an interest rate of 1% per second is unrealistic, it effectively illustrates how compound interest works and how we have created a working prototype of a decentralized finance application.
+
+## Conclusion and Next Steps
+
+There is much more to build, including a front-end interface, which will be covered in future lessons. This module has introduced the Motoko language and some unique features of the Internet Computer. The next lesson includes a quiz to test your understanding of the core concepts covered, followed by instructions on deploying to the live Internet Computer blockchain.
+
+## Key Takeaways
+
+- Compound interest allows money to earn interest on both the initial principal and the accumulated interest.
+- The compound interest formula involves the principal, interest rate, compounding frequency, and time.
+- Tracking elapsed time accurately is essential for calculating compound interest in programming.
+- Data type consistency is crucial when performing mathematical operations involving floats and integers.

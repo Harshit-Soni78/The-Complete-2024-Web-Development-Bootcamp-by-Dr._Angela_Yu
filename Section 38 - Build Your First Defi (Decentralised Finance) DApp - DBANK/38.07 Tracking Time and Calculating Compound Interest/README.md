@@ -67,3 +67,17 @@ Next, we apply the compound interest formula to update the current value.
       startTime := currentTime;
     }
 ```
+
+### Handling Data Types
+
+In Motoko, the exponentiation operator is `**`. However, we encounter a type mismatch error because `currentValue` is a natural number (`Nat`), while the interest rate and time elapsed are floating-point numbers (`Float`). To resolve this, we convert all relevant variables to `Float` to allow decimal calculations, which is more appropriate for representing money including cents and pennies.
+
+We also change variables such as `amount` and `tempValue` to `Float` to maintain consistency throughout the code.
+
+```mo
+    currentValue : Float;
+    amount : Float;
+    tempValue : Float;
+
+    startTime : stable var Time.Time = Time.now();
+```

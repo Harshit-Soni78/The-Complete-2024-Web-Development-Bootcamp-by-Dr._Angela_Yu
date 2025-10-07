@@ -8,3 +8,10 @@ async function updateBalance() {
 
 window.addEventListener("DOMContentLoaded", updateBalance);
 
+document.querySelector("form").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const button = event.target.querySelector("#submit-btn");
+  const inputAmount = parseFloat(document.getElementById("input-amount").value);
+  const outputAmount = parseFloat(document.getElementById("withdrawal-amount").value);
+});

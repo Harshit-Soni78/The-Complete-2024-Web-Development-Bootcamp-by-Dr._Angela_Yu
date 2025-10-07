@@ -25,3 +25,12 @@ window.addEventListener("load", async () => {
 ```
 
 Testing this code by reloading the page shows "Finished loading" in the console, confirming the event listener works correctly.
+
+Next, instead of logging to the console, we want to update the span element with id `value` to display the current balance. We create a constant `currentAmount` and assign it the result of `dbank.checkBalance()`. Then, we use `document.getElementById("value")` to get the span element and set its `innerText` to `currentAmount`.
+
+```js
+window.addEventListener("load", async () => {
+  const currentAmount = await dbank.checkBalance();
+  document.getElementById("value").innerText = currentAmount;
+});
+```

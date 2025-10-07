@@ -82,3 +82,21 @@ We then call the `topUp()` function asynchronously with the parsed amount:
 ```js
 await dbank.topUp(topUpAmount);
 ```
+
+### Improving User Experience During Transactions
+
+To prevent users from clicking the submit button multiple times during a transaction, we disable the submit button as soon as it is clicked. After the transaction completes, we re-enable the button.
+
+```js
+const button = event.target.querySelector("#submit-btn");
+button.setAttribute("disabled", true);
+
+// After transaction completes
+button.removeAttribute("disabled");
+```
+
+We also clear the input field after the transaction to prepare for the next input:
+
+```js
+    document.getElementById("input-amount").value = "";
+```

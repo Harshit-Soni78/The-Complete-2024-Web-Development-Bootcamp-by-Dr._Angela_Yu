@@ -69,3 +69,16 @@ Inside the submit event callback, we retrieve the values the user typed into the
 const inputAmount = document.getElementById("input-amount").value;
 const outputAmount = document.getElementById("withdrawal-amount").value;
 ```
+
+The `topUp()` function expects a 64-bit floating point number as input. However, values from input fields are strings by default. We convert these strings to floating point numbers using `parseFloat()` before passing them to the backend functions.
+
+```js
+const topUpAmount = parseFloat(inputAmount);
+const withdrawAmount = parseFloat(outputAmount);
+```
+
+We then call the `topUp()` function asynchronously with the parsed amount:
+
+```js
+await dbank.topUp(topUpAmount);
+```

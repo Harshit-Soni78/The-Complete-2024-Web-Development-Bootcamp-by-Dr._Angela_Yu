@@ -19,5 +19,9 @@ document.querySelector("form").addEventListener("submit", async function (event)
     await dbank_backend.topUP(inputAmount);
   }
 
+  if (!isNaN(outputAmount)) {
+    await dbank_backend.withdraw(outputAmount);
+  }
+
   await updateBalance();
 });

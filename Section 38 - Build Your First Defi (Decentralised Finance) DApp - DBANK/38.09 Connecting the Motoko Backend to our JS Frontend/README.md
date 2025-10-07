@@ -60,3 +60,12 @@ form.addEventListener("submit", async (event) => {
   console.log("Submitted");
 });
 ```
+
+Calling `event.preventDefault()` prevents the form's default behavior of clearing fields and reloading the page upon submission, allowing us to handle the data manually.
+
+Inside the submit event callback, we retrieve the values the user typed into the input fields for top-up and withdrawal amounts using `document.getElementById().value`.
+
+```js
+const inputAmount = document.getElementById("input-amount").value;
+const outputAmount = document.getElementById("withdrawal-amount").value;
+```

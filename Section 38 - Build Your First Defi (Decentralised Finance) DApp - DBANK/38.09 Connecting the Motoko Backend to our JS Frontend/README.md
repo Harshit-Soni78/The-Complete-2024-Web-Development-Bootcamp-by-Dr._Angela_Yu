@@ -122,3 +122,19 @@ After either topping up or withdrawing, we call the `compound()` function to app
 ```js
 await dbank.compound();
 ```
+
+### Refactoring Update Logic
+
+To avoid repeating code that updates the balance display, we create an asynchronous function `update()` that fetches the current balance and updates the DOM. We call this function on page load and after transactions.
+
+```js
+async function update() {
+  let currentAmount = await dbank.checkBalance();
+  currentAmount = Math.round(currentAmount * 100) / 100;
+  document.getElementById("value").innerText = currentAmount;
+}
+
+window.addEventListener("load", update);
+```
+
+After completing these steps, the frontend is fully connected to the Motoko backend. Users can view their current balance, top up, withdraw, and see their balance update with compound interest, all through the frontend interface.

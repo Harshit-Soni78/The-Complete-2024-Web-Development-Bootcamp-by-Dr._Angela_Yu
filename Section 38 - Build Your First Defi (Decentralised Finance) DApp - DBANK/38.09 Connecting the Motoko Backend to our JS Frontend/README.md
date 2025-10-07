@@ -48,3 +48,15 @@ window.addEventListener("load", async () => {
   document.getElementById("value").innerText = currentAmount;
 });
 ```
+
+### Handling User Transactions: Top Up and Withdraw
+
+Next, we listen for when the user submits a transaction, either topping up or withdrawing funds. We add an event listener to the form's submit event. When the submit button is pressed, a callback function executes.
+
+```js
+const form = document.querySelector("form");
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  console.log("Submitted");
+});
+```

@@ -138,3 +138,10 @@ window.addEventListener("load", update);
 ```
 
 After completing these steps, the frontend is fully connected to the Motoko backend. Users can view their current balance, top up, withdraw, and see their balance update with compound interest, all through the frontend interface.
+
+## Key Takeaways
+
+- Connected the Motoko backend to the JavaScript frontend by importing the dbank module.
+- Implemented asynchronous functions to update the current balance on page load and after transactions.
+- Added input validation and event listeners to handle top-up and withdrawal transactions.
+- Improved user experience by disabling the submit button during transactions and clearing input fields after completion.

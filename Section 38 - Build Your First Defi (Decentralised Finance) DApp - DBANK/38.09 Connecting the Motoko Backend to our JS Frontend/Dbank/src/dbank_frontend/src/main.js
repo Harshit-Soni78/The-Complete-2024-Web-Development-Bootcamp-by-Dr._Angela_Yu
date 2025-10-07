@@ -28,5 +28,7 @@ document.querySelector("form").addEventListener("submit", async function (event)
   await dbank_backend.compound();
   await updateBalance();
 
+  document.getElementById("input-amount").value = "";
+  document.getElementById("withdrawal-amount").value = "";
   button.removeAttribute("disabled");
 });

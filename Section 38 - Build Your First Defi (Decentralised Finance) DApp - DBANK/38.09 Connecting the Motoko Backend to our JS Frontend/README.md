@@ -114,3 +114,11 @@ if (document.getElementById("withdrawal-amount").value.length !== 0) {
   await dbank.withdrawl(parseFloat(outputAmount));
 }
 ```
+
+### Compounding Interest After Transactions
+
+After either topping up or withdrawing, we call the `compound()` function to apply interest to the balance. This ensures the balance updates with accrued interest after each transaction.
+
+```js
+await dbank.compound();
+```

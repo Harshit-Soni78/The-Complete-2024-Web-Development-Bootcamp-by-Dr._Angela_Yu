@@ -14,4 +14,7 @@ document.querySelector("form").addEventListener("submit", async function (event)
   const button = event.target.querySelector("#submit-btn");
   const inputAmount = parseFloat(document.getElementById("input-amount").value);
   const outputAmount = parseFloat(document.getElementById("withdrawal-amount").value);
+
+  console.log(inputAmount, outputAmount, button)
+
 });

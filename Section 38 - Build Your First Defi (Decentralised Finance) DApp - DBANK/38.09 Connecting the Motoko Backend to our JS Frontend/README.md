@@ -15,3 +15,13 @@ Here, we use a relative path to access the declarations folder, which exposes ou
 ### Updating the Current Balance on Page Load
 
 Our first goal is to update the balance displayed on the frontend so that it shows the actual current balance instead of placeholder text. To achieve this, we will use the `checkBalance()` function from the `dbank` module, which returns the current balance value.
+
+We want this balance to update every time the page loads. Therefore, we add an event listener to the `window` object to listen for the "load" event, which fires when all the code on the page has finished loading. When this event triggers, a callback function will execute.
+
+```js
+window.addEventListener("load", async () => {
+  console.log("Finished loading");
+});
+```
+
+Testing this code by reloading the page shows "Finished loading" in the console, confirming the event listener works correctly.

@@ -15,6 +15,8 @@ document.querySelector("form").addEventListener("submit", async function (event)
   const inputAmount = parseFloat(document.getElementById("input-amount").value);
   const outputAmount = parseFloat(document.getElementById("withdrawal-amount").value);
 
+  button.setAttribute("disabled", true);
+
   if (!isNaN(inputAmount)) {
     await dbank_backend.topUP(inputAmount);
   }
@@ -25,4 +27,6 @@ document.querySelector("form").addEventListener("submit", async function (event)
 
   await dbank_backend.compound();
   await updateBalance();
+
+  button.removeAttribute("disabled");
 });

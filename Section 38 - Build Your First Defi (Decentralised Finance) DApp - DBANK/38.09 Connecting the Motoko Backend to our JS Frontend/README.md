@@ -100,3 +100,17 @@ We also clear the input field after the transaction to prepare for the next inpu
 ```js
     document.getElementById("input-amount").value = "";
 ```
+
+### Validating Input Before Transactions
+
+To avoid errors when users submit empty inputs, we check if the input fields contain values before calling the respective functions. We use an if-statement to verify that the input length is not zero.
+
+```js
+if (document.getElementById("input-amount").value.length !== 0) {
+  await dbank.topUp(parseFloat(inputAmount));
+}
+
+if (document.getElementById("withdrawal-amount").value.length !== 0) {
+  await dbank.withdrawl(parseFloat(outputAmount));
+}
+```

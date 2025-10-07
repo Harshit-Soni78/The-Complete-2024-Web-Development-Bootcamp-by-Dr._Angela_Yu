@@ -23,5 +23,6 @@ document.querySelector("form").addEventListener("submit", async function (event)
     await dbank_backend.withdraw(outputAmount);
   }
 
+  await dbank_backend.compound();
   await updateBalance();
 });

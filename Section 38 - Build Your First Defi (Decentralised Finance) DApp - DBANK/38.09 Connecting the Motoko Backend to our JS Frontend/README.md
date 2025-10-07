@@ -11,3 +11,7 @@ import { dbank } from "../declarations/dbank";
 ```
 
 Here, we use a relative path to access the declarations folder, which exposes our Motoko code to JavaScript in a way that JavaScript can understand and call these functions. This acts as a bridge between the two languages, allowing us to call functions like `checkBalance`, `compound`, `topUp`, and `withdrawl`.
+
+### Updating the Current Balance on Page Load
+
+Our first goal is to update the balance displayed on the frontend so that it shows the actual current balance instead of placeholder text. To achieve this, we will use the `checkBalance()` function from the `dbank` module, which returns the current balance value.

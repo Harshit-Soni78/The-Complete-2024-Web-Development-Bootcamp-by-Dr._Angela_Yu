@@ -34,3 +34,17 @@ window.addEventListener("load", async () => {
   document.getElementById("value").innerText = currentAmount;
 });
 ```
+
+Upon refreshing the page, the balance displays as a Promise object instead of the actual value. This happens because `checkBalance()` returns asynchronously, and we must await its result before updating the DOM.
+
+By marking the callback function as `async` and using the `await` keyword before `dbank.checkBalance()`, we ensure the balance is updated correctly once the Promise resolves.
+
+The balance shows many decimal places, which clutters the display. To improve readability, we round the balance to two decimal places using JavaScript's `Math.round()` function. We multiply the amount by 100, round it, then divide by 100 again.
+
+```js
+window.addEventListener("load", async () => {
+  let currentAmount = await dbank.checkBalance();
+  currentAmount = Math.round(currentAmount * 100) / 100;
+  document.getElementById("value").innerText = currentAmount;
+});
+```

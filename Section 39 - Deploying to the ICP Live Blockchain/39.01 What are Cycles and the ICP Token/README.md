@@ -42,3 +42,7 @@ Canisters are preloaded with cycles, representing their computational potential.
 ### Analogy for Cycles
 
 This system is analogous to using propane gas cans at home. You store propane to fuel gas heaters or burners and replenish the supply as it runs low. Similarly, canisters require topping up with cycles to continue functioning.
+
+## Obtaining Free Cycles via the Dfinity Cycles Faucet
+
+To facilitate development, the Dfinity Foundation offers a Cycles Faucet that provides free cycles. Anyone with a GitHub account older than 90 days can receive approximately $20 worth of free cycles. This allowance enables developers to deploy canister smart contracts, build web3 applications, and gain practical experience working with the Internet Computer.

@@ -22,3 +22,18 @@ The total size is only a few hundred kilobytes, making it inexpensive to deploy 
 ## Bundling Assets
 
 Bundle all files into a new folder named `assets`. This folder will contain all the website's assets. In previous projects, such as dbank, a similar `dbank_assets` folder was used to store CSS, logos, `index.html`, and `index.js` files.
+
+## Creating the dfx.json File
+
+A new file named `dfx.json` must be created in the main project folder (outside the `assets` folder). This file describes how the canister appears to the Internet Computer. The file uses JSON format to define a canister called `website`, specifying its type as `assets` and its source as the `assets` folder.
+
+```json
+{
+  "canisters": {
+    "website": {
+      "type": "assets",
+      "source": ["assets"]
+    }
+  }
+}
+```

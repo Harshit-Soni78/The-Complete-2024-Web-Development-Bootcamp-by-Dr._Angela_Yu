@@ -28,3 +28,7 @@ The Internet Computer is controlled by the Network Nervous System (NNS), a gover
 ### Grants from the Dfinity Foundation
 
 The Dfinity Foundation has allocated funds to support developers. By submitting proposals, developers can apply for grants ranging from 25,000 to 100,000 ICP tokens to aid in their projects. These grants come without any equity or ownership claims, serving as straightforward financial support.
+
+### Running Data Centers
+
+Dfinity connects multiple independent data centers worldwide to form a virtual shared computer. Individuals or organizations that own or operate such infrastructure and supply electricity can run nodes within the Internet Computer. In return, they receive ICP tokens as rewards for maintaining server availability.

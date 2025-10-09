@@ -45,3 +45,20 @@ Review your cycle purchase, which will show the amount of ICP to be converted in
 Once the transaction is completed, refresh your cycles wallet. You may need to log in and authenticate again. Sometimes, you might see a "register device" prompt if the system does not recognize your device, but refreshing the page usually updates the status.
 
 After refreshing, your balance will be updated, showing the added terra cycles and the topped-up balance.
+
+## Summary
+
+This process demonstrates how to convert ICP tokens into cycles for development purposes. Checking your main wallet will show that your ICP balance has decreased accordingly after the conversion.
+
+If you run out of cycles for deployment, this method allows you to convert ICP into cycles and continue powering your canisters.
+
+## Next Steps
+
+In the next lesson, there is a small challenge to use the Internet Computer to host one of the websites built earlier in this course.
+
+## Key Takeaways
+
+- Cycles can run out if too many canisters are created or large files are hosted, requiring ICP tokens to replenish.
+- ICP tokens can be purchased on cryptocurrency exchanges like Binance, Coinbase, and KuCoin.
+- Coinbase offers a "Learn and Earn" program to earn tokens by completing quizzes, which can then be converted to ICP tokens.
+- ICP tokens can be transferred to the Network Nervous System wallet and converted into cycles to power canisters for development.

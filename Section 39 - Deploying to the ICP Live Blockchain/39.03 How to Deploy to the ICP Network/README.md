@@ -47,3 +47,13 @@ Try topping up your application with some money to verify that it is working. Th
 If you return to your Cycles Wallet and refresh it, you may need to log in again. You will notice that the initial balance, for example, 14 tera cycles, will have decreased. This is because deployment is one of the most expensive parts of using Dfinity.
 
 To conserve cycles, be careful when deploying new canisters. Updating an existing canister is different and less costly.
+
+## Upgrading an Existing Canister
+
+If you make a small change, such as commenting out two lines of code and saving, you can deploy again using the same command:
+
+```bash
+    dfx deploy --network ic
+```
+
+This time, instead of creating a new canister, you will see a message stating, "All canisters have already been created." It simply upgrades the code for that canister, which does not cost much in terms of cycles.

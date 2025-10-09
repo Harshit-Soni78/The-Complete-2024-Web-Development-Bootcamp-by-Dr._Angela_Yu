@@ -54,3 +54,17 @@ It is crucial to treat cycles like money. Once the free $20 worth of cycles is d
 Therefore, when deploying to the live network, exercise caution. Different computational actions incur varying costs, with creating a canister being the most expensive operation.
 
 For example, on July 26, 2021, deploying a canister cost about 0.1 terra cycles. Current costs may be higher. To avoid premature depletion, watch tutorial videos carefully before performing deployment actions to conserve cycles effectively.
+
+## Next Steps
+
+With this understanding, we are ready to return to our project and deploy it to the live Internet Computer network. This deployment will utilize the knowledge of cycles and ICP tokens to maintain our canisters and applications online.
+
+For all of this and more, see you in the next lesson.
+
+## Key Takeaways
+
+- Cycles are the computational resource units required to deploy and run applications on the live Internet Computer network.
+- ICP tokens are tradable tokens that can be converted into cycles to power canisters on the Internet Computer.
+- ICP tokens can be obtained by purchasing on exchanges, participating in the Network Nervous System, receiving grants from the Dfinity Foundation, or running data centers.
+- The Dfinity Foundation provides a free Cycles Faucet for developers with GitHub accounts over 90 days old to start deploying applications.
+- Deploying canisters consumes cycles, and careful management is necessary to avoid running out and needing to purchase more ICP tokens.

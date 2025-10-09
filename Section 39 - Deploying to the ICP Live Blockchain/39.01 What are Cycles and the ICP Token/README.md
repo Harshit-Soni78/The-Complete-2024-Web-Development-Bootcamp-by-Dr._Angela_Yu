@@ -32,3 +32,9 @@ The Dfinity Foundation has allocated funds to support developers. By submitting 
 ### Running Data Centers
 
 Dfinity connects multiple independent data centers worldwide to form a virtual shared computer. Individuals or organizations that own or operate such infrastructure and supply electricity can run nodes within the Internet Computer. In return, they receive ICP tokens as rewards for maintaining server availability.
+
+## Converting ICP Tokens to Cycles
+
+After acquiring ICP tokens, users can burn these tokens to exchange them for computation cycles within their canisters. This process converts a publicly tradable token into a non-tradable resource that powers canisters by enabling data storage and computation.
+
+Canisters are preloaded with cycles, representing their computational potential. As long as a canister has sufficient cycles, it remains operational.

@@ -61,3 +61,7 @@ After deployment, retrieve the canister's ID using the following command:
 ```
 
 Replace `website` with your canister name if different. The canister ID can be used to access your website at `https://<canister-id>.ic0.app`.
+
+## Viewing and Sharing Your Website
+
+Once loaded, the website will display the favicon and content as expected. The site is now live on the Internet Computer, and the URL can be shared with anyone for global access.

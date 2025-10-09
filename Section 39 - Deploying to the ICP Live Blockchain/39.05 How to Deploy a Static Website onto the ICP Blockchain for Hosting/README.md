@@ -51,3 +51,13 @@ After updating the file references, save the changes. Open a terminal in the CSS
 ```
 
 This command creates a canister on the Internet Computer blockchain and uses cycles from your wallet to deploy it.
+
+## Retrieving the Canister ID
+
+After deployment, retrieve the canister's ID using the following command:
+
+```bash
+    dfx canister --network ic id website
+```
+
+Replace `website` with your canister name if different. The canister ID can be used to access your website at `https://<canister-id>.ic0.app`.

@@ -18,3 +18,7 @@ The website folder contains:
 - The `index.html` file
 
 The total size is only a few hundred kilobytes, making it inexpensive to deploy and host on the Internet Computer.
+
+## Bundling Assets
+
+Bundle all files into a new folder named `assets`. This folder will contain all the website's assets. In previous projects, such as dbank, a similar `dbank_assets` folder was used to store CSS, logos, `index.html`, and `index.js` files.

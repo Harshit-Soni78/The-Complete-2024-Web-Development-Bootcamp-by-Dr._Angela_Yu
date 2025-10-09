@@ -41,3 +41,9 @@ Once you navigate to this address, you will be able to see your live deployed `d
 ## Testing and Live Computation
 
 Try topping up your application with some money to verify that it is working. The computations are now happening live on the Internet Computer.
+
+## Monitoring Cycle Usage
+
+If you return to your Cycles Wallet and refresh it, you may need to log in again. You will notice that the initial balance, for example, 14 tera cycles, will have decreased. This is because deployment is one of the most expensive parts of using Dfinity.
+
+To conserve cycles, be careful when deploying new canisters. Updating an existing canister is different and less costly.

@@ -46,3 +46,11 @@ This system is analogous to using propane gas cans at home. You store propane to
 ## Obtaining Free Cycles via the Dfinity Cycles Faucet
 
 To facilitate development, the Dfinity Foundation offers a Cycles Faucet that provides free cycles. Anyone with a GitHub account older than 90 days can receive approximately $20 worth of free cycles. This allowance enables developers to deploy canister smart contracts, build web3 applications, and gain practical experience working with the Internet Computer.
+
+## Important Warning on Cycle Usage
+
+It is crucial to treat cycles like money. Once the free $20 worth of cycles is depleted, recharging requires purchasing ICP tokens and converting them into cycles.
+
+Therefore, when deploying to the live network, exercise caution. Different computational actions incur varying costs, with creating a canister being the most expensive operation.
+
+For example, on July 26, 2021, deploying a canister cost about 0.1 terra cycles. Current costs may be higher. To avoid premature depletion, watch tutorial videos carefully before performing deployment actions to conserve cycles effectively.

@@ -38,3 +38,7 @@ Dfinity connects multiple independent data centers worldwide to form a virtual s
 After acquiring ICP tokens, users can burn these tokens to exchange them for computation cycles within their canisters. This process converts a publicly tradable token into a non-tradable resource that powers canisters by enabling data storage and computation.
 
 Canisters are preloaded with cycles, representing their computational potential. As long as a canister has sufficient cycles, it remains operational.
+
+### Analogy for Cycles
+
+This system is analogous to using propane gas cans at home. You store propane to fuel gas heaters or burners and replenish the supply as it runs low. Similarly, canisters require topping up with cycles to continue functioning.

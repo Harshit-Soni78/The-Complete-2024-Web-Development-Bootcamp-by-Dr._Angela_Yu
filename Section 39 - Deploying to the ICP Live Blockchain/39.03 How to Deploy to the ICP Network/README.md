@@ -57,3 +57,10 @@ If you make a small change, such as commenting out two lines of code and saving,
 ```
 
 This time, instead of creating a new canister, you will see a message stating, "All canisters have already been created." It simply upgrades the code for that canister, which does not cost much in terms of cycles.
+
+## Key Takeaways
+
+- Ensure all required packages are installed before deploying to the ICP network.
+- Use the `dfx deploy --network ic` command to deploy your project to the Internet Computer.
+- Access your deployed application using the canister ID in the specified URL format.
+- Deploying a new canister consumes a significant amount of cycles, while upgrading an existing canister is less costly.

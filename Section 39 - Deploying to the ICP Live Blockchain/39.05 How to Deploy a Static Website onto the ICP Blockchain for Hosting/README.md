@@ -1,0 +1,1 @@
+# How to Deploy a Static Website onto the ICP Blockchain for Hosting

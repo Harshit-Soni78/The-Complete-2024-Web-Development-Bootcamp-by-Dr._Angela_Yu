@@ -20,3 +20,7 @@ The most common way to pay for computational resources is by acquiring ICP Token
 - Participating in the Network Nervous System (NNS), which governs the Internet Computer.
 - Receiving grants from the Dfinity Foundation.
 - Operating data centers that run nodes for the Internet Computer network.
+
+### Network Nervous System (NNS) and Neurons
+
+The Internet Computer is controlled by the Network Nervous System (NNS), a governing system overseeing all aspects of the network. Users can lock their existing ICP Tokens to create a Neuron. By voting on proposals, participants earn rewards in ICP tokens, giving them direct influence over the network's future.

@@ -65,3 +65,14 @@ Replace `website` with your canister name if different. The canister ID can be u
 ## Viewing and Sharing Your Website
 
 Once loaded, the website will display the favicon and content as expected. The site is now live on the Internet Computer, and the URL can be shared with anyone for global access.
+
+## Maintaining Your Website
+
+To keep the website accessible, ensure your wallet has enough cycles. If the wallet runs out of cycles, the static website will go offline. For future projects, local deployment is recommended to avoid costs, but you now have the tools to deploy live to the Internet Computer blockchain.
+
+## Key Takeaways
+
+- Hosting a static website on the Internet Computer is straightforward and cost-effective for small sites.
+- The deployment process requires bundling all assets and updating file references to a flat structure.
+- The `dfx.json` file is essential for defining the canister and its assets.
+- Keeping the website online requires maintaining enough cycles in the wallet.

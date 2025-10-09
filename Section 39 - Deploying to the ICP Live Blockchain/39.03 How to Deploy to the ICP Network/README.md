@@ -37,3 +37,7 @@ This will provide a canister ID, which you can enter into your browser. The stru
 `https://<canister-id>.ic0.app`
 
 Once you navigate to this address, you will be able to see your live deployed `dbank` application. This URL can be shared with anyone who has internet access.
+
+## Testing and Live Computation
+
+Try topping up your application with some money to verify that it is working. The computations are now happening live on the Internet Computer.

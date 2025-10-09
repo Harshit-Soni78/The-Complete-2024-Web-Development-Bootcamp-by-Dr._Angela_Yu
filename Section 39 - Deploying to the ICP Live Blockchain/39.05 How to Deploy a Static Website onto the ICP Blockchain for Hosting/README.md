@@ -37,3 +37,7 @@ A new file named `dfx.json` must be created in the main project folder (outside 
   }
 }
 ```
+
+## Adjusting File References for Deployment
+
+During deployment, the folder structure collapses, placing all files (including those from `images` and `CSS` folders) at the same level as the favicon and `index.html`. To ensure the website works after deployment, remove folder references from file paths in `index.html`. For example, delete `css/` and `images/` from all relevant references, leaving only the file names.

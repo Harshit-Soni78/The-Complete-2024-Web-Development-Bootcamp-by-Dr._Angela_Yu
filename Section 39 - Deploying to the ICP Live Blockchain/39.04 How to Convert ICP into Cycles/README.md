@@ -25,3 +25,23 @@ After logging in and authorizing, click on the ICP tab to view your wallet addre
 Return to Coinbase, go to the Send and Receive section, select ICP as the payment method, and send your ICP tokens to the copied wallet address. You can send all your ICP tokens or a specific amount.
 
 After confirming and sending, the transaction will be processed. Refresh the Network Nervous System page to verify that the ICP tokens have been transferred to your account.
+
+## Converting ICP Tokens into Cycles
+
+With ICP tokens in your account, you can now convert some of them into cycles. First, navigate to the Canisters section and click on "Create or Link a Canister." Link it to your wallet by copying your wallet's canister ID.
+
+Alternatively, you can obtain your wallet canister ID via the command line by running:
+
+```bash
+    dfx identity --network ic get-wallet
+```
+
+After obtaining the canister ID, click "Attach Canister." Occasionally, you may encounter an error stating, "You are not the controller of this canister and cannot access its details," but this usually resolves itself.
+
+Next, add cycles to this wallet by selecting "Main" as your source account and specifying the amount of cycles to add. The minimum amount is two cycles.
+
+Review your cycle purchase, which will show the amount of ICP to be converted into terra cycles (trillion cycles). Confirm and send the transaction.
+
+Once the transaction is completed, refresh your cycles wallet. You may need to log in and authenticate again. Sometimes, you might see a "register device" prompt if the system does not recognize your device, but refreshing the page usually updates the status.
+
+After refreshing, your balance will be updated, showing the added terra cycles and the topped-up balance.

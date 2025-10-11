@@ -62,3 +62,13 @@ useEffect(() => {
 ```
 
 Now, `useEffect` is triggered only once. When we add a note and click add, the note appears. When we reload, the notes persist because they are read from the Motoko backend on the blockchain.
+
+## Maintaining Note Order
+
+You may notice that the order of notes changes on refresh. This is because the push function in Motoko prepends new notes to the beginning of the list, but on the frontend, new notes are added to the end. To fix this, we adjust the logic so that new notes are added to the beginning of the array on the frontend as well.
+
+```js
+setNotes((prevNotes) => [newNote, ...prevNotes]);
+```
+
+Now, when we add a new note, it appears at the top. Refreshing the website does not change the order, and everything works as expected.

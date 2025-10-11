@@ -45,3 +45,7 @@ Open `webpack.config.js` and locate the `entry` property in the `module.exports`
 ```
 
 Scroll down to the section with a comment about React. Uncomment the section to enable the TypeScript loader, which is necessary for running and loading the React application.
+
+## Adding TypeScript Configuration
+
+Download the `tsconfig.json` file from the course resources and add it to the `dkeeper` project, placing it below the `webpack.config.js` file. This file contains configuration for compiling the code and specifying JavaScript versions.

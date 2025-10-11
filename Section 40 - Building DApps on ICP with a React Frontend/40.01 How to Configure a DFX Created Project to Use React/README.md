@@ -11,3 +11,13 @@ React is widely used for building modern web applications due to its ability to 
 The module demonstrates how to take a previously built Keeper app, which mimics Google Keep, and integrate it with an ICP backend for data persistence and storage. Initially, the Keeper app was built using only React, meaning it had no backend or database. As a result, refreshing the application would reset all data.
 
 To address this, the module guides through the process of adding an ICP backend to make the application fully featured and decentralized on the Internet Computer blockchain.
+
+## Creating a New ICP Project
+
+The first step is to create a new ICP application. Navigate to the desired directory (for example, `ic-projects`) and create a new DFX project.
+
+```bash
+    dfx new dkeeper
+```
+
+After running the command, the project is created. Once the Dfinity logo appears, the setup is complete. The project can then be opened in Visual Studio Code by navigating to the `ic-projects` directory and selecting the new `dkeeper` application.

@@ -85,3 +85,14 @@ Once deployment is complete, start the React frontend.
 ```
 
 Navigate to `localhost:8080` in the browser to see the React application running. The frontend is now linked up correctly and hosted locally. Adding notes works, and icons display properly. However, refreshing the page deletes all notes since there is no backend or storage yet.
+
+## Next Steps
+
+In the next lesson, the focus will be on connecting the frontend to the Motoko backend to persist user data on the Internet Computer blockchain.
+
+## Key Takeaways
+
+- A DFX project can be configured to use a React frontend by replacing and restructuring asset files.
+- The index.js file should be renamed to index.jsx for compatibility with React and webpack.
+- The webpack configuration must be updated to recognize the new entry point and enable React support.
+- Additional configuration files and dependencies are required for building and running the React frontend within the DFX project.

@@ -18,3 +18,7 @@ We will create a public function in Motoko called `removeNote`. It will take an 
       // Implementation will go here
     };
 ```
+
+## Understanding Motoko Lists: Push, Take, and Drop
+
+Motoko lists do not have a built-in utility to remove an item by index. When you use `push`, it prepends items to the list. For example, adding A, B, C, D results in the list being in reverse order: D, C, B, A.

@@ -72,3 +72,13 @@ import { dkeeper } from "../../../declarations/dkeeper";
 ```
 
 The canister name is specified in `dfx.json`. The relative path ensures you access the correct declarations. After running `dfx deploy`, the bridge between JavaScript and Motoko is established, and the `createNote` function becomes available.
+
+## Calling createNote from the Frontend
+
+Inside the `addNote` function, call the Motoko function with the correct arguments. Ensure the order of arguments matches the Motoko function: first the title, then the content.
+
+```js
+dkeeper.createNote(newNote.title, newNote.content);
+```
+
+The attribute names `title` and `content` are defined in the frontend's `createArea` component. This ensures consistency between frontend and backend data structures.

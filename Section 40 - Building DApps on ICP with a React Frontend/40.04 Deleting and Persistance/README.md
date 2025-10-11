@@ -52,3 +52,12 @@ To implement a remove-at-index function, follow these steps:
 ## Integrating with the Frontend
 
 After implementing the backend logic, update the frontend to call the `removeNote` method and pass the appropriate index. This ensures that when a note is deleted, it is removed both from the frontend and the backend, and the deletion persists after a refresh.
+
+## Achieving Persistence with Stable Variables
+
+When you deploy or upgrade your canister, the notes are cleared unless you use the `stable` keyword. By marking the notes variable as `stable`, the data persists across upgrades, providing a permanent storage solution for your application.
+
+```mo
+    // Motoko stable variable declaration
+    stable var notes: List.Text = List.nil<Text>();
+```

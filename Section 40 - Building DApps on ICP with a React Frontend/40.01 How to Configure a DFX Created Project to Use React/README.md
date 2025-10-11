@@ -69,3 +69,19 @@ In another terminal panel, install the required dependencies.
 ```
 
 Warnings about deprecated libraries may appear, but they do not affect the project. It is recommended to keep the dependencies as they are to avoid issues with newer versions.
+
+## Deploying and Testing the Frontend
+
+Deploy the canisters onto the simulated ICP network.
+
+```bash
+    dfx deploy
+```
+
+Once deployment is complete, start the React frontend.
+
+```bash
+    npm start
+```
+
+Navigate to `localhost:8080` in the browser to see the React application running. The frontend is now linked up correctly and hosted locally. Adding notes works, and icons display properly. However, refreshing the page deletes all notes since there is no backend or storage yet.

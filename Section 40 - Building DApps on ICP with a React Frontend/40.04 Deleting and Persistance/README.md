@@ -61,3 +61,14 @@ When you deploy or upgrade your canister, the notes are cleared unless you use t
     // Motoko stable variable declaration
     stable var notes: List.Text = List.nil<Text>();
 ```
+
+## Conclusion
+
+By combining a React frontend with a Motoko backend on the Internet Computer, we have built an application that can add, view, and persistently delete notes. Using the `stable` keyword ensures data is retained even after canister upgrades, making the backend function like a database. This approach allows us to create Web3 applications with the power and beauty of modern Web2 interfaces.
+
+## Key Takeaways
+
+- Implemented backend note deletion in Motoko using `take`, `drop`, and `append` methods.
+- Demonstrated how Motoko lists prepend items and differ structurally from arrays.
+- Achieved persistent storage across canister upgrades by marking variables as `stable`.
+- Integrated frontend and backend for seamless note management in a Web3 application.

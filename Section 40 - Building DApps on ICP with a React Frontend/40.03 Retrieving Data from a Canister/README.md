@@ -37,3 +37,16 @@ useEffect(() => {
 ```
 
 This function takes two parameters: the first is the function to call on re-render, and the second is an array of dependencies. Initially, we log when `useEffect` is triggered to confirm it works.
+
+## Fetching Data Asynchronously
+
+Inside `useEffect`, we call a function called `fetchData`. We separate this function because it needs to be asynchronous, and `useEffect` itself cannot be asynchronous.
+
+```js
+async function fetchData() {
+  const notesArray = await dkeeper.readNotes();
+  setNotes(notesArray);
+}
+```
+
+We call `fetchData` inside `useEffect` to retrieve the notes from our Motoko code. The result is stored in a local constant, and we use `setNotes` to update the state. This triggers a re-render since the state has changed.

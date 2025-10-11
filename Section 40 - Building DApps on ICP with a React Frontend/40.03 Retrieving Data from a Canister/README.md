@@ -72,3 +72,14 @@ setNotes((prevNotes) => [newNote, ...prevNotes]);
 ```
 
 Now, when we add a new note, it appears at the top. Refreshing the website does not change the order, and everything works as expected.
+
+## Summary
+
+In this lesson, we have persisted our notes and can read them from the backend using the ICP blockchain. We also fixed the note addition logic so that the order is more logical. In the next lesson, we will implement deletion so that notes removed from the frontend are also removed from the backend.
+
+## Key Takeaways
+
+- Implemented a public query function in Motoko to read notes efficiently from the canister.
+- Used the `toArray` function to convert a list of notes to an array for easier handling in JavaScript.
+- Leveraged React's `useEffect` hook to fetch and update notes on initial render, preventing infinite re-renders with a dependency array.
+- Adjusted note addition logic to ensure new notes appear at the top, maintaining reverse chronological order.

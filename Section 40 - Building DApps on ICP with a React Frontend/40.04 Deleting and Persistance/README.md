@@ -48,3 +48,7 @@ To implement a remove-at-index function, follow these steps:
     let listBack = List.drop(notes, id + 1);
     notes := List.append(listFront, listBack);
 ```
+
+## Integrating with the Frontend
+
+After implementing the backend logic, update the frontend to call the `removeNote` method and pass the appropriate index. This ensures that when a note is deleted, it is removed both from the frontend and the backend, and the deletion persists after a refresh.

@@ -50,3 +50,15 @@ async function fetchData() {
 ```
 
 We call `fetchData` inside `useEffect` to retrieve the notes from our Motoko code. The result is stored in a local constant, and we use `setNotes` to update the state. This triggers a re-render since the state has changed.
+
+## Preventing Infinite Loops in useEffect
+
+If we are not careful, updating the state inside `useEffect` can cause an infinite loop, as each update triggers another render and thus another call to `useEffect`. To prevent this, we use the second parameter of `useEffect`, an empty array, to ensure it only runs once when the component mounts.
+
+```js
+useEffect(() => {
+  fetchData();
+}, []);
+```
+
+Now, `useEffect` is triggered only once. When we add a note and click add, the note appears. When we reload, the notes persist because they are read from the Motoko backend on the blockchain.

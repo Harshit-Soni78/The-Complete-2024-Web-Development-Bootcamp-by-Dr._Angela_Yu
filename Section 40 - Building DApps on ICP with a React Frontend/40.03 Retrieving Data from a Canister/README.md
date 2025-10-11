@@ -13,3 +13,13 @@ We are creating a public query function called `readNotes`. It will not accept a
 ### Why Store Notes as a List?
 
 We store notes as a list because, for operations like pushing notes or finding a note to delete, working with a serialized array is not efficient on the blockchain. When reading, we convert the list to an array before returning it.
+
+## Converting a List to an Array in Motoko
+
+We use the `toArray` function from the List documentation to convert a list to an array. This function takes the list you want to convert and returns it as an array.
+
+```mo
+    List.toArray(notes)
+```
+
+We pass our notes into this function and return the result as an array of Note objects. The Motoko side is straightforward, but we now need to address how to retrieve this data when our page loads.

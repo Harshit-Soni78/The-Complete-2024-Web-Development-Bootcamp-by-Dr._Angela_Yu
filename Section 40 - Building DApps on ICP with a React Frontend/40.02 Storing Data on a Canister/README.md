@@ -41,3 +41,24 @@ Next, create a variable called `notes` of type `List<Note>`. This is similar to 
 ```
 
 If you see an error about an unbound variable `List`, import it from the Motoko base library as shown above.
+
+## Creating the createNote Function
+
+Now, create a public function called `createNote`. This function will accept two parameters: `titleText` and `contentText`, both of type `Text`. It will create a new Note and add it to the notes list.
+
+```mo
+    public func createNote(titleText : Text, contentText : Text) : async () {
+      let newNote : Note = {
+        title = titleText;
+        content = contentText;
+      };
+      notes := List.push(newNote, notes);
+      Debug.print(debug_show(notes));
+    };
+```
+
+The `List.push` function adds the new note to the beginning of the list. Unlike JavaScript arrays, this prepends the item. To update the list, assign the result back to `notes` using the `:=` operator. Import the Debug library to print the notes list for verification.
+
+```mo
+    import Debug "mo:base/Debug";
+```

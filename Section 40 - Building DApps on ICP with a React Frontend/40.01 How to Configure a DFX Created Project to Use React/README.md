@@ -31,3 +31,7 @@ Expand the `src` folder inside the project. Within it, there is a `dkeeper` fold
 Download the finished Keeper project from the course resources. Extract the zip file and open the folder. Inside the `public` folder are `index.html` and `styles.css`, and inside the `src` folder are the components and `index.js`.
 
 Move `index.html` and the `components` folder, along with `index.js`, into the `src` folder of the DFX project. Place `styles.css` into the `assets` folder. This transfers the entire React frontend into the new DFX project.
+
+## Renaming for React Compatibility
+
+The `index.js` file must be renamed to `index.jsx` to ensure compatibility with webpack and React. This is a common extension for React components and applications.

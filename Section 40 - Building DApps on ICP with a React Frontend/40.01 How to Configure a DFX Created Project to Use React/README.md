@@ -35,3 +35,13 @@ Move `index.html` and the `components` folder, along with `index.js`, into the `
 ## Renaming for React Compatibility
 
 The `index.js` file must be renamed to `index.jsx` to ensure compatibility with webpack and React. This is a common extension for React components and applications.
+
+## Modifying Webpack Configuration
+
+Open `webpack.config.js` and locate the `entry` property in the `module.exports` section. Update the entry to point to the new `index.jsx` file.
+
+```js
+    entry: './src/index.jsx',
+```
+
+Scroll down to the section with a comment about React. Uncomment the section to enable the TypeScript loader, which is necessary for running and loading the React application.

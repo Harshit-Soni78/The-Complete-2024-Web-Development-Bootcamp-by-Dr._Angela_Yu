@@ -33,3 +33,18 @@ To remove an item at a specific index, combine these methods. For example, to re
 - Use `take(list, 2)` to get D and C.
 - Use `drop(list, 3)` to get A.
 - Append the results to get D, C, A.
+
+## Implementing Remove by Index
+
+To implement a remove-at-index function, follow these steps:
+
+1. Use `take(notes, id)` to get the front part of the list.
+2. Use `drop(notes, id + 1)` to get the back part of the list.
+3. Append the two lists to exclude the item at the specified index.
+
+```mo
+    // Motoko code to remove a note at a given index
+    let listFront = List.take(notes, id);
+    let listBack = List.drop(notes, id + 1);
+    notes := List.append(listFront, listBack);
+```

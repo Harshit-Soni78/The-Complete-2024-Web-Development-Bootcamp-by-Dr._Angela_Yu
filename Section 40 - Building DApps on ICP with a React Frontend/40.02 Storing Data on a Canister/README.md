@@ -82,3 +82,7 @@ dkeeper.createNote(newNote.title, newNote.content);
 ```
 
 The attribute names `title` and `content` are defined in the frontend's `createArea` component. This ensures consistency between frontend and backend data structures.
+
+## Testing the Integration
+
+After deploying with `dfx deploy`, refresh the Keeper app and create a new note. When you click Add, the frontend updates immediately due to React's state management. To verify the backend, check the terminal running `dfx start` for the debug print statement showing the updated notes list.

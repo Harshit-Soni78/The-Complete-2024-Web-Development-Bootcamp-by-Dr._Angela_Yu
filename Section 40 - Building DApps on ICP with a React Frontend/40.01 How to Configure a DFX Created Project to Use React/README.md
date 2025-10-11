@@ -21,3 +21,7 @@ The first step is to create a new ICP application. Navigate to the desired direc
 ```
 
 After running the command, the project is created. Once the Dfinity logo appears, the setup is complete. The project can then be opened in Visual Studio Code by navigating to the `ic-projects` directory and selecting the new `dkeeper` application.
+
+## Preparing the Project for React
+
+Expand the `src` folder inside the project. Within it, there is a `dkeeper` folder containing the main Motoko file, and a `dkeeper_assets` folder containing the assets and source files. The files `index.html`, `styles.css`, and `index.js` in the assets should be deleted to prepare for the React frontend.

@@ -25,3 +25,9 @@ After running the command, the project is created. Once the Dfinity logo appears
 ## Preparing the Project for React
 
 Expand the `src` folder inside the project. Within it, there is a `dkeeper` folder containing the main Motoko file, and a `dkeeper_assets` folder containing the assets and source files. The files `index.html`, `styles.css`, and `index.js` in the assets should be deleted to prepare for the React frontend.
+
+## Importing React Files
+
+Download the finished Keeper project from the course resources. Extract the zip file and open the folder. Inside the `public` folder are `index.html` and `styles.css`, and inside the `src` folder are the components and `index.js`.
+
+Move `index.html` and the `components` folder, along with `index.js`, into the `src` folder of the DFX project. Place `styles.css` into the `assets` folder. This transfers the entire React frontend into the new DFX project.

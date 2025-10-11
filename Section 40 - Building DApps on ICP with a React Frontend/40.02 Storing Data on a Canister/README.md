@@ -86,3 +86,14 @@ The attribute names `title` and `content` are defined in the frontend's `createA
 ## Testing the Integration
 
 After deploying with `dfx deploy`, refresh the Keeper app and create a new note. When you click Add, the frontend updates immediately due to React's state management. To verify the backend, check the terminal running `dfx start` for the debug print statement showing the updated notes list.
+
+## Conclusion
+
+We have successfully implemented the 'Create' aspect of CRUD in our Motoko backend, storing new notes in a list. In the next lesson, we will move on to the 'Read' aspect, enabling the retrieval of notes so they persist after refreshing.
+
+## Key Takeaways
+
+- Successfully set up a Motoko backend to persist user data in a decentralized Internet Computer app.
+- Defined a custom Note data type and managed a list of notes using Motoko's List module.
+- Linked Motoko backend functions to the JavaScript frontend, enabling note creation from the UI.
+- Demonstrated the CRUD 'Create' operation, storing notes on the backend and verifying with debug output.

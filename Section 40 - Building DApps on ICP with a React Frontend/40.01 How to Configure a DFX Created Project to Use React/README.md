@@ -53,3 +53,19 @@ Download the `tsconfig.json` file from the course resources and add it to the `d
 ## Updating Dependencies
 
 Open `package.json` and delete all existing content. Then, download `package.txt` from the course resources, copy its contents, and paste them into `package.json`. This adds the necessary dependencies for the project.
+
+## Running the Project Locally
+
+Open a new terminal and start the simulated local ICP blockchain.
+
+```bash
+    dfx start
+```
+
+In another terminal panel, install the required dependencies.
+
+```bash
+    npm install
+```
+
+Warnings about deprecated libraries may appear, but they do not affect the project. It is recommended to keep the dependencies as they are to avoid issues with newer versions.

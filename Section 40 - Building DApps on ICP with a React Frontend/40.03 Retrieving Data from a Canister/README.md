@@ -9,3 +9,7 @@ Currently, whenever we create a Note and refresh our front end, it disappears. H
 To retrieve notes, we will work on our back-end and create a new function. This will be a public function. When reading from the ICP blockchain, it is much faster if we do not need to modify anything. Since we are only reading the list of notes, we can add the `query` keyword to speed up the process.
 
 We are creating a public query function called `readNotes`. It will not accept any inputs, but it will return asynchronously an array of notes. An array in Motoko is structurally similar to arrays in JavaScript, making it easier to work with in our JavaScript code.
+
+### Why Store Notes as a List?
+
+We store notes as a list because, for operations like pushing notes or finding a note to delete, working with a serialized array is not efficient on the blockchain. When reading, we convert the list to an array before returning it.

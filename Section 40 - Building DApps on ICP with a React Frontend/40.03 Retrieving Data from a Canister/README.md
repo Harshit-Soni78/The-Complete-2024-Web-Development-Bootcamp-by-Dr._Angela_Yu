@@ -23,3 +23,17 @@ We use the `toArray` function from the List documentation to convert a list to a
 ```
 
 We pass our notes into this function and return the result as an array of Note objects. The Motoko side is straightforward, but we now need to address how to retrieve this data when our page loads.
+
+## Fetching Notes on Page Load with React
+
+When we add a new note, the `setNotes` method ensures the notes constant is updated. Since we use the `useState` hook, any update triggers a re-render and displays the new note. To fetch notes when the website first loads, we use another React hook called `useEffect`.
+
+The `useEffect` hook is triggered every time the render function is called in React. This includes the first time the website is rendered. We add this to our code to trigger a function whenever the app component is re-rendered.
+
+```js
+useEffect(() => {
+  console.log("useEffect is triggered");
+}, []);
+```
+
+This function takes two parameters: the first is the function to call on re-render, and the second is an array of dependencies. Initially, we log when `useEffect` is triggered to confirm it works.

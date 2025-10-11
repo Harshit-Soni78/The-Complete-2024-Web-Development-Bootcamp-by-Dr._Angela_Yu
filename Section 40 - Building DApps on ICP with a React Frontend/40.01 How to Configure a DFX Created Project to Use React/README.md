@@ -49,3 +49,7 @@ Scroll down to the section with a comment about React. Uncomment the section to 
 ## Adding TypeScript Configuration
 
 Download the `tsconfig.json` file from the course resources and add it to the `dkeeper` project, placing it below the `webpack.config.js` file. This file contains configuration for compiling the code and specifying JavaScript versions.
+
+## Updating Dependencies
+
+Open `package.json` and delete all existing content. Then, download `package.txt` from the course resources, copy its contents, and paste them into `package.json`. This adds the necessary dependencies for the project.

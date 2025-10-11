@@ -62,3 +62,13 @@ The `List.push` function adds the new note to the beginning of the list. Unlike 
 ```mo
     import Debug "mo:base/Debug";
 ```
+
+## Linking Motoko with JavaScript Frontend
+
+To connect the Motoko backend with the JavaScript frontend, import the canister in your `app.jsx` file. The function `addNote()` in the frontend is triggered when the user presses the add button. This function needs to call `createNote` on the backend.
+
+```js
+import { dkeeper } from "../../../declarations/dkeeper";
+```
+
+The canister name is specified in `dfx.json`. The relative path ensures you access the correct declarations. After running `dfx deploy`, the bridge between JavaScript and Motoko is established, and the `createNote` function becomes available.

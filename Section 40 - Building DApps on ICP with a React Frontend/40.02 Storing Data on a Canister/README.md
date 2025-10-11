@@ -29,3 +29,15 @@ Add the `public` keyword to the type definition so it can be accessed from JavaS
       content : Text;
     };
 ```
+
+### Creating the Notes List
+
+Next, create a variable called `notes` of type `List<Note>`. This is similar to arrays in JavaScript but with some differences. The list will start as empty using `List.nil<Note>()`.
+
+```mo
+    import List "mo:base/List";
+
+    var notes : List.List<Note> = List.nil<Note>();
+```
+
+If you see an error about an unbound variable `List`, import it from the Motoko base library as shown above.

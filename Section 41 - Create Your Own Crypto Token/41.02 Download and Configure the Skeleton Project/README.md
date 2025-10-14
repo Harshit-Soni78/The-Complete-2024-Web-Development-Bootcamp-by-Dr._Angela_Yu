@@ -46,3 +46,19 @@ To use a HashMap, it must be imported. The balances variable is set to a new Has
 ```
 
 This code sets up the owner, total supply, symbol, and initializes the balances HashMap. The owner's Principal is added to the ledger with the total supply of tokens.
+
+## Implementing the balanceOf Method
+
+To check a user's balance, a public query function called `balanceOf` is created. This function takes a Principal as input and returns the associated balance from the HashMap. If the Principal does not exist in the ledger, it returns 0.
+
+```mo
+    public query func balanceOf(who : Principal) : async Nat {
+      let balance : Nat = switch (balances.get(who)) {
+        case (null) 0;
+        case (?result) result;
+      };
+      return balance;
+    }
+```
+
+The `balanceOf` method uses a switch statement to handle the Option type returned by `balances.get(who)`. If the result is null, it returns 0; otherwise, it returns the balance.

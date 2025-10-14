@@ -33,3 +33,13 @@ The installation may take some time depending on your internet speed and compute
 During installation, you might see warnings about deprecated packages. These are minor and will not affect the functionality or security of the website.
 
 For example, some Material-UI icons may have been renamed to MUI icons, but this will not impact our project.
+
+### Deploying the Backend
+
+Next, we need to deploy our backend canister.
+
+Note that the `main.mo` file has had all starter code removed.
+
+Run `dfx deploy` in a new terminal window. This command builds and installs the canister onto the locally running ICP blockchain.
+
+You will see folders such as `dist` and `declarations` being created during this process.

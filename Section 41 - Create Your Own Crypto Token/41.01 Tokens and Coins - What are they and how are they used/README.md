@@ -31,3 +31,13 @@ Additionally, the Shiba token creators sent half of the total circulating supply
 Vitalik Buterin burned many of the Shiba tokens he received, which means destroying them or sending them to an inaccessible wallet. He kept about 1 billion tokens, which he donated to the Indian COVID relief fund. He requested not to be sent such tokens in the future to avoid involvement.
 
 This story helped legitimize the Shiba token because it implied that the Ethereum founder owned some, supporting their marketing campaign.
+
+### Uses of Tokens
+
+Tokens are used for various purposes:
+
+- **Payment:** You can exchange tokens for other tokens, services, or products.
+- **Equity:** Tokens can represent voting rights in decentralized applications. For example, ICP tokens can be staked to vote on agendas and earn rewards, similar to owning shares in a company.
+- **Utility:** Tokens can provide access to functionalities within applications or blockchains. For instance, cycles obtained from the Faucet are tokens used to pay for computing cycles on the Internet Computer.
+- **Representation of Real-World Assets:** Some tokens represent physical items, such as the WPR token on the WePower blockchain, which represents energy and allows direct exchange between providers and consumers.
+- **Gaming:** Tokens like AXS in Axie Infinity can be earned by playing games and used for payment, staking, or governance.

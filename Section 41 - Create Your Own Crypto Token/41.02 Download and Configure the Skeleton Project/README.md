@@ -43,3 +43,21 @@ Note that the `main.mo` file has had all starter code removed.
 Run `dfx deploy` in a new terminal window. This command builds and installs the canister onto the locally running ICP blockchain.
 
 You will see folders such as `dist` and `declarations` being created during this process.
+
+### Starting the Frontend
+
+Once deployment completes and you see "deployed canisters" in the terminal, run `npm start`.
+
+This will launch the frontend on `localhost:8080`. You can open this URL in your browser to view the DSurv website.
+
+The website includes the following sections:
+
+- **Faucet:** Allows users to claim some tokens for free.
+- **Check Balance:** Enables checking an account's token balance.
+- **Transfer:** Allows transferring custom tokens to another account.
+
+Ensure everything is running without errors in the console.
+
+If you encounter any issues, review the video and trace the steps carefully to resolve them.
+
+Once you have the project running successfully, proceed to the next lesson where we will build the Check Balance functionality on the backend and connect it with the frontend.

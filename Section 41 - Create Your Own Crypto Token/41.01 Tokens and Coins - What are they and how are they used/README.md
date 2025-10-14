@@ -25,3 +25,9 @@ In contrast, tokens do not require mining or creating a blockchain. Instead, you
 The Shiba token creators took advantage of the large Ethereum user base. Since the Shiba token is on Ethereum, they could use existing Ethereum exchanges like Uniswap. This allowed massive trading activity from the start, unlike Dogecoin, which had to build a following over time and required an exchange for people to acquire coins.
 
 Additionally, the Shiba token creators sent half of the total circulating supply, about a quadrillion tokens, to Vitalik Buterin, the founder of Ethereum. They sent it to one of his cold wallets, which is offline and requires two pieces of paper to access. During COVID, it was difficult for him to access these tokens. He wanted to get rid of them to avoid being seen as supporting these tokens or influencing their value.
+
+### Burning Tokens and Donations
+
+Vitalik Buterin burned many of the Shiba tokens he received, which means destroying them or sending them to an inaccessible wallet. He kept about 1 billion tokens, which he donated to the Indian COVID relief fund. He requested not to be sent such tokens in the future to avoid involvement.
+
+This story helped legitimize the Shiba token because it implied that the Ethereum founder owned some, supporting their marketing campaign.

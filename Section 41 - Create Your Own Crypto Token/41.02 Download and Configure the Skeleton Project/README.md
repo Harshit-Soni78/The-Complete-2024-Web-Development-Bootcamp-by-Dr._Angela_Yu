@@ -96,3 +96,14 @@ Now, use this variable to check the owner's balance by calling the `balanceOf` m
 ```
 
 The result should show that the owner's Principal ID has one billion tokens, confirming that the balances HashMap and the `balanceOf` method are working as intended.
+
+## Conclusion
+
+The backend is now set up to track token balances using a HashMap and allows querying balances with the `balanceOf` method. The next step will be to connect the backend with the frontend to display balances on the website.
+
+## Key Takeaways
+
+- The Principal type in Motoko is used to uniquely identify users and canisters on the Internet Computer.
+- HashMaps in Motoko are used to efficiently store and retrieve token balances by mapping Principal IDs to token amounts.
+- The balanceOf method allows querying the balance of a given Principal, handling cases where the Principal does not exist in the ledger.
+- Proper formatting and use of Principal IDs are essential when interacting with canister methods from the command line.

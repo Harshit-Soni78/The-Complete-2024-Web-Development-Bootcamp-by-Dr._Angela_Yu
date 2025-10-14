@@ -13,3 +13,13 @@ To assign a balance to a user, it is necessary to identify the user. On the Inte
 ```
 
 This command returns the Principal ID of the default user, which will be used to assign tokens when creating the canister. All freshly minted tokens, such as one billion tokens, will be assigned to the owner identified by this Principal ID.
+
+## Creating the Token Actor and Variables
+
+A new actor named `Token` is created in `main.mo`. Inside this actor, several variables are defined:
+
+- `owner`: Assigned the Principal ID obtained earlier, using the Principal type.
+- `totalSupply`: The total supply of the token, set as a natural number (Nat), for example, one billion.
+- `symbol`: The symbol for the token, such as "DANG" for Decentralized Angela Coin.
+
+To use the Principal type, it must be imported, and the `fromText` method is used to convert the Principal ID string into a Principal type.

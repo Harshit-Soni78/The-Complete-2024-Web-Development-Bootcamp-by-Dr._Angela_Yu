@@ -62,3 +62,37 @@ To check a user's balance, a public query function called `balanceOf` is created
 ```
 
 The `balanceOf` method uses a switch statement to handle the Option type returned by `balances.get(who)`. If the result is null, it returns 0; otherwise, it returns the balance.
+
+## Deploying and Querying the Canister
+
+After updating the code, save the `main.mo` file and deploy the canister using the following command:
+
+```bash
+    dfx deploy
+```
+
+To call the `balanceOf` method from the command line, the Principal ID must be formatted correctly. First, obtain the Principal ID:
+
+```bash
+    dfx identity get -principal
+```
+
+Save the Principal ID for future use. To format it for the `balanceOf` method, create a variable in the command line:
+
+```bash
+    OWNER_PUBLIC_KEY='principal "$(dfx identity get -principal)"'
+```
+
+Verify the variable with the echo command:
+
+```bash
+    echo $OWNER_PUBLIC_KEY
+```
+
+Now, use this variable to check the owner's balance by calling the `balanceOf` method on the token canister:
+
+```bash
+    dfx canister call token balanceOf $OWNER_PUBLIC_KEY
+```
+
+The result should show that the owner's Principal ID has one billion tokens, confirming that the balances HashMap and the `balanceOf` method are working as intended.

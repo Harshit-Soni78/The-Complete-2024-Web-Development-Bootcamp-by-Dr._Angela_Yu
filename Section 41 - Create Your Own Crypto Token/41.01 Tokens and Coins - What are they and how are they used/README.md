@@ -19,3 +19,9 @@ On the other hand, the Shiba token is often called a coin, but it is actually a 
 To create a coin, you first need to create a blockchain. This is not very hard if you copy an existing blockchain, but to secure your blockchain, you need a large number of miners willing to mine your coin. For example, Bitcoin and Dogecoin use a lot of energy and resources for mining. You also need people who believe in your coin's future to spend energy mining it.
 
 In contrast, tokens do not require mining or creating a blockchain. Instead, you write code for the ledger and specify how your token is transferred and recorded on the ledger. This makes token creation much simpler.
+
+### How Shiba Token Gained Prominence
+
+The Shiba token creators took advantage of the large Ethereum user base. Since the Shiba token is on Ethereum, they could use existing Ethereum exchanges like Uniswap. This allowed massive trading activity from the start, unlike Dogecoin, which had to build a following over time and required an exchange for people to acquire coins.
+
+Additionally, the Shiba token creators sent half of the total circulating supply, about a quadrillion tokens, to Vitalik Buterin, the founder of Ethereum. They sent it to one of his cold wallets, which is offline and requires two pieces of paper to access. During COVID, it was difficult for him to access these tokens. He wanted to get rid of them to avoid being seen as supporting these tokens or influencing their value.

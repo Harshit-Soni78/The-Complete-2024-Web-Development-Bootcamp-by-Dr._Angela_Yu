@@ -41,3 +41,14 @@ Tokens are used for various purposes:
 - **Utility:** Tokens can provide access to functionalities within applications or blockchains. For instance, cycles obtained from the Faucet are tokens used to pay for computing cycles on the Internet Computer.
 - **Representation of Real-World Assets:** Some tokens represent physical items, such as the WPR token on the WePower blockchain, which represents energy and allows direct exchange between providers and consumers.
 - **Gaming:** Tokens like AXS in Axie Infinity can be earned by playing games and used for payment, staking, or governance.
+
+### Conclusion and Next Steps
+
+With this understanding, we are ready to start creating our own tokens. In this tutorial, I will create a custom token called the DAngela token, or DANG for short, as our currency. Let's begin creating awesome tokens on the Internet Computer.
+
+## Key Takeaways
+
+- Tokens are created on existing blockchains, whereas coins require their own blockchain.
+- Dogecoin is a coin with its own blockchain, while Shiba Inu is a token built on Ethereum.
+- Creating a coin involves building a blockchain and recruiting miners, which requires significant resources.
+- Tokens can be used for payments, equity, governance, utility, and represent real-world assets.

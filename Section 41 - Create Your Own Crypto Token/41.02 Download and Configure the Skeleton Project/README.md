@@ -61,3 +61,10 @@ Ensure everything is running without errors in the console.
 If you encounter any issues, review the video and trace the steps carefully to resolve them.
 
 Once you have the project running successfully, proceed to the next lesson where we will build the Check Balance functionality on the backend and connect it with the frontend.
+
+## Key Takeaways
+
+- Download and unzip the starting project to begin building a custom token.
+- The project is pre-configured with React, TypeScript, and Webpack for development.
+- Use `dfx start` to launch a local ICP blockchain simulator and `npm install` to install dependencies.
+- Deploy the backend canister with `dfx deploy` and run the frontend locally with `npm start` to view the DSurv website.

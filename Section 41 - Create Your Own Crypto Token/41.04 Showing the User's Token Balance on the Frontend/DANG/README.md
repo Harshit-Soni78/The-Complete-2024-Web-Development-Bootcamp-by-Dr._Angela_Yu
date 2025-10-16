@@ -8,7 +8,7 @@
 
 2. Save it somewhere.
 
-   e.g. My principal id is: gbdev-tyqsv-hnvqv-7mgz4-4kcfl-wbv6x-6khez-y56gq-uohqs-quomc-uqe
+   e.g. My principal id is: 63nnq-bagp5-imzum-enjum-2dfo5-uc644-ltud4-sq6kk-2ukgm-764oy-uqe
 
 3. Format and store it in a command line variable:
 

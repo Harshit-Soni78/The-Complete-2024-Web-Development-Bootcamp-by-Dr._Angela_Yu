@@ -55,3 +55,17 @@ Once the preupgrade is done, we have shifted our entries from the HashMap into t
 In the postupgrade, we assign the balances HashMap a new value using `HashMap.fromIter`. We define the key and value types as Principal and Nat. We use `balanceEntries.val()` to get an iterable of all the tuples inside our balance entries. We also supply the same arguments as when we created our HashMap: the starting size, the equality checker, and the hashing method.
 
 Now, we have completed our preupgrade and postupgrade process to move our HashMap into our stable balanceEntries array and then get the values back after the upgrade.
+
+## Initializing the Ledger Correctly
+
+There is one more thing to fix: the `balances.put` statement. This assigns the owner the total supply of tokens when we first create our balances ledger. If this code is called every time the upgrade method runs, it will reset the ledger and always give the owner the total supply, which is not correct.
+
+```mo
+    if (balances.size() < 1) {
+      balances.put(owner, totalSupply);
+    }
+```
+
+We move this code into the postupgrade method and add an if-statement to check if the balances HashMap has a size less than one. If it does, we put the owner and the totalSupply as the only keys and values inside our balances HashMap. This ensures that the only way our balances are modified is through the transfer method.
+
+We can turn our balances HashMap into a private variable so that only the token actor can modify it. No other file, canister, or class will be able to accidentally modify it. Similarly, we should make balanceEntries private, as it should only be modified in preupgrade and postupgrade.

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { Principal } from "@dfinity/principal";
+import { DANG_backend } from "../../../declarations/DANG_backend";
 
 function Balance() {
-  
-  async function handleClick() {
-    console.log("Balance Button Clicked");
-  }
+  const [inputValue, setInput] = useState("");
+  const [balanceResult, setBalance] = useState("");
+  const [cryptoSymbol, setSymbol] = useState("");
+  const [isHidden, setHidden] = useState(true);
 
+  async function handleClick() {
+    // console.log(inputValue);
+    const principal = Principal.fromText(inputValue);
+    const balance = await DANG_backend.balanceOf(principal);
+    setBalance(balance.toLocaleString());
+    setSymbol(await DANG_backend.getSymbol());
+    setHidden(false);
+  }
 
   return (
     <div className="window white">
@@ -15,17 +25,16 @@ function Balance() {
           id="balance-principal-id"
           type="text"
           placeholder="Enter a Principal ID"
+          value={inputValue}
+          onChange={(e) => setInput(e.target.value)}
         />
       </p>
       <p className="trade-buttons">
-        <button
-          id="btn-request-balance"
-          onClick={handleClick}
-        >
+        <button id="btn-request-balance" onClick={handleClick}>
           Check Balance
         </button>
       </p>
-      <p>This account has a balance of XYZ.</p>
+      <p hidden={isHidden}>This account has a balance of {balanceResult} {cryptoSymbol}.</p>
     </div>
   );
 }

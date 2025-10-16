@@ -113,3 +113,38 @@ setSymbol(await token.getSymbol());
 ```
 
 Display the symbol next to the balance result in the UI.
+
+## Handling Backend Changes
+
+If you see a type error such as 'token... is not a function,' it is likely because the backend Motoko code was updated but not redeployed. The frontend server restarts automatically with `npm start`, but you must manually run `dfx deploy` to update the backend and declarations.
+
+```bash
+    dfx deploy
+```
+
+After deploying, the frontend can now access the new method and display the symbol.
+
+## Improving User Experience
+
+To hide the feedback message when there are no accounts, create a constant `isHidden` and a setter `setHidden`, starting with a value of `true`. Set the `hidden` attribute on the paragraph to `isHidden`, and set it to `false` after fetching the balance and symbol.
+
+```js
+const [isHidden, setHidden] = useState(true);
+```
+
+```js
+setHidden(false);
+```
+
+Now, the feedback message is hidden initially and only appears after checking the balance, improving the frontend's appearance and user experience.
+
+## Conclusion
+
+The balance checking mechanism is now complete. The frontend fetches and displays the user's balance and currency symbol, and the user experience is improved by hiding feedback messages until relevant data is available. The next step is to implement the Faucet functionality to allow users to receive free tokens.
+
+## Key Takeaways
+
+- Implemented frontend logic to fetch and display user token balances using React state and backend queries.
+- Converted user input into Principal type for backend compatibility.
+- Added currency symbol display by extending both Motoko backend and frontend code.
+- Improved user experience by conditionally hiding feedback messages until relevant data is available.

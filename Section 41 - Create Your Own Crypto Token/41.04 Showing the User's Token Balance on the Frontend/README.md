@@ -53,3 +53,17 @@ const principal = Principal.fromText(inputValue);
 ```
 
 This converts whatever the user types into the input into a Principal type, which we then use to call the `balanceOf()` method from our backend.
+
+## Importing the Token Actor
+
+To call backend methods, we need to import our actor, which is our token canister, from the correct relative path.
+
+```js
+import { token } from "../../../declarations/token_bridge";
+```
+
+Now, we can call `await token.balanceOf(principal)`, passing in the Principal we created.
+
+```js
+const balance = await token.balanceOf(principal);
+```

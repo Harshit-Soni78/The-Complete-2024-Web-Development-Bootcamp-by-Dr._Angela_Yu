@@ -23,3 +23,35 @@ Now, what if we call this `transfer()` method, which then calls the `payOut()` m
 You can see that this ID is neither the frontend Principal ID when we clicked the button to call that method, nor is it the user Principal that we called previously from our command line. Instead, it is this. You might be a little bit familiar with this because every time we do `dfx deploy`, you will see it. It says, "Deploying all canisters. All canisters have been created." Then it says something about, "Upgrading code for canister token, with the canister_id", and there it is. It matches this.
 
 Essentially, what is happening here is when you call a method from another method, it is this canister that is actually calling this method. So in this case, the `msg.caller` is this entire actor, this token canister. That is why we get that canister ID being printed here. This is really important in order for us to make our transfer function work.
+
+## Implementing the Transfer Function
+
+Let us restore some of this code for our Faucet function, and work on our transfer function for real this time. Firstly, we are also going to make this a public shared function with the parameter `msg`, and we are also going to give it an async return, which is going to be a piece of text similar to before.
+
+What do we want to do when we transfer some token from one account to another? We want to subtract the amount that they want to transfer from the account that is being transferred from, and then we want to add that amount to the account that is being transferred to.
+
+In this transfer function, we need to add two parameters: the `to`, which is going to be a Principal ID type, and the `amount`, which is going to be the amount that we are going to transfer to that particular account. You will notice that we do not have the transfer from in this function. Why is that? The transfer from is going to be the message caller. Whoever triggers this function is going to be the one where the money is going to be taken from.
+
+When we call this method from the frontend, when we click on that button, the debug_show showed us that the `msg.caller` is the Principal ID of the frontend user. When we do that here, it is also going to take the from account as the principal of the person using the website, and then they are going to provide the Principal ID of the account they want to transfer to, and the amount they want to transfer.
+
+So then it is just a matter of a little bit of math. The first thing we can figure out is what is the fromBalance? The person who is going to be doing the transfer. We can work that out by using our `balanceOf()` method and passing in the `msg.caller` as the principal.
+
+If you are worried about these error messages, it is because we are expecting a return here of type text. If we just add a `return "Success"` at the very bottom, then we can actually write our code in peace. Once we have gotten hold of the balance of the account we are transferring from, we can do a quick check to see if the fromBalance is greater than the amount that we want to transfer, because otherwise we cannot really do the transfer, right?
+
+If they have enough money, we are going to return "Success", but otherwise we are going to return "Insufficient funds". Remember that this `balanceOf` returns asynchronously, so in order to fix this error, we have to make sure we have the `await` in front here.
+
+We are going to get the balance of the caller of this transfer method, and we are going to wait for it until it is done. Then we are going to check to see if they actually have enough money, if they have more money than they want to transfer. If they do, then we are going to actually make the transfer go through.
+
+What does that actually mean in terms of math? We are going to subtract this amount from their balance and add this amount to the person they want to transfer to. It is pretty simple, just a bit of addition and subtraction.
+
+Let us create a new constant: `let newFromBalance = fromBalance - amount`. Because Motoko thinks that this can go below zero, even though we definitely know it cannot, we have to add a data type explicitly here and that will make that warning go away.
+
+Once we have figured out the new balance of the account that we are transferring from, then we can update our ledger of balances to this new amount for this user, which is `msg.caller`. So we can say `balances.put`, and we are basically going to replace the entry here. We are going to put in the `msg.caller`'s ID as the key, and for them we are going to update their value to the newFromBalance. This basically just does the subtraction from the account.
+
+The other aspect is to add the amount to the account that is being transferred to. But let us first figure out what is the balance of the owner that we are transferring the money to. So we can say, `let toBalance = balanceOf`, and then we pass in the Principal ID, which comes from this `to` parameter, which basically the user is actually going to type in or paste in. It is going to be the long form sort of principal ID of the account that they want to transfer to.
+
+Once we have figured out their balance, and you will notice that in our `balanceOf` method, we have already taken care of the case where that user does not actually exist. Then we are just going to assign them a balance of zero. Once we have done that, the next step is to add the amount that we want to transfer, so the `newToBalance`, which is the `toBalance + amount`.
+
+Again, we have to await for the results of `balanceOf` before we can execute this line, so adding the `await` keyword before the `balanceOf`. Finally, we are going to put into our HashMap the new updated balance. The key is the Principal ID of the to account, and the value is the newToBalance.
+
+In those few lines of code, we have just done a little bit of simple math. We have subtracted the amount from the balance of the sender, and we have added the amount to the balance of the recipient. Then we have basically updated our ledger with this new information. We return "Success" if they had enough balance, which means all of this should succeed, but otherwise we return "Insufficient funds".

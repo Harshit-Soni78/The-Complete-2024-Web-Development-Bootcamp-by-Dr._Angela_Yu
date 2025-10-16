@@ -74,3 +74,17 @@ const identity = await authClient.getIdentity();
 const userPrincipal = identity._principal.toString();
 console.log(userPrincipal);
 ```
+
+## Passing Principal ID to the Frontend
+
+To display the Principal ID in the frontend, use React props. Pass the `userPrincipal` as a prop named `loggedInPrincipal` to the Faucet component.
+
+```js
+<Faucet userPrincipal={props.loggedInPrincipal} />
+```
+
+In the Faucet component, use the prop to display the Principal ID.
+
+```js
+<label>{props.userPrincipal}</label>
+```

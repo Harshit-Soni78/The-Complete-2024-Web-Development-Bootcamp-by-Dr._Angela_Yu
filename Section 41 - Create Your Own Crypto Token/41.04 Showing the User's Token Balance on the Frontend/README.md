@@ -137,14 +137,3 @@ setHidden(false);
 ```
 
 Now, the feedback message is hidden initially and only appears after checking the balance, improving the frontend's appearance and user experience.
-
-## Conclusion
-
-The balance checking mechanism is now complete. The frontend fetches and displays the user's balance and currency symbol, and the user experience is improved by hiding feedback messages until relevant data is available. The next step is to implement the Faucet functionality to allow users to receive free tokens.
-
-## Key Takeaways
-
-- Implemented frontend logic to fetch and display user token balances using React state and backend queries.
-- Converted user input into Principal type for backend compatibility.
-- Added currency symbol display by extending both Motoko backend and frontend code.
-- Improved user experience by conditionally hiding feedback messages until relevant data is available.

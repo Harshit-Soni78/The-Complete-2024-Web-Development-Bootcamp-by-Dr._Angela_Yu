@@ -3,9 +3,9 @@ import Text "mo:base/Text";
 import HashMap "mo:base/HashMap";
 
 persistent actor Token {
-  transient var owner : Principal = Principal.fromText("63nnq-bagp5-imzum-enjum-2dfo5-uc644-ltud4-sq6kk-2ukgm-764oy-uqe");
-  transient var totalSupply : Nat = 1000000000;
-  transient var symbol : Text = "DANG";
+  var owner : Principal = Principal.fromText("63nnq-bagp5-imzum-enjum-2dfo5-uc644-ltud4-sq6kk-2ukgm-764oy-uqe");
+  var totalSupply : Nat = 1000000000;
+  var symbol : Text = "DANG";
   transient var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
 
   balances.put(owner, totalSupply);
@@ -18,4 +18,9 @@ persistent actor Token {
     };
     return balance;
   };
+
+  public query func getSymbol() : async Text {
+    return symbol;
+  };
+
 };

@@ -53,3 +53,11 @@ In the main initialization logic, we use an `if-else` statement: if the user is 
 This approach ensures a seamless user experience by avoiding redundant login prompts.
 
 After implementing this logic, saving the changes, and refreshing the page, the user is no longer forced to log in again if already authenticated.
+
+## Next Steps: Integrating Authentication with Backend Calls
+
+Once the user is authenticated, this identity should be used as the frontend user identity. For example, when clicking the "Gimme" button in the Faucet component, the DANG tokens should be distributed to the authenticated user's account.
+
+Currently, method calls such as `payOut()` or `transfer()` are executed as anonymous users (`msg.caller` is unauthenticated). The next step is to modify these method calls to use the authenticated user's identity instead of an anonymous caller.
+
+This integration will be covered in the next lesson.

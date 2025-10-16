@@ -69,3 +69,7 @@ There is one more thing to fix: the `balances.put` statement. This assigns the o
 We move this code into the postupgrade method and add an if-statement to check if the balances HashMap has a size less than one. If it does, we put the owner and the totalSupply as the only keys and values inside our balances HashMap. This ensures that the only way our balances are modified is through the transfer method.
 
 We can turn our balances HashMap into a private variable so that only the token actor can modify it. No other file, canister, or class will be able to accidentally modify it. Similarly, we should make balanceEntries private, as it should only be modified in preupgrade and postupgrade.
+
+## Testing the Upgrade Process
+
+With preupgrade and postupgrade in place, we can try the experiment again. Set the `CANISTER_PUBLIC_KEY` to the token canister ID, transfer half a billion tokens, and check the balance. After taking some money out and checking the balance again, it will be down by 10,000 DANG. If we add a Debug.print, save, and run `dfx deploy` to upgrade, the balance will remain correct after the upgrade. The ledger is now stable across upgrades.

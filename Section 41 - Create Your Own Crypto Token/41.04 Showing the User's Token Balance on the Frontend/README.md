@@ -11,3 +11,27 @@ To achieve this, we need to write some code in the `Balance.jsx` file. The HTML 
 The `handleClick` listener is set up so that whenever the user clicks the `request-balance` button, it triggers this function. Currently, it only logs to the console. When we click 'Check Balance' on the frontend, it triggers the function call.
 
 Instead of logging to the console, we want to use `await` to call our `balanceOf()` function, passing in the Principal that the user typed into the text field. To access the input value, we need to add a `value` attribute to the input, which will be tracked by a constant.
+
+## Using React State for Input
+
+We will create a constant called `inputValue` using React's `useState`, along with a setter called `setInput`. The initial value will be an empty string.
+
+```js
+const [inputValue, setInput] = useState("");
+```
+
+To update `inputValue` as the user types, we add an `onChange` listener to the input. This listener will use a fat arrow function to call `setInput` with the event target's value.
+
+```js
+<input value={inputValue} onChange={(e) => setInput(e.target.value)} />
+```
+
+Whenever the input changes, this function sets the state to the current input value. This pattern is common in React: the input's value is set using a constant, and `onChange` triggers the setter.
+
+To verify this works, we can log `inputValue` instead of a generic message when the button is clicked.
+
+```js
+console.log(inputValue);
+```
+
+Typing in the input and clicking 'Check Balance' should now log the input value, confirming we have access to the field.

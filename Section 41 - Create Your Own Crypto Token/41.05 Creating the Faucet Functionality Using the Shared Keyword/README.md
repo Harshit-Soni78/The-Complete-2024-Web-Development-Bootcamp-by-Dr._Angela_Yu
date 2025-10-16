@@ -24,3 +24,24 @@ In Motoko, the `shared` keyword allows methods declared inside an actor to be ca
         return "Success";
     }
 ```
+
+## Deploying and Testing the Faucet
+
+After saving and deploying the canister with these changes, the `payOut` method can be called from the command line using:
+
+```bash
+    dfx canister call token payOut
+```
+
+The method returns "Success" for now, but the caller's Principal ID is printed in the simulated ICP blockchain panel. This demonstrates that `msg.caller` reflects the ID of the user or canister making the call.
+
+## Integrating Faucet with the Frontend
+
+To call the Faucet from the frontend, import the token canister in `Faucet.jsx` and use the `payOut` method inside the async click handler.
+
+```js
+    import token from '../../../declarations/token';
+    const result = await token.payOut();
+```
+
+Calling the Faucet from the frontend triggers the function as the website user, and the Principal ID of the anonymous user is printed. This shows that `msg.caller` accurately reflects the caller's identity.

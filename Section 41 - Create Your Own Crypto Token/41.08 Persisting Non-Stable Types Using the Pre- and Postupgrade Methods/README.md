@@ -77,3 +77,10 @@ With preupgrade and postupgrade in place, we can try the experiment again. Set t
 ## Handling Initial Deployment
 
 There is one final thing to fix. If you download this project and run it without going through an upgrade, it will go through the initial phase (create canister, deploy canister). We want there to be an initial balance and owner even if you have not gone through an upgrade. Copy the if-statement and put it below balances to cover this case. This ensures the owner gets some DANG to work with on initial deployment.
+
+## Key Takeaways
+
+- Upgrading a canister resets non-stable state, causing loss of data such as token balances.
+- HashMap is a non-stable type in Motoko and cannot be made stable directly.
+- The preupgrade and postupgrade system methods allow transferring data between non-stable and stable types during upgrades.
+- Using a stable array of tuples as an intermediary enables persistence of HashMap data across upgrades.

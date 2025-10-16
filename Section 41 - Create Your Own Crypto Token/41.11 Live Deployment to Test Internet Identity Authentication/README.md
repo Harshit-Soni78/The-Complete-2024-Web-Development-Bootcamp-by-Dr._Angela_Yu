@@ -88,3 +88,23 @@ In the Faucet component, use the prop to display the Principal ID.
 ```js
 <label>{props.userPrincipal}</label>
 ```
+
+## Updating the Transfer Component
+
+Apply the same authentication process to the `Transfer.jsx` component. Instead of calling `token.transfer`, use the `authenticatedCanister.transfer` method.
+
+```js
+import { AuthClient } from "@dfinity/auth-client";
+import { canisterId, createActor } from "../declarations/token";
+
+const authClient = await AuthClient.create();
+const identity = await authClient.getIdentity();
+const authenticatedCanister = createActor(canisterId, {
+  agentOptions: {
+    identity: identity,
+  },
+});
+await authenticatedCanister.transfer(recipient, amount);
+```
+
+After deploying the changes, test the transfer. A successful transfer confirms that authentication and canister method calls are working as intended.

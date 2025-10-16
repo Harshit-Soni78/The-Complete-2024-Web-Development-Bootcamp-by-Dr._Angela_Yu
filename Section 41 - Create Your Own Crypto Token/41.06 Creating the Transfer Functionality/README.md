@@ -118,3 +118,10 @@ const handleClick = async () => {
   setDisable(false);
 };
 ```
+
+## Key Takeaways
+
+- The transfer functionality allows users to send tokens from their account to another by specifying a recipient Principal ID and an amount.
+- The transfer function determines the sender using `msg.caller` and ensures sufficient balance before proceeding.
+- Balances are updated atomically: the sender's balance is reduced and the recipient's balance is increased.
+- The frontend handles user input, disables the transfer button during processing, and displays feedback based on the transfer result.

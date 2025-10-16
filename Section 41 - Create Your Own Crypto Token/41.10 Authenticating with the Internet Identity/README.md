@@ -61,3 +61,10 @@ Once the user is authenticated, this identity should be used as the frontend use
 Currently, method calls such as `payOut()` or `transfer()` are executed as anonymous users (`msg.caller` is unauthenticated). The next step is to modify these method calls to use the authenticated user's identity instead of an anonymous caller.
 
 This integration will be covered in the next lesson.
+
+## Key Takeaways
+
+- Implemented Internet Identity authentication using the auth-client package.
+- Used asynchronous AuthClient methods to manage login and check authentication status.
+- Handled login pop-up blocking and ensured smooth user experience by caching login state.
+- Planned integration of authenticated user identity with backend method calls for secure transactions.

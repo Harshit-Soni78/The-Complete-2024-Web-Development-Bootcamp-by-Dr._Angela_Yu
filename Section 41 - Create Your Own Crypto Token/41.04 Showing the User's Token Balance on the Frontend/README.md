@@ -83,3 +83,7 @@ setBalance(balance.toLocaleString());
 ```
 
 After saving and testing, pasting in a Principal ID and clicking 'Check Balance' should display the formatted balance.
+
+## Adding the Currency Symbol
+
+To further improve the display, we want to show the currency symbol after the balance. This requires modifying both the Motoko backend and the JavaScript frontend.

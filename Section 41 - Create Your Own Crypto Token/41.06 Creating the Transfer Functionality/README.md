@@ -73,3 +73,48 @@ Now we should be able to bring the values inside these inputs in, and we should 
 Let us fix that by importing the Principal data type. Then, create the recipient as `Principal.fromText`, passing in the `recipientId` that we got from our state Hook. Similarly, convert our amount as a new constant `amountToTransfer`, converting it into a number from the string. Now we can replace `recipientId` with our new recipient constant and the amount with our new `amountToTransfer` constant.
 
 Now, finally, we can test our code. Make sure you run `dfx deploy`. Copy the principal ID of the frontend. If we first check our sender balance, you can see we have zero DANG because we did `dfx deploy`, so the ledger has been reset. Let us reclaim it from the faucet. Now if we check it, you can see we have 10,000 DANG. We are going to transfer it to our user's Principal ID and transfer 50 DANG. If we click Transfer and check our balance again, you can see 50 has now been subtracted, and if we check the balance of the recipient, you can see that 50 has been added to its balance. So our transfer method finally works.
+
+## Improving User Experience
+
+Now that we have the functionality down, let us add some user experience touches that will improve the way our website works. The first thing we are going to do is make the button disabled when the transfer is happening. Once we get the results back, we can enable it again. We will set the disabled attribute to a new constant called `isDisabled` and create a setter for `setDisable`. We will start it out with `false` so that we can actually tap on the button, and as soon as the button gets clicked, we will set it to `true`. Once the process has completed, we can set it back to `false` again.
+
+In addition, when we call our `token.transfer`, we actually get a result that comes back in the form of text. If you remember, it can either be "Success" or it can be "Insufficient funds". We want to capture that. Let us create a constant called `result` and set it equal to the output of this transfer function call. We want to display that in a paragraph element. Just above the last two divs, let us add a paragraph element. Inside this paragraph, we are going to add some feedback.
+
+This feedback is going to be a new constant, starting out with an empty string, but as soon as we get the results back from our `token.transfer`, we are going to set the feedback to whatever that result is. This feedback probably should not exist to begin with, so we can create another constant called `isHidden`, and use the `setHidden` setter to hide that paragraph element. It is going to start out with `true`. We will start out by having this paragraph element have a hidden attribute set to the constant `isHidden`. As soon as we get our result back and set our feedback, we can set the hidden to `false`. The next time the user clicks on the button, we are going to set the hidden to `true` again.
+
+Now, copy your Principal ID, go back and try to make another transfer. Click Transfer and you can see this time the transfer button goes gray and becomes disabled when the process is going through, and once it is done, it gives us "Success". If you try to transfer some amount that your account does not have, for example, if you only have 10,000 and you try to transfer 100,000, then it will think a little bit and then tell you "Insufficient funds".
+
+```mo
+    public shared(msg) func transfer(to: Principal, amount: Nat): async Text {
+      let fromBalance = await balanceOf(msg.caller);
+      if (fromBalance < amount) {
+        return "Insufficient funds";
+      } else {
+        let newFromBalance: Nat = fromBalance - amount;
+        balances.put(msg.caller, newFromBalance);
+        let toBalance = await balanceOf(to);
+        let newToBalance: Nat = toBalance + amount;
+        balances.put(to, newToBalance);
+        return "Success";
+      }
+    }
+```
+
+```js
+const [recipientId, setId] = useState("");
+const [amount, setAmount] = useState("");
+const [isDisabled, setDisable] = useState(false);
+const [feedback, setFeedback] = useState("");
+const [isHidden, setHidden] = useState(true);
+
+const handleClick = async () => {
+  setDisable(true);
+  setHidden(true);
+  const recipient = Principal.fromText(recipientId);
+  const amountToTransfer = Number(amount);
+  const result = await token.transfer(recipient, amountToTransfer);
+  setFeedback(result);
+  setHidden(false);
+  setDisable(false);
+};
+```

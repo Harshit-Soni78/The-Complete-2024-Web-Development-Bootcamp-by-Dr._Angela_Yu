@@ -69,3 +69,29 @@ const [isDisabled, setDisable] = useState(false);
 ```
 
 When the button is clicked, set `isDisabled` to true. After the token payout completes, it can be set back to false, or the button can remain disabled to prevent multiple claims.
+
+## Preventing Multiple Claims
+
+To ensure users cannot claim Faucet tokens multiple times, add a check in the backend. Use the `get` method on the balances HashMap to see if the caller already exists. If not, transfer the tokens; otherwise, return a message indicating the tokens have already been claimed.
+
+```mo
+    if (balances.get(msg.caller) == null) {
+        balances.put(msg.caller, 10000);
+        return "Success";
+    } else {
+        return "Already claimed";
+    }
+```
+
+## Updating the Frontend Button Text
+
+On the frontend, create a state variable for the button text. After the Faucet method is called, update the button text based on the result returned from the backend.
+
+```js
+const [buttonText, setText] = useState("Gimme gimme");
+
+const result = await token.payOut();
+setText(result);
+```
+
+After deploying the updated backend, the Faucet will return either "Success" or "Already claimed". The frontend reflects this in the button text, and the backend prevents multiple claims by the same user.

@@ -55,3 +55,21 @@ Once we have figured out their balance, and you will notice that in our `balance
 Again, we have to await for the results of `balanceOf` before we can execute this line, so adding the `await` keyword before the `balanceOf`. Finally, we are going to put into our HashMap the new updated balance. The key is the Principal ID of the to account, and the value is the newToBalance.
 
 In those few lines of code, we have just done a little bit of simple math. We have subtracted the amount from the balance of the sender, and we have added the amount to the balance of the recipient. Then we have basically updated our ledger with this new information. We return "Success" if they had enough balance, which means all of this should succeed, but otherwise we return "Insufficient funds".
+
+## Frontend Integration for Transfer
+
+Now let us make sure that we hook this up with our frontend and that we actually call that method in our `handleClick()`. When the user presses the transfer button, we want to call that method in our token canister, so let us import our token canister.
+
+So, import from `../declarations/token`. Then we can call `await token.transfer`, and I believe it is spelled lowercase. We have to provide the two inputs that are required: the `to`, which comes from the first input field where we have the transfer to, and we are going to do this in the same way that we did for our balance checking.
+
+We need to use our useState Hook in order to hook up our input so that it has a value and it has an onChange listener. The value is going to be tied to a constant, which we will call `recipientId`, and we will have a setter called `setId`. This is going to useState, and we are going to set it to an initial value of an empty string.
+
+Now we can set this value to the `recipientId` constant, and when that gets changed, we are going to use that event listener to update the ID by using our `setId` setter. We are going to set it to the `e.target.value`, which will give us the value of the input at the moment when it changes. It is going to keep updating this `recipientId`, and then in the moment when we click on the button, we will be able to take the final value of the `recipientId` and pass it over to the `token.transfer()` method.
+
+The other thing that we need to set up is the amount. We are going to do something pretty similar. We are going to have our value and we are going to have our onChange. That means that we again have to set up a new constant. We will call that the `amount` and `setAmount`, and it is going to start off with a value of an empty string. We can update this in the same way as before.
+
+Now we should be able to bring the values inside these inputs in, and we should be able to get hold of it here and use it in our transfer function. There are a couple of problems with using the `recipientId` or the `amount` straight from the inputs, because the amount is going to come in as a piece of text and when we call the transfer function, we actually need it to be a number. Similarly, the `recipientId` needs to be a valid Principal type rather than a simple piece of text.
+
+Let us fix that by importing the Principal data type. Then, create the recipient as `Principal.fromText`, passing in the `recipientId` that we got from our state Hook. Similarly, convert our amount as a new constant `amountToTransfer`, converting it into a number from the string. Now we can replace `recipientId` with our new recipient constant and the amount with our new `amountToTransfer` constant.
+
+Now, finally, we can test our code. Make sure you run `dfx deploy`. Copy the principal ID of the frontend. If we first check our sender balance, you can see we have zero DANG because we did `dfx deploy`, so the ledger has been reset. Let us reclaim it from the faucet. Now if we check it, you can see we have 10,000 DANG. We are going to transfer it to our user's Principal ID and transfer 50 DANG. If we click Transfer and check our balance again, you can see 50 has now been subtracted, and if we check the balance of the recipient, you can see that 50 has been added to its balance. So our transfer method finally works.

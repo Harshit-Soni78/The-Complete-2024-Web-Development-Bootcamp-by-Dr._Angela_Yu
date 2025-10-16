@@ -43,3 +43,13 @@ If the user is authenticated, we can log a message such as "logged in" and proce
 Testing this behavior in the browser console shows that the user remains logged in without needing to go through the login process repeatedly. This is because the login state is cached, similar to how services like Facebook or Gmail remember your login status for a period (e.g., eight days).
 
 This caching improves user experience by preventing unnecessary login prompts on subsequent visits within the cache duration.
+
+## Managing Authenticated State
+
+Knowing that we can check authentication status, we create an asynchronous function called `handleAuthenticated(authClient)`. This function renders the `App` component and will be called both after a successful login and if the user is already authenticated.
+
+In the main initialization logic, we use an `if-else` statement: if the user is authenticated, we call `handleAuthenticated(authClient)` to render the app directly; otherwise, we invoke the login process to prompt the user to authenticate.
+
+This approach ensures a seamless user experience by avoiding redundant login prompts.
+
+After implementing this logic, saving the changes, and refreshing the page, the user is no longer forced to log in again if already authenticated.

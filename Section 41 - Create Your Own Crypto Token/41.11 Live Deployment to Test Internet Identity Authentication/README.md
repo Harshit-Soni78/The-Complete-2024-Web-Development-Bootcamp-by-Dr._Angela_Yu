@@ -60,3 +60,7 @@ The project has two canisters: one for backend logic (`token`) and one for front
 ```bash
     dfx canister --network ic id token_assets
 ```
+
+## Authenticating and Testing the Faucet
+
+On the live site, authenticate and use the Faucet. The network may take longer to respond than local testing. A successful payout means authentication works and the payout is made to the authenticated user's account.

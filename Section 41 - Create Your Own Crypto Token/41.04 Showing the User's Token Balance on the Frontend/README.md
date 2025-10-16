@@ -67,3 +67,19 @@ Now, we can call `await token.balanceOf(principal)`, passing in the Principal we
 ```js
 const balance = await token.balanceOf(principal);
 ```
+
+## Displaying the Balance
+
+We want to display the balance inside a paragraph element. Instead of showing a placeholder, we will display the actual balance result. For this, we create another constant with state, called `balanceResult`, and a setter called `setBalance`.
+
+```js
+const [balanceResult, setBalance] = useState("");
+```
+
+When we get the balance back, it is a natural number. To display it properly, we use JavaScript's `toLocaleString` method to format the number as a string.
+
+```js
+setBalance(balance.toLocaleString());
+```
+
+After saving and testing, pasting in a Principal ID and clicking 'Check Balance' should display the formatted balance.

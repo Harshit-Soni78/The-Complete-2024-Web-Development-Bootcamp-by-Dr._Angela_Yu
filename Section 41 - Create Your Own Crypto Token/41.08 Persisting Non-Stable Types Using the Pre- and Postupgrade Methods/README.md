@@ -73,3 +73,7 @@ We can turn our balances HashMap into a private variable so that only the token 
 ## Testing the Upgrade Process
 
 With preupgrade and postupgrade in place, we can try the experiment again. Set the `CANISTER_PUBLIC_KEY` to the token canister ID, transfer half a billion tokens, and check the balance. After taking some money out and checking the balance again, it will be down by 10,000 DANG. If we add a Debug.print, save, and run `dfx deploy` to upgrade, the balance will remain correct after the upgrade. The ledger is now stable across upgrades.
+
+## Handling Initial Deployment
+
+There is one final thing to fix. If you download this project and run it without going through an upgrade, it will go through the initial phase (create canister, deploy canister). We want there to be an initial balance and owner even if you have not gone through an upgrade. Copy the if-statement and put it below balances to cover this case. This ensures the owner gets some DANG to work with on initial deployment.

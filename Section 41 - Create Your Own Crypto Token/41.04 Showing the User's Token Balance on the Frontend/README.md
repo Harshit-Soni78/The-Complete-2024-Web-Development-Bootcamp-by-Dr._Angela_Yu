@@ -87,3 +87,13 @@ After saving and testing, pasting in a Principal ID and clicking 'Check Balance'
 ## Adding the Currency Symbol
 
 To further improve the display, we want to show the currency symbol after the balance. This requires modifying both the Motoko backend and the JavaScript frontend.
+
+### Motoko: Add a Query Function
+
+In `main.mo`, create a new public query function called `getSymbol` that returns the currency symbol.
+
+```mo
+    public query func getSymbol() : async Text {
+      return symbol;
+    };
+```

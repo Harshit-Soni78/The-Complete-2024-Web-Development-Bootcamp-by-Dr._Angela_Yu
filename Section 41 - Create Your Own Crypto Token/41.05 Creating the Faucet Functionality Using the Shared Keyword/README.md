@@ -95,3 +95,14 @@ setText(result);
 ```
 
 After deploying the updated backend, the Faucet will return either "Success" or "Already claimed". The frontend reflects this in the button text, and the backend prevents multiple claims by the same user.
+
+## Conclusion
+
+The Faucet functionality now allows any user to claim 10,000 custom tokens once. Security and user experience have been improved by disabling the button after use and providing clear feedback. In the next lesson, the transfer functionality will be implemented, allowing users to send tokens to others.
+
+## Key Takeaways
+
+- Implemented a Faucet functionality to allow users to claim free tokens from a central pool.
+- Utilized the `shared` keyword and `msg.caller` in Motoko to identify and assign tokens to the calling Principal ID.
+- Enhanced user experience by disabling the Faucet button after use and providing feedback messages.
+- Added a security check to prevent users from claiming Faucet tokens multiple times.

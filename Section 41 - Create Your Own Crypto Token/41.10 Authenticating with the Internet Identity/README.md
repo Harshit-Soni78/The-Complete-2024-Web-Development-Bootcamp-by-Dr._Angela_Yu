@@ -29,3 +29,17 @@ If you do not have a recovery mechanism set up, you may be prompted to add one l
 After successful authentication, the page will display which website is requesting authentication and the identity you are authenticating with, which is important for security.
 
 Clicking "Proceed" will return you to the original website that requested authentication.
+
+## Handling Repeated Login Attempts
+
+However, there is an issue: every time the frontend initializes, it calls the login method, triggering the login process repeatedly, even if the user has already authenticated.
+
+To avoid this, we need to check if the user is already logged in and bypass the login process if so.
+
+We can achieve this by using the asynchronous method `isAuthenticated()` from the `authClient` class. This method returns a boolean indicating whether the user is currently authenticated.
+
+If the user is authenticated, we can log a message such as "logged in" and proceed to render the main application without prompting for login again.
+
+Testing this behavior in the browser console shows that the user remains logged in without needing to go through the login process repeatedly. This is because the login state is cached, similar to how services like Facebook or Gmail remember your login status for a period (e.g., eight days).
+
+This caching improves user experience by preventing unnecessary login prompts on subsequent visits within the cache duration.

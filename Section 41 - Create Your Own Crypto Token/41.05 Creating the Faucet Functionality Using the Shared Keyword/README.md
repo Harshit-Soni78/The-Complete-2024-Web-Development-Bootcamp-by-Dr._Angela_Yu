@@ -45,3 +45,27 @@ To call the Faucet from the frontend, import the token canister in `Faucet.jsx` 
 ```
 
 Calling the Faucet from the frontend triggers the function as the website user, and the Principal ID of the anonymous user is printed. This shows that `msg.caller` accurately reflects the caller's identity.
+
+## Assigning Tokens to the Caller
+
+To transfer tokens to the caller, use the balances HashMap and the `put()` method. The key is the Principal ID from `msg.caller`, and the value is the amount to transfer. In this Faucet, the amount is set to 10,000 tokens.
+
+```mo
+    balances.put(msg.caller, 10000);
+```
+
+After deploying the updated code, checking the balance of the user's Principal ID shows the correct token amount. The anonymous user can also receive tokens by clicking the Faucet button, which updates their balance accordingly.
+
+## Improving User Experience
+
+The Faucet button takes a few seconds to process because it is an update method. To prevent users from pressing it repeatedly, the button should be disabled until the operation completes. This is achieved by using a state variable `isDisabled` in the frontend.
+
+```js
+const [isDisabled, setDisable] = useState(false);
+
+<button disabled={isDisabled} onClick={handleClick}>
+  Gimme gimme
+</button>;
+```
+
+When the button is clicked, set `isDisabled` to true. After the token payout completes, it can be set back to false, or the button can remain disabled to prevent multiple claims.

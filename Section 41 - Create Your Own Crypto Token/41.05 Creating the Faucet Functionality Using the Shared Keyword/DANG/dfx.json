@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "DANG_backend": {
+      "main": "src/DANG_backend/main.mo",
+      "type": "motoko"
+    },
+    "DANG_frontend": {
+      "dependencies": [
+        "DANG_backend"
+      ],
+      "source": [
+        "src/DANG_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "DANG_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -108,3 +108,14 @@ await authenticatedCanister.transfer(recipient, amount);
 ```
 
 After deploying the changes, test the transfer. A successful transfer confirms that authentication and canister method calls are working as intended.
+
+## Conclusion
+
+Now, authentication using Internet Identity is integrated, allowing creation of canisters and method calls using the authenticated user's identity. The next project will focus on building an NFT marketplace.
+
+## Key Takeaways
+
+- Integrated Internet Identity authentication with canister method calls for secure token payouts and transfers.
+- Demonstrated how to deploy a project to the live Internet Computer network and manage canister IDs and tokens.
+- Showed how to retrieve and display the authenticated user's Principal ID in the frontend using React props.
+- Illustrated updating both Faucet and Transfer components to use authenticated canisters for secure transactions.

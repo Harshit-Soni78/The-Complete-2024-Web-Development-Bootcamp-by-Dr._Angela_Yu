@@ -97,3 +97,19 @@ In `main.mo`, create a new public query function called `getSymbol` that returns
       return symbol;
     };
 ```
+
+### JavaScript: Fetch and Display the Symbol
+
+In the frontend, create a constant `cryptoSymbol` and a setter `setSymbol` using `useState`, with an initial value of an empty string.
+
+```js
+const [cryptoSymbol, setSymbol] = useState("");
+```
+
+Call the backend method to fetch the symbol and update the state.
+
+```js
+setSymbol(await token.getSymbol());
+```
+
+Display the symbol next to the balance result in the UI.

@@ -35,3 +35,21 @@ console.log(inputValue);
 ```
 
 Typing in the input and clicking 'Check Balance' should now log the input value, confirming we have access to the field.
+
+## Converting Input to Principal
+
+Next, we want to convert the input value to a Principal data type before passing it to the backend. To do this in JavaScript, we import the Principal type from the Dfinity module.
+
+```js
+import { Principal } from "@dfinity/principal";
+```
+
+This is similar to importing from Motoko's `mo:base/Principal`, but in JavaScript, it comes from the Dfinity package. The `@` sign denotes a scoped package, grouping similar packages together.
+
+We can create a Principal by converting the input value using the `Principal.fromText` method.
+
+```js
+const principal = Principal.fromText(inputValue);
+```
+
+This converts whatever the user types into the input into a Principal type, which we then use to call the `balanceOf()` method from our backend.

@@ -35,3 +35,20 @@ const authenticatedCanister = createActor(canisterId, {
 ```
 
 Now, call the `payOut()` method on `authenticatedCanister`. This ensures that `msg.caller` will be the Principal ID of the authenticated user, who will receive the token transfer.
+
+## Deploying to the Live Internet Computer
+
+Even if the code is correct, testing locally will result in a 403 error because local dfx is a simulation. To get authenticated sessions, deploy the project to the live Internet Computer blockchain.
+
+```bash
+    dfx deploy --network ic
+```
+
+After deployment, transfer tokens into the canister. The canister holds half the tokens, and the owner holds the other half. The canister's half is used for Faucet distribution.
+
+Check the live canister's ID, as it will differ from the local one. Assign it to a variable, then transfer tokens to the canister.
+
+```bash
+    LIVE_CANISTER_KEY=$(dfx canister --network ic id token)
+    echo $LIVE_CANISTER_KEY
+```

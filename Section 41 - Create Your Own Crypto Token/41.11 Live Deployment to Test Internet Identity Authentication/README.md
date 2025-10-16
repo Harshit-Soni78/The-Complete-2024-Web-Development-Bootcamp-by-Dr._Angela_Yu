@@ -52,3 +52,11 @@ Check the live canister's ID, as it will differ from the local one. Assign it to
     LIVE_CANISTER_KEY=$(dfx canister --network ic id token)
     echo $LIVE_CANISTER_KEY
 ```
+
+## Accessing the Live Frontend
+
+The project has two canisters: one for backend logic (`token`) and one for frontend assets (`token_assets`). To access the frontend, get its canister ID and combine it with the `.raw.ic0.app` suffix.
+
+```bash
+    dfx canister --network ic id token_assets
+```

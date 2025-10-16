@@ -64,3 +64,13 @@ The project has two canisters: one for backend logic (`token`) and one for front
 ## Authenticating and Testing the Faucet
 
 On the live site, authenticate and use the Faucet. The network may take longer to respond than local testing. A successful payout means authentication works and the payout is made to the authenticated user's account.
+
+## Retrieving and Displaying the Principal ID
+
+The identity object contains the Principal under the `_principal` property. Convert it to a string for display.
+
+```js
+const identity = await authClient.getIdentity();
+const userPrincipal = identity._principal.toString();
+console.log(userPrincipal);
+```

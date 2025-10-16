@@ -19,3 +19,9 @@ Using the Internet Identity, we can create as many of these anchors as we want. 
 The Internet Identity builds on the Web Authentication API, which is a specification written by W3C and FIDO with the participation of big companies like Google, Mozilla, Microsoft, and others. This means the technology behind it will be compatible with all modern browsers and operating systems.
 
 When you create an Internet Identity, it is secured using chain-key cryptography, the same framework that powers the Internet Computer. It uses compatible cryptographically enabled devices such as the fingerprint sensor on a laptop or the Face ID system on a phone to authenticate you. From a user's point of view, this makes sign-up and login super easy because you do not have to remember any passwords or usernames. All you have to do is sign in using your biometric data like your face or fingerprint, which makes it very convenient and also eliminates the weakest point of online security, which is the user’s ability to generate secure enough usernames and passwords and to remember them.
+
+### How Does Internet Identity Work?
+
+When you add a device to an anchor and generate a new Internet Identity, a pair of cryptographic keys—a private key and a public key—are generated. The public key is stored on the Internet Computer blockchain, while your private key remains locked inside the authentication device, secured with biometric data such as Touch ID. When you log on to a decentralized application, both keys are required to authorize the session. The authorization from the Internet Identity then grants you access as an application-specific anonymous identity, allowing you to be pseudonymous across many applications. It also lets you create as many of these pseudo-identities as you need.
+
+If you want to learn more, you can take a look at a demo from the Dfinity team, where the founder of Dfinity talks about how it works in more detail.

@@ -11,3 +11,11 @@ NFTs, or non-fungible tokens, are unique digital assets that cannot be exchanged
 ### Real-World Example of Fungibility
 
 Recently, while traveling in Costa Rica, I had a 10,000 Costa Rican colones bill that accidentally tore in half. I was concerned it was worthless, but the bank replaced it after verifying it was genuine. This illustrates how traditional currency is fungible and replaceable.
+
+### The Concept of Unique Tokens on Blockchain
+
+While cryptocurrencies like Ethereum and Bitcoin are interchangeable tokens, NFTs are designed to be unique. They have distinct identifiers and features, often representing digital art or collectibles that are one of a kind.
+
+### The Uniqueness of Digital Art
+
+Consider the Mona Lisa in the Louvre. No matter how perfect a replica is, it cannot be the original Mona Lisa. Similarly, NFTs represent unique digital artworks that cannot be duplicated or sold as originals.

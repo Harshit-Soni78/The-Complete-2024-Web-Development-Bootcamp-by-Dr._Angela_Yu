@@ -51,3 +51,18 @@ In our marketplace, NFTs will be minted on the Internet Computer blockchain, wit
 ### Inspiration: Cryptopunks
 
 Our collection is inspired by Cryptopunks, one of the original NFT projects featuring pixel art characters with unique features like hats or 3D glasses. Prices for some Cryptopunks have reached extraordinary amounts, such as one sold for 124,000 ETH, worth approximately 415 million U.S. dollars.
+
+### Custom Pixel Art Collection
+
+To avoid the need for expensive artwork, I created a collection of six pixel art characters inspired by Cryptopunks using pixelart.com. These will be available as course resources and serve as the basis for our NFT marketplace.
+
+### Project Features
+
+The final website, called OpenD, will include core features such as:
+
+- Viewing NFTs owned by the logged-in user.
+- Selling NFTs by setting prices in the DANG token.
+- Discovering and purchasing NFTs listed by other users.
+- Minting new NFTs that create unique canisters on the Internet Computer blockchain.
+
+Users cannot buy their own listed items but can purchase others'.

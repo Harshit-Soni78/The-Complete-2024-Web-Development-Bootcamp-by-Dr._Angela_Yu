@@ -43,3 +43,11 @@ Our project is an NFT e-commerce site inspired by OpenSea. It will be built with
 ### Current NFT Storage Practices
 
 Most NFTs today store their original files on third-party servers like IPFS. For example, NFT number 5465 on OpenSea links to a contract address on Etherscan, which points to an IPFS URL where the actual image is hosted and accessible to anyone.
+
+### Our Approach: On-Chain Storage
+
+In our marketplace, NFTs will be minted on the Internet Computer blockchain, with the actual data stored on-chain. This differs from simply having a smart contract with a URL pointing to external storage, enhancing security and decentralization.
+
+### Inspiration: Cryptopunks
+
+Our collection is inspired by Cryptopunks, one of the original NFT projects featuring pixel art characters with unique features like hats or 3D glasses. Prices for some Cryptopunks have reached extraordinary amounts, such as one sold for 124,000 ETH, worth approximately 415 million U.S. dollars.

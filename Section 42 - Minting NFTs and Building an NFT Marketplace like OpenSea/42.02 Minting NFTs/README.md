@@ -109,3 +109,14 @@ After deployment, use the query functions to verify the NFT's properties. For ex
 ```
 
 Similarly, you can call `getOwner` and `getAsset` to retrieve the owner and the image bytes. The asset data is raw bytes and not directly viewable as an image.
+
+## Next Steps
+
+To view the newly minted NFT, the frontend must be built, which will be covered in the next lesson.
+
+## Key Takeaways
+
+- Set up the project by downloading and unzipping the starter files, and explored the folder structure.
+- Created a new NFT canister using an actor class in Motoko, allowing programmatic NFT minting.
+- Configured the dfx.json file to register the new NFT canister and deployed it with initialization arguments.
+- Implemented query functions to retrieve NFT properties and verified deployment using dfx commands.

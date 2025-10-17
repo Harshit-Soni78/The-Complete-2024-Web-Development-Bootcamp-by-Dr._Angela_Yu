@@ -61,3 +61,41 @@ The NFT needs properties such as `itemName`, `nftOwner`, and `imageBytes`. To in
 ```
 
 The `name` is a text value, the `owner` is a Principal, and the `content` is an array of Nat8 (8-bit natural numbers) representing the image data.
+
+## Query Functions for NFT Properties
+
+Add query functions to retrieve the NFT's properties: `getName`, `getOwner`, and `getAsset`.
+
+```mo
+    public query func getName(): async Text {
+      return itemName;
+    }
+
+    public query func getOwner(): async Principal {
+      return nftOwner;
+    }
+
+    public query func getAsset(): async [Nat8] {
+      return imageBytes;
+    }
+```
+
+With these functions, you can retrieve the NFT's name, owner, and image data.
+
+## Deploying the NFT Canister with Arguments
+
+Since the NFT canister is now an actor class, you must provide initialization arguments when deploying. If you attempt to deploy without arguments, you will receive an error: "Invalid data: Expected arguments, but found none."
+
+To deploy with arguments, use the following command format (replace the values as needed):
+
+```bash
+    dfx deploy nft --argument '("CryptoDunks #123", principal "<YOUR_PRINCIPAL>", vec {10; 20; 30; ...})'
+```
+
+To find your principal, run:
+
+```bash
+    dfx identity get-principal
+```
+
+Replace `<YOUR_PRINCIPAL>` in the deploy command with your actual principal ID. Ensure the formatting is correct.

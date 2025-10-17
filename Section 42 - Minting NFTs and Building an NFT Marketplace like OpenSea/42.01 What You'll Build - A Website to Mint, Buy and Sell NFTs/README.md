@@ -66,3 +66,11 @@ The final website, called OpenD, will include core features such as:
 - Minting new NFTs that create unique canisters on the Internet Computer blockchain.
 
 Users cannot buy their own listed items but can purchase others'.
+
+### Integration with DANG Token
+
+Purchases and sales will use the DANG token, which users can claim from a previous project. This integration demonstrates how third-party tokens can facilitate transactions within the marketplace.
+
+### Minting NFTs
+
+Minting an NFT will create a unique canister on the Internet Computer blockchain containing all data for the image file. Minted NFTs will appear in the user's collection, ready for sale or personal holding.

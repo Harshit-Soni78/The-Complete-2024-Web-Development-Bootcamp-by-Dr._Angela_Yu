@@ -99,3 +99,13 @@ To find your principal, run:
 ```
 
 Replace `<YOUR_PRINCIPAL>` in the deploy command with your actual principal ID. Ensure the formatting is correct.
+
+## Verifying the NFT Canister
+
+After deployment, use the query functions to verify the NFT's properties. For example, to get the name:
+
+```bash
+    dfx canister call nft getName
+```
+
+Similarly, you can call `getOwner` and `getAsset` to retrieve the owner and the image bytes. The asset data is raw bytes and not directly viewable as an image.

@@ -27,3 +27,11 @@ NFTs have surged in popularity recently. For instance, Christie's auction house 
 ### Building an NFT Marketplace
 
 As developers, we can create platforms where users can mint, list, and sell NFTs. One of the largest existing marketplaces is OpenSea, where NFTs are bought and sold, often at high prices.
+
+### Example: Bored Ape Yacht Club on OpenSea
+
+The Bored Ape Yacht Club collection has 10,000 items listed on OpenSea, with prices averaging around 100 ETH. At current rates, 100 ETH is approximately 335,000 U.S. dollars, illustrating the high value of some NFTs.
+
+### Platform Fees and Advantages
+
+OpenSea charges a 2.5% transaction fee on sales. This highlights that being the platform owner can be more profitable than being an individual creator, especially if you are not already famous.

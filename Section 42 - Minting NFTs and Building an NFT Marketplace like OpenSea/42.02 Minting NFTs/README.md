@@ -23,3 +23,41 @@ In `nft.mo`, create a new actor called `NFT`. To verify it works, import Debug f
       Debug.print("It works.");
     }
 ```
+
+## Installing Dependencies and Deploying
+
+Open a new terminal and run the following command to install all requirements from `package.json`:
+
+```bash
+    npm install
+```
+
+Once installation is complete, start the local dfx network:
+
+```bash
+    dfx start
+```
+
+In a new terminal, deploy the canisters:
+
+```bash
+    dfx deploy
+```
+
+If successful, you should see "It works" printed from the NFT canister. If not, try stopping and restarting dfx, and check your `dfx.json` and file paths for correctness.
+
+## Building the NFT Actor Class
+
+The NFT needs properties such as `itemName`, `nftOwner`, and `imageBytes`. To initialize these, use an actor class instead of a simple actor. This allows programmatic canister creation, which is essential for minting NFTs dynamically.
+
+```mo
+    import Principal "mo:base/Principal";
+
+    actor class NFT(name: Text, owner: Principal, content: [Nat8]) {
+      let itemName = name;
+      let nftOwner = owner;
+      let imageBytes = content;
+    }
+```
+
+The `name` is a text value, the `owner` is a Principal, and the `content` is an array of Nat8 (8-bit natural numbers) representing the image data.

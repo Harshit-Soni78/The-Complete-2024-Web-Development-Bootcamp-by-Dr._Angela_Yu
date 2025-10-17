@@ -78,3 +78,14 @@ Minting an NFT will create a unique canister on the Internet Computer blockchain
 ### Project Complexity and Learning Outcomes
 
 This project is quite extensive but has been simplified to focus on essential NFT marketplace functionalities. It covers programmatic canister creation, buying and selling NFTs via third-party tokens, and managing e-commerce requirements.
+
+### Conclusion
+
+I am excited to begin this project, which took considerable effort to simplify and prepare. When you are ready, proceed to the next lesson to start building the NFT marketplace.
+
+## Key Takeaways
+
+- NFTs are unique digital tokens that cannot be exchanged on a one-to-one basis like traditional currency.
+- The NFT marketplace project will allow minting, listing, and selling NFTs on the Internet Computer blockchain.
+- Unlike many current NFTs stored on third-party servers, this project stores NFT data directly on-chain.
+- The project is inspired by popular NFT collections like Cryptopunks and aims to simplify core marketplace functionalities.

@@ -74,3 +74,7 @@ Purchases and sales will use the DANG token, which users can claim from a previo
 ### Minting NFTs
 
 Minting an NFT will create a unique canister on the Internet Computer blockchain containing all data for the image file. Minted NFTs will appear in the user's collection, ready for sale or personal holding.
+
+### Project Complexity and Learning Outcomes
+
+This project is quite extensive but has been simplified to focus on essential NFT marketplace functionalities. It covers programmatic canister creation, buying and selling NFTs via third-party tokens, and managing e-commerce requirements.

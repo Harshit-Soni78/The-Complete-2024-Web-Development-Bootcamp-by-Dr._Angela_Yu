@@ -19,3 +19,11 @@ While cryptocurrencies like Ethereum and Bitcoin are interchangeable tokens, NFT
 ### The Uniqueness of Digital Art
 
 Consider the Mona Lisa in the Louvre. No matter how perfect a replica is, it cannot be the original Mona Lisa. Similarly, NFTs represent unique digital artworks that cannot be duplicated or sold as originals.
+
+### The NFT Craze and Mainstream Adoption
+
+NFTs have surged in popularity recently. For instance, Christie's auction house sold a digital art collection called "Everydays" by Beeple for over 69 million U.S. dollars. This collection consisted of a piece created every day for 5,000 days, showcasing the scale and value of NFTs.
+
+### Building an NFT Marketplace
+
+As developers, we can create platforms where users can mint, list, and sell NFTs. One of the largest existing marketplaces is OpenSea, where NFTs are bought and sold, often at high prices.

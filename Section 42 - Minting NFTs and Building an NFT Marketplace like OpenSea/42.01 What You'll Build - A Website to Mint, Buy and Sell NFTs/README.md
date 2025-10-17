@@ -35,3 +35,11 @@ The Bored Ape Yacht Club collection has 10,000 items listed on OpenSea, with pri
 ### Platform Fees and Advantages
 
 OpenSea charges a 2.5% transaction fee on sales. This highlights that being the platform owner can be more profitable than being an individual creator, especially if you are not already famous.
+
+### Project Overview
+
+Our project is an NFT e-commerce site inspired by OpenSea. It will be built with React on the frontend and Motoko on the Internet Computer blockchain for the backend. Unlike many NFTs that store files on third-party servers, our NFTs will have their data stored directly on-chain.
+
+### Current NFT Storage Practices
+
+Most NFTs today store their original files on third-party servers like IPFS. For example, NFT number 5465 on OpenSea links to a contract address on Etherscan, which points to an IPFS URL where the actual image is hosted and accessible to anyone.

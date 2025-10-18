@@ -74,3 +74,28 @@ useEffect(() => {
   loadNFT();
 }, []);
 ```
+
+## Fetching and Displaying NFT Name
+
+Call the `getName()` method on the NFT actor asynchronously and store the result in a React state variable. Initialize the state as follows:
+
+```js
+const [name, setName] = useState();
+```
+
+After fetching the name, update the state:
+
+```js
+const name = await NFTActor.getName();
+setName(name);
+```
+
+## Fetching and Displaying NFT Owner
+
+Similarly, fetch the owner using `getOwner()`. The owner is returned as a Principal type, so convert it to text before setting the state:
+
+```js
+const [owner, setOwner] = useState();
+const ownerPrincipal = await NFTActor.getOwner();
+setOwner(ownerPrincipal.toText());
+```

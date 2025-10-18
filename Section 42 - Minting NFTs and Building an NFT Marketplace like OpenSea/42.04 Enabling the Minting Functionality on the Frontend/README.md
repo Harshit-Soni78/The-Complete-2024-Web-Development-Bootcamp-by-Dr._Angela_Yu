@@ -137,3 +137,14 @@ const [loaderHidden, setLoaderHidden] = useState(true);
 ```
 
 Set `loaderHidden` to `false` when the form is submitted and back to `true` after minting completes. The loader provides an indication that the process is ongoing.
+
+## Conclusion
+
+Users can now mint NFTs on the Internet Computer using the OpenD website. The frontend and backend are integrated to handle user input, image upload, canister creation, and NFT display. In the next lesson, the focus will be on displaying all minted NFTs in the My NFTs section.
+
+## Key Takeaways
+
+- Enabled users to mint NFTs directly from the frontend using a form powered by React Hook Form.
+- Implemented backend minting logic in Motoko, including canister creation, cycles allocation, and principal management.
+- Integrated frontend and backend, handling image upload, conversion to byte data, and NFT display after minting.
+- Added user feedback with a loader during the minting process and ensured correct rendering of the newly minted NFT.

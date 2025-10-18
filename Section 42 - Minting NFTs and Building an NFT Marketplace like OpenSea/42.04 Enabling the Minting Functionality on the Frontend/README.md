@@ -108,3 +108,12 @@ Use the Debug module to print the cycles balance before and after canister creat
 ```mo
     Debug.print(debug_show(Cycles.balance()));
 ```
+
+## Calling the Mint Function from the Frontend
+
+Import the backend canister (e.g., `opend`) in the frontend and call the `mint` method with the image byte data and name. Log the new NFT's principal ID using `toText`.
+
+```js
+const newNFTID = await opend.mint(imageByteData, name);
+console.log(newNFTID.toText());
+```

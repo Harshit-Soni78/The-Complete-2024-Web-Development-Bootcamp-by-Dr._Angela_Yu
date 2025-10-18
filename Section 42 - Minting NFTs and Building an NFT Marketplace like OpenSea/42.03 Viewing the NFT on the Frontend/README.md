@@ -46,3 +46,31 @@ Import the `HttpAgent` class from the `@dfinity/agent` package. Be careful with 
 ```js
 import { HttpAgent } from "@dfinity/agent";
 ```
+
+## Creating the NFT Actor
+
+To interact with the NFT canister, an actor must be created using the `idlFactory` from the NFT declarations. Import the `idlFactory` as follows:
+
+```js
+import { idlFactory } from "../../../declarations/nft";
+```
+
+The actor is created by passing the `idlFactory`, agent, and canister ID (converted to a Principal type) as options.
+
+```js
+import { Principal } from "@dfinity/principal";
+const NFTActor = await Actor.createActor(idlFactory, {
+  agent,
+  canisterId: Principal.fromText(props.id),
+});
+```
+
+## Loading NFT Data on Component Mount
+
+The NFT data should be loaded when the `Item` component is first rendered. Use the `useEffect` hook to call the `loadNFT` function only once:
+
+```js
+useEffect(() => {
+  loadNFT();
+}, []);
+```

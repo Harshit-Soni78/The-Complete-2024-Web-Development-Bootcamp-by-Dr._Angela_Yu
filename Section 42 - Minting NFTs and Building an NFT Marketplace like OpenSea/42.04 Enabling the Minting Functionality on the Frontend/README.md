@@ -117,3 +117,13 @@ Import the backend canister (e.g., `opend`) in the frontend and call the `mint` 
 const newNFTID = await opend.mint(imageByteData, name);
 console.log(newNFTID.toText());
 ```
+
+## Displaying the Minted NFT
+
+After minting, update the frontend to display the new NFT. Use React's `useState` to manage the `nftPrincipal`. If it is an empty string, render the form; otherwise, render the success message and the NFT item.
+
+```js
+const [nftPrincipal, setNFTPrincipal] = useState("");
+```
+
+Set `nftPrincipal` to the new NFT ID after minting. Pass it as a prop to the Item component, converting it to text format.

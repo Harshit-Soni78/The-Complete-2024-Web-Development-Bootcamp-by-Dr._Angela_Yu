@@ -127,3 +127,13 @@ const [nftPrincipal, setNFTPrincipal] = useState("");
 ```
 
 Set `nftPrincipal` to the new NFT ID after minting. Pass it as a prop to the Item component, converting it to text format.
+
+## Adding a Loader During Minting
+
+To provide user feedback, add a loader that appears when the minting process is triggered and disappears when it completes. Use React's `useState` to manage the loader's visibility.
+
+```js
+const [loaderHidden, setLoaderHidden] = useState(true);
+```
+
+Set `loaderHidden` to `false` when the form is submitted and back to `true` after minting completes. The loader provides an indication that the process is ongoing.

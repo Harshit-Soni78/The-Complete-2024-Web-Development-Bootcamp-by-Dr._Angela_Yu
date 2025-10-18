@@ -120,3 +120,14 @@ const [image, setImage] = useState();
 ```
 
 Update the image element in the HTML to use the `image` state variable. After saving and refreshing, the NFT item will display the name, owner, and image as fetched from the canister.
+
+## Conclusion
+
+With the NFT name, owner, and image now displayed on the frontend, the next step is to allow users to mint their own NFTs by uploading images to the OpenD website.
+
+## Key Takeaways
+
+- The NFT actor class allows minting NFTs by passing in the name, owner, and image data.
+- The frontend is updated to display NFT data by fetching it from the canister using HTTP requests.
+- React state and hooks are used to manage and display NFT name, owner, and image dynamically.
+- Image data from the canister is converted to a displayable format using JavaScript's Blob and URL APIs.

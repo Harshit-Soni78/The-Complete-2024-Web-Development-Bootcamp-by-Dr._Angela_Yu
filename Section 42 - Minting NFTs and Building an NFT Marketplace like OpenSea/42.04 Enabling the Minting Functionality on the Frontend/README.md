@@ -13,3 +13,29 @@ The form includes:
 - An image upload input, allowing users to select an image.
 - A text input for the collection name or NFT title.
 - A button to trigger the minting process.
+
+## Capturing Form Data with React Hook Form
+
+Instead of using the usual `value` and `onChange` attributes, use the `useForm` hook from the `react-hook-form` module. Import `useForm` and initialize it to manage form data.
+
+```js
+import { useForm } from "react-hook-form";
+```
+
+Register the inputs using the `register` object. For the name input, add the `register` attribute with the name "name" and set `required` to `true` to ensure the field is not left blank.
+
+```js
+    {...register("name", { required: true })}
+```
+
+## Handling Form Submission
+
+Add an `onClick` handler to the Mint NFT button to trigger `handleSubmit`, which calls the `onSubmit` asynchronous function. The `onSubmit` function receives the form data.
+
+```js
+async function onSubmit(data) {
+  console.log(data.name);
+}
+```
+
+Test the form by entering a name and clicking Mint NFT. The entered name should appear in the console log.

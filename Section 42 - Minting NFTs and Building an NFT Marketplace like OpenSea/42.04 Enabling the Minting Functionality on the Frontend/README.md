@@ -60,3 +60,37 @@ const image = data.image[0];
 const imageArray = await image.arrayBuffer();
 const imageByteData = [...new Uint8Array(imageArray)];
 ```
+
+## Backend Minting Logic in Motoko
+
+The backend minting function is implemented in `main.mo`. It is a public shared function called `mint` that takes the image data as an array of Nat8 numbers and the NFT name as text. The function returns the principal of the newly minted canister.
+
+```mo
+    public shared ({ caller }) func mint(imgData: [Nat8], name: Text): async Principal {
+      let owner: Principal = caller;
+      // ... logic to create NFT canister
+      // ... allocate cycles
+      // ... return new canister principal
+    }
+```
+
+Import the NFT actor class and initialize a new NFT with the name, owner, and content. Use `await` for asynchronous initialization.
+
+```mo
+    let newNFT = await NFTActorClass(name, owner, imgData);
+```
+
+Create a public query function in the actor class to get the canister ID using `Principal.fromActor(this)`.
+
+```mo
+    public query func getCanisterId(): async Principal {
+      return Principal.fromActor(this);
+    }
+```
+
+Call `getCanisterId` on the new NFT and return the result from the mint function.
+
+```mo
+    let newNFTPrincipal = await newNFT.getCanisterId();
+    return newNFTPrincipal;
+```

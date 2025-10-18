@@ -99,3 +99,24 @@ const [owner, setOwner] = useState();
 const ownerPrincipal = await NFTActor.getOwner();
 setOwner(ownerPrincipal.toText());
 ```
+
+## Fetching and Displaying NFT Image
+
+To display the NFT image, fetch the asset using `getAsset()`, which returns an array of 8-bit numbers. Convert this to a `Uint8Array`, then to a Blob, and finally to an object URL for use in the image element.
+
+```js
+const imageData = await NFTActor.getAsset();
+const imageContent = new Uint8Array(imageData);
+const image = URL.createObjectURL(
+  new Blob([imageContent.buffer], { type: "image/png" })
+);
+setImage(image);
+```
+
+Initialize the image state variable as follows:
+
+```js
+const [image, setImage] = useState();
+```
+
+Update the image element in the HTML to use the `image` state variable. After saving and refreshing, the NFT item will display the name, owner, and image as fetched from the canister.

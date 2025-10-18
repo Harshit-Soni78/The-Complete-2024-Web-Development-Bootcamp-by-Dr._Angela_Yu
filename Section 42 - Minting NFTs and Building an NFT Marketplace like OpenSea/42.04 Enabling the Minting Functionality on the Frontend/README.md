@@ -94,3 +94,17 @@ Call `getCanisterId` on the new NFT and return the result from the mint function
     let newNFTPrincipal = await newNFT.getCanisterId();
     return newNFTPrincipal;
 ```
+
+## Allocating Cycles for Canister Creation
+
+When creating a new canister on the Internet Computer, allocate cycles using the ExperimentalCycles module. Add 100 billion cycles for creation and 500 million cycles for operation.
+
+```mo
+    Cycles.add(100_000_000_000 + 500_000_000);
+```
+
+Use the Debug module to print the cycles balance before and after canister creation.
+
+```mo
+    Debug.print(debug_show(Cycles.balance()));
+```

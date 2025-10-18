@@ -39,3 +39,24 @@ async function onSubmit(data) {
 ```
 
 Test the form by entering a name and clicking Mint NFT. The entered name should appear in the console log.
+
+## Registering the Image Upload Input
+
+Similarly, register the image upload input with the name "image" and set `required` to `true`.
+
+```js
+    {...register("image", { required: true })}
+```
+
+When submitting the form, log `data.image`. It will be a FileList, so access the first file with `data.image[0]`.
+
+## Preparing Image Data for the Blockchain
+
+Extract the name and image from the form data. Since the image is a FileList, use the first item. Convert the image to binary data using `arrayBuffer` and then to a `Uint8Array`.
+
+```js
+const name = data.name;
+const image = data.image[0];
+const imageArray = await image.arrayBuffer();
+const imageByteData = [...new Uint8Array(imageArray)];
+```

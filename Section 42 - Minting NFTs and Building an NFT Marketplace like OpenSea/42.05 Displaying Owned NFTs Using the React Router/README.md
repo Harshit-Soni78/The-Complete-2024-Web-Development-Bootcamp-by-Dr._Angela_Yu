@@ -123,3 +123,15 @@ useEffect(() => {
   getNFTs();
 }, []);
 ```
+
+## Rendering the NFT Gallery
+
+The Gallery component is updated to accept the list of NFT IDs as props and render each as an Item component. The `useState` hook is used to manage the gallery state, and the `map` function is used to render each NFT.
+
+```js
+const items = props.ids.map((NFTId) => (
+  <Item id={NFTId} key={Principal.toText(NFTId)} />
+));
+```
+
+The Item component expects the id prop, which is the Principal of the NFT. The key prop is set to the text representation of the Principal to uniquely identify each item. The useEffect hook is used to trigger the fetching and rendering of NFTs when the component mounts.

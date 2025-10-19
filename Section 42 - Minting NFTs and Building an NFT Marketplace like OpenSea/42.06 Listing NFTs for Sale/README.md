@@ -92,3 +92,16 @@ The `listItem` function will check if the NFT exists, verify that the caller is 
         }
     }
 ```
+
+## Calling the Backend from the Frontend
+
+In the `sellItem` function on the frontend, we will call the `listItem` method on the backend. We need to import the `opend` canister and call `await opend.listItem(props.id, Number(price))`. Save the output as `listingResult` and log it.
+
+```js
+import { opend } from "../../../declarations/opend";
+
+const listingResult = await opend.listItem(props.id, Number(price));
+console.log(listingResult);
+```
+
+If you encounter an error such as 'Invalid Nat argument: "12"', it means the price is being passed as a string instead of a number. Wrapping the price in `Number()` converts it to the correct type.

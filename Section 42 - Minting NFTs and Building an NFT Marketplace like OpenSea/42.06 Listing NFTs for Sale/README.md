@@ -148,3 +148,16 @@ If you encounter the error 'Fail to verify certificate', it is related to the Df
 ```js
 agent.fetchRootKey();
 ```
+
+## Final Testing
+
+After deploying the updated canisters, mint a new NFT and attempt to sell it. Upon clicking Confirm, you should see "listing: Success" and "transfer: Success" in the console. This means the NFT is listed in the HashMap of listings and ownership has been transferred to the OpenD canister.
+
+The entire process ensures that only the owner can list and transfer NFTs, and the platform holds the NFT until it is sold. In the next lesson, we will tidy up the code and ensure all listed items appear in the Discover section.
+
+## Key Takeaways
+
+- Added a sell button to each NFT, allowing users to list NFTs for sale on the marketplace.
+- Implemented state management for the price input and button text using React hooks.
+- Developed backend logic to securely list NFTs and transfer ownership only if the caller is the owner.
+- Addressed common bugs and deployment issues, including type conversion and local agent configuration.

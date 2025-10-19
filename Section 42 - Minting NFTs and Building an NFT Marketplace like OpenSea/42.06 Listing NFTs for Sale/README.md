@@ -33,3 +33,25 @@ const handleSell = () => {
 ```
 
 We will also create a state tracker called `button` and `setButton` using React's `useState` to manage the button's state. Place the button just below the final paragraph tag in the component. After saving and refreshing the frontend, you should see styled buttons underneath each NFT. Clicking the sell button should log "Sell clicked" in the console, confirming the function is passed and triggered correctly.
+
+## Handling Price Input
+
+When someone clicks the sell button, we want to allow them to input the price they wish to sell the item for. We will create a state variable `priceInput` and its setter, and insert the price input HTML just above the button. When `handleSell` is triggered, set `priceInput` to include the input HTML so it appears above the button. We will also create a variable `price` to store the value entered.
+
+```js
+const [priceInput, setPriceInput] = useState("");
+let price = "";
+
+const handlePriceChange = (e) => {
+  price = e.target.value;
+};
+```
+
+When the sell button is clicked, the input appears, allowing the user to enter a price in DANG. We also want to update the button to say "Confirm" and change its function to actually make the sale. We will create a new function called `sellItem`, which will be asynchronous, as it will interact with the backend.
+
+```js
+const sellItem = async () => {
+  console.log("Confirm clicked");
+  console.log("Set price:", price);
+};
+```

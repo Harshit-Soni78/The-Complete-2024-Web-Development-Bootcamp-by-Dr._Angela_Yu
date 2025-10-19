@@ -140,3 +140,11 @@ const openDId = await opend.getOpenDCanisterID();
 const transferResult = await NFTActor.transferOwnership(openDId);
 console.log(transferResult);
 ```
+
+## Handling Local Deployment Issues
+
+If you encounter the error 'Fail to verify certificate', it is related to the Dfinity agent configuration. By default, the agent is set up for the main Internet Computer blockchain and verifies responses using a hardcoded public key. For local deployment, call `agent.fetchRootKey()` to resolve this issue. Remember to remove this line when deploying live.
+
+```js
+agent.fetchRootKey();
+```

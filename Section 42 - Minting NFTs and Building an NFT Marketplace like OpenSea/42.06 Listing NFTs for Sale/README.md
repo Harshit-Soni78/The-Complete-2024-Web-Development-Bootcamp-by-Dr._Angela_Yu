@@ -105,3 +105,20 @@ console.log(listingResult);
 ```
 
 If you encounter an error such as 'Invalid Nat argument: "12"', it means the price is being passed as a string instead of a number. Wrapping the price in `Number()` converts it to the correct type.
+
+## Transferring Ownership to the Platform
+
+After listing, we need to transfer the NFT to the platform (OpenD) so it can hold the NFT until it is sold. We will write a new public shared function called `transferOwnership`, which takes the new owner's id and returns a text message indicating success or failure. The function checks if the caller is the current owner before transferring.
+
+```mo
+    public shared func transferOwnership(newOwner: Principal): async Text {
+        if (Principal.equal(nftOwner, msg.caller)) {
+            nftOwner := newOwner;
+            return "Success";
+        } else {
+            return "Not initiated by an NFT Owner.";
+        }
+    }
+```
+
+We will also make the NFT's owner property private to ensure it can only be updated within the NFT itself, specifically through the `transferOwnership` function.

@@ -48,3 +48,40 @@ Four routes are defined: one for the home page, and one each for Discover, Minte
 ```
 
 The `exact` keyword is added to the root route to ensure it only matches the exact string and does not interfere with other routes. A link is also added to the root route, wrapping the relevant text or heading.
+
+## Backend Data Structures for NFT Ownership
+
+To display all NFTs owned by a user, the backend code in `main.mo` is updated. When minting a new NFT, a data store is set up to track which NFTs were minted and who the owners are. This is accomplished using a HashMap.
+
+```mo
+    import HashMap "mo:base/HashMap";
+```
+
+```mo
+    var mapOfNFTs = HashMap.HashMap<Principal, NFTActorClass.NFT>(Principal.equal, Principal.hash);
+```
+
+Each new NFT is added to the `mapOfNFTs` HashMap, with the Principal as the key and the NFT as the value. Additionally, a `mapOfOwners` HashMap is created to map owner Principals to a list of NFT Principals they own. The List type is imported to facilitate this.
+
+```mo
+    import List "mo:base/List";
+```
+
+```mo
+    var mapOfOwners = HashMap.HashMap<Principal, List.List<Principal>>(Principal.equal, Principal.hash);
+```
+
+A private function `addToOwnershipMap` is defined to add a newly minted NFT to the owner's list. It retrieves the existing list, updates it, and stores it back in the HashMap. If the owner is new, an empty list is initialized.
+
+```mo
+    private func addToOwnershipMap(owner: Principal, nftId: Principal) {
+      let ownedNFTs: List.List<Principal> = switch (mapOfOwners.get(owner)) {
+        case null => List.nil<Principal>(),
+        case (?result) => result
+      };
+      let updatedNFTs = List.push(nftId, ownedNFTs);
+      mapOfOwners.put(owner, updatedNFTs);
+    }
+```
+
+The `addToOwnershipMap` function is called after minting a new NFT, passing in the owner's Principal and the new NFT's Principal.

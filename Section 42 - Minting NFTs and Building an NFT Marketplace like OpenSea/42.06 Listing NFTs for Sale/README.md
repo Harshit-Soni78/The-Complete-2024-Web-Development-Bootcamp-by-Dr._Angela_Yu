@@ -55,3 +55,40 @@ const sellItem = async () => {
   console.log("Set price:", price);
 };
 ```
+
+## Backend Logic for Listing NFTs
+
+To list an item, we need to write backend logic. We will create a new public shared function called `listItem` that takes two inputs: the id (Principal type) of the NFT and the price (Nat type). We will also create a HashMap called `mapOfListings` to keep track of all listings.
+
+```mo
+    private type Listing = {
+        itemOwner: Principal;
+        itemPrice: Nat;
+    };
+
+    let mapOfListings = HashMap.HashMap<Principal, Listing>(Principal.equal, Principal.hash);
+```
+
+The `listItem` function will check if the NFT exists, verify that the caller is the owner, and then create a new listing in the HashMap. If the NFT does not exist, it returns a message. If the caller is not the owner, it returns an error message. Otherwise, it adds the listing and returns "Success".
+
+```mo
+    public shared func listItem(id: Principal, price: Nat): async Text {
+        let itemOpt = mapOfNFTs.get(id);
+        switch (itemOpt) {
+            case null { return "NFT does not exist"; };
+            case (?item) {
+                let owner = await item.getOwner();
+                if (Principal.equal(owner, msg.caller)) {
+                    let newListing: Listing = {
+                        itemOwner = owner;
+                        itemPrice = price;
+                    };
+                    mapOfListings.put(id, newListing);
+                    return "Success";
+                } else {
+                    return "You don't own the NFT";
+                }
+            }
+        }
+    }
+```

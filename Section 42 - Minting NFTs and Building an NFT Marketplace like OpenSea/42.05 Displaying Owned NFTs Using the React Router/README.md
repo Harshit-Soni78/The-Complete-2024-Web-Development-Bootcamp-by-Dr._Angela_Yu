@@ -145,3 +145,14 @@ To ensure the gallery updates immediately after minting a new NFT, the `forceRef
 ```
 
 Now, after minting a new NFT, navigating to 'My NFTs' forces a refresh and displays the newly minted NFT in the gallery as expected.
+
+## Conclusion
+
+All NFTs owned by the user are now displayed in the gallery, and the system dynamically updates after minting new tokens. The next step in the project will involve setting up NFTs for sale and listing them on the Discover page.
+
+## Key Takeaways
+
+- Implemented navigation between NFT minting, discovery, and collection using React Router.
+- Set up backend data structures in Motoko to track NFT ownership and minting.
+- Developed functions to fetch and display all NFTs owned by a user in the frontend gallery.
+- Ensured dynamic updates and proper rendering of NFT collections after minting new tokens.

@@ -135,3 +135,13 @@ const items = props.ids.map((NFTId) => (
 ```
 
 The Item component expects the id prop, which is the Principal of the NFT. The key prop is set to the text representation of the Principal to uniquely identify each item. The useEffect hook is used to trigger the fetching and rendering of NFTs when the component mounts.
+
+## Ensuring Dynamic Updates
+
+To ensure the gallery updates immediately after minting a new NFT, the `forceRefresh` attribute is added to the BrowserRouter. This causes the Header to refresh, triggering the useEffect and fetching the latest NFTs.
+
+```js
+    <BrowserRouter forceRefresh={true}>
+```
+
+Now, after minting a new NFT, navigating to 'My NFTs' forces a refresh and displays the newly minted NFT in the gallery as expected.

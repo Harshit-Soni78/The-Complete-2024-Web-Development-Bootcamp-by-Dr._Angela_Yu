@@ -85,3 +85,17 @@ A private function `addToOwnershipMap` is defined to add a newly minted NFT to t
 ```
 
 The `addToOwnershipMap` function is called after minting a new NFT, passing in the owner's Principal and the new NFT's Principal.
+
+## Fetching Owned NFTs for the Frontend
+
+A public query function `getOwnedNFTs` is created in `main.mo` to fetch the list of NFT Principals owned by a user and return them as an array for use in the frontend.
+
+```mo
+    public query func getOwnedNFTs(user: Principal): async [Principal] {
+      let userNFTs: List.List<Principal> = switch (mapOfOwners.get(user)) {
+        case null => List.nil<Principal>(),
+        case (?result) => result
+      };
+      return List.toArray(userNFTs);
+    }
+```

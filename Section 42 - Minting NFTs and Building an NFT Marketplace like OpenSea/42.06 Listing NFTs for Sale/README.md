@@ -122,3 +122,21 @@ After listing, we need to transfer the NFT to the platform (OpenD) so it can hol
 ```
 
 We will also make the NFT's owner property private to ensure it can only be updated within the NFT itself, specifically through the `transferOwnership` function.
+
+## Getting the OpenD Canister ID
+
+To transfer ownership to OpenD, we need its Principal ID. We will create a public query function called `getOpenDCanisterID` that returns the Principal ID of the OpenD actor.
+
+```mo
+    public query func getOpenDCanisterID(): async Principal {
+        return Principal.fromActor(OpenD);
+    }
+```
+
+On the frontend, we can call this function to get the OpenD canister ID and pass it to the `transferOwnership` function.
+
+```js
+const openDId = await opend.getOpenDCanisterID();
+const transferResult = await NFTActor.transferOwnership(openDId);
+console.log(transferResult);
+```

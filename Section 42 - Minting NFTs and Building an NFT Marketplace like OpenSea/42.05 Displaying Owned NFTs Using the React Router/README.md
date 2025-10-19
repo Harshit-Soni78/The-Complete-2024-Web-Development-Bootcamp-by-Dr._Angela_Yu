@@ -99,3 +99,27 @@ A public query function `getOwnedNFTs` is created in `main.mo` to fetch the list
       return List.toArray(userNFTs);
     }
 ```
+
+## Integrating Backend with Frontend
+
+In the frontend, the `opend` canister is imported, and an asynchronous function `getNFTs` is defined to call `getOwnedNFTs` and retrieve the user's NFT IDs. The Principal of the current user is used, which is defined as a constant for simplicity.
+
+```js
+import opend from "../../declarations/opend";
+import { CURRENT_USER_ID } from "../../index.jsx";
+```
+
+```js
+async function getNFTs() {
+  const userNFTIds = await opend.getOwnedNFTs(CURRENT_USER_ID);
+  console.log(userNFTIds);
+}
+```
+
+The `getNFTs` function is triggered when the component is rendered, using the `useEffect` hook. The retrieved NFT IDs are then passed to the Gallery component for rendering.
+
+```js
+useEffect(() => {
+  getNFTs();
+}, []);
+```

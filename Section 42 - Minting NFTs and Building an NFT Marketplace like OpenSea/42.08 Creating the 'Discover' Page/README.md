@@ -62,3 +62,9 @@ To prevent users from buying their own NFTs, we need to check the original owner
 On the frontend, we call `await opend.getOriginalOwner(props.id)` and compare the original owner's Principal (converted to text) with the current logged-in user ID. If they differ, we show the Buy button; otherwise, we hide it. We import `CURRENT_USER_ID` from our index.jsx to perform this comparison.
 
 After saving main.mo and redeploying the canister, we face a challenge: minting NFTs from the frontend always sets the current user as the original owner, so the Buy button never appears. To test the Buy button, we use the command line to mint NFTs and transfer ownership to OpenD, simulating a different original owner.
+
+## Minting NFTs for Testing via Command Line
+
+The README contains instructions under "Creating NFT for Testing". We mint an NFT via command line, copy the returned NFT ID, and replace it in the listing step. We also replace placeholders with the OpenD canister ID for transferring ownership. This process mimics frontend actions but is done backend-side to simulate different owners.
+
+Once completed successfully, refreshing the Discover page shows the newly minted NFT from the command line. Because the original owner differs from the current user, the Buy button appears correctly. Minting and selling NFTs on the frontend shows the difference: only NFTs not originally owned by the user display the Buy button.

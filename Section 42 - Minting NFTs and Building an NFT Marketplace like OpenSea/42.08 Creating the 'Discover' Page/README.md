@@ -45,3 +45,20 @@ async function handleBuy() {
 ```
 
 Testing shows that the Discover page items display a Buy button, while My NFTs page items show a Sell button if the item can be sold. However, the Buy button appears even for NFTs listed by ourselves, which logically should not be possible since we temporarily transfer ownership to OpenD to list the NFT.
+
+## Preventing Users from Buying Their Own NFTs
+
+To prevent users from buying their own NFTs, we need to check the original owner rather than the current owner (which is OpenD's canister ID). We add a new public query function in main.mo called `getOriginalOwner()` that takes the NFT's Principal ID and returns the Principal ID of the original owner.
+
+```mo
+    public query func getOriginalOwner(id : Principal) : async Principal {
+        switch (mapOfListings.get(id)) {
+            case (null) { return Principal.fromText("aaaaa-aa"); } // empty Principal
+            case (?listing) { return listing.itemOwner; }
+        }
+    }
+```
+
+On the frontend, we call `await opend.getOriginalOwner(props.id)` and compare the original owner's Principal (converted to text) with the current logged-in user ID. If they differ, we show the Buy button; otherwise, we hide it. We import `CURRENT_USER_ID` from our index.jsx to perform this comparison.
+
+After saving main.mo and redeploying the canister, we face a challenge: minting NFTs from the frontend always sets the current user as the original owner, so the Buy button never appears. To test the Buy button, we use the command line to mint NFTs and transfer ownership to OpenD, simulating a different original owner.

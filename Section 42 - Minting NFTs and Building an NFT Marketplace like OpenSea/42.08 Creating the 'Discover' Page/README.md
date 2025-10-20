@@ -68,3 +68,43 @@ After saving main.mo and redeploying the canister, we face a challenge: minting 
 The README contains instructions under "Creating NFT for Testing". We mint an NFT via command line, copy the returned NFT ID, and replace it in the listing step. We also replace placeholders with the OpenD canister ID for transferring ownership. This process mimics frontend actions but is done backend-side to simulate different owners.
 
 Once completed successfully, refreshing the Discover page shows the newly minted NFT from the command line. Because the original owner differs from the current user, the Buy button appears correctly. Minting and selling NFTs on the frontend shows the difference: only NFTs not originally owned by the user display the Buy button.
+
+## Displaying NFT Prices on Discover Page
+
+To help buyers make informed decisions, we want to display the prices of NFTs listed for sale. The README provides a Price label HTML snippet, which we use to create a new React component called PriceLabel.jsx.
+
+```js
+import React from "react";
+
+function PriceLabel(props) {
+  return (
+    <div className="price-label">
+      <span>{props.sellPrice}</span>
+    </div>
+  );
+}
+
+export default PriceLabel;
+```
+
+We insert the PriceLabel component just above the h2 element in the item display and pass the sellPrice as a prop. Initially, it shows a static value, but we update it to use dynamic data.
+
+In main.mo, we add a new public query function `getListedNFTPrice()` that takes an NFT ID and returns its price as a natural number. It retrieves the listing from mapOfListings and returns the itemPrice or zero if not found.
+
+```mo
+    public query func getListedNFTPrice(id : Principal) : async Nat {
+        switch (mapOfListings.get(id)) {
+            case (null) { return 0; }
+            case (?listing) { return listing.itemPrice; }
+        }
+    }
+```
+
+On the frontend, we call this method with the NFT ID and set the priceLabel state with a PriceLabel component, passing the sellPrice prop as the price converted to a string.
+
+```js
+const price = await opend.getListedNFTPrice(props.id);
+setPriceLabel(<PriceLabel sellPrice={price.toString()} />);
+```
+
+After saving and redeploying the backend, minting a new NFT and listing it for sale will display its price on the Discover page.

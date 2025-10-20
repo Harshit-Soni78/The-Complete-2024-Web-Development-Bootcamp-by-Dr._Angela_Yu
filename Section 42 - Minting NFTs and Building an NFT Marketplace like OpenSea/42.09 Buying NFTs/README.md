@@ -55,3 +55,11 @@ Fix asynchronous errors by adding `await` where necessary and ensure variable na
 Back in `Item.jsx`, call the `completePurchase()` method with the NFT ID, seller ID, and current user ID, capturing and logging the result.
 
 Redeploy the project and mint an NFT from the command line. List the NFT for sale and update the canister IDs in the commands accordingly. Test the purchase by clicking the Buy button and verify the NFT disappears from the Discover page and appears in My NFTs.
+
+### UI Improvements
+
+To improve user experience, show a loader during the purchase process and make the NFT item disappear from the Discover page once bought. Use a state variable `shouldDisplay` to control the CSS `display` property of the NFT item, toggling between `inline` and `none`.
+
+Set `shouldDisplay` to `true` initially. When `handleBuy` is triggered, set the loader to visible and after the purchase completes, hide the loader and set `shouldDisplay` to `false` to remove the item from view.
+
+Test the full purchase flow: mint an NFT, list it, and buy it. Confirm that the token balance decreases, the NFT disappears from Discover, and appears in My NFTs.

@@ -13,3 +13,11 @@ We will paste the loader just below the image in the `Item.jsx` file. The loader
 The loader will become visible when the user clicks the confirm button, triggering the `sellItem()` function. At that point, we set `loaderHidden` to `false`. Once the listing and transfer complete successfully, indicated by `transferResult` being "Success", we set `loaderHidden` back to `true` to hide the loader.
 
 Testing this, when clicking Confirm to sell an NFT, the loader appears during the listing and transfer process and disappears upon successful transfer, providing clear user feedback.
+
+## Updating UI Elements After Listing
+
+After a successful transfer, we also want to hide the sell button and the price input field. We achieve this by using `setButton` and `setPriceInput` to make these elements disappear once the transfer completes.
+
+Testing again with an NFT that the user owns, the button and price input disappear after listing, which is the desired behavior. NFTs transferred to OpenD cannot be sold again, and we will address this shortly.
+
+We also update the owner display to reflect the new ownership. Instead of showing the Principal, which is not user-friendly, we set the owner text to "OpenD" to indicate that the NFT has been listed and ownership has temporarily transferred to the OpenD canister.

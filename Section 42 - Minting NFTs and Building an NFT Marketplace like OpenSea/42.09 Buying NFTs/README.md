@@ -21,3 +21,11 @@ Deploy the token canister using `dfx deploy` while ensuring your `dfx start` is 
 Use the frontend to load the token canister with DANG tokens. Set the canister ID to a local variable, then transfer half a billion tokens using the token transfer function. After that, claim tokens from the faucet by clicking "Gimme, gimme." Once successful, the anonymous user will have 10,000 DANG tokens to use for purchasing NFTs.
 
 This simplified project does not use Internet Identity login flow, saving deployment costs. All functionality here will work once deployed online. The token canister and OpenD canister will be live on the Internet Computer blockchain, and it is important to learn how to enable canisters to communicate.
+
+### Integrating Token Canister in Frontend
+
+We will access the token canister's types and functions by copying its declaration folder into our OpenD project under the `declarations` directory. This allows us to interact with the token canister programmatically.
+
+In `tokendid.js`, an `idlFactory` defines the methods and data types for the token canister. We will import this factory in `Item.jsx` with an alias `tokenIdlFactory` to avoid conflicts with other canisters.
+
+We create a token actor using the `Actor.createActor()` method, passing in the `tokenIdlFactory`, the agent, and the token canister ID. Obtain the token canister ID by running `dfx canister id token` and use `Principal.fromText()` to convert it to a Principal type.

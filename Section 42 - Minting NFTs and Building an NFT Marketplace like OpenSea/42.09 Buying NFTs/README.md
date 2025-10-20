@@ -63,3 +63,18 @@ To improve user experience, show a loader during the purchase process and make t
 Set `shouldDisplay` to `true` initially. When `handleBuy` is triggered, set the loader to visible and after the purchase completes, hide the loader and set `shouldDisplay` to `false` to remove the item from view.
 
 Test the full purchase flow: mint an NFT, list it, and buy it. Confirm that the token balance decreases, the NFT disappears from Discover, and appears in My NFTs.
+
+## Conclusion
+
+This project demonstrates a complete NFT marketplace with minting, listing, buying, and ownership tracking functionalities on the Internet Computer. While the project is complex and may require debugging, it provides a solid foundation for building decentralized applications with token integration and inter-canister communication.
+
+Remember that deploying on the live network incurs costs for minting and transactions, so extensive testing on localhost is recommended. Consider applying for developer grants from Dfinity to support your projects.
+
+Thank you for following along, and I look forward to seeing the innovative projects you create in the future.
+
+## Key Takeaways
+
+- Implemented the buying functionality for NFTs by transferring tokens and ownership.
+- Integrated the token canister to handle DANG token transfers between buyer and seller.
+- Developed a backend function to complete the purchase and update NFT ownership.
+- Enhanced the frontend UI to reflect purchase status and update NFT listings dynamically.

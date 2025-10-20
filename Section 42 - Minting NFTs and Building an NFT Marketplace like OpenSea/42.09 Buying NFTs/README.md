@@ -7,3 +7,17 @@ The final step to complete the NFT Marketplace Project is enabling the purchase 
 Currently, clicking the buy button only triggers a console log stating "Buy was triggered." To test the buying functionality, ensure you have an NFT available for purchase by minting one using the "Creating NFT for testing" section.
 
 In our `Item.jsx` file, the `handleBuy` function currently only logs a message. We will update this function to perform the actual purchase process.
+
+### Setting Up the Token Canister
+
+First, we need to get our token canister running. If you have completed the module where we built the token canister and frontend for managing tokens, you can proceed. Otherwise, download the `token-local` compressed zip file provided in this lesson, extract it, and place the folder inside your `ic-projects` directory. Open this folder in a new VS Code window.
+
+The `token-local` project contains the token canister backend and frontend. It tracks balances, allows querying balances, faucet payouts, and transfers. We will use the transfer function to move tokens between users.
+
+Before deploying, open the README and follow the deploy section. First, obtain your Principal ID by running the provided command in the terminal inside the `token-local` folder. Then, update the `owner` field in `main.mo` inside the token folder with your Principal ID, enclosed in double quotes.
+
+Deploy the token canister using `dfx deploy` while ensuring your `dfx start` is running on your OpenD project. After deployment, start the frontend with `npm start`. It will run on a different localhost port (e.g., 8081) to avoid conflicts.
+
+Use the frontend to load the token canister with DANG tokens. Set the canister ID to a local variable, then transfer half a billion tokens using the token transfer function. After that, claim tokens from the faucet by clicking "Gimme, gimme." Once successful, the anonymous user will have 10,000 DANG tokens to use for purchasing NFTs.
+
+This simplified project does not use Internet Identity login flow, saving deployment costs. All functionality here will work once deployed online. The token canister and OpenD canister will be live on the Internet Computer blockchain, and it is important to learn how to enable canisters to communicate.

@@ -37,3 +37,21 @@ To transfer tokens, first retrieve the seller's Principal ID by calling the `get
 Use the token actor's `transfer()` method to send tokens from the buyer to the seller. The method takes the recipient's Principal and the amount as a natural number. Log the result of the transfer to verify success.
 
 Try purchasing an NFT by clicking the Buy button. If the transfer returns "Success," verify that the buyer's token balance has decreased accordingly.
+
+### Transferring NFT Ownership
+
+After a successful token transfer, transfer the NFT ownership to the buyer. Add a new public shared function `completePurchase()` in `main.mo` that takes the NFT ID, current owner ID, and new owner ID as inputs and returns a text result.
+
+Inside `completePurchase()`, retrieve the purchased NFT from the map of NFTs. If it does not exist, return "NFT does not exist." Otherwise, unwrap the NFT and proceed.
+
+Call the NFT's `transferOwnership()` method with the new owner ID. If the transfer result is "Success," delete the NFT from the listings map and remove it from the previous owner's list of owned NFTs.
+
+Retrieve the list of NFTs owned by the previous owner from the ownership map. If none exist, initialize an empty list. Use the `List.filter()` method to create a new list excluding the purchased NFT's ID.
+
+Add the purchased NFT to the new owner's ownership map using the `addToOwnershipMap()` method. Return "Success" if all operations complete successfully; otherwise, return the transfer result error.
+
+Fix asynchronous errors by adding `await` where necessary and ensure variable names match the function parameters, such as using `newOwnerId` consistently.
+
+Back in `Item.jsx`, call the `completePurchase()` method with the NFT ID, seller ID, and current user ID, capturing and logging the result.
+
+Redeploy the project and mint an NFT from the command line. List the NFT for sale and update the canister IDs in the commands accordingly. Test the purchase by clicking the Buy button and verify the NFT disappears from the Discover page and appears in My NFTs.

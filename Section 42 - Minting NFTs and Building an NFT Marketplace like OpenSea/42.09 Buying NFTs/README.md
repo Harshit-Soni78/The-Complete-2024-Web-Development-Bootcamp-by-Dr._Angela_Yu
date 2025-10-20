@@ -29,3 +29,11 @@ We will access the token canister's types and functions by copying its declarati
 In `tokendid.js`, an `idlFactory` defines the methods and data types for the token canister. We will import this factory in `Item.jsx` with an alias `tokenIdlFactory` to avoid conflicts with other canisters.
 
 We create a token actor using the `Actor.createActor()` method, passing in the `tokenIdlFactory`, the agent, and the token canister ID. Obtain the token canister ID by running `dfx canister id token` and use `Principal.fromText()` to convert it to a Principal type.
+
+### Transferring Tokens from Buyer to Seller
+
+To transfer tokens, first retrieve the seller's Principal ID by calling the `getOriginalOwner()` method on the OpenD canister, passing the NFT's ID. Then, get the NFT's price by calling `getListedNFTPrice()` with the NFT ID.
+
+Use the token actor's `transfer()` method to send tokens from the buyer to the seller. The method takes the recipient's Principal and the amount as a natural number. Log the result of the transfer to verify success.
+
+Try purchasing an NFT by clicking the Buy button. If the transfer returns "Success," verify that the buyer's token balance has decreased accordingly.

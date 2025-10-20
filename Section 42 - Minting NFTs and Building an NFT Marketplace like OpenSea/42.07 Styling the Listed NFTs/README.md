@@ -49,3 +49,10 @@ Finally, to provide clear feedback, we add a "Listed" label in purple text at th
 This completes the styling and UI updates for listed NFTs. The next step is to fetch and display all listed NFTs on the Discover page, allowing users to browse NFTs currently for sale on OpenD.
 
 For all of that and more, I will see you in the next lesson.
+
+## Key Takeaways
+
+- Implemented loaders to provide user feedback during NFT listing and transfer processes.
+- Updated UI elements such as buttons, price inputs, and image styling to reflect NFT listing status.
+- Added backend functionality to check if an NFT is listed, ensuring UI consistency on page refresh.
+- Enhanced the Discover page to display all NFTs currently listed for sale on OpenD.

@@ -29,3 +29,15 @@ To visually indicate that an NFT is listed and no longer owned by the user, we a
 At the start of the `sellItem` function, we set the blur style to `filter: blur(4px)`. This applies a subtle blur effect, allowing the image to still be visible but clearly indicating it is listed.
 
 Testing this by minting and selling a new NFT, the blur appears on the image as soon as the Confirm button is clicked and remains until the listing completes. The loader also appears during this process, providing comprehensive feedback.
+
+## Persisting UI State on Page Refresh
+
+Currently, when refreshing the page, the owner text, button visibility, and blur effect do not persist. This is because the item is loaded via the `loadNFT()` function, which does not check if the NFT is listed.
+
+To fix this, we add a new public query function `isListed()` in the `main.mo` backend file. This function takes an NFT ID and returns a boolean indicating whether the NFT is listed for sale.
+
+The function checks the listings map for the given ID. If the entry is `null`, it returns `false`; otherwise, it returns `true`.
+
+On the frontend, before setting buttons, we call `opend.isListed(props.id)` and store the result in a constant `nftIsListed`. If `nftIsListed` is true, we set the owner to "OpenD" and apply the blur effect. Otherwise, we set the sell button to "Sell". By default, the button is empty, so it only appears if the NFT is not listed.
+
+After adding the new `isListed` method to the OpenD canister's `.did` files and redeploying all canisters, the UI correctly reflects the listing status even after page refreshes. The owner shows as "OpenD", the blur effect remains, and the sell button is hidden for listed NFTs.

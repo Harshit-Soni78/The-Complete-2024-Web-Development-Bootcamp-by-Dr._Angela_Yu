@@ -27,3 +27,9 @@ We will add a new public query function called `getListedNFTs()` which takes no 
 Back in Header.jsx, we call `await opend.getListedNFTs()` and log the IDs to verify it works. Then, we set the gallery state to a new Gallery component with props: title="Discover" and ids=listedNFTIds. This passes control to the Gallery component to display the NFTs.
 
 After deploying the canister with the new method, we can mint a new NFT and list it for sale. Navigating to the Discover page will show the listed NFT. Minting another NFT without listing it demonstrates the difference between My NFTs and Discover pages, confirming the code works correctly.
+
+## Differentiating Roles and Adding Buy Button
+
+We want to modify the Discover page so that listed NFTs are not blurred and include a Buy button. To distinguish when the Discover page is rendered versus the collection page, we add a new prop called `role` when creating the Gallery component. For My NFTs, we pass `role="collection"`, and for Discover, `role="discover"`.
+
+Inside the Gallery component, we pass the `role` prop down to each item. For items where `props.role === "collection"`, we perform the existing functions such as setting Image, Owner, and Name. For `props.role === "discover"`, we change the button text to "Buy" and pass a new method called `handleBuy` instead of `handleSell`.

@@ -41,3 +41,11 @@ The function checks the listings map for the given ID. If the entry is `null`, i
 On the frontend, before setting buttons, we call `opend.isListed(props.id)` and store the result in a constant `nftIsListed`. If `nftIsListed` is true, we set the owner to "OpenD" and apply the blur effect. Otherwise, we set the sell button to "Sell". By default, the button is empty, so it only appears if the NFT is not listed.
 
 After adding the new `isListed` method to the OpenD canister's `.did` files and redeploying all canisters, the UI correctly reflects the listing status even after page refreshes. The owner shows as "OpenD", the blur effect remains, and the sell button is hidden for listed NFTs.
+
+## Adding a Listed Status Label
+
+Finally, to provide clear feedback, we add a "Listed" label in purple text at the bottom of the `Item.jsx` component. We create a state variable `sellStatus` initialized as an empty string. When the NFT is listed, we set `sellStatus` to " Listed" (with a leading space for formatting). This label appears next to the NFT, indicating its listed status.
+
+This completes the styling and UI updates for listed NFTs. The next step is to fetch and display all listed NFTs on the Discover page, allowing users to browse NFTs currently for sale on OpenD.
+
+For all of that and more, I will see you in the next lesson.

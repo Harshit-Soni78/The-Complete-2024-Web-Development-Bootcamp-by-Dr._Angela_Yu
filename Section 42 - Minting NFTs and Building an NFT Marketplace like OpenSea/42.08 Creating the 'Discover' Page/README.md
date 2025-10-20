@@ -108,3 +108,15 @@ setPriceLabel(<PriceLabel sellPrice={price.toString()} />);
 ```
 
 After saving and redeploying the backend, minting a new NFT and listing it for sale will display its price on the Discover page.
+
+## Conclusion
+
+We have successfully styled the Discover page to display all NFTs available for sale. The Buy button only appears for NFTs listed by someone other than the current user. The price label is set up, resulting in a polished digital marketplace for NFTs. The next lesson will cover buying NFTs, transferring DANG tokens, and ownership transfer.
+
+## Key Takeaways
+
+- Implemented the Discover page to display all listed NFTs using the Gallery component.
+- Created backend methods in Motoko to fetch listed NFTs, original owners, and NFT prices.
+- Added logic to differentiate between collection and discover roles, showing appropriate buttons.
+- Enabled testing of buy functionality by minting NFTs via command line and transferring ownership to the marketplace.
+- Displayed NFT prices on the Discover page with a dedicated PriceLabel component.

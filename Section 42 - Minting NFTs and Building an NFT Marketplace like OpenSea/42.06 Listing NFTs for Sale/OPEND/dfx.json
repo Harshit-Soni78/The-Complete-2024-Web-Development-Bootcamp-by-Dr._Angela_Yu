@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "OPEND_backend": {
+      "main": "src/OPEND_backend/main.mo",
+      "type": "motoko"
+    },
+    "nft": {
+      "main": "src/NFT/nft.mo",
+      "type": "motoko"
+    },
+    "OPEND_frontend": {
+      "dependencies": ["OPEND_backend"],
+      "source": ["src/OPEND_frontend/dist"],
+      "type": "assets",
+      "workspace": "OPEND_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

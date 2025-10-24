@@ -68,3 +68,26 @@ Feel free to reach out or follow my progress:
 - [LinkedIn](https://www.linkedin.com/in/harshit-soni78/)
 
 Stay tuned for updates as I continue my journey to becoming a full-stack web developer! Happy coding!
+
+---
+
+## 🧾Completed the Cource
+
+### 🌟 Achievement Unlocked! 🌟
+
+Excited to Share a New Milestone: Full-Stack Web Developer
+
+I'm thrilled to announce that I have successfully completed "The Complete Full-Stack Web Development Bootcamp" on Udemy!
+
+This comprehensive, project-based program was an intensive journey into modern web development. I've gained hands-on experience in building, testing, and deploying full-stack applications, mastering technologies including:
+
+- **Front-End:** HTML5, CSS3, JavaScript (ES6+), and React
+- **Back-End:** Node.js, Express.js, and RESTful APIs
+- **Databases:** MongoDB (NoSQL) and SQL
+- **Developer Tools:** Git, GitHub, and the command line
+
+I'm proud of the portfolio of projects I built during this course and am eager to apply these new skills to solve real-world problems.
+
+A huge thank you to the instructor and the community for the support. Ready for the next challenge!
+
+![img](</Certificate%20of%20Completion%20(The%20Complete%20Full-Stack%20Web%20Development%20Bootcamp).jpg>)

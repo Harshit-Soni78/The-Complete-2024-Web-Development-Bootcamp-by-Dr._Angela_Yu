@@ -1,0 +1,11 @@
+node_modules
+*.log
+__pycache__/
+secret.txt
+.git
+listFileName.py
+folder_name_finder.py
+
+Dont_push
+try.md
+try
